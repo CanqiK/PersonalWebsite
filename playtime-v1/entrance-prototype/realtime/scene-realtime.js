@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from '../vendor/GLTFLoader.js';
-import { createNightWeather } from './night-weather.js?v=playtime-v1';
+import { createNightWeather } from './night-weather.js?v=playtime-v1-cursors';
 const embedded = new URLSearchParams(location.search).has('embed');
 document.documentElement.classList.toggle('embedded', embedded);
 

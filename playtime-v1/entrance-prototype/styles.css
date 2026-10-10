@@ -106,3 +106,13 @@ html,body{background:#000}
 .is-powering-off .boot-led{background:#263326}
 @keyframes crt-off{0%{transform:scale(1);filter:brightness(1)}45%{transform:scale(1,.015);filter:brightness(2)}75%{transform:scale(.05,.015);filter:brightness(2)}100%{transform:scale(0);opacity:0}}
 @media(prefers-reduced-motion:reduce){.boot-progress span,.boot-computer{transition:none}.is-powering-off .boot-screen{animation:none;opacity:0}}
+
+/* Native cursors stay exact during camera panning; no animated pointer overlay.
+   Hotspots: lens centre, scope centre, raised fingertip. Touch keeps its defaults. */
+@media (any-hover:hover) and (any-pointer:fine){
+  body{cursor:url("assets/cursors/search.svg") 19 19,default}
+  .entrance,.boot-loader{cursor:inherit}
+  .canqi-target{cursor:url("assets/cursors/hand.svg") 30 6,help}
+  .worker-bubble{cursor:url("assets/cursors/scope.svg") 24 24,crosshair}
+  .worker-bubble *{cursor:inherit}
+}

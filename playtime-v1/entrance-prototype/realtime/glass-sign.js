@@ -49,7 +49,7 @@ function makeLetterTexture(glow = false) {
 }
 
 // Two ignition flashes in two seconds, three seconds of steady light, then an
-// interrupted power-down. No rapid strobe; the long dark intervals are deliberate.
+// interrupted power-down. The cadence changes only the dark interval, not flashes.
 export function glassSignState(age) {
   if (age < 0 || age >= 5.85) return { level: 0, spark: 0 };
   let level = 0;
@@ -100,7 +100,7 @@ export function createGlassSign(scene) {
   const spill = new THREE.PointLight(0x9bc8e7, 0, 9, 2);
   spill.position.set(1.65, 3.2, -18);
   scene.add(spill);
-  let nextStart = 8;
+  let nextStart = 4;
   let cycle = 0;
   let age = -1;
 
@@ -109,7 +109,7 @@ export function createGlassSign(scene) {
       age = elapsed - nextStart;
       if (age >= 5.85) {
         cycle++;
-        nextStart = elapsed + 14 + ((cycle * 7) % 11);
+        nextStart = elapsed + 7 + ((cycle * 3) % 5);
         age = -1;
       }
     }

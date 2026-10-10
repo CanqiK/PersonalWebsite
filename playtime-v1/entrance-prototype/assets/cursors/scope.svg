@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" shape-rendering="crispEdges">
+  <defs><path id="reticle" d="M8 4h8v2h3v3h2v6h-2v3h-3v2H8v-2H5v-3H3V9h2V6h3V4ZM12 1v8m0 6v8M0 12h9m6 0h9"/></defs>
+  <g fill="none" stroke-linejoin="miter">
+    <use href="#reticle" stroke="#080b10" stroke-width="3"/>
+    <use href="#reticle" stroke="#fff" stroke-width="1"/>
+  </g>
+  <path fill="#080b10" d="M10 10h4v4h-4z"/>
+  <path fill="#fff" d="M11 11h2v2h-2z"/>
+</svg>

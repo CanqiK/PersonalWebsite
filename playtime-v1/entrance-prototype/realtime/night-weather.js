@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { createGlassSign } from './glass-sign.js?v=playtime-v1';
+import { createGlassSign } from './glass-sign.js?v=playtime-v1-cursors';
 import { airshipAcoustics } from './airship-acoustics.js?v=playtime-v1';
 
 const paneX = -12.27;
