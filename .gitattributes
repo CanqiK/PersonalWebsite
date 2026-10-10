@@ -1,0 +1,7 @@
+* -text
+*.pdf binary
+*.blend binary
+*.glb binary
+*.png binary
+*.jpg binary
+entrance-prototype/vendor/** -whitespace

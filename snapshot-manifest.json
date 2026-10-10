@@ -1,0 +1,243 @@
+{
+  "codename": "进入页-Playtime Ver.1",
+  "date": "2026-10-10",
+  "branch": "backup/entrance-playtime-v1",
+  "tag": "playtime-v1",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 116,
+      "sha256": "28c8e962fcdc2c60fbb754ca1f82d06f7f583e6930de8679101503e813df3912"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 60,
+      "sha256": "7c5ca405f1b0f4630ee49e9341c3bf40a0ac42b1d94e0dd442031a93c52d1e13"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "entrance-prototype/.gitignore",
+      "bytes": 94,
+      "sha256": "d872273f52c72032a73444e08e22febe6aac59e4850d73dfc8fdb419ce86dd31"
+    },
+    {
+      "path": "entrance-prototype/ambience.js",
+      "bytes": 20154,
+      "sha256": "c62e6de1fcad0a4abee8e67265ac2f02939284656c2e74fea7b094909162e4dd"
+    },
+    {
+      "path": "entrance-prototype/assets/canqi-office-facing-styled.blend",
+      "bytes": 5610054,
+      "sha256": "272578053a063a1b05712026448d052318343136bb65aebbebae8a0cdf4171ce"
+    },
+    {
+      "path": "entrance-prototype/assets/preview-got-him-signal-20261010.png",
+      "bytes": 108822,
+      "sha256": "06b12f773b253e1497e1daea44728413cca00cdbe2152ccc31a1e1dacdf28971"
+    },
+    {
+      "path": "entrance-prototype/assets/preview-loading-20261010.png",
+      "bytes": 16171,
+      "sha256": "4769a3bf7ff7b29db73ed07582983350e0eadd91e62afca3951ddf6f53310304"
+    },
+    {
+      "path": "entrance-prototype/assets/reference-approved.png",
+      "bytes": 2063791,
+      "sha256": "1029eee0a4c402d796b4c3150688068e0752a64cfd2865a5caded26671f1aaac"
+    },
+    {
+      "path": "entrance-prototype/blender/export_realtime_scene.py",
+      "bytes": 16136,
+      "sha256": "fc7c234f6450900fd7c58ce298e8388441cda7ec26df2a81eee4f13e26b6191e"
+    },
+    {
+      "path": "entrance-prototype/bubble-sequence.js",
+      "bytes": 5732,
+      "sha256": "3059c3d7409054f1d916c078d486d796af53a95df59d5a9e56633f6766fd1284"
+    },
+    {
+      "path": "entrance-prototype/index.html",
+      "bytes": 6071,
+      "sha256": "cd38918c673c485f28475dac82b4f80c9678531b705d3b73283171d3f16cd010"
+    },
+    {
+      "path": "entrance-prototype/interaction.js",
+      "bytes": 6356,
+      "sha256": "860c2ba5771f882c169f57b419d6ea6c6bd6386a94685dc03c88437e757a2619"
+    },
+    {
+      "path": "entrance-prototype/README.md",
+      "bytes": 4733,
+      "sha256": "cb0b7f6c642c18fd79054fa1c785238d078a9279dc9aa837929977136d256947"
+    },
+    {
+      "path": "entrance-prototype/realtime/airship-acoustics.js",
+      "bytes": 1056,
+      "sha256": "8290da38c96fd36f0f1f41760b076b4c89da2ad21b7bfba2ddffdc76bc627581"
+    },
+    {
+      "path": "entrance-prototype/realtime/canqi-night-office.glb",
+      "bytes": 15040496,
+      "sha256": "7f8d88d206ecefb5f9e08847ffb00e80f2c0e3d75c08a5fc846b5d596813a8e3"
+    },
+    {
+      "path": "entrance-prototype/realtime/glass-sign.js",
+      "bytes": 5845,
+      "sha256": "5a131a57c773073058c68c1fdd92013203c39711f3b7dfde70e44957dc376044"
+    },
+    {
+      "path": "entrance-prototype/realtime/index.html",
+      "bytes": 1567,
+      "sha256": "a3fadbac9df9fb6fa84182f6d32e3862b48a1aee120316ba2aaed2e0d951f37e"
+    },
+    {
+      "path": "entrance-prototype/realtime/night-weather.js",
+      "bytes": 10192,
+      "sha256": "88bf471d7169671b547f25e39cb6fdbc2a13efec47ff853d981af99e6bcce4d3"
+    },
+    {
+      "path": "entrance-prototype/realtime/scene-meta.json",
+      "bytes": 3459,
+      "sha256": "b37d1eb765c8b058c365f8a66d249d1fba11aae588898cb94162d73e33b491d8"
+    },
+    {
+      "path": "entrance-prototype/realtime/scene-realtime.js",
+      "bytes": 19775,
+      "sha256": "cafe92565c3bd22b262d69979f63d96a018535f082ee88c810db90e8bfb40364"
+    },
+    {
+      "path": "entrance-prototype/realtime/styles.css",
+      "bytes": 3030,
+      "sha256": "54d6473652019f4a14c37f0cfb2f63061a2b1db35d2696bdbc2471d742bb1e6f"
+    },
+    {
+      "path": "entrance-prototype/scene-anchors.js",
+      "bytes": 2131,
+      "sha256": "14d19933afc670652d87cb803b55ece4032645fc0442cefa3a855d4fb42c7c69"
+    },
+    {
+      "path": "entrance-prototype/scene-pan.js",
+      "bytes": 2589,
+      "sha256": "a4c834d932900f3085b111251384de399d6c63c546030867418acad99315d2b5"
+    },
+    {
+      "path": "entrance-prototype/scene-pan.test.mjs",
+      "bytes": 3356,
+      "sha256": "e4f0eace64d1dbf8e6029e6c42b0a276b95ffb1f34e71918240a33f2b72d538e"
+    },
+    {
+      "path": "entrance-prototype/styles.css",
+      "bytes": 12539,
+      "sha256": "b122d027bb8169625c1231498adaccb9af5895a8229eb33e945040fe84f4b045"
+    },
+    {
+      "path": "entrance-prototype/tests/airship-acoustics.test.mjs",
+      "bytes": 1078,
+      "sha256": "9ddea4428f4414306c194d18dc4e4735f95976a2ad8ab6f9e806e2141ec942cb"
+    },
+    {
+      "path": "entrance-prototype/tests/boot-flow.test.mjs",
+      "bytes": 7344,
+      "sha256": "d49fb4da8b71480e0b697629104582dc1ad2cb0100caaba7c08db407b15872e3"
+    },
+    {
+      "path": "entrance-prototype/tests/runtime-assets.test.mjs",
+      "bytes": 1748,
+      "sha256": "97711a6d9a88fff91e08c170ea591e04e94125fa57fd665f426627db9df66834"
+    },
+    {
+      "path": "entrance-prototype/utils/BufferGeometryUtils.js",
+      "bytes": 35539,
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751"
+    },
+    {
+      "path": "entrance-prototype/vendor/GLTFLoader.js",
+      "bytes": 114739,
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a"
+    },
+    {
+      "path": "entrance-prototype/vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b9ea122bcbe8a3e4ec0ae4e708b12926fba933987433c756b27bd6df135b104"
+    },
+    {
+      "path": "entrance-prototype/vendor/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    {
+      "path": "entrance-prototype/vendor/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1016,
+      "sha256": "e9ce3f45af1b1db28509badc064785eac5cf7ea551efa226afea06b497a14553"
+    },
+    {
+      "path": "site/.gitignore",
+      "bytes": 121,
+      "sha256": "c02dca7c4872ca5d1c25855ed4de0ccfb4901322ffd9e65ffb9f5b80e596f1ff"
+    },
+    {
+      "path": "site/.nojekyll",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "site/app.js",
+      "bytes": 51776,
+      "sha256": "26722d1cc50672694c3e22d66e8d7f0992ee0aea4bd6424b2ef29187fdcc7b25"
+    },
+    {
+      "path": "site/assets/canqi-lin-cv-2026-en.pdf",
+      "bytes": 5574,
+      "sha256": "ef34da85e7207e6459742cd07a0d35f38cc220e06166fc254182e070f8a903b2"
+    },
+    {
+      "path": "site/assets/canqi-portrait.jpg",
+      "bytes": 38002,
+      "sha256": "51b1db6cd7eafeb1e49b6d0f0df3b195a56c3b8987b95e3144d26a83e66e4e01"
+    },
+    {
+      "path": "site/docs/build_cv_en.py",
+      "bytes": 8493,
+      "sha256": "817f70ee31bf17190e808399142f45fb50d546d6b5b43ad15c99b097fe596c8a"
+    },
+    {
+      "path": "site/docs/CONTENT.md",
+      "bytes": 2066,
+      "sha256": "07afe17651efaa81214ce152c5f8ea2f762edde89a9d49e1e89705296b97979a"
+    },
+    {
+      "path": "site/docs/PUBLISHING.md",
+      "bytes": 1541,
+      "sha256": "cca2bc05ff6856b21e640374f650c95ecc5e9e91c9f1b9dd345f271303fe6d27"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 2663,
+      "sha256": "2ca7a8a301a617132e5fa1fa28156e89408af86e7d6bec33f2508b0df9981b01"
+    },
+    {
+      "path": "site/README.md",
+      "bytes": 2307,
+      "sha256": "d79b4e1150e8f57b45d8def5c5abce4c2c2ae8fd8385aed66b83e5df4b946497"
+    },
+    {
+      "path": "site/styles.css",
+      "bytes": 48681,
+      "sha256": "eecc81cd01762e96dd7a166805d8885aafb439637a2a417c9135536b6c079d6b"
+    },
+    {
+      "path": "verify_snapshot.py",
+      "bytes": 712,
+      "sha256": "b45c363609f27e73766e5c3d8cbb11586cea79b76d06ac0ab3280fa06876b37d"
+    }
+  ]
+}

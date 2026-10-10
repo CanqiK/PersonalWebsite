@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171716">
+  <meta name="description" content="CANQI 燦琪 — performative installation, spatial narrative and experimental theatre. Interactive portfolio wireframe.">
+  <title>CANQI 燦琪 — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content / 跳至内容</a>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header" id="header">
+    <a class="brand" href="#main" aria-label="CANQI — home">CANQI<span>燦琪</span></a>
+    <nav class="primary" aria-label="Primary navigation">
+      <a href="#artist" data-branch="artist" data-en="As an artist" data-zh="作为艺术家">As an artist</a>
+      <a href="#mentor" data-branch="mentor" data-en="As a mentor" data-zh="作为导师">As a mentor</a>
+      <a href="#who" data-branch="who" data-en="Who am I?" data-zh="我是谁？">Who am I?</a>
+    </nav>
+    <button class="language" id="language" type="button" aria-label="切换到中文">中文</button>
+  </header>
+  <div class="context-bar" id="context-bar" hidden>
+    <nav class="breadcrumb" id="breadcrumb" aria-label="Breadcrumb"></nav>
+    <nav class="secondary" id="secondary" aria-label="Section navigation"></nav>
+  </div>
+  <main id="content" tabindex="-1"></main>
+  <footer class="site-footer" id="footer">
+    <a href="#landing" data-en="Back to the cover" data-zh="返回封面">Back to the cover</a>
+    <span>CANQI © 2026</span>
+    <details class="print-settings">
+      <summary data-en="Print settings" data-zh="印刷效果">Print settings</summary>
+      <div class="settings-inner">
+        <label><span data-en="Image treatment" data-zh="图像模式">Image treatment</span><select id="treatment"><option value="halftone">Halftone / 半调</option><option value="continuous">Grayscale / 灰阶</option></select></label>
+        <label><span class="setting-label-row"><span data-en="Dot size" data-zh="网点尺寸">Dot size</span><output id="dot-size-value" for="dot-size">3</output></span><input id="dot-size" type="range" min="2" max="10" step="0.5" value="3"></label>
+        <label><span data-en="Paper grain" data-zh="纸张颗粒">Paper grain</span><input id="grain" type="range" min="0" max="10" value="3"></label>
+      </div>
+    </details>
+  </footer>
+  <noscript><div class="noscript"><h1>CANQI 燦琪</h1><p>此交互线框需要 JavaScript。请启用 JavaScript 后刷新。</p></div></noscript>
+</body>
+</html>
