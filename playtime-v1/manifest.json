@@ -1,0 +1,127 @@
+[
+  {
+    "path": "entrance-prototype/index.html",
+    "bytes": 6071,
+    "sha256": "cd38918c673c485f28475dac82b4f80c9678531b705d3b73283171d3f16cd010"
+  },
+  {
+    "path": "entrance-prototype/styles.css",
+    "bytes": 12539,
+    "sha256": "b122d027bb8169625c1231498adaccb9af5895a8229eb33e945040fe84f4b045"
+  },
+  {
+    "path": "entrance-prototype/interaction.js",
+    "bytes": 6356,
+    "sha256": "860c2ba5771f882c169f57b419d6ea6c6bd6386a94685dc03c88437e757a2619"
+  },
+  {
+    "path": "entrance-prototype/ambience.js",
+    "bytes": 20154,
+    "sha256": "c62e6de1fcad0a4abee8e67265ac2f02939284656c2e74fea7b094909162e4dd"
+  },
+  {
+    "path": "entrance-prototype/bubble-sequence.js",
+    "bytes": 5732,
+    "sha256": "3059c3d7409054f1d916c078d486d796af53a95df59d5a9e56633f6766fd1284"
+  },
+  {
+    "path": "entrance-prototype/scene-anchors.js",
+    "bytes": 2131,
+    "sha256": "14d19933afc670652d87cb803b55ece4032645fc0442cefa3a855d4fb42c7c69"
+  },
+  {
+    "path": "entrance-prototype/scene-pan.js",
+    "bytes": 2589,
+    "sha256": "a4c834d932900f3085b111251384de399d6c63c546030867418acad99315d2b5"
+  },
+  {
+    "path": "entrance-prototype/realtime/index.html",
+    "bytes": 1567,
+    "sha256": "a3fadbac9df9fb6fa84182f6d32e3862b48a1aee120316ba2aaed2e0d951f37e"
+  },
+  {
+    "path": "entrance-prototype/realtime/styles.css",
+    "bytes": 3030,
+    "sha256": "54d6473652019f4a14c37f0cfb2f63061a2b1db35d2696bdbc2471d742bb1e6f"
+  },
+  {
+    "path": "entrance-prototype/realtime/scene-realtime.js",
+    "bytes": 19775,
+    "sha256": "cafe92565c3bd22b262d69979f63d96a018535f082ee88c810db90e8bfb40364"
+  },
+  {
+    "path": "entrance-prototype/realtime/night-weather.js",
+    "bytes": 10192,
+    "sha256": "88bf471d7169671b547f25e39cb6fdbc2a13efec47ff853d981af99e6bcce4d3"
+  },
+  {
+    "path": "entrance-prototype/realtime/glass-sign.js",
+    "bytes": 5845,
+    "sha256": "5a131a57c773073058c68c1fdd92013203c39711f3b7dfde70e44957dc376044"
+  },
+  {
+    "path": "entrance-prototype/realtime/airship-acoustics.js",
+    "bytes": 1056,
+    "sha256": "8290da38c96fd36f0f1f41760b076b4c89da2ad21b7bfba2ddffdc76bc627581"
+  },
+  {
+    "path": "entrance-prototype/realtime/scene-meta.json",
+    "bytes": 3459,
+    "sha256": "b37d1eb765c8b058c365f8a66d249d1fba11aae588898cb94162d73e33b491d8"
+  },
+  {
+    "path": "entrance-prototype/realtime/canqi-night-office.glb",
+    "bytes": 15040496,
+    "sha256": "7f8d88d206ecefb5f9e08847ffb00e80f2c0e3d75c08a5fc846b5d596813a8e3"
+  },
+  {
+    "path": "entrance-prototype/vendor/three.module.js",
+    "bytes": 603113,
+    "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+  },
+  {
+    "path": "entrance-prototype/vendor/three.core.js",
+    "bytes": 1403455,
+    "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+  },
+  {
+    "path": "entrance-prototype/vendor/GLTFLoader.js",
+    "bytes": 114739,
+    "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a"
+  },
+  {
+    "path": "entrance-prototype/vendor/LICENSE",
+    "bytes": 1081,
+    "sha256": "8b9ea122bcbe8a3e4ec0ae4e708b12926fba933987433c756b27bd6df135b104"
+  },
+  {
+    "path": "entrance-prototype/utils/BufferGeometryUtils.js",
+    "bytes": 35539,
+    "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751"
+  },
+  {
+    "path": "site/index.html",
+    "bytes": 2663,
+    "sha256": "2ca7a8a301a617132e5fa1fa28156e89408af86e7d6bec33f2508b0df9981b01"
+  },
+  {
+    "path": "site/app.js",
+    "bytes": 51776,
+    "sha256": "26722d1cc50672694c3e22d66e8d7f0992ee0aea4bd6424b2ef29187fdcc7b25"
+  },
+  {
+    "path": "site/styles.css",
+    "bytes": 48681,
+    "sha256": "eecc81cd01762e96dd7a166805d8885aafb439637a2a417c9135536b6c079d6b"
+  },
+  {
+    "path": "site/assets/canqi-portrait.jpg",
+    "bytes": 38002,
+    "sha256": "51b1db6cd7eafeb1e49b6d0f0df3b195a56c3b8987b95e3144d26a83e66e4e01"
+  },
+  {
+    "path": "site/assets/canqi-lin-cv-2026-en.pdf",
+    "bytes": 5574,
+    "sha256": "ef34da85e7207e6459742cd07a0d35f38cc220e06166fc254182e070f8a903b2"
+  }
+]

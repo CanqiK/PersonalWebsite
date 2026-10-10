@@ -1,0 +1,226 @@
+{
+  "source": "canqi-office-facing-styled.blend",
+  "camera": "Camera | right shoulder toward left",
+  "projectionRows": [
+    [
+      1.277255892753601,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      2.270677089691162,
+      -0.5056952238082886,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0009095668792725,
+      -0.20009095966815948
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0,
+      0.0
+    ]
+  ],
+  "referenceWidth": 1280,
+  "referenceHeight": 720,
+  "staticObjectsMerged": 2672,
+  "materialGroups": 81,
+  "dynamicObjects": 74,
+  "walkingWorkers": [
+    "Walking worker 1",
+    "Walking worker 2",
+    "Walking worker 3",
+    "Walking worker 4",
+    "Walking worker 5"
+  ],
+  "frontLampAnchors": [
+    {
+      "row": 0,
+      "column": 0,
+      "position": [
+        -9.2,
+        0.918,
+        -4.767
+      ]
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "position": [
+        -4.3,
+        0.918,
+        -4.767
+      ]
+    },
+    {
+      "row": 0,
+      "column": 2,
+      "position": [
+        0.1,
+        0.918,
+        -4.767
+      ]
+    },
+    {
+      "row": 0,
+      "column": 3,
+      "position": [
+        4.5,
+        0.918,
+        -4.767
+      ]
+    },
+    {
+      "row": 1,
+      "column": 0,
+      "position": [
+        -9.2,
+        0.918,
+        -9.067
+      ]
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "position": [
+        -4.3,
+        0.918,
+        -9.067
+      ]
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "position": [
+        0.1,
+        0.918,
+        -9.067
+      ]
+    },
+    {
+      "row": 1,
+      "column": 3,
+      "position": [
+        4.5,
+        0.918,
+        -9.067
+      ]
+    },
+    {
+      "row": 2,
+      "column": 0,
+      "position": [
+        -9.2,
+        0.918,
+        -13.367
+      ]
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "position": [
+        -4.3,
+        0.918,
+        -13.367
+      ]
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "position": [
+        0.1,
+        0.918,
+        -13.367
+      ]
+    },
+    {
+      "row": 2,
+      "column": 3,
+      "position": [
+        4.5,
+        0.918,
+        -13.367
+      ]
+    },
+    {
+      "row": 3,
+      "column": 0,
+      "position": [
+        -9.2,
+        0.918,
+        -17.667
+      ]
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "position": [
+        -4.3,
+        0.918,
+        -17.667
+      ]
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "position": [
+        0.1,
+        0.918,
+        -17.667
+      ]
+    },
+    {
+      "row": 3,
+      "column": 3,
+      "position": [
+        4.5,
+        0.918,
+        -17.667
+      ]
+    }
+  ],
+  "characterParts": [
+    "CANQI | head",
+    "CANQI | chest",
+    "CANQI | left arm",
+    "CANQI | right arm",
+    "CANQI | lower"
+  ],
+  "cameraPullbackMetres": 0.25,
+  "cameraRaiseMetres": 0.38,
+  "cameraExtraDownTiltDegrees": 3,
+  "bubbleAnchors": {
+    "artist": [
+      696.8,
+      262.82
+    ],
+    "designer": [
+      519.23,
+      361.89
+    ],
+    "mentor": [
+      1092.92,
+      301.52
+    ],
+    "director": [
+      1148.71,
+      467.42
+    ],
+    "entry": [
+      800.55,
+      409.05
+    ]
+  },
+  "canqiBox": [
+    138.08,
+    260.43,
+    312.89,
+    755.74
+  ]
+}

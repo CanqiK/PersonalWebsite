@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070d18">
+  <title>CANQI — Live 3D study</title>
+  <link rel="stylesheet" href="styles.css?v=playtime-v1">
+  <script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
+  <script type="module" src="scene-realtime.js?v=playtime-v1"></script>
+</head>
+<body>
+  <main class="viewport" aria-label="CANQI live 3D night office study">
+    <div class="stage" id="stage">
+      <canvas id="scene" aria-label="Live 3D view of CANQI overlooking the night office"></canvas>
+    </div>
+    <div class="chrome">
+      <div class="identity"><span class="identity-mark" aria-hidden="true"></span><span>CANQI</span><small>LIVE 3D STUDY</small></div>
+      <a class="compare" href="../">VIEW CURRENT ENTRANCE <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="status" id="status" role="status">LOADING OFFICE MODEL</div>
+    <div class="calibration" id="calibration" aria-label="3D scene preview controls" hidden>
+      <label for="light-level">LIGHT <output id="light-value" for="light-level">1.25</output></label>
+      <input id="light-level" type="range" min="0.8" max="1.8" step="0.05" value="1.25" aria-label="Scene brightness">
+      <button id="motion-toggle" type="button" aria-pressed="true">MOTION ON</button>
+    </div>
+    <div class="metrics" id="metrics" aria-label="Rendering metrics" hidden></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1422">
+  <meta name="description" content="CANQI — an interactive low-poly entrance scene.">
+  <title>CANQI — Entrance prototype</title>
+  <style>html,body{margin:0;background:#000}#entrance:not(.scene-entered){clip-path:circle(0 at 50% 50%)}.boot-loader{position:fixed;inset:0;z-index:30;background:#000}</style>
+  <link rel="stylesheet" href="styles.css?v=playtime-v1">
+  <script type="module" src="interaction.js?v=playtime-v1"></script>
+</head>
+<body>
+  <section class="boot-loader" id="boot-loader" aria-label="Loading the 3D office">
+    <div class="boot-computer" id="boot-computer">
+      <div class="boot-monitor">
+        <div class="boot-screen">
+          <p class="boot-title">CANQI</p>
+          <p id="boot-status" role="status">CONNECTING TO THE OFFICE</p>
+          <div class="boot-progress" id="boot-progress" role="progressbar" aria-label="3D scene loading" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="boot-progress-fill"></span></div>
+          <span class="boot-percent" id="boot-percent">0%</span>
+          <button id="boot-sound" class="boot-sound" type="button">CLICK FOR SOUND</button>
+        </div>
+        <span class="boot-led" aria-hidden="true"></span>
+      </div>
+      <div class="boot-stand" aria-hidden="true"></div>
+      <div class="boot-base" aria-hidden="true"></div>
+      <div class="boot-keyboard" aria-hidden="true"></div>
+    </div>
+    <button class="boot-retry" id="boot-retry" type="button" hidden>RETRY LOADING</button>
+    <noscript>This scene needs JavaScript to load.</noscript>
+  </section>
+  <main class="entrance scene-3d-pending" id="entrance" aria-label="CANQI entrance scene" aria-busy="true" tabindex="-1" inert>
+    <div class="scene-stage" id="scene-stage">
+    <iframe class="realtime-scene" id="realtime-scene" src="realtime/?embed=1&v=playtime-v1" title="CANQI 3D office scene" aria-hidden="true" tabindex="-1" loading="eager"></iframe>
+    <div class="scene-grain" aria-hidden="true"></div>
+
+    <button class="canqi-target" id="canqi-target" type="button" aria-label="Show information about Canqi" aria-expanded="false"></button>
+
+    <div class="bubbles" id="bubbles" aria-label="Office windows">
+      <button hidden class="window worker-bubble artist" type="button" data-role="artist" aria-label="Break artist question">
+        <span class="window-top"><span class="window-close" aria-hidden="true">×</span></span><span class="window-body">artist?</span>
+      </button>
+      <button hidden class="window worker-bubble designer" type="button" data-role="designer" aria-label="Break designer question">
+        <span class="window-top"><span class="window-close" aria-hidden="true">×</span></span><span class="window-body">designer?</span>
+      </button>
+      <a hidden class="window worker-bubble entry" id="entry-link" href="../site/index.html#main" aria-label="Got Him! Enter the main website">
+        <span class="window-top"><span class="window-close" aria-hidden="true">×</span></span><span class="window-body">Got Him!</span>
+      </a>
+      <button hidden class="window worker-bubble mentor" type="button" data-role="mentor" aria-label="Break mentor question">
+        <span class="window-top"><span class="window-close" aria-hidden="true">×</span></span><span class="window-body">mentor?</span>
+      </button>
+      <button hidden class="window worker-bubble director" type="button" data-role="director" aria-label="Break director question">
+        <span class="window-top"><span class="window-close" aria-hidden="true">×</span></span><span class="window-body">director?</span>
+      </button>
+    </div>
+
+    <section class="window intro-window" id="intro-window" aria-label="About Canqi" hidden>
+      <div class="window-top"><span>CANQI</span><button class="window-close-button" id="intro-close" type="button" aria-label="Close Canqi introduction">×</button></div>
+      <div class="intro-copy" tabindex="0" aria-label="Canqi practice statement">
+        <p>His practice engages deeply with the laws of the natural world, the humanities, and social relations, examining how these forces intersect within spatial installations and human–computer interaction. By exploring the narrative and experiential potential of space, CANQI constructs environments that prompt viewers to rethink their relationship to technology, ecology, and the structures that shape contemporary life.</p>
+        <p>The diversity of elements in his work invites interpretation from multiple theoretical perspectives, revealing a spectrum of artistic singularities. Through this multiplicity, CANQI’s creations articulate a distinct and evolving artistic language that continues to expand across disciplines and modes of spatial storytelling.</p>
+      </div>
+    </section>
+    </div>
+    <p class="scene-credit"><span>SCENE REFERENCE</span> Jacques Tati, dir.,
+      <cite><a href="https://www.cinematheque.qc.ca/en/cinema/playtime/" target="_blank" rel="noopener noreferrer">PlayTime</a></cite>
+      (France/Italy, 1967). French theatrical release:
+      <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1363.html" target="_blank" rel="noopener noreferrer">16 December 1967</a>.
+    </p>
+    <button class="sound-toggle" id="sound-toggle" type="button" aria-label="Enable ambient sound" aria-pressed="false" data-sound="off">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true">
+        <path d="M3 9h4l5-4v14l-5-4H3z"/>
+        <path class="sound-waves" d="M16 8c2 2 2 6 0 8m3-11c4 4 4 10 0 14"/>
+        <path class="sound-slash" d="M16 8l5 8"/>
+      </svg>
+      <span class="sound-label">ENABLE SOUND</span>
+    </button>
+    <p class="scene-pan-hint" aria-hidden="true">Swipe to explore →</p>
+  </main>
+</body>
+</html>

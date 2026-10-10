@@ -1,0 +1,29 @@
+:root { color-scheme: dark; font-family: "Courier New", monospace; background: #070d18; color: #e5e7e4; }
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+.viewport { position: relative; width: 100%; height: 100dvh; overflow-x: auto; overflow-y: hidden; background: #070d18; }
+.stage { position: relative; height: 100%; width: max(100%, 177.77778dvh); background: #000; }
+.stage::after { content: ''; pointer-events: none; position: absolute; inset: 0; background: radial-gradient(ellipse at 46% 38%, transparent 32%, #03081124 100%); }
+canvas { width: 100%; height: 100%; display: block; }
+.chrome { pointer-events: none; position: fixed; z-index: 2; inset: 0 0 auto; height: 76px; padding: 25px 31px; display: flex; justify-content: space-between; align-items: flex-start; background: linear-gradient(#060b14bb, transparent); }
+.identity, .compare { display: inline-flex; gap: 12px; align-items: center; color: #e5e7e4; letter-spacing: .12em; font-size: 12px; }
+.identity-mark { width: 7px; height: 7px; border: 1px solid #c3cbc8; transform: rotate(45deg); }
+.identity small { color: #9da8aa; font-size: 10px; margin-left: 9px; }
+.compare { pointer-events: auto; text-decoration: none; padding: 7px 0; border-bottom: 1px solid #9ba3a4; }
+.compare:hover, .compare:focus-visible { color: #fff; border-color: #fff; }
+.status, .metrics { position: fixed; z-index: 2; bottom: 25px; color: #bac3c6; letter-spacing: .1em; font-size: 10px; background: #07101a9c; border: 1px solid #53616a70; padding: 9px 11px; }
+.status { left: 31px; }
+.metrics { right: 31px; }
+.status[hidden], .metrics[hidden] { display: none; }
+.calibration { position: fixed; z-index: 3; left: 31px; bottom: 25px; display: flex; align-items: center; gap: 12px; min-height: 33px; padding: 5px 9px; color: #d7e1e3; background: #07101adc; border: 1px solid #62738196; font-size: 10px; letter-spacing: .09em; }
+.calibration[hidden] { display: none; }
+.calibration label { white-space: nowrap; }
+.calibration output { color: #fff; margin-left: 3px; font-variant-numeric: tabular-nums; }
+.calibration input { width: 118px; height: 16px; margin: 0; accent-color: #a8bdcb; cursor: pointer; }
+.calibration button { min-height: 22px; padding: 2px 8px; border: 1px solid #8495a1; color: #e0e7e9; background: transparent; font: inherit; letter-spacing: inherit; cursor: pointer; }
+.calibration button:hover, .calibration button:focus-visible { background: #314458; }
+.calibration input:focus-visible, .compare:focus-visible { outline: 2px solid #d9e9f3; outline-offset: 3px; }
+@media (max-width: 700px) { .chrome { padding: 17px 18px; } .identity small { display: none; } .compare { font-size: 9px; } .status, .calibration { left: 18px; } .metrics { right: 18px; bottom: 72px; } .calibration { gap: 7px; } .calibration input { width: 78px; } }
+.embedded .chrome,.embedded .status,.embedded .calibration,.embedded .metrics{display:none!important}
+.embedded .viewport{overflow:hidden}
+.embedded .stage{width:100%;height:100%}

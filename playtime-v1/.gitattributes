@@ -1,0 +1,5 @@
+* -text
+*.pdf binary
+*.glb binary
+*.jpg binary
+vendor/** -whitespace
