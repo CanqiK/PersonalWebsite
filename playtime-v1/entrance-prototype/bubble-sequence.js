@@ -74,11 +74,22 @@ function spark(node) {
   setTimeout(() => flash.remove(), 450);
 }
 
-bubbles.forEach(state => {
-  state.node.addEventListener('pointerenter', () => { state.hover = true; });
+let lastHoverSound = -Infinity;
+function selectBubble(state) {
+  if (state.hover || state.focus || performance.now() - lastHoverSound < 150) return;
+  lastHoverSound = performance.now();
+  bubbleSound(state.node, 'hover');
+}
+[...bubbles,reward].forEach(state => {
+  state.node.addEventListener('pointerenter', event => {
+    if (event.pointerType === 'touch') return;
+    selectBubble(state); state.hover = true;
+  });
   state.node.addEventListener('pointerleave', () => { state.hover = false; state.elapsed = 0; });
-  state.node.addEventListener('focus', () => { state.focus = true; });
+  state.node.addEventListener('focus', () => { selectBubble(state); state.focus = true; });
   state.node.addEventListener('blur', () => { state.focus = false; state.elapsed = 0; });
+});
+bubbles.forEach(state => {
   state.node.addEventListener('click', () => {
     if (state.phase === 'broken') return;
     bubbleSound(state.node, 'break');
@@ -103,7 +114,7 @@ setInterval(() => {
   if (document.hidden || !root.classList.contains('scene-ready') || root.classList.contains('scene-3d-pending')) return;
   const introOpen = root.classList.contains('canqi-active');
   for (const state of [...bubbles, reward]) {
-    if (state.phase === 'broken' || (introOpen && state !== reward)) continue;
+    if (state.phase === 'broken' || (introOpen && state !== reward) || root.inert) continue;
     if (state.phase === 'visible' && (state.hover || state.focus)) continue;
     state.elapsed += delta;
     if (state.phase === 'waiting' && state.elapsed >= state.delay) begin(state);

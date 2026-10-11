@@ -1,51 +1,35 @@
-# CANQI 燦琪 — Personal Website
+# CANQI — Portfolio
 
-Personal portfolio of Canqi Lin / 林灿琪. This repository contains a static HTML wireframe for the public site.
+Current public runtime, updated 11 October 2026.
 
-**Website:** [canqik.github.io/PersonalWebsite](https://canqik.github.io/PersonalWebsite/)
+- Website: https://canqik.github.io/PersonalWebsite/
+- Entrance: https://canqik.github.io/PersonalWebsite/playtime-v1/entrance-prototype/
+- Main page: https://canqik.github.io/PersonalWebsite/playtime-v1/site/index.html#main
 
-The current release is an interactive draft. Its artwork is procedural layout imagery labelled as a placeholder. Project documentation, CV entries, and contact details are incomplete and must be checked before being presented as final content.
+The established `playtime-v1` URL is kept as the current preview address.
+Earlier versions remain recoverable through Git history and the original version tag.
 
-## Explore
+## Current version
 
-```text
-Landing → Main
-  ├─ As an artist → Works → Project details
-  ├─ As a mentor → Section in progress
-  └─ Who am I?
-       ├─ About
-       ├─ CV
-       └─ Have you seen Canqi? (Contact)
-```
+An interactive low-poly office entrance with synthesized sound, bubble hit feedback,
+character-only pixel/glitch effects, and a surveillance-to-poster transition into
+the portfolio. The homepage uses a monochrome electronic treatment. Some seated
+office workers now have long hair and adjusted silhouettes. About and CV share a
+scrolling page; the CV links to the public English PDF. Work imagery still includes
+labeled abstract placeholders. Reduced-motion preferences are supported.
 
-The site starts in English and offers a Chinese switch. The work index has six selected titles, category filters, and square halftone studies. Print settings allow the reader to compare halftone, grayscale, dot size, and grain. Motion respects `prefers-reduced-motion`.
+## Local preview
 
-## Run locally
+From this repository root, run `python -m http.server 4187`, then open
+`http://localhost:4187/playtime-v1/entrance-prototype/`.
+No build step or package installation is needed; Three.js and its license are included.
 
-Open `index.html`, or serve this directory with:
+## Files and publishing
 
-```sh
-python -m http.server 4173
-```
+The live runtime is in `playtime-v1/entrance-prototype/` and `playtime-v1/site/`.
+The root `index.html` forwards visitors to the entrance and preserves old portfolio
+hash links. `playtime-v1/manifest.json` records public asset sizes and SHA-256 hashes.
+GitHub Pages publishes branch `main`, folder `/`; see `docs/PUBLISHING.md`.
 
-Then visit `http://localhost:4173/`. No dependencies or build step are required. Routes use URL fragments such as `#works`, so deep links work under a GitHub Pages project path.
-
-## Files
-
-| File | Purpose |
-| --- | --- |
-| `index.html` | Page shell, primary and secondary navigation, print controls |
-| `styles.css` | Editorial layout, print texture, responsive styles |
-| `app.js` | Routes, bilingual copy, project index, filters, Canvas halftone |
-| `.nojekyll` | Keeps GitHub Pages from applying Jekyll processing |
-| `docs/CONTENT.md` | What is verified, provisional, and still missing |
-| `docs/PUBLISHING.md` | Deployment and maintenance instructions |
-
-## Editing
-
-- Page text and project data are in `app.js`; keep English and Chinese variants together.
-- Visual layout and breakpoints are in `styles.css`.
-- Replace `data-study` canvases with authorized images when project media is ready. Keep actual work colors on detail pages; use print effects selectively.
-- Update `docs/CONTENT.md` as facts, permissions, and credits are confirmed.
-
-This repository is the public site source. Do not commit original portfolios, private correspondence, application materials, raw media, or credentials.
+Only public runtime assets are included. Blender sources, reference images, raw
+portfolios, maintenance scripts and local backups remain outside this checkout.

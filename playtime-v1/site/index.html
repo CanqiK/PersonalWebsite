@@ -6,10 +6,24 @@
   <meta name="theme-color" content="#171716">
   <meta name="description" content="CANQI 燦琪 — performative installation, spatial narrative and experimental theatre. Interactive portfolio wireframe.">
   <title>CANQI 燦琪 — Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <style>
+    #home-intro{display:none}
+    html.home-intro-pending{background:#000}
+    .home-intro-pending body{visibility:hidden}
+    .home-intro-pending #home-intro{display:block;visibility:visible;position:fixed;inset:0;z-index:40;background:#000}
+  </style>
+  <script>
+    if(new URLSearchParams(location.search).get('intro')==='canqi'&&['','#main','#landing'].includes(location.hash)){
+      document.documentElement.classList.add('home-intro-pending');
+      window.homeIntroFallback=setTimeout(()=>document.documentElement.classList.remove('home-intro-pending'),6000);
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css?v=handoff-1">
+  <link rel="stylesheet" href="digital-home.css?v=mono-fast-4">
+  <script src="app.js?v=mono-fast-4" defer></script>
 </head>
 <body>
+  <div id="home-intro" aria-hidden="true"></div>
   <a class="skip" href="#content">Skip to content / 跳至内容</a>
   <div class="grain" aria-hidden="true"></div>
   <header class="site-header" id="header">
@@ -27,7 +41,7 @@
   </div>
   <main id="content" tabindex="-1"></main>
   <footer class="site-footer" id="footer">
-    <a href="#landing" data-en="Back to the cover" data-zh="返回封面">Back to the cover</a>
+    <a href="../entrance-prototype/" data-en="Back to the entrance" data-zh="返回进入页">Back to the entrance</a>
     <span>CANQI © 2026</span>
     <details class="print-settings">
       <summary data-en="Print settings" data-zh="印刷效果">Print settings</summary>

@@ -1,0 +1,27 @@
+.signal-handoff{position:fixed;inset:0;z-index:50;overflow:hidden;isolation:isolate;cursor:wait;color:#cdecc2;background:#1020321c}
+.signal-rgb-defs{position:absolute;width:0;height:0;overflow:hidden}
+.signal-monitor{position:absolute;inset:clamp(24px,6vw,90px);z-index:2;font:bold 11px/1.4 "Courier New",monospace;letter-spacing:.1em;text-shadow:2px 0 #bc6fa887,-2px 0 #6fd8dc87}
+.signal-corner{position:absolute;width:clamp(28px,4vw,58px);height:clamp(28px,4vw,58px);border:solid #cdecc2;border-width:0;filter:drop-shadow(3px 0 #c879b5) drop-shadow(-3px 0 #71d5dc);clip-path:polygon(0 0,100% 0,100% calc(100% - 4px),calc(100% - 4px) calc(100% - 4px),calc(100% - 4px) 100%,0 100%)}
+.signal-corner.tl{top:0;left:0;border-top-width:4px;border-left-width:4px}
+.signal-corner.tr{top:0;right:0;border-top-width:4px;border-right-width:4px}
+.signal-corner.bl{bottom:0;left:0;border-bottom-width:4px;border-left-width:4px}
+.signal-corner.br{bottom:0;right:0;border-bottom-width:4px;border-right-width:4px}
+.signal-camera{position:absolute;top:12px;left:16px}.signal-rec{position:absolute;top:12px;right:16px}.signal-caption{position:absolute;bottom:14px;left:16px}
+.signal-noise,.signal-scan,.signal-tear,.signal-black{position:absolute;inset:0;width:100%;height:100%}
+.signal-camera,.signal-rec,.signal-caption{padding:4px 6px;background:#0c192bc9}
+.signal-caption small{font-size:9px;line-height:1.8;color:#80d3d1}
+.signal-palette{position:absolute;right:16px;bottom:18px;width:80px;height:8px;background:linear-gradient(90deg,#cdecc2 0 25%,#74d4d6 25% 50%,#c879b5 50% 75%,#263d59 75%);box-shadow:4px 4px #081324}
+.signal-noise{opacity:.28;image-rendering:pixelated;mix-blend-mode:screen}
+.signal-scan{background:repeating-linear-gradient(0deg,#050e2455 0 1px,transparent 1px 4px);opacity:.7}
+.signal-scan::after{content:"";position:absolute;left:0;right:0;top:-30%;height:25%;background:linear-gradient(transparent 0 42%,#74d4d626 42% 47%,#c879b526 47% 52%,#050e2480 52% 62%,transparent 62%);animation:signal-roll 1s steps(14,end) both}
+.signal-tear{background:repeating-linear-gradient(0deg,transparent 0 28px,#71d5dc55 28px 32px,#c879b533 32px 36px,transparent 36px 88px);clip-path:inset(43% 0 46%);animation:signal-tear 1s steps(1,end) both}
+.signal-black{z-index:3;background:#000;animation:signal-blackout 1s linear both}
+.is-transmitting .scene-stage{filter:url(#signal-rgb) saturate(1.45) contrast(1.15) brightness(.85);animation:signal-offset 1s steps(1,end) both;pointer-events:none}
+@keyframes signal-roll{to{transform:translateY(600%)}}
+@keyframes signal-offset{0%,26%,55%{transform:translateX(0)}24%{transform:translateX(-3px)}53%{transform:translateX(5px)}72%{transform:translate(-8px,2px)}80%{transform:translateX(4px)}88%,100%{transform:translateX(0)}}
+@keyframes signal-tear{0%,23%{clip-path:inset(43% 0 53%);transform:translateX(-8px)}24%,52%{clip-path:inset(19% 0 72%);transform:translateX(12px)}53%,71%{clip-path:inset(63% 0 25%);transform:translateX(-18px)}72%,87%{clip-path:inset(29% 0 39%);transform:translateX(15px)}88%,100%{clip-path:inset(0);transform:none}}
+@keyframes signal-blackout{0%,70%{opacity:0}86%{opacity:.65}100%{opacity:1}}
+.signal-handoff-reduced .signal-monitor,.signal-handoff-reduced .signal-noise,.signal-handoff-reduced .signal-scan,.signal-handoff-reduced .signal-tear{display:none}
+.signal-handoff-reduced .signal-black{animation:signal-soft-blackout .2s linear both}
+@keyframes signal-soft-blackout{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.is-transmitting .scene-stage{animation:none;filter:none}.signal-monitor,.signal-noise,.signal-scan,.signal-tear{display:none}.signal-black{animation:signal-soft-blackout .2s linear both}}

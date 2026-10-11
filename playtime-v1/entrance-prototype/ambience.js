@@ -1,3 +1,4 @@
+import { playFeedback } from '../site/interaction-audio.js?v=feedback-2';
 const button = document.getElementById('sound-toggle');
 const label = button.querySelector('.sound-label');
 const realtimeFrame = document.getElementById('realtime-scene');
@@ -390,6 +391,15 @@ entrance.addEventListener('scene:entered', () => {
   sceneEntered = true;
   if (!userMuted) startSound();
 });
+entrance.addEventListener('scene:leaving', () => {
+  if (engine) engine.master.gain.setTargetAtTime(0, engine.context.currentTime, .09);
+});
+entrance.addEventListener('scene:handoff', () => {
+  try { sessionStorage.setItem('canqi-intro-sound', !userMuted && engine?.context.state === 'running' ? 'on' : 'off'); } catch {}
+});
+entrance.addEventListener('scene:returned', () => {
+  if (!userMuted) startSound();
+});
 
 document.getElementById('entrance').addEventListener('scene:bubble-sound', event => {
   if (!engine || !audible || document.hidden) return;
@@ -404,6 +414,11 @@ document.getElementById('entrance').addEventListener('scene:bubble-sound', event
   if (kind === 'target') {
     const duration = playTargetFound(context, panner, now);
     setTimeout(() => panner.disconnect(), (duration + .4) * 1000);
+    return;
+  }
+  if (kind === 'hover' || kind === 'break') {
+    playFeedback(context,panner,kind,strength);
+    setTimeout(() => panner.disconnect(), 600);
     return;
   }
   playTone(context, panner, now, opening ? 740 : 480, .12, .088 * strength);

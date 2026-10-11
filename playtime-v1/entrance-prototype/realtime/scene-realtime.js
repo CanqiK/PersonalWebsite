@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from '../vendor/GLTFLoader.js';
 import { createNightWeather } from './night-weather.js?v=playtime-v1-cursors';
+import { createCharacterGlitch } from './character-glitch.js?v=mono-fast-4';
 const embedded = new URLSearchParams(location.search).has('embed');
 document.documentElement.classList.toggle('embedded', embedded);
 
@@ -94,6 +95,7 @@ let cityWindows = [];
 let walkers = [];
 let walkerLimbs = [];
 let weather;
+let portraitGlitch;
 let weatherTime = 0;
 let lastFrame = 0;
 const tunedMaterials = new Set();
@@ -117,6 +119,19 @@ function receivePointer(data) {
   gaze.y = THREE.MathUtils.clamp(data.y, -1, 1);
 }
 addEventListener('message', event => {
+  if (embedded && event.origin === location.origin && event.source === window.parent &&
+      event.data?.type === 'canqi:portrait-glitch') {
+    portraitGlitch?.setActive(event.data.active === true);
+    return;
+  }
+  if (embedded && event.origin === location.origin && event.source === window.parent &&
+      event.data?.type === 'canqi:signal-mode') {
+    const signal = event.data.active === true;
+    renderer.setPixelRatio(signal ? Math.min(.6,640/stage.clientWidth) : Math.min(devicePixelRatio,1.5));
+    renderer.setSize(stage.clientWidth,stage.clientHeight,false);
+    canvas.style.imageRendering = signal ? 'pixelated' : 'auto';
+    return;
+  }
   if (embedded && event.origin === location.origin && event.source === window.parent &&
       event.data?.type === 'canqi:pointer') receivePointer(event.data);
 });
@@ -250,7 +265,7 @@ function update(t) {
         Math.sin(weatherTime * 4.3 + phase) * pace;
     }
   }
-  renderer.render(scene, camera);
+  if (!portraitGlitch?.render(time)) renderer.render(scene, camera);
   requestAnimationFrame(update);
 }
 
@@ -261,8 +276,8 @@ async function load() {
   try {
     reportProgress(5, 'LOADING THE OFFICE');
     const [meta, gltf] = await Promise.all([
-      fetch('./scene-meta.json?v=playtime-v1').then(response => { if (!response.ok) throw new Error('Camera metadata missing'); return response.json(); }),
-      new GLTFLoader().loadAsync('./canqi-night-office.glb?v=playtime-v1', event => {
+      fetch('./scene-meta.json?v=workers-5').then(response => { if (!response.ok) throw new Error('Camera metadata missing'); return response.json(); }),
+      new GLTFLoader().loadAsync('./canqi-night-office.glb?v=workers-5', event => {
         if (event.lengthComputable && event.total > 0) {
           reportProgress(5 + event.loaded / event.total * 75, 'LOADING THE OFFICE');
         } else reportProgress(5, 'RECEIVING THE OFFICE');
@@ -358,11 +373,14 @@ async function load() {
       }
     });
 
+    portraitGlitch = createCharacterGlitch(renderer, scene, camera, canqiParts, reducedMotion);
     addAisleWalkers();
     reportProgress(92, 'WARMING UP THE LIGHTS');
     await new Promise(requestAnimationFrame);
     if (renderer.compileAsync) await renderer.compileAsync(scene, camera);
     fit();
+    await portraitGlitch.warmup();
+    renderer.render(scene, camera);
     // Wait for the first rendered frame before allowing the parent to reveal it.
     await new Promise(requestAnimationFrame);
     sceneStartTime = performance.now() / 1000;

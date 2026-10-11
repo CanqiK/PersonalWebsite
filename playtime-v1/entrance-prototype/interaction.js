@@ -88,6 +88,7 @@ realtimeFrame.addEventListener('error', showLoadError);
 function showIntro() {
   if (!intro.hidden) return;
   root.classList.add('canqi-active');
+  realtimeFrame.contentWindow?.postMessage({type:'canqi:portrait-glitch',active:true},location.origin);
   intro.hidden = false;
   canqiTarget.setAttribute('aria-expanded', 'true');
   root.dispatchEvent(new CustomEvent('scene:bubble-sound', { detail: { kind: 'open', pan: -.65, level: .6 } }));
@@ -95,12 +96,17 @@ function showIntro() {
 function hideIntro() {
   if (intro.hidden) return;
   root.classList.remove('canqi-active');
+  realtimeFrame.contentWindow?.postMessage({type:'canqi:portrait-glitch',active:false},location.origin);
   intro.hidden = true;
   canqiTarget.setAttribute('aria-expanded', 'false');
   root.dispatchEvent(new CustomEvent('scene:bubble-sound', { detail: { kind: 'close', pan: -.65, level: .6 } }));
 }
 canqiTarget.addEventListener('mouseenter', showIntro);
 canqiTarget.addEventListener('mouseleave', hideIntro);
+canqiTarget.addEventListener('focus',showIntro);
+canqiTarget.addEventListener('blur',hideIntro);
+canqiTarget.addEventListener('click',showIntro);
+addEventListener('blur',hideIntro);
 introClose.addEventListener('click', hideIntro);
 addEventListener('keydown', (event) => {
   if (event.key === 'Escape') hideIntro();
@@ -133,7 +139,9 @@ root.addEventListener('pointerleave', clearPointer);
 root.addEventListener('scroll', queuePointer, { passive: true });
 addEventListener('blur', clearPointer);
 
-import './bubble-sequence.js?v=playtime-v1';
+import './bubble-sequence.js?v=feedback-2';
 import './scene-anchors.js?v=playtime-v1';
 import './scene-pan.js';
-import './ambience.js?v=playtime-v1';
+import './ambience.js?v=feedback-2';
+import './exit-transition.js?v=feedback-2';
+import './hit-feedback.js?v=digital-3';

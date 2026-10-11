@@ -56,7 +56,7 @@
   let homePaperTimers = [];
   let homeTouchStart = null;
   let suppressHomeClickUntil = 0;
-  let landingTransition = null;
+  let homeIntroTransition = null;
   const titleOf = w => lang === 'zh' ? w.zh : w.title;
   const art = (n, label = '') => `<canvas data-study="${n}" role="img" aria-label="${label || t('Abstract halftone composition — image placeholder, not project documentation','抽象半调图形 — 图像占位，非作品记录')}"></canvas>`;
   const caption = () => `<figcaption class="image-caption"><span>${t('IMAGE STUDY / PLACEHOLDER','图像实验 / 占位图')}</span><span>CANQI</span></figcaption>`;
@@ -81,61 +81,83 @@
     const underlay=`<div class="paper-underlay paper-underlay-back" aria-hidden="true"><span class="underlay-masthead">CANQI / ${t('PROJECT ARCHIVE','项目档案')}</span><span class="underlay-frame"></span><span class="underlay-line long"></span><span class="underlay-line"></span><span class="underlay-line short"></span><span class="underlay-side-frame"></span><span class="underlay-footer">${t('IMAGE / TEXT / PROCESS','图像 / 文字 / 过程')}</span></div>`;
     return `<div class="paper-stack" id="home-paper-stack" role="region" tabindex="0" aria-label="${t('Featured newspapers. Scroll, swipe horizontally or use left and right arrow keys to turn.','精选项目报纸。滚动、左右滑动或按左右方向键翻页。')}">${underlay}<div class="paper-underlay paper-underlay-middle" aria-hidden="true"><span class="underlay-masthead">CANQI / ${t('SELECTED WORKS','精选作品')}</span><span class="underlay-frame"></span><span class="underlay-line long"></span><span class="underlay-line"></span><span class="underlay-line short"></span><span class="underlay-side-frame"></span><span class="underlay-footer">${t('STUDY / DOCUMENT / INDEX','实验 / 记录 / 索引')}</span></div><div class="home-paper-front" id="home-paper-front">${coverSheet(featuredWorks[homePaperIndex])}</div></div>`;
   }
-  function landing() {
-    return `<section class="landing"><div class="landing-top"><span>CANQI / 燦琪</span><span>${t('AN ARTIST’S PERSONAL INDEX','一位艺术家的个人索引')}</span></div>
-    <a class="entrance" href="#main" aria-label="${t('Enter CANQI portfolio','进入燦琪的个人网站')}"><span class="mini-cover"><strong>CANQI</strong>${art(2)}<small><span>燦琪 / SELECTED WORKS</span><span>2026</span></small></span><span class="enter-label">${t('Enter the index','进入个人索引')}${arrow}</span></a>
-    <h1 class="landing-note">${t('Art, space, and everything in between.','艺术、空间，以及两者之间。')}</h1></section>`;
-  }
-  function clearLandingTransition() {
-    if (!landingTransition) return;
-    landingTransition.timers.forEach(clearTimeout);
-    landingTransition.overlay.remove();
+  function clearHomeIntro() {
+    if (!homeIntroTransition) return;
+    const state = homeIntroTransition;
+    homeIntroTransition = null;
+    state.animations.forEach(animation => animation.cancel());
+    state.audio?.dispose();
+    state.overlay.remove();
     content.classList.remove('home-arriving','home-arrived');
-    content.querySelector('.landing')?.classList.remove('is-departing');
-    landingTransition = null;
+    document.documentElement.classList.remove('home-intro-pending','home-intro-active','home-intro-revealing');
+    state.locked.forEach(([element,inert]) => { element.inert = inert; });
   }
-  function enterFromLanding(event) {
-    if (currentRoute !== 'landing' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    event.preventDefault();
-    if (landingTransition) return;
-    const entrance = event.currentTarget;
-    const source = entrance.querySelector('.mini-cover');
-    const rect = source.getBoundingClientRect();
-    const overlay = document.createElement('div');
-    overlay.className = 'entrance-transition';
-    overlay.setAttribute('aria-hidden','true');
-    overlay.style.left = `${rect.left}px`;
-    overlay.style.top = `${rect.top}px`;
-    overlay.style.width = `${source.offsetWidth}px`;
-    overlay.style.height = `${source.offsetHeight}px`;
-    overlay.style.setProperty('--move-x',`${innerWidth / 2 - (rect.left + rect.width / 2)}px`);
-    overlay.style.setProperty('--move-y',`${innerHeight / 2 - (rect.top + rect.height / 2)}px`);
-    overlay.style.setProperty('--grow',String(Math.min(1.9,Math.max(1.15,Math.min(innerWidth * .86,540) / source.offsetWidth))));
-    const copy = source.cloneNode(true);
-    const originalCanvas = source.querySelector('canvas');
-    const copiedCanvas = copy.querySelector('canvas');
-    if (originalCanvas && copiedCanvas) {
-      copiedCanvas.width = originalCanvas.width;
-      copiedCanvas.height = originalCanvas.height;
-      copiedCanvas.getContext('2d')?.drawImage(originalCanvas,0,0);
-    }
-    overlay.append(copy);
-    document.body.append(overlay);
-    landingTransition = {overlay,timers:[]};
-    const later = (callback,delay) => landingTransition?.timers.push(setTimeout(callback,delay));
-    content.querySelector('.landing')?.classList.add('is-departing');
-    requestAnimationFrame(()=>overlay.classList.add('is-growing'));
-    later(()=>{
+  async function startHomeIntro() {
+    const html = document.documentElement;
+    if (!html.classList.contains('home-intro-pending')) return;
+    clearTimeout(window.homeIntroFallback);
+    // Consume the handoff marker so reload and ordinary home navigation stay direct.
+    const url = new URL(location.href);
+    url.searchParams.delete('intro');
+    url.hash = 'main';
+    history.replaceState(null,'',url);
+    const overlay = $('#home-intro');
+    const state = {overlay,animations:[],locked:[content,$('#header'),$('#footer')].map(element=>[element,element.inert])};
+    let audioEnabled = true;
+    try {
+      audioEnabled = sessionStorage.getItem('canqi-intro-sound') !== 'off';
+      sessionStorage.removeItem('canqi-intro-sound');
+    } catch {}
+    homeIntroTransition = state;
+    const animate = (element,frames,options) => {
+      const animation = element.animate(frames,{fill:'forwards',...options});
+      state.animations.push(animation);
+      return animation.finished;
+    };
+    try {
+      overlay.innerHTML = `<div class="home-intro-shade"></div><div class="intro-poster"><span class="mini-cover"><strong>CANQI</strong>${art(2)}<small><span>燦琪 / SELECTED WORKS</span><span>2026</span></small></span></div>`;
+      const poster = overlay.querySelector('.intro-poster');
+      const shade = overlay.querySelector('.home-intro-shade');
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      state.locked.forEach(([element])=>{element.inert=true;});
+      html.classList.add('home-intro-active');
+      html.classList.remove('home-intro-pending');
+      if (reduced) {
+        poster.hidden = true;
+        html.classList.add('home-intro-revealing');
+        await animate(shade,[{opacity:1},{opacity:0}],{duration:180});
+        return;
+      }
       content.classList.add('home-arriving');
-      history.pushState(null,'','#main');
-      render({focus:false});
+      // Keep visual entry independent of sound permissions or audio support.
+      try {
+        const sound = await import('./interaction-audio.js?v=feedback-2');
+        if (homeIntroTransition !== state) return;
+        state.audio = sound.createIntroAudio(audioEnabled);
+        await state.audio.ready;
+        if (homeIntroTransition !== state) return;
+      } catch {}
+      if (homeIntroTransition !== state) return;
+      drawStudies(overlay);
+      const landed = 'translate(-50%,-50%) rotate(-4deg)';
+      state.audio?.cue('drop');
+      await animate(poster,[{transform:'translate(-50%,calc(-50% - 110vh)) rotate(-9deg)'},{transform:landed}],{duration:680,easing:'cubic-bezier(.16,1,.3,1)'});
+      const grow = Math.min(1.8,Math.max(1.12,Math.min(innerWidth*.86,540)/poster.offsetWidth));
+      await animate(poster,[{transform:landed},{transform:`translate(-50%,-50%) rotate(0) scale(${grow})`}],{duration:440,delay:120,easing:'cubic-bezier(.65,0,.35,1)'});
       overlay.classList.add('is-scattering');
-      requestAnimationFrame(()=>content.classList.add('home-arrived'));
-    },640);
-    later(()=>{
-      clearLandingTransition();
-      content.focus({preventScroll:true});
-    },1240);
+      state.audio?.cue('scatter');
+      content.classList.add('home-arrived');
+      html.classList.add('home-intro-revealing');
+      await animate(shade,[{opacity:1},{opacity:0}],{duration:600,easing:'ease'});
+    } catch (error) {
+      // Cancelling on route changes or Escape is expected; other failures fail open.
+      if (error.name !== 'AbortError') console.warn('Home introduction skipped:',error);
+    } finally {
+      if (homeIntroTransition === state) {
+        clearHomeIntro();
+        content.focus({preventScroll:true});
+      }
+    }
   }
   function home() {
     const identities=[
@@ -393,7 +415,7 @@
     const leaf = route.split('/')[0];
     const isArtist=leaf==='artist'||route.startsWith('artist-');
     const branch = isArtist||['works','work'].includes(leaf) ? 'artist' : leaf === 'mentor' ? 'mentor' : ['who','about','cv','contact'].includes(leaf) ? 'who' : '';
-    $('#header').hidden = leaf === 'landing';
+    $('#header').hidden = false;
     $('#context-bar').hidden = !branch;
     document.querySelectorAll('[data-branch]').forEach(a => { if(a.dataset.branch === branch) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); });
     if (!branch) return;
@@ -416,8 +438,10 @@
     $('#secondary').innerHTML = items.map(key=>`<a href="#${key}" ${key===leaf || (key==='works' && leaf==='work') ? 'aria-current="page"':''}>${key==='contact' ? t('Have you seen Canqi? (Contact)','你见过燦琪吗？（联系）') : t(...routeNames[key])}</a>`).join('');
   }
   function render({focus=true,force=false}={}) {
-    const route = location.hash.slice(1) || 'landing';
-    const pages = {landing,main:home,mentor,works:archive};
+    const requestedRoute = location.hash.slice(1) || 'main';
+    const route = requestedRoute === 'landing' ? 'main' : requestedRoute;
+    if (requestedRoute === 'landing') history.replaceState(null,'','#main');
+    const pages = {main:home,mentor,works:archive};
     const isArtist=route==='artist'||route.startsWith('artist-')||route.startsWith('artist/project/');
     const wasArtist=currentRoute==='artist'||currentRoute.startsWith('artist-')||currentRoute.startsWith('artist/project/');
     const isWho=['who','about','cv','contact'].includes(route);
@@ -439,6 +463,7 @@
     if(wasWho)cancelAnimationFrame(scrollFrame);
     if(currentRoute==='main')stopHomePaper();
     document.body.classList.toggle('on-artist',isArtist);
+    document.body.classList.toggle('on-main',route==='main');
     setupNavigation(route);
     content.innerHTML = isArtist ? artist() : isWho ? who() : route.startsWith('work/') ? project(route.split('/')[1]) : pages[route] ? pages[route]() : `<section class="page"><h1>${t('Page not found.','未找到页面。')}</h1>${link('main','Return to the index','返回主页')}</section>`;
     if(isArtist&&!wasArtist)window.scrollTo(0,0);
@@ -457,7 +482,6 @@
     if (!isArtist && route !== currentRoute) {
       window.scrollTo(0,0);
       if (focus) content.focus({preventScroll:true});
-      if (currentRoute === 'landing' && route === 'main' && !landingTransition) {content.classList.add('route-enter');setTimeout(()=>content.classList.remove('route-enter'),450);}
     }
     if(isWho){
       if(force&&wasWho){window.scrollTo(0,previousWhoScroll);updateWhoNav();}
@@ -493,20 +517,31 @@
       canvas.width=width;canvas.height=height;
       const ctx=canvas.getContext('2d');if(!ctx)return;
       const n=Number(canvas.dataset.study);
-      ctx.fillStyle='#e6e4dc';ctx.fillRect(0,0,width,height);
+      const digital=Boolean(canvas.closest('.home,#home-intro'));
+      ctx.fillStyle=digital?'#cccccc':'#e6e4dc';ctx.fillRect(0,0,width,height);
       if(effects.treatment === 'continuous') {
         const pixels=ctx.createImageData(width,height);
         for(let y=0;y<height;y++)for(let x=0;x<width;x++) {
           const v=field(x/width,y/height,n);const p=(y*width+x)*4;
-          pixels.data[p]=23+v*207;pixels.data[p+1]=23+v*205;pixels.data[p+2]=22+v*198;pixels.data[p+3]=255;
+          pixels.data[p]=digital?32+v*172:23+v*207;
+          pixels.data[p+1]=digital?32+v*172:23+v*205;
+          pixels.data[p+2]=digital?32+v*172:22+v*198;pixels.data[p+3]=255;
         }
         ctx.putImageData(pixels,0,0);
       } else {
         const step=effects.dot*width/360;
-        ctx.fillStyle='#171716';ctx.beginPath();
+        ctx.fillStyle=digital?'#202020':'#171716';ctx.beginPath();
         for(let y=step/2;y<height;y+=step)for(let x=step/2;x<width;x+=step) {
-          const r=step*.72*Math.sqrt(1-field(x/width,y/height,n));
-          ctx.moveTo(x+r,y);ctx.arc(x,y,r,0,Math.PI*2);
+          const band=Math.floor(y/height*29);
+          const offset=digital&&band%11===4?.025:0;
+          const shade=1-field(x/width+offset,y/height,n);
+          if(digital){
+            const cell=step*Math.sqrt(shade);
+            ctx.rect(x-cell/2,y-cell/2,cell,cell);
+          }else{
+            const r=step*.72*Math.sqrt(shade);
+            ctx.moveTo(x+r,y);ctx.arc(x,y,r,0,Math.PI*2);
+          }
         }
         ctx.fill();
       }
@@ -544,11 +579,6 @@
     }
   },true);
   content.addEventListener('click',event=> {
-    const entrance = event.target.closest('.entrance');
-    if (entrance) {
-      enterFromLanding({currentTarget:entrance,preventDefault:()=>event.preventDefault()});
-      return;
-    }
     const slip=event.target.closest('[data-poster-slip]');
     if(slip){
       slip.classList.add('is-torn');
@@ -620,6 +650,7 @@
     if(printSettings.open&&!printSettings.contains(event.target))printSettings.open=false;
   });
   document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&homeIntroTransition){clearHomeIntro();content.focus({preventScroll:true});}
     if(event.key==='Escape'&&printSettings.open){
       printSettings.open=false;
       printSettings.querySelector('summary').focus();
@@ -627,6 +658,8 @@
   });
   let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(drawStudies,160);});
   window.addEventListener('scroll',()=>{if(content.querySelector('.artist-page'))updateArtistNav();else if(content.querySelector('.who-page'))updateWhoNav();},{passive:true});
-  window.addEventListener('hashchange',()=>{clearLandingTransition();render();});
+  window.addEventListener('hashchange',()=>{clearHomeIntro();render();});
+  window.addEventListener('pagehide',clearHomeIntro);
   render({focus:false});
+  startHomeIntro();
 })();
