@@ -4,7 +4,7 @@ This is an **interactive wireframe**, published so the site structure and visual
 
 ## Included
 
-- Public name: CANQI 燦琪 / Canqi Lin / 林灿琪.
+- Public name: CANQI 燦琪 / Canqi Lin / 林燦琪.
 - Three primary identity branches and their requested hierarchy.
 - Six work titles and dates from the existing local portfolio index: Power Off; Power Off — B.S.O.D.; The Gavel Room; Fishbird [Sumeru]; Carnival Nervous System; CHANG | “隙”.
 - A short professional role description and the previously recorded Guangzhou Academy of Fine Arts teaching appointment.

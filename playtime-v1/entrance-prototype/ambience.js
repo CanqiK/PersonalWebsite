@@ -337,10 +337,11 @@ function createEngine() {
 }
 
 function renderButton() {
-  button.dataset.sound = audible ? 'on' : 'off';
+  button.dataset.sound = audible ? 'on' : userMuted ? 'off' : 'pending';
   button.setAttribute('aria-pressed', String(audible));
-  button.setAttribute('aria-label', audible ? 'Mute ambient sound' : 'Enable ambient sound');
-  label.textContent = audible ? 'SOUND ON' : userMuted ? 'SOUND OFF' : 'START SOUND';
+  button.setAttribute('aria-label', audible ? 'Mute ambient sound' : userMuted ? 'Enable ambient sound' : 'Sound enabled automatically; click to allow playback');
+  button.title = audible ? 'Mute sound' : userMuted ? 'Enable sound' : 'Sound starts automatically when permitted, or after your first interaction';
+  label.textContent = audible ? 'SOUND ON' : userMuted ? 'SOUND OFF' : 'SOUND AUTO';
   if (bootSound) {
     const unlocked = engine?.context.state === 'running' && !userMuted;
     bootSound.textContent = unlocked ? 'SOUND READY' : 'CLICK FOR SOUND';
@@ -432,9 +433,13 @@ document.getElementById('entrance').addEventListener('scene:bubble-sound', event
 
 // Browsers need a gesture before audio can play. The first interaction with the
 // scene starts the default ambience; the explicit button also works immediately.
-document.addEventListener('pointerdown', event => {
+function unlockFromGesture(event) {
   if (!audible && !userMuted && !button.contains(event.target)) startSound();
-});
+}
+document.addEventListener('pointerdown', unlockFromGesture);
+// Touch browsers may grant audio activation only on release or click.
+document.addEventListener('pointerup', unlockFromGesture);
+document.addEventListener('click', unlockFromGesture);
 document.addEventListener('keydown', event => {
   if (!audible && !userMuted && event.key !== 'Tab') startSound();
 });

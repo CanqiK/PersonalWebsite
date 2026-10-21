@@ -10,16 +10,19 @@ const bubbles = [...document.querySelectorAll('.worker-bubble[data-role]')].map(
 });
 const reward = makeState(entry, Infinity);
 let unlocked = false;
+let autoShattering = false;
+let shatterElapsed = 0;
 
 function makeState(node, delay) {
   const body = node.querySelector('.window-body');
   const text = body.textContent;
   body.textContent = '';
   node.hidden = true;
-  return { node, body, text, phase: 'waiting', elapsed: 0, delay, hover: false, focus: false };
+  return { node, body, text, phase: 'waiting', elapsed: 0, delay, rounds: 0, hover: false, focus: false };
 }
 
 function begin(state) {
+  state.rounds += 1;
   state.node.hidden = false;
   bubbleSound(state.node, state.node === entry ? 'target' : 'open');
   if (state.node === entry) {
@@ -85,25 +88,26 @@ function selectBubble(state) {
     if (event.pointerType === 'touch') return;
     selectBubble(state); state.hover = true;
   });
-  state.node.addEventListener('pointerleave', () => { state.hover = false; state.elapsed = 0; });
+  state.node.addEventListener('pointerleave', () => { state.hover = false; });
   state.node.addEventListener('focus', () => { selectBubble(state); state.focus = true; });
-  state.node.addEventListener('blur', () => { state.focus = false; state.elapsed = 0; });
+  state.node.addEventListener('blur', () => { state.focus = false; });
 });
-bubbles.forEach(state => {
-  state.node.addEventListener('click', () => {
-    if (state.phase === 'broken') return;
-    bubbleSound(state.node, 'break');
-    shatter(state.node);
-    state.node.hidden = true;
-    state.phase = 'broken';
-    state.node.dataset.state = 'broken';
-    if (!unlocked && bubbles.every(bubble => bubble.phase === 'broken')) {
-      unlocked = true;
-      reward.delay = 500;
-      reward.elapsed = 0;
-    }
-  });
-});
+function breakBubble(state) {
+  if (state.phase === 'broken') return;
+  bubbleSound(state.node, 'break');
+  shatter(state.node);
+  state.node.hidden = true;
+  state.phase = 'broken';
+  state.hover = false;
+  state.focus = false;
+  state.node.dataset.state = 'broken';
+  if (!unlocked && bubbles.every(bubble => bubble.phase === 'broken')) {
+    unlocked = true;
+    reward.delay = 500;
+    reward.elapsed = 0;
+  }
+}
+bubbles.forEach(state => state.node.addEventListener('click', () => breakBubble(state)));
 
 // One clock keeps transitions ordered and pauses the sequence in hidden tabs.
 let previous = performance.now();
@@ -112,10 +116,9 @@ setInterval(() => {
   const delta = Math.min(now - previous, 100);
   previous = now;
   if (document.hidden || !root.classList.contains('scene-ready') || root.classList.contains('scene-3d-pending')) return;
-  const introOpen = root.classList.contains('canqi-active');
+  const introOpen = root.classList.contains('canqi-hover');
   for (const state of [...bubbles, reward]) {
     if (state.phase === 'broken' || (introOpen && state !== reward) || root.inert) continue;
-    if (state.phase === 'visible' && (state.hover || state.focus)) continue;
     state.elapsed += delta;
     if (state.phase === 'waiting' && state.elapsed >= state.delay) begin(state);
     else if (state.phase === 'opening' && state.elapsed >= 180) {
@@ -131,7 +134,7 @@ setInterval(() => {
         state.elapsed = 0;
         state.node.classList.remove('is-typing');
       }
-    } else if (state.phase === 'visible' && state !== reward && state.elapsed >= 6000) {
+    } else if (state.phase === 'visible' && state !== reward && state.rounds < 2 && state.elapsed >= 6000) {
       state.phase = 'collapsing';
       state.elapsed = 0;
       state.node.classList.add('is-collapsing');
@@ -145,5 +148,21 @@ setInterval(() => {
       state.delay = randomDelay();
     }
     state.node.dataset.state = state.phase;
+  }
+  // Finish the second reading of every remaining bubble, then break them in order.
+  // Hover/focus does not restart the clock; only hidden scene states pause it.
+  if (!unlocked && !introOpen && !root.inert) {
+    const remaining = bubbles.filter(state => state.phase !== 'broken');
+    if (!autoShattering && remaining.every(state => state.rounds >= 2 && state.phase === 'visible' && state.elapsed >= 6000)) {
+      autoShattering = true;
+      shatterElapsed = 450;
+    }
+    if (autoShattering) {
+      shatterElapsed += delta;
+      if (shatterElapsed >= 450 && remaining.length) {
+        shatterElapsed = 0;
+        breakBubble(remaining[0]);
+      }
+    }
   }
 }, 40);

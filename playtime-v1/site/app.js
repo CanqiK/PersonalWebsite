@@ -4,7 +4,7 @@
   const content = $('#content');
   let lang = 'en';
   try { lang = localStorage.getItem('canqi-wireframe-language') === 'zh' ? 'zh' : 'en'; } catch {}
-  let filter = 'all';
+  let selectedProject = '';
   let currentRoute = '';
   const effects = { treatment: 'halftone', dot: 3 };
   const t = (en, zh) => lang === 'zh' ? zh : en;
@@ -44,6 +44,11 @@
     ]}
   ];
   const allArtistWorks = [...selectedWorks,...otherGroups.flatMap(group=>group.items)];
+  function updateWorkSelection() {
+    content.querySelectorAll('[data-work-id]').forEach(card=>{
+      card.classList.toggle('is-selected',card.dataset.workId===selectedProject);
+    });
+  }
   const featuredWorks = [works[0],works[1],selectedWorks[2],works[3]];
   let featuredIndex = 0;
   let featuredTimer = 0;
@@ -89,6 +94,7 @@
     state.audio?.dispose();
     state.overlay.remove();
     content.classList.remove('home-arriving','home-arrived');
+    if(content.querySelector('.investigation-board'))startWallThreads();
     document.documentElement.classList.remove('home-intro-pending','home-intro-active','home-intro-revealing');
     state.locked.forEach(([element,inert]) => { element.inert = inert; });
   }
@@ -165,10 +171,73 @@
       {href:'mentor',number:'02',en:'Canqi as mentor',zh:'燦琪，作为导师',kind:['TEACHING / MENTORING','教学 / 指导']},
       {href:'artist-spatial',number:'03',en:'Canqi as designer',zh:'燦琪，作为设计师',kind:['SPACE / DESIGN','空间 / 设计']}
     ];
-    return `<section class="home home-editorial"><aside class="home-aside home-left"><div class="home-file"><span class="home-file-tab">CANQI / ${t('PERSONAL FILE','个人档案')} — 001</span><p class="artist-role">${role()}</p></div></aside><div class="home-center"><a class="home-bookmark" href="#artist-selected"><span class="home-bookmark-words"><span>${t('Explore','探索')}</span> <span>${t('the','精选')}</span> <span>${t('works','作品')}</span></span><span class="home-bookmark-arrow">${arrow}</span></a>${cover()}</div><aside class="home-aside right home-right"><div class="home-identities" aria-label="${t('Canqi identities','燦琪的身份')}">${identities.map(item=>`<a class="home-id" href="#${item.href}"><span class="home-id-top"><span>CANQI / ID ${item.number}</span><span>燦琪</span></span><span class="home-id-body"><span class="home-id-photo" aria-hidden="true">C.</span><strong>${t(item.en,item.zh)}</strong></span><span class="home-id-bottom"><span>${t(...item.kind)}</span>${arrow}</span></a>`).join('')}</div>${link('who','Who am I?','我是谁？')}</aside></section>`;
+    const pin=id=>`<span class="wall-pin" data-wall-pin="${id}" aria-hidden="true"></span>`;
+    return `<section class="home home-investigation" aria-label="${t('Canqi’s investigation wall','燦琪的线索墙')}">
+      <div class="scene-camera">
+      <div class="scene-rear" aria-hidden="true"><div class="scene-plate scene-backdrop"></div></div>
+      <div class="scene-window" aria-hidden="true"><div class="scene-plate scene-backdrop"><div class="scene-rain"></div></div></div>
+      <div class="scene-workstation">
+      <div class="scene-plate scene-backdrop" aria-hidden="true"></div>
+      <div class="investigation-board">
+        <svg class="wall-threads" aria-hidden="true"><g></g></svg>
+        <aside class="home-aside home-left">
+          <div class="home-file">${pin('file')}<span class="home-file-tab">CANQI / ${t('PERSONAL FILE','个人档案')} — 001</span><p class="artist-role">${role()}</p></div>
+
+        </aside>
+        <div class="home-center">
+          <div class="wall-paper-pin">${pin('project')}</div>
+          ${cover()}
+          <a class="home-bookmark" href="#artist-selected">${pin('works')}<span class="home-bookmark-words"><span>${t('Explore','探索')}</span> <span>${t('the','精选')}</span> <span>${t('works','作品')}</span></span><span class="home-bookmark-arrow">${arrow}</span></a>
+        </div>
+        <aside class="home-aside right home-right"><div class="home-identities" aria-label="${t('Canqi identities','燦琪的身份')}">${identities.map(item=>`<a class="home-id" href="#${item.href}">${pin(item.href)}<span class="home-id-top"><span>CANQI / ID ${item.number}</span><span>燦琪</span></span><span class="home-id-body"><span class="home-id-photo" aria-hidden="true">C.</span><strong>${t(item.en,item.zh)}</strong></span><span class="home-id-bottom"><span>${t(...item.kind)}</span>${arrow}</span></a>`).join('')}</div>${link('who','Who am I?','我是谁？')}</aside>
+      </div>
+      <div class="desk-props scene-plate">
+        <button class="desk-crt" type="button" aria-label="${t('Crocursionism — flicker the room lights','Crocursionism — 让房间灯光闪动')}" title="${t('Click to flicker the lights','点击，让灯光闪动')}"><img src="assets/crocursionism-logo.jpg" alt="Crocursionism" width="1326" height="1280"></button>
+          <div class="wall-photos">
+            <a class="wall-photo wall-photo-portrait" href="#about" aria-label="${t('About Canqi','关于燦琪')}"><img src="assets/canqi-portrait.jpg" alt="${t('Canqi in a bird mask','佩戴鸟形面具的燦琪')}" width="640" height="640"><span>CANQI / ${t('PORTRAIT','肖像')}</span></a>
+            <a class="wall-photo wall-photo-seaside" href="#who" aria-label="${t('Who am I?','我是谁？')}"><img src="assets/canqi-seaside.png" alt="${t('Canqi by the sea','海边的燦琪')}" width="723" height="714"><span>${t('Who am I?','我是谁？')} ${arrow}</span></a>
+          </div>
+      </div>
+      </div><div class="room-light-dip" aria-hidden="true"></div></div>
+    </section>`;
+  }
+  let disposeHomeScene=null;
+  let wallObserver=null;
+  let wallFrame=0;
+  function stopWallThreads(){
+    wallObserver?.disconnect();wallObserver=null;
+    cancelAnimationFrame(wallFrame);
+  }
+  function startWallThreads(){
+    stopWallThreads();
+    const board=content.querySelector('.investigation-board');
+    if(!board)return;
+    const svg=board.querySelector('.wall-threads');
+    const draw=()=>{
+      if(!board.isConnected)return;
+      const bounds=board.getBoundingClientRect();
+      svg.setAttribute('viewBox',`0 0 ${bounds.width} ${bounds.height}`);
+      const positions={};
+      board.querySelectorAll('[data-wall-pin]').forEach(pin=>{
+        const r=pin.getBoundingClientRect();
+        positions[pin.dataset.wallPin]=[r.left+r.width/2-bounds.left,r.top+r.height/2-bounds.top];
+      });
+      const pairs=[['file','project'],['project','artist'],['project','mentor'],['works','artist-spatial'],['mentor','artist-spatial']];
+      svg.querySelector('g').innerHTML=pairs.map(([a,b])=>{
+        const p=positions[a],q=positions[b];
+        return `<path d="M${p[0]},${p[1]} Q${(p[0]+q[0])/2},${(p[1]+q[1])/2+7} ${q[0]},${q[1]}"/>`;
+      }).join('');
+    };
+    const schedule=()=>{cancelAnimationFrame(wallFrame);wallFrame=requestAnimationFrame(draw);};
+    wallObserver=new ResizeObserver(schedule);
+    wallObserver.observe(board);
+    wallObserver.observe(board.closest('.home-investigation'));
+    board.querySelectorAll('.home-left,.home-center,.home-right').forEach(el=>wallObserver.observe(el));
+    board.querySelectorAll('img').forEach(img=>img.addEventListener('load',schedule,{once:true}));
+    schedule();
   }
   function artistCard(w, small = false, index = 0) {
-    return `<a class="artist-card ${small ? 'artist-card-small' : ''}" href="#artist/project/${w.id}" data-project-open="${w.id}"><span class="artist-card-image">${art(w.study)}<span class="artist-card-number">${String(index+1).padStart(2,'0')}</span><span class="artist-card-arrow">${arrow}</span></span><h4 class="artist-card-title">${titleOf(w)}</h4><span class="artist-card-meta"><span>${t(...w.medium)}</span><span>${w.year || '—'}</span></span></a>`;
+    return `<a class="artist-card ${small ? 'artist-card-small' : ''}" href="#artist/project/${w.id}" data-project-open="${w.id}" data-work-id="${w.id}"><span class="artist-card-image">${art(w.study)}</span><div class="artist-card-copy"><h4 class="artist-card-title">${titleOf(w)}</h4><span class="artist-card-meta"><span>${w.year || '—'}</span><span class="artist-card-arrow" aria-hidden="true">${arrow}</span></span></div></a>`;
   }
   function featureImage(w) {
     return `<div class="feature-slide">${art(w.study)}<span class="feature-vignette" aria-hidden="true"></span><span class="feature-film" aria-hidden="true"></span></div>`;
@@ -189,11 +258,13 @@
         <div class="feature-controls"><span>${t('01 / FEATURED PROJECTS','01 / 精选项目')}</span><div><button type="button" data-slide="previous" aria-label="${t('Previous project','上一个项目')}">←</button><button type="button" data-slide="next" aria-label="${t('Next project','下一个项目')}">→</button></div><span>${t('AUTO ADVANCE / 06 SEC','自动切换 / 06 秒')}</span></div>
       </section>
       <div class="artist-index-grid">
-      <section class="artist-collection" id="artist-selected" aria-labelledby="selected-heading"><div class="artist-section-heading"><span>02 / ${t('THE INDEX','索引')}</span><h2 id="selected-heading">${t('Selected<br>works.','精选<br>作品。')}</h2><p>${t('Projects and their related works. Select a square to open the project within this page.','项目及其关联作品。点击方形图像，在当前页面内展开项目。')}</p></div>
+      <section class="artist-collection" id="artist-selected" aria-labelledby="selected-heading"><div class="artist-section-heading"><span>02 / ${t('THE INDEX','索引')}</span><h2 id="selected-heading">${t('Selected<br>works.','精选<br>作品。')}</h2><p>${t('Projects and their related works. Select a card to open the project within this page.','项目及其关联作品。点击作品卡片，在当前页面内展开项目。')}</p></div>
         ${selectedGroups.map(group=>`<section class="artist-work-group"><div class="artist-group-heading"><h3>${t(group.en,group.zh)}</h3><span>${String(group.items.length).padStart(2,'0')} ${t('WORKS','件作品')}</span></div><div class="artist-card-grid">${group.items.map((w,i)=>artistCard(w,false,i)).join('')}</div></section>`).join('')}
+
       </section>
       <section class="artist-collection artist-other" id="artist-other" aria-labelledby="other-heading"><div class="artist-section-heading"><span>03 / ${t('THE ARCHIVE','档案')}</span><h2 id="other-heading">${t('Other<br>works.','其他<br>作品。')}</h2><p>${t('A smaller index of theatre, spatial and conceptual projects.','戏剧、空间和概念项目的小型索引。')}</p></div>
         ${otherGroups.map(group=>`<section class="artist-work-group" id="artist-${group.id}"><div class="artist-group-heading"><h3>${t(group.en,group.zh)}</h3><span>${String(group.items.length).padStart(2,'0')} ${t('WORKS','件作品')}</span></div><div class="artist-card-grid artist-card-grid-small">${group.items.map((w,i)=>artistCard(w,true,i)).join('')}</div></section>`).join('')}
+
       </section>
       </div>
       <dialog class="artist-project-dialog" id="artist-project-dialog" aria-labelledby="artist-dialog-title"></dialog>
@@ -206,16 +277,14 @@
     return `<div class="who-page">${about()}${cv()}${contact()}</div>`;
   }
   function archive() {
-    const filters = [['all','All','全部'],['performance','Performance','表演'],['installation','Installation','装置'],['spatial','Spatial','空间']];
-    return `<section class="page"><div class="page-heading"><h1>${t('Works.','作品。')}</h1><p>${t('An index of selected works.<br>Performance, installation, and spatial narrative.','创作选集。<br>表演、装置与空间叙事。')}</p></div><div class="archive-toolbar"><div class="filters" role="group" aria-label="${t('Filter works','筛选作品')}">${filters.map(([id,en,zh])=>`<button type="button" data-filter="${id}" aria-pressed="${filter===id}">${t(en,zh)}</button>`).join('')}</div><span class="result-count" aria-live="polite" id="result-count"></span></div><div class="works-grid" id="works-grid"></div><p class="archive-note">${t('Images are abstract layout studies, not documentation of the works. Project titles and dates follow the existing portfolio index.','当前图像为抽象版式实验，非真实作品记录。作品名称与年份沿用已有作品内容索引。')}</p></section>`;
+    return `<section class="page"><div class="page-heading"><h1>${t('Works.','作品。')}</h1><p>${t('Performance, installation and spatial narrative.','表演、装置与空间叙事。')}</p></div><div class="works-grid" id="works-grid"></div><p class="archive-note">${t('Images are abstract layout studies, not documentation of the works.','当前图像为抽象版式实验，非真实作品记录。')}</p></section>`;
   }
   function fillWorks() {
-    const visible = works.filter(w => filter === 'all' || w.category === filter);
-    $('#works-grid').innerHTML = visible.map(w=>`<a class="work-item" href="#work/${w.id}"><span class="work-image">${art(w.study)}<span class="open-mark">${arrow}</span></span><h2>${titleOf(w)}</h2><span class="work-meta"><span>${t(...w.medium)}</span><span>${w.year}</span></span></a>`).join('');
-    $('#result-count').textContent = `${String(visible.length).padStart(2,'0')} / ${String(works.length).padStart(2,'0')}`;
+    $('#works-grid').innerHTML=allArtistWorks.map(w=>artistCard(w)).join('');
+    updateWorkSelection();
   }
   function about() {
-    return `<section class="page reading" id="about"><div class="page-heading"><h1>${t('About.','关于。')}</h1><p>CANQI LIN / 林灿琪</p></div><div class="reading-grid"><figure><img class="about-portrait" src="assets/canqi-portrait.jpg" alt="${t('Canqi Lin wearing a bird mask in a black-and-white portrait.','林灿琪佩戴鸟形面具的黑白肖像。')}" width="640" height="640"><figcaption class="image-caption"><span>${t('CANQI LIN / PORTRAIT','林灿琪 / 肖像')}</span><span>CANQI</span></figcaption></figure><div class="reading-copy"><p>${t('Canqi Lin is a performative installation artist, visual storyteller, experimental theatre director and spatial designer.','林灿琪是一位行为装置艺术家、视觉叙事创作者、实验戏剧导演与空间设计师。')}</p><p class="small-copy about-background">${t('Beginning with architecture and environmental art, he expanded his practice into spatial theatre, installation and digital media. He studied at Guangzhou Academy of Fine Arts and completed an MFA in Spatial Performance and Design in the AAIS Interprofessional Studio at the Architectural Association in London.','他从建筑与环境艺术设计出发，逐步将创作延伸至空间戏剧、装置艺术与数字媒体。他本科毕业于广州美术学院，并在伦敦建筑联盟学院 AAIS 跨专业工作室取得空间表演与设计硕士学位。')}</p><h2>${t('Practice & approach','创作与方法')}</h2><p class="small-copy">${t('His work uses space as a narrative medium, bringing performance, physical installation and digital interaction together to explore how people, technology, nature and social relationships shape one another.','他的创作以空间为叙事媒介，结合表演、实体装置与数字交互，探讨人与技术、自然及社会关系如何相互塑造。')}</p><h2>${t('Teaching & design','教学与设计')}</h2><p class="small-copy">${t('Alongside his artistic practice, he works on digital-arts teaching and curriculum development at SFK International Art Education. He has mentored digital-media projects there and taught interdisciplinary spatial design as an externally appointed lecturer at Guangzhou Academy of Fine Arts.','在艺术实践之外，他现于斯芬克国际艺术教育从事数字艺术教学与课程研发，曾担任数字媒体项目导师，并受聘于广州美术学院讲授跨学科空间设计课程。')}</p><div class="about-next">${link('cv','Read the CV','查看履历')}</div></div></div></section>`;
+    return `<section class="page reading" id="about"><div class="page-heading"><h1>${t('About.','关于。')}</h1><p>CANQI LIN / 林燦琪</p></div><div class="reading-grid"><div class="about-portraits"><figure><img class="about-portrait" src="assets/canqi-portrait.jpg" alt="${t('Canqi Lin wearing a bird mask in a black-and-white portrait.','林燦琪佩戴鸟形面具的黑白肖像。')}" width="640" height="640"><figcaption class="image-caption"><span>${t('CANQI LIN / PORTRAIT','林燦琪 / 肖像')}</span><span>CANQI</span></figcaption></figure><img class="about-snapshot" src="assets/canqi-seaside.png" alt="${t('Canqi by the sea, with a ship in the background.','林燦琪在海边，背后是一艘船。')}" width="723" height="714" loading="lazy"></div><div class="reading-copy"><p>${t('Canqi Lin is a performative installation artist, visual storyteller, experimental theatre director and spatial designer.','林燦琪是一位行为装置艺术家、视觉叙事创作者、实验戏剧导演与空间设计师。')}</p><p class="small-copy about-background">${t('Beginning with architecture and environmental art, he expanded his practice into spatial theatre, installation and digital media. He studied at Guangzhou Academy of Fine Arts and completed an MFA in Spatial Performance and Design in the AAIS Interprofessional Studio at the Architectural Association in London.','他从建筑与环境艺术设计出发，逐步将创作延伸至空间戏剧、装置艺术与数字媒体。他本科毕业于广州美术学院，并在伦敦建筑联盟学院 AAIS 跨专业工作室取得空间表演与设计硕士学位。')}</p><h2>${t('Practice & approach','创作与方法')}</h2><p class="small-copy">${t('His work uses space as a narrative medium, bringing performance, physical installation and digital interaction together to explore how people, technology, nature and social relationships shape one another.','他的创作以空间为叙事媒介，结合表演、实体装置与数字交互，探讨人与技术、自然及社会关系如何相互塑造。')}</p><h2>${t('Teaching & design','教学与设计')}</h2><p class="small-copy">${t('Alongside his artistic practice, he works on digital-arts teaching and curriculum development at SFK International Art Education. He has mentored digital-media projects there and taught interdisciplinary spatial design as an externally appointed lecturer at Guangzhou Academy of Fine Arts.','在艺术实践之外，他现于斯芬克国际艺术教育从事数字艺术教学与课程研发，曾担任数字媒体项目导师，并受聘于广州美术学院讲授跨学科空间设计课程。')}</p><div class="about-next">${link('cv','Read the CV','查看履历')}</div></div></div></section>`;
   }
   function cv() {
     const sections = [
@@ -224,10 +293,10 @@
         ['07.2017 — 06.2021','BA, Environmental Art and Design','环境艺术设计学士','School of Architecture and Applied Arts, Guangzhou Academy of Fine Arts.','广州美术学院建筑艺术设计学院。']
       ]},
       {heading:['Teaching & professional roles','教学与工作经历'],entries:[
-        [['04.2026 — Present','2026.04 — 至今'],'Digital Arts teaching and curriculum development','数字艺术科系教研','SFK International Art Education; teaching, curriculum and programme development.','斯芬克国际艺术教育；负责数字艺术教学、课程及教学产品研发。'],
-        ['04.2024 — 04.2026','Digital media project mentor','数字媒体项目导师','SFK International Art Education; mentoring digital-media and spatial-performance projects.','斯芬克国际艺术教育；指导数字媒体与空间表演项目。'],
-        ['10.2024 — 12.2024','Externally appointed lecturer','外聘专业课讲师','School of Architecture and Applied Arts, Guangzhou Academy of Fine Arts; interdisciplinary spatial and digital design.','广州美术学院建筑艺术设计学院；讲授空间与数字设计跨学科课程。'],
-        ['2023 — 03.2024','Spatial designer','空间设计师','HEYTEA, Shenzhen headquarters; retail interiors, display systems and store concepts.','喜茶深圳总部空间设计部；参与门店空间、陈设系统与概念设计。']
+        [['04.2026 — Present','2026.04 — 至今'],'Academic Supervisor and Curriculum Development','数字艺术科系教研','SFK International Art Education; teaching, curriculum and programme development.','斯芬克国际艺术教育；负责数字艺术教学、课程及教学产品研发。',true],
+        ['04.2024 — 04.2026','Digital Media Project Mentor','数字媒体项目导师','SFK International Art Education; mentoring digital-media and spatial-performance projects.','斯芬克国际艺术教育；指导数字媒体与空间表演项目。'],
+        ['10.2024 — 12.2024','Externally Appointed Lecturer','外聘专业课讲师','School of Architecture and Applied Arts, Guangzhou Academy of Fine Arts; interdisciplinary spatial and digital design.','广州美术学院建筑艺术设计学院；讲授空间与数字设计跨学科课程。'],
+        ['2023 — 03.2024','Spatial Designer','空间设计师','HEYTEA, Shenzhen headquarters; retail interiors, display systems and store concepts.','喜茶深圳总部空间设计部；参与门店空间、陈设系统与概念设计。']
       ]},
       {heading:['Selected projects & presentations','精选项目与展出'],entries:[
         ['10.2026','Leather project: world','群花','MEILISHUO Exhibition display design for the Canton Fair, Guangzhou.','美丽说 广交会沉浸式装置展厅设计',true],
@@ -240,11 +309,30 @@
         ['03.2022 — 05.2022','POWER OFF / POWER OFF — B.S.O.D.','断电 / 断电蓝屏','Immersive performances in Glasgow and London; project founder, director and spatial-installation designer.','格拉斯哥及伦敦的沉浸式戏剧；项目创始人、导演及空间装置设计师。']
       ]}
     ];
-    return `<section class="page reading" id="cv"><div class="page-heading"><h1>${t('Curriculum<br>vitae.','个人<br>履历。')}</h1><p>CANQI LIN / 林灿琪<br>${t('SELECTED RECORD / 2026','精选履历 / 2026')}</p></div><div class="cv-list">${sections.map(section=>`<section class="cv-row"><h2>${t(...section.heading)}</h2><div class="cv-entries">${section.entries.map(([date,en,zh,enDetail,zhDetail,ongoing])=>`<div class="cv-entry"><time>${Array.isArray(date)?t(...date):date}</time><div><div class="cv-entry-title"><strong>${t(en,zh)}</strong>${ongoing?`<span class="cv-entry-status">${t('ONGOING','进行中')}</span>`:''}</div><p>${t(enDetail,zhDetail)}</p></div></div>`).join('')}</div></section>`).join('')}</div><div class="cv-pdf-wrap"><a class="cv-pdf-link" href="assets/canqi-lin-cv-2026-en.pdf" target="_blank" rel="noopener" type="application/pdf"><span><strong>${t('View full CV','查看完整履历')}</strong><small>${t('ENGLISH PDF / 2026','英文 PDF / 2026')}</small></span>${arrow}</a></div></section>`;
+    return `<section class="page reading" id="cv"><div class="page-heading"><h1>${t('Curriculum<br>vitae.','个人<br>履历。')}</h1><p>CANQI LIN / 林燦琪<br>${t('SELECTED RECORD / 2026','精选履历 / 2026')}</p></div><div class="cv-list">${sections.map(section=>`<section class="cv-row"><h2>${t(...section.heading)}</h2><div class="cv-entries">${section.entries.map(([date,en,zh,enDetail,zhDetail,ongoing])=>`<div class="cv-entry"><time>${Array.isArray(date)?t(...date):date}</time><div><div class="cv-entry-title"><strong>${t(en,zh)}</strong>${ongoing?`<span class="cv-entry-status">${t('ONGOING','进行中')}</span>`:''}</div><p>${t(enDetail,zhDetail)}</p></div></div>`).join('')}</div></section>`).join('')}</div><div class="cv-pdf-wrap"><a class="cv-pdf-link" href="assets/canqi-lin-cv-2026-en.pdf" target="_blank" rel="noopener" type="application/pdf"><span><strong>${t('View full CV','查看完整履历')}</strong><small>${t('ENGLISH PDF / 2026','英文 PDF / 2026')}</small></span>${arrow}</a></div></section>`;
   }
   function contact() {
-    const slips=Array.from({length:6},(_,i)=>`<button class="poster-slip" type="button" data-poster-slip aria-label="${t(`Take contact tab ${i+1}`,`撕下第 ${i+1} 张联系纸条`)}"><span>CANQI / ${t('CONTACT','联系')}</span><span>${t('DETAILS TO FOLLOW','方式待公布')}</span></button>`).join('');
-    return `<section class="page contact-page" id="contact"><div class="contact-poster"><span class="poster-tape poster-tape-left" aria-hidden="true"></span><span class="poster-tape poster-tape-right" aria-hidden="true"></span><div class="poster-body"><span class="poster-kicker">CANQI / ${t('NOTICE 001','寻人启事 001')}</span><h1 class="poster-heading">HAVE YOU<br>SEEN CANQI?</h1><figure class="poster-portrait"><img src="assets/canqi-portrait.jpg" alt="${t('Canqi Lin wearing a bird mask.','佩戴鸟形面具的林灿琪。')}" width="640" height="640"></figure><p class="poster-caption">${t('LAST SEEN BETWEEN PERFORMANCE, INSTALLATION AND SPACE.','最后出现于表演、装置与空间之间。')}</p><p class="poster-description">${t('For exhibitions, residencies, research and collaborations, take a tab. Public contact details will appear here soon.','关于展览、驻地、研究与合作，请撕下一张纸条。公开联系方式即将在此公布。')}</p><div class="poster-bottom"><span>${t('TAKE A TAB / KEEP LOOKING','撕下一张 / 继续寻找')}</span><a href="#about">${t('About Canqi','关于燦琪')} ${arrow}</a></div></div><div class="poster-tearoffs" role="group" aria-label="${t('Tear-off contact tabs','可撕取的联系纸条')}">${slips}</div><p class="poster-status" id="poster-status" aria-live="polite"></p></div></section>`;
+    const icons={
+      email:'<rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 6 9 7 9-7"/>',
+      linkedin:'<rect x="3" y="3" width="18" height="18" rx="1"/><path d="M7 10v7M11 17v-7m0 3c0-4 6-4 6 0v4"/><circle cx="7" cy="7" r=".6"/>',
+      instagram:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/>',
+      rednote:'<path d="M4 4h6c2 0 2 2 2 2s0-2 2-2h6v15h-6c-2 0-2 1-2 1s0-1-2-1H4Z"/><path d="M12 6v14M7 8h2m6 0h2M7 12h2m6 0h2"/>',
+      youtube:'<rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 6 3-6 3Z"/>'
+    };
+    const contacts=[
+      {id:'email',label:'Email',account:'louvslefv@gmail.com'},
+      {id:'linkedin',label:'LinkedIn',account:'Canqi Lin',url:'https://www.linkedin.com/in/canqi-lin-61aa2a243/'},
+      {id:'instagram',label:'Instagram',account:'@lcanqi',url:'https://www.instagram.com/lcanqi/',qr:true},
+      {id:'rednote',label:t('Rednote','小红书'),account:'502184641',url:'https://www.xiaohongshu.com/user/profile/5c358d61000000000503e5d8?xsec_token=YB6QJ4M-4y8vqn2avj5wCOjzaIj6DVa7XMfYGkpDXWYLo=&xsec_source=app_share',qr:true},
+      {id:'youtube',label:'YouTube',account:'@klocii4744',url:'https://www.youtube.com/@klocii4744'}
+    ];
+    const slips=contacts.map(c=>{
+      const body=`<svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[c.id]}</svg><strong class="contact-platform">${c.label}</strong><span class="contact-account">${c.account}</span><span class="contact-action">${c.id==='email'?t('COPY','复制'):t('OPEN ↗','打开 ↗')}</span>`;
+      const action=c.url?`<a class="contact-slip-action" data-poster-slip href="${c.url.replaceAll('&','&amp;')}" target="_blank" rel="noopener noreferrer" aria-label="${c.label}: ${c.account} — ${t('opens in a new tab','在新标签页打开')}">${body}</a>`:`<button class="contact-slip-action" type="button" data-poster-slip data-copy-email aria-label="${t('Copy email address','复制邮箱地址')}: ${c.account}">${body}</button>`;
+      return `<div class="poster-slip">${action}${c.qr?`<button class="contact-qr-toggle" type="button" data-contact-qr="${c.id}" aria-expanded="false" aria-controls="contact-qr-${c.id}">${t('QR code','二维码')}</button>`:''}</div>`;
+    }).join('');
+    const qrPanels=contacts.filter(c=>c.qr).map(c=>`<div class="contact-qr-panel" id="contact-qr-${c.id}" hidden><div class="contact-qr-heading"><strong>${c.label} / ${c.account}</strong><button type="button" data-qr-close aria-label="${t('Close QR code','关闭二维码')}">×</button></div><div class="contact-qr-image contact-qr-image--${c.id}"><img src="assets/contact-${c.id}-qr.jpg" alt="${t(`Scan to find Canqi on ${c.label}`,`扫描二维码在${c.label}找到 Canqi`)}" loading="lazy"></div><p>${t('Scan with your phone, or use the tab above to open the profile.','用手机扫描，或点击上方纸条直接打开主页。')}</p></div>`).join('');
+    return `<section class="page contact-page" id="contact"><div class="contact-poster"><span class="poster-tape poster-tape-left" aria-hidden="true"></span><span class="poster-tape poster-tape-right" aria-hidden="true"></span><div class="poster-body"><span class="poster-kicker">CANQI / ${t('NOTICE 001','寻人启事 001')}</span><h1 class="poster-heading">HAVE YOU<br>SEEN CANQI?</h1><figure class="poster-portrait"><img src="assets/canqi-portrait.jpg" alt="${t('Canqi Lin wearing a bird mask.','佩戴鸟形面具的林燦琪。')}" width="640" height="640"></figure><p class="poster-caption">${t('LAST SEEN BETWEEN PERFORMANCE, INSTALLATION AND SPACE.','最后出现于表演、装置与空间之间。')}</p><p class="poster-description">${t('For exhibitions, residencies, research and collaborations, take a tab. Copy an email. Follow a trace.','关于展览、驻地、研究与合作，请取一张纸条。复制邮箱，或循着线索找到我。')}</p><div class="poster-bottom"><span>${t('TAKE A TAB / KEEP LOOKING','撕下一张 / 继续寻找')}</span><a href="#about">${t('About Canqi','关于燦琪')} ${arrow}</a></div></div><div class="poster-tearoffs" role="group" aria-label="${t('Tear-off contact tabs','可撕取的联系纸条')}">${slips}</div>${qrPanels}<p class="poster-status" id="poster-status" aria-live="polite"></p></div></section>`;
   }
   function project(id) {
     const w = works.find(x => x.id === id);
@@ -308,6 +396,8 @@
     if(route.startsWith('artist/project/')) {
       const id=route.split('/')[2];
       if(dialog.dataset.project!==id) {
+        selectedProject=id;
+        updateWorkSelection();
         dialog.innerHTML=artistDetail(id);
         dialog.dataset.project=id;
         if(!dialog.open)dialog.showModal();
@@ -391,6 +481,7 @@
     },850));
   }
   function startArtist() {
+    updateWorkSelection();
     clearInterval(featuredTimer);
     featuredTimer=setInterval(()=>{
       const hero=$('#artist-featured');
@@ -465,6 +556,8 @@
     document.body.classList.toggle('on-artist',isArtist);
     document.body.classList.toggle('on-main',route==='main');
     setupNavigation(route);
+    stopWallThreads();
+    disposeHomeScene?.();disposeHomeScene=null;
     content.innerHTML = isArtist ? artist() : isWho ? who() : route.startsWith('work/') ? project(route.split('/')[1]) : pages[route] ? pages[route]() : `<section class="page"><h1>${t('Page not found.','未找到页面。')}</h1>${link('main','Return to the index','返回主页')}</section>`;
     if(isArtist&&!wasArtist)window.scrollTo(0,0);
     if (route === 'works') fillWorks();
@@ -475,6 +568,10 @@
     const pageTitle = content.querySelector('h1')?.innerText.replace(/\s+/g,' ').trim() || 'Portfolio';
     document.title = pageTitle === 'CANQI' ? 'CANQI 燦琪 — Portfolio' : `${pageTitle} — CANQI 燦琪`;
     drawStudies();
+    if(route==='main'){
+      startWallThreads();
+      disposeHomeScene=window.CanqiHomeScene?.mount(content.querySelector('.home-investigation'));
+    }
     if (isArtist) {
       startArtist();
       syncArtistRoute(route,false);
@@ -578,13 +675,53 @@
       event.stopImmediatePropagation();
     }
   },true);
+  async function copyContactEmail(button){
+    const email='louvslefv@gmail.com';
+    const status=$('#poster-status');
+    let copied=false;
+    try{await navigator.clipboard.writeText(email);copied=true;}catch{
+      const field=document.createElement('textarea');
+      field.value=email;
+      field.setAttribute('readonly','');
+      field.style.cssText='position:fixed;left:-9999px;top:0';
+      document.body.append(field);
+      field.select();
+      try{copied=document.execCommand('copy');}catch{}
+      field.remove();
+      button.focus({preventScroll:true});
+    }
+    if(!button.isConnected)return;
+    button.querySelector('.contact-action').textContent=copied?t('COPIED','已复制'):t('RETRY','重试');
+    status.textContent=copied?t('Copied — louvslefv@gmail.com','已复制 — louvslefv@gmail.com'):t('Copy unavailable. Select this address to copy: louvslefv@gmail.com','暂时无法自动复制，请选中邮箱手动复制：louvslefv@gmail.com');
+  }
+  content.addEventListener('keydown',event=>{
+    if(event.key==='Escape'){
+      const close=content.querySelector('.contact-qr-panel:not([hidden]) [data-qr-close]');
+      if(close){event.preventDefault();close.click();}
+    }
+  });
   content.addEventListener('click',event=> {
+    const qrToggle=event.target.closest('[data-contact-qr]');
+    const qrClose=event.target.closest('[data-qr-close]');
+    if(qrToggle||qrClose){
+      const open=qrToggle?.getAttribute('aria-expanded')!=='true';
+      const previous=content.querySelector('[data-contact-qr][aria-expanded="true"]');
+      content.querySelectorAll('.contact-qr-panel').forEach(panel=>panel.hidden=true);
+      content.querySelectorAll('[data-contact-qr]').forEach(button=>button.setAttribute('aria-expanded','false'));
+      if(qrToggle&&open){
+        $(`#contact-qr-${qrToggle.dataset.contactQr}`).hidden=false;
+        qrToggle.setAttribute('aria-expanded','true');
+      }else if(qrClose)previous?.focus({preventScroll:true});
+      return;
+    }
     const slip=event.target.closest('[data-poster-slip]');
     if(slip){
-      slip.classList.add('is-torn');
-      slip.disabled=true;
-      const status=$('#poster-status');
-      if(status)status.textContent=t('A tab has been taken. Public contact details will be added soon.','已撕下一张纸条。公开联系方式即将公布。');
+      const paper=slip.closest('.poster-slip');
+      paper.classList.remove('is-taking');
+      void paper.offsetWidth;
+      paper.classList.add('is-taking');
+      setTimeout(()=>paper.classList.remove('is-taking'),650);
+      if(slip.hasAttribute('data-copy-email'))copyContactEmail(slip);
       return;
     }
     const slide=event.target.closest('[data-slide]');
@@ -595,10 +732,6 @@
       if(dialog?.open)dialog.close();
       return;
     }
-    const button=event.target.closest('[data-filter]');if(!button)return;
-    filter=button.dataset.filter;
-    document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===filter)));
-    fillWorks();drawStudies();
   });
   content.addEventListener('wheel',event=>{
     if(currentRoute!=='main'||!event.target.closest('#home-paper-stack'))return;

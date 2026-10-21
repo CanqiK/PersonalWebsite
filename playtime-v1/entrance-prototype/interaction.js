@@ -1,8 +1,26 @@
 const root = document.getElementById('entrance');
-const canqiTarget = document.getElementById('canqi-target');
-const intro = document.getElementById('intro-window');
-const introClose = document.getElementById('intro-close');
 const realtimeFrame = document.getElementById('realtime-scene');
+const noiseSlider = document.getElementById('scene-noise');
+const noiseValue = document.getElementById('scene-noise-value');
+const noiseLayer = document.querySelector('.scene-grain');
+const noiseStorageKey = 'canqi-scene-noise';
+try {
+  const savedNoise = localStorage.getItem(noiseStorageKey);
+  if (savedNoise !== null && Number.isFinite(Number(savedNoise))) {
+    noiseSlider.value = String(Math.max(0, Math.min(100, Number(savedNoise))));
+  }
+} catch {}
+function updateNoise() {
+  const amount = Number(noiseSlider.value);
+  noiseLayer.style.opacity = String(amount / 100);
+  noiseValue.value = `${amount}%`;
+  noiseSlider.setAttribute('aria-valuetext', `${amount}%`);
+}
+noiseSlider.addEventListener('input', updateNoise);
+noiseSlider.addEventListener('change', () => {
+  try { localStorage.setItem(noiseStorageKey, noiseSlider.value); } catch {}
+});
+updateNoise();
 
 const loader = document.getElementById('boot-loader');
 const computer = document.getElementById('boot-computer');
@@ -67,8 +85,17 @@ async function enterScene() {
   if (document.activeElement === document.body) root.focus({ preventScroll: true });
 }
 addEventListener('message', event => {
-  if (bootState !== 'loading') return;
   if (event.origin !== location.origin || event.source !== realtimeFrame.contentWindow) return;
+  if (event.data?.type === 'canqi:camera-anchors') {
+    const { anchors, box } = event.data;
+    if (!anchors || !['artist','designer','mentor','director','entry'].every(role =>
+      Array.isArray(anchors[role]) && anchors[role].length === 2 && anchors[role].every(Number.isFinite)) ||
+      !Array.isArray(box) || box.length !== 4 || !box.every(Number.isFinite)) return;
+    root.dispatchEvent(new CustomEvent('scene:3d-anchors', { detail: { anchors, box } }));
+    queuePointer();
+    return;
+  }
+  if (bootState !== 'loading') return;
   if (event.data?.type === 'canqi:3d-progress') {
     showProgress(event.data.value, event.data.label);
     return;
@@ -84,33 +111,6 @@ addEventListener('message', event => {
   enterScene();
 });
 realtimeFrame.addEventListener('error', showLoadError);
-
-function showIntro() {
-  if (!intro.hidden) return;
-  root.classList.add('canqi-active');
-  realtimeFrame.contentWindow?.postMessage({type:'canqi:portrait-glitch',active:true},location.origin);
-  intro.hidden = false;
-  canqiTarget.setAttribute('aria-expanded', 'true');
-  root.dispatchEvent(new CustomEvent('scene:bubble-sound', { detail: { kind: 'open', pan: -.65, level: .6 } }));
-}
-function hideIntro() {
-  if (intro.hidden) return;
-  root.classList.remove('canqi-active');
-  realtimeFrame.contentWindow?.postMessage({type:'canqi:portrait-glitch',active:false},location.origin);
-  intro.hidden = true;
-  canqiTarget.setAttribute('aria-expanded', 'false');
-  root.dispatchEvent(new CustomEvent('scene:bubble-sound', { detail: { kind: 'close', pan: -.65, level: .6 } }));
-}
-canqiTarget.addEventListener('mouseenter', showIntro);
-canqiTarget.addEventListener('mouseleave', hideIntro);
-canqiTarget.addEventListener('focus',showIntro);
-canqiTarget.addEventListener('blur',hideIntro);
-canqiTarget.addEventListener('click',showIntro);
-addEventListener('blur',hideIntro);
-introClose.addEventListener('click', hideIntro);
-addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') hideIntro();
-});
 
 // The iframe does not intercept the scene's bubbles. Relay the real pointer in
 // its full, horizontally panned canvas coordinates instead.
@@ -139,9 +139,10 @@ root.addEventListener('pointerleave', clearPointer);
 root.addEventListener('scroll', queuePointer, { passive: true });
 addEventListener('blur', clearPointer);
 
-import './bubble-sequence.js?v=feedback-2';
-import './scene-anchors.js?v=playtime-v1';
-import './scene-pan.js';
-import './ambience.js?v=feedback-2';
-import './exit-transition.js?v=feedback-2';
+import './bubble-sequence.js?v=rounds-pin-3';
+import './intro-window.js?v=rounds-pin-3';
+import './scene-anchors.js?v=rounds-pin-3';
+import './scene-pan.js?v=depth-pan-2';
+import './ambience.js?v=auto-sound-8';
+import './exit-transition.js?v=handoff-fix-6';
 import './hit-feedback.js?v=digital-3';

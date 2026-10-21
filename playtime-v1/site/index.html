@@ -18,16 +18,29 @@
       window.homeIntroFallback=setTimeout(()=>document.documentElement.classList.remove('home-intro-pending'),6000);
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=handoff-1">
+  <link rel="stylesheet" href="styles.css?v=entrance-computer-13">
   <link rel="stylesheet" href="digital-home.css?v=mono-fast-4">
-  <script src="app.js?v=mono-fast-4" defer></script>
+  <link rel="stylesheet" href="work-index.css?v=work-clean-8">
+  <link rel="stylesheet" href="investigation-wall.css?v=wall-lowpoly-15">
+  <link rel="stylesheet" href="home-scene.css?v=wall-fit-18">
+  <script src="home-scene.js?v=wall-fit-18" defer></script>
+  <script src="app.js?v=wall-fit-18" defer></script>
 </head>
 <body>
   <div id="home-intro" aria-hidden="true"></div>
   <a class="skip" href="#content">Skip to content / 跳至内容</a>
   <div class="grain" aria-hidden="true"></div>
   <header class="site-header" id="header">
-    <a class="brand" href="#main" aria-label="CANQI — home">CANQI<span>燦琪</span></a>
+    <div class="header-identity">
+      <a class="brand" href="#main" aria-label="CANQI — home">CANQI<span>燦琪</span></a>
+      <a class="entrance-computer" href="../entrance-prototype/" aria-labelledby="entrance-tooltip">
+        <span class="mini-computer" aria-hidden="true">
+          <span class="mini-monitor"><span class="mini-screen"><span>CANQI</span><i></i></span><span class="mini-led"></span></span>
+          <span class="mini-stand"></span><span class="mini-base"></span><span class="mini-keyboard"></span>
+        </span>
+        <span class="entrance-tooltip" id="entrance-tooltip" role="tooltip" data-en="Back to the entrance" data-zh="返回进入页">Back to the entrance</span>
+      </a>
+    </div>
     <nav class="primary" aria-label="Primary navigation">
       <a href="#artist" data-branch="artist" data-en="As an artist" data-zh="作为艺术家">As an artist</a>
       <a href="#mentor" data-branch="mentor" data-en="As a mentor" data-zh="作为导师">As a mentor</a>
@@ -41,7 +54,6 @@
   </div>
   <main id="content" tabindex="-1"></main>
   <footer class="site-footer" id="footer">
-    <a href="../entrance-prototype/" data-en="Back to the entrance" data-zh="返回进入页">Back to the entrance</a>
     <span>CANQI © 2026</span>
     <details class="print-settings">
       <summary data-en="Print settings" data-zh="印刷效果">Print settings</summary>

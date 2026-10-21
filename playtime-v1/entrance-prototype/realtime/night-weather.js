@@ -4,30 +4,38 @@ import { airshipAcoustics } from './airship-acoustics.js?v=playtime-v1';
 
 const paneX = -12.27;
 
-function rainTexture(seed, streaks, beads) {
+function rainTexture(seed, streaks, beads, renderer) {
   const canvas = document.createElement('canvas');
-  canvas.width = 1024;
-  canvas.height = 256;
+  const logicalWidth = 1024;
+  const logicalHeight = 256;
+  const textureLimit = renderer?.capabilities.maxTextureSize || 4096;
+  canvas.width = 2 ** Math.floor(Math.log2(Math.min(4096, textureLimit)));
+  canvas.height = canvas.width / 4;
   const context = canvas.getContext('2d');
+  // Draw in the original coordinates so extra texels refine edges, not drop size or density.
+  context.scale(canvas.width / logicalWidth, canvas.height / logicalHeight);
+  context.lineCap = 'round';
   let state = seed;
   const random = () => ((state = (1664525 * state + 1013904223) >>> 0) / 4294967296);
   for (let i = 0; i < streaks; i++) {
-    const x = random() * canvas.width;
-    const y = random() * canvas.height;
+    const x = random() * logicalWidth;
+    const y = random() * logicalHeight;
     const length = 7 + random() ** 2 * 47;
     const alpha = .09 + random() * .30;
     context.strokeStyle = `rgba(202,224,241,${alpha})`;
-    context.lineWidth = random() > .90 ? 2 : 1;
+    context.lineWidth = random() > .90 ? 1.3 : .65;
     context.beginPath();
     context.moveTo(x, y);
     context.lineTo(x + (random() - .5) * 2, y + length);
     context.stroke();
     context.fillStyle = `rgba(235,246,255,${alpha * .74})`;
-    context.fillRect(x - 1, y + length - 1, 2, 2);
+    context.beginPath();
+    context.ellipse(x, y + length, .65, 1, 0, 0, Math.PI * 2);
+    context.fill();
   }
   for (let i = 0; i < beads; i++) {
-    const x = random() * canvas.width;
-    const y = random() * canvas.height;
+    const x = random() * logicalWidth;
+    const y = random() * logicalHeight;
     context.fillStyle = `rgba(226,242,252,${.13 + random() * .22})`;
     context.beginPath();
     context.ellipse(x, y, .8 + random() * 1.6, 1.6 + random() * 3, 0, 0, Math.PI * 2);
@@ -36,13 +44,17 @@ function rainTexture(seed, streaks, beads) {
   const texture = new THREE.CanvasTexture(canvas);
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
   texture.repeat.set(1, 1.6);
+  texture.generateMipmaps = true;
+  texture.minFilter = THREE.LinearMipmapLinearFilter;
+  texture.magFilter = THREE.LinearFilter;
+  texture.anisotropy = Math.min(8, renderer?.capabilities.getMaxAnisotropy() || 1);
   texture.colorSpace = THREE.SRGBColorSpace;
   return texture;
 }
 
-function makeRain(scene) {
-  const movingTexture = rainTexture(2771, 760, 80);
-  const fixedTexture = rainTexture(8107, 110, 210);
+function makeRain(scene, renderer) {
+  const movingTexture = rainTexture(2771, 760, 80, renderer);
+  const fixedTexture = rainTexture(8107, 110, 210, renderer);
   for (const [texture, x, opacity] of [
     [movingTexture, paneX, .84], [fixedTexture, paneX + .012, .37],
   ]) {
@@ -198,8 +210,8 @@ function makeSearchlight(scene, offset = 0) {
   return update;
 }
 
-export function createNightWeather(scene, camera) {
-  const updateRain = makeRain(scene);
+export function createNightWeather(scene, camera, renderer) {
+  const updateRain = makeRain(scene, renderer);
   const patrols = [0, 1].map(index => ({ ship: makeAirship(scene),
     searchlight: makeSearchlight(scene, index * 2.4), offset: index * 20 }));
   const sign = createGlassSign(scene);

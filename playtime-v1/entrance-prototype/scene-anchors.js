@@ -37,12 +37,20 @@ function positionIntro() {
   const panel = document.getElementById('intro-window');
   const width = Math.min(640, viewport.clientWidth - 32);
   panel.style.width = `${width}px`;
+  if (panel.dataset.dragX !== undefined) {
+    const x = Math.max(8, Math.min(viewport.clientWidth - width - 8, Number(panel.dataset.dragX)));
+    const y = Math.max(8, Math.min(viewport.clientHeight - (panel.hidden ? 44 : panel.offsetHeight) - 8, Number(panel.dataset.dragY)));
+    panel.style.left = `${viewport.scrollLeft + x}px`;
+    panel.style.top = `${y}px`;
+    return;
+  }
   panel.style.left = `${viewport.scrollLeft + Math.max(16, (viewport.clientWidth - width) / 2)}px`;
 }
 const observer = new ResizeObserver(layout);
 observer.observe(stage);
 observer.observe(viewport);
 viewport.addEventListener('scroll', positionIntro, { passive: true });
+viewport.addEventListener('scene:intro-layout', positionIntro);
 viewport.addEventListener('scene:3d-anchors', event => {
   anchors = event.detail.anchors;
   canqiBox = event.detail.box;

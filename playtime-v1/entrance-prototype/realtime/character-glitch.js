@@ -92,13 +92,20 @@ export function createCharacterGlitch(renderer, scene, camera, parts, reducedMot
 
   function resize() {
     renderer.getDrawingBufferSize(size);
-    if (color.width === size.x && color.height === size.y) return;
-    color.setSize(size.x, size.y);
+    // The intentional mosaic needs no full-screen HDR allocation at 4K.
+    const colorScale = Math.min(1, 1600 / Math.max(size.x, size.y));
+    const width = Math.max(1, Math.round(size.x * colorScale));
+    const height = Math.max(1, Math.round(size.y * colorScale));
+    if (color.width !== width || color.height !== height) color.setSize(width, height);
     // A deliberately pixelated silhouette needs no full-resolution buffer.
     const scale = Math.min(0.5, 768 / Math.max(size.x, size.y));
-    mask.setSize(Math.max(1, Math.round(size.x * scale)), Math.max(1, Math.round(size.y * scale)));
+    const maskWidth = Math.max(1, Math.round(size.x * scale));
+    const maskHeight = Math.max(1, Math.round(size.y * scale));
+    if (mask.width !== maskWidth || mask.height !== maskHeight) {
+      mask.setSize(maskWidth, maskHeight);
+      lastMask = -Infinity;
+    }
     uniforms.uResolution.value.copy(size);
-    lastMask = -Infinity;
   }
 
   function drawMask(time) {

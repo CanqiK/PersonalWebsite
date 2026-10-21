@@ -1,6 +1,6 @@
 # CANQI — Portfolio
 
-Current public runtime, updated 11 October 2026.
+Current public runtime, updated 21 October 2026.
 
 - Website: https://canqik.github.io/PersonalWebsite/
 - Entrance: https://canqik.github.io/PersonalWebsite/playtime-v1/entrance-prototype/
@@ -13,7 +13,8 @@ Earlier versions remain recoverable through Git history and the original version
 
 An interactive low-poly office entrance with synthesized sound, bubble hit feedback,
 character-only pixel/glitch effects, and a surveillance-to-poster transition into
-the portfolio. The homepage uses a monochrome electronic treatment. Some seated
+the portfolio. The homepage is a responsive low-poly investigation room with layered parallax,
+window rain, a perspective-mapped CRT emblem and desktop photographs. Some seated
 office workers now have long hair and adjusted silhouettes. About and CV share a
 scrolling page; the CV links to the public English PDF. Work imagery still includes
 labeled abstract placeholders. Reduced-motion preferences are supported.

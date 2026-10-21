@@ -3,16 +3,18 @@
 const entryLink = document.getElementById('entry-link');
 const scene = document.getElementById('entrance');
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const realtime = document.getElementById('realtime-scene');
 let handoff = null;
 
 function resetHandoff() {
   if (!handoff) return;
   clearTimeout(handoff.navigation);
   clearTimeout(handoff.audio);
+  clearTimeout(handoff.restoreTimer);
+  handoff.fade?.cancel();
   cancelAnimationFrame(handoff.frame);
   handoff.overlay.remove();
   scene.classList.remove('is-transmitting');
-  document.getElementById('realtime-scene').contentWindow?.postMessage({type:'canqi:signal-mode',active:false},location.origin);
   scene.inert = false;
   entryLink.removeAttribute('aria-disabled');
   handoff = null;
@@ -72,10 +74,47 @@ entryLink.addEventListener('click', event => {
 });
 
 addEventListener('pagehide', () => {
-  if (handoff) cancelAnimationFrame(handoff.frame);
+  if (!handoff) return;
+  cancelAnimationFrame(handoff.frame);
+  clearTimeout(handoff.navigation);
+  clearTimeout(handoff.audio);
+  clearTimeout(handoff.restoreTimer);
+  handoff.fade?.cancel();
+});
+function revealRestoredScene() {
+  const state = handoff;
+  if (!state?.restoring || state.revealing) return;
+  state.revealing = true;
+  clearTimeout(state.restoreTimer);
+  // Give the iframe's repainted drawing buffer a compositor frame before reveal.
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    if (handoff !== state) return;
+    const fade = state.overlay.animate([{opacity:1},{opacity:0}], {
+      duration:reduceMotion.matches ? 0 : 180, fill:'forwards',
+    });
+    state.fade = fade;
+    fade.finished.then(() => {
+      if (handoff !== state) return;
+      resetHandoff();
+      scene.dispatchEvent(new Event('scene:returned'));
+    }).catch(() => {});
+  }));
+}
+addEventListener('message', event => {
+  if (event.origin !== location.origin || event.source !== realtime.contentWindow ||
+      event.data?.type !== 'canqi:signal-ready' || event.data.requestId !== handoff?.requestId) return;
+  revealRestoredScene();
 });
 addEventListener('pageshow', event => {
-  if (!event.persisted) return;
-  resetHandoff();
-  scene.dispatchEvent(new Event('scene:returned'));
+  if (!event.persisted || !handoff) return;
+  // Keep the saved blackout in place while restoring full-resolution WebGL.
+  // Removing it before the asynchronous iframe message exposes a blank frame.
+  handoff.restoring = true;
+  handoff.revealing = false;
+  handoff.requestId = `restore-${performance.now()}`;
+  handoff.overlay.replaceChildren();
+  handoff.overlay.style.background = '#000';
+  scene.classList.remove('is-transmitting');
+  handoff.restoreTimer = setTimeout(revealRestoredScene, 1200);
+  realtime.contentWindow?.postMessage({type:'canqi:signal-mode',active:false,requestId:handoff.requestId},location.origin);
 });

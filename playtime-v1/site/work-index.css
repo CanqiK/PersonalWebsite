@@ -1,0 +1,58 @@
+/* Image-led work index: one stable frame for hover, focus and last selection. */
+.artist-card {
+  position:relative;
+  aspect-ratio:16/10;
+  overflow:hidden;
+  border:1px solid transparent;
+  background:#0b0b0b;
+  color:#fff;
+  transition:border-color .2s ease;
+  isolation:isolate;
+}
+.artist-card .artist-card-image {position:absolute;inset:0;aspect-ratio:auto;border:0;background:#111}
+.artist-card .artist-card-image canvas {width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1);filter:none}
+.artist-card::after {content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(transparent 15%,#0004 48%,#000e 100%)}
+.artist-card .artist-card-copy {position:absolute;inset:auto 16px 14px;z-index:1}
+.artist-card .artist-card-title {font-size:20px;line-height:1.18;letter-spacing:.01em;font-weight:500;margin:0;text-wrap:pretty;color:#fff}
+.artist-card .artist-card-meta {border:0;margin-top:7px;padding:0;display:flex;flex-direction:row;align-items:center;font-size:14px;line-height:1.3;color:#ddd}
+.artist-card .artist-card-arrow {position:static;background:none;width:20px;height:20px;opacity:0;transform:translateX(-4px);transition:opacity .2s,transform .2s}
+.artist-card.is-selected,.artist-card:focus-visible,.artist-card:active {border-color:#fff}
+.artist-card:focus-visible {outline:2px solid #fff;outline-offset:3px}
+.artist-card:focus-visible canvas,.artist-card:active canvas {transform:scale(1.05);filter:none}
+.artist-card:focus-visible .artist-card-arrow,.artist-card.is-selected .artist-card-arrow {opacity:1;transform:none}
+@media(hover:hover){
+  .artist-card:hover {border-color:#fff}
+  .artist-card:hover canvas {transform:scale(1.05);filter:none}
+  .artist-card:hover .artist-card-arrow {opacity:1;transform:none}
+}
+.artist-card-grid {gap:20px 18px}
+.artist-card-grid-small {grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.artist-card-small .artist-card-title {font-size:16px}
+.artist-card-small .artist-card-meta {font-size:12px}
+.artist-card-small .artist-card-copy {inset:auto 12px 10px}
+.artist-project-dialog[open] {border-color:#fff;animation:project-arrive .24s cubic-bezier(.2,.7,.2,1)}
+.artist-detail-heading {padding-top:44px}
+.artist-detail-heading h2 {font-size:clamp(38px,5.5vw,76px);line-height:1.02;letter-spacing:-.035em}
+.artist-detail-meta {margin-bottom:18px}
+.artist-detail-next {border:1px solid #555;padding:20px;transition:border-color .2s,background-color .2s}
+.artist-detail-next:hover,.artist-detail-next:focus-visible {border-color:#fff;background:#ffffff08}
+@keyframes project-arrive {from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(max-width:1000px){.artist-card-grid-small{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){
+  .artist-card-grid,.artist-card-grid-small{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .artist-card .artist-card-copy{inset:auto 10px 10px}
+  .artist-card .artist-card-title{font-size:16px}
+  .artist-card .artist-card-meta{font-size:12px;margin-top:5px}
+  .artist-card .artist-card-arrow{opacity:1;transform:none}
+}
+@media(max-width:480px){
+  .artist-card-grid,.works-grid{grid-template-columns:1fr}
+  .artist-card-grid-small{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .artist-card-small{aspect-ratio:1}
+  .artist-card-small .artist-card-title{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .artist-card,.artist-card canvas,.artist-card-arrow{transition:none!important}
+  .artist-card:hover canvas,.artist-card:focus-visible canvas,.artist-card:active canvas{transform:none}
+  .artist-project-dialog[open]{animation:none}
+}

@@ -1,11 +1,21 @@
 const viewport = document.getElementById('entrance');
 const hint = document.querySelector('.scene-pan-hint');
+const realtime = document.getElementById('realtime-scene');
 const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 let pointer = null;
 let frame = 0;
 let previous = 0;
 let scrollPosition = null;
+
+function cameraMessage(data) {
+  realtime?.contentWindow?.postMessage({ type: 'canqi:camera-follow', ...data }, location.origin);
+}
+function deadzone(value) {
+  const outside = Math.max(0, (Math.min(1, Math.abs(value)) - .20) / .80);
+  return Math.sign(value) * outside * outside;
+}
+function resetCamera() { cameraMessage({ x: 0, y: 0 }); }
 
 function stop() {
   cancelAnimationFrame(frame);
@@ -17,6 +27,7 @@ function stop() {
 
 function updateHint() {
   stop();
+  resetCamera();
   hint.textContent = !finePointer.matches ? 'Swipe to explore →'
     : reducedMotion.matches ? 'Scroll horizontally to explore ↔'
       : 'Move the mouse left or right to look around ↔';
@@ -51,17 +62,25 @@ function tick(now) {
 }
 
 viewport.addEventListener('pointermove', event => {
-  if (event.pointerType !== 'mouse' || event.buttons) { stop(); return; }
+  if (event.pointerType !== 'mouse' || event.buttons || !finePointer.matches || reducedMotion.matches) { stop(); return; }
+  if (viewport.scrollWidth - viewport.clientWidth <= 1) {
+    const rect = viewport.getBoundingClientRect();
+    cameraMessage({
+      x: deadzone((event.clientX - rect.left) / rect.width * 2 - 1),
+      y: deadzone(1 - (event.clientY - rect.top) / rect.height * 2),
+    });
+    return;
+  }
   pointer = { x: event.clientX, y: event.clientY };
   if (!frame && desiredPosition() !== null) frame = requestAnimationFrame(tick);
 }, { passive: true });
-viewport.addEventListener('pointerleave', stop);
-viewport.addEventListener('pointerdown', stop);
+viewport.addEventListener('pointerleave', () => { stop(); resetCamera(); });
+viewport.addEventListener('pointerdown', () => { stop(); cameraMessage({ freeze: true }); });
 viewport.addEventListener('wheel', stop, { passive: true });
 viewport.addEventListener('scene:focus-entry', stop);
-document.addEventListener('visibilitychange', stop);
-addEventListener('blur', stop);
-addEventListener('resize', stop);
+document.addEventListener('visibilitychange', () => { stop(); resetCamera(); });
+addEventListener('blur', () => { stop(); resetCamera(); });
+addEventListener('resize', updateHint);
 finePointer.addEventListener('change', updateHint);
 reducedMotion.addEventListener('change', updateHint);
 updateHint();

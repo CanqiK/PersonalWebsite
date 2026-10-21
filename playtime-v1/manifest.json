@@ -1,38 +1,38 @@
 [
   {
     "path": "entrance-prototype/index.html",
-    "bytes": 6148,
-    "sha256": "5765e1489146d4ef82745f9ef597521b16907a35b3fa7ed7d3f6223631dd69e0"
+    "bytes": 6462,
+    "sha256": "5567a9f8aa35c4ba0c001f129cab8abc14a9919784bc4f80e0f080348a209f4e"
   },
   {
     "path": "entrance-prototype/styles.css",
-    "bytes": 14240,
-    "sha256": "6442f5b07dfa252a08b060230fd39fba429616023d79cf00a68eebba7a330967"
+    "bytes": 15512,
+    "sha256": "33be6693ebdfefce3b0b68e525d1371865ec3a946bf89dd3e7b0b70cababc225"
   },
   {
     "path": "entrance-prototype/interaction.js",
-    "bytes": 6837,
-    "sha256": "c044d3fb91081fc8fe153fc54fa5b030283f6d7bb754d8fbed8deab5cb4d22b6"
+    "bytes": 6893,
+    "sha256": "7bd8491fa1c9adfb710481642b98c426db61953b4f6ec73b7f7a9c1093131ae3"
   },
   {
     "path": "entrance-prototype/ambience.js",
-    "bytes": 20815,
-    "sha256": "ca10c2937003766e9a84a3f73dd3fc0acf2e76995b673889d682426f431f1ce7"
+    "bytes": 21289,
+    "sha256": "f90ec0aa8bb71f0c0a12365543bf17c1e2d31b6e34d93159e58fe40c48dde3a5"
   },
   {
     "path": "entrance-prototype/bubble-sequence.js",
-    "bytes": 6123,
-    "sha256": "405a3f24fab5ac2528c0175450df7ae069781ea8feabe959134508f5877dd03a"
+    "bytes": 6861,
+    "sha256": "b5bba18e8bb779c44a3272e687e5d964ab1b4539f9ebc0c9299efba272bc436e"
   },
   {
     "path": "entrance-prototype/scene-anchors.js",
-    "bytes": 2131,
-    "sha256": "14d19933afc670652d87cb803b55ece4032645fc0442cefa3a855d4fb42c7c69"
+    "bytes": 2585,
+    "sha256": "2c28936fdf66aa62f68e1e575bec498a5c672f9af92bdd885f2ab26fb3092131"
   },
   {
     "path": "entrance-prototype/scene-pan.js",
-    "bytes": 2589,
-    "sha256": "a4c834d932900f3085b111251384de399d6c63c546030867418acad99315d2b5"
+    "bytes": 3503,
+    "sha256": "15f9ca761400a6d33ab4e4e9328a9fb69119a0681efe2452e4fcc8e5d179a582"
   },
   {
     "path": "entrance-prototype/hit-feedback.js",
@@ -41,8 +41,8 @@
   },
   {
     "path": "entrance-prototype/exit-transition.js",
-    "bytes": 4743,
-    "sha256": "1fcd8a873cc4009ea78a1fe7a58cbd567cbaace2d133d288113819cae872a0b7"
+    "bytes": 6352,
+    "sha256": "6c45cda41cfd1f24a538e0523ec8841a215a7c77304793efec243547c47ffc41"
   },
   {
     "path": "entrance-prototype/exit-transition.css",
@@ -72,7 +72,7 @@
   {
     "path": "entrance-prototype/realtime/index.html",
     "bytes": 1565,
-    "sha256": "daa43335d03b30a2fb35a3f855c4db6d959817fde1ae7d2ad618682d841605a0"
+    "sha256": "f48ab3a4fdfa16d5cada65f2540cee580df0726cfae12319a6b0f410bc2ad9bd"
   },
   {
     "path": "entrance-prototype/realtime/styles.css",
@@ -81,18 +81,28 @@
   },
   {
     "path": "entrance-prototype/realtime/scene-realtime.js",
-    "bytes": 20751,
-    "sha256": "aad42cd8eebdd71b4d6461a23781662571cdc1ccffe7e9ced32f556bb7c453da"
+    "bytes": 23826,
+    "sha256": "c8c309709a591227b9ff8c8daa1e0ae05e3122964177a872ccbf13da5710de8e"
   },
   {
     "path": "entrance-prototype/realtime/character-glitch.js",
-    "bytes": 7185,
-    "sha256": "ba416a99cd7874e6cec7439a736c19c84e2e6ae92a1290bb2c094b3e49fd7f0c"
+    "bytes": 7769,
+    "sha256": "7a2b35ea097452d8d16702c36e43e728be0ea4d8b26ae0ed7fa21b4c2cb85962"
   },
   {
     "path": "entrance-prototype/realtime/night-weather.js",
-    "bytes": 10199,
-    "sha256": "2035012163cce8de36d78d89fbefa35fe0cf56a363f79288efb08eac951d66e6"
+    "bytes": 10939,
+    "sha256": "aaae331134ef3fafeb7c0ef663ac371930f170f598a5ec700935e20e53c22e4a"
+  },
+  {
+    "path": "entrance-prototype/realtime/camera-follow.js",
+    "bytes": 3803,
+    "sha256": "83ff4ebdef03c744a1a34af5cd5b4f8f9ae6b1b330ee1eb3e290df0eae5b907d"
+  },
+  {
+    "path": "entrance-prototype/intro-window.js",
+    "bytes": 5272,
+    "sha256": "98dadb20ac24ce14dcaaf28543e36ffff57d79c7a26ee9178621b80b601a2671"
   },
   {
     "path": "entrance-prototype/realtime/glass-sign.js",
@@ -141,18 +151,18 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 3478,
-    "sha256": "5f74b304f86a374bb4f36131c7a8f2416dc701b9c6fb566a1d479cd19675252a"
+    "bytes": 4275,
+    "sha256": "69398900fe56ae243da7094a747296a0cf0040155c045326ef6f267eaa039f9e"
   },
   {
     "path": "site/app.js",
-    "bytes": 53741,
-    "sha256": "ecac3d3fc9d812ea4bfa37ac2c1e710728194ca39f3f6af6a29b8aee1b723a17"
+    "bytes": 61662,
+    "sha256": "35f112b318bdb2d9f7bb8253125dcc9fc87a803bbca2fa19e4f4992c8a65c61f"
   },
   {
     "path": "site/styles.css",
-    "bytes": 47614,
-    "sha256": "bb5a72fc3e825dfe8ab819a38c20b2bdc330c05197318f94a2c379715e7f4f00"
+    "bytes": 53172,
+    "sha256": "9525502470c47334f57f7eb32425a097dc1d88e2dd57287a2e79ef44c67bfaf4"
   },
   {
     "path": "site/digital-home.css",
@@ -160,14 +170,64 @@
     "sha256": "d962bd4f48f5cf204f792fc90ca0d8841037151453df345ac540a4e841c3243c"
   },
   {
+    "path": "site/investigation-wall.css",
+    "bytes": 12003,
+    "sha256": "eb81043b68c3c1443d618b2cafa1586da4d5ca3b92b0f5ca485df8b54a9c4ac8"
+  },
+  {
+    "path": "site/home-scene.css",
+    "bytes": 6166,
+    "sha256": "29e96a4ff09c3d06c8b05cacc4f5cb1196ff8a097a6fb5c1166adaa156ac5660"
+  },
+  {
+    "path": "site/home-scene.js",
+    "bytes": 7448,
+    "sha256": "c6de41e5ce090b005e22f00c75f1b441482f1426354ea27ce69db363d7b66bd4"
+  },
+  {
+    "path": "site/work-index.css",
+    "bytes": 3718,
+    "sha256": "f7e1021bd2fc706f43ee6d52ee5074dc036fa40747c8b05ee4399a9773db07eb"
+  },
+  {
     "path": "site/interaction-audio.js",
     "bytes": 5104,
     "sha256": "2c6707015fe4b38944f6d54a0b6ea7377bd727a0ff9fafdac360165c8a54e778"
   },
   {
+    "path": "site/assets/investigation-room-lowpoly.png",
+    "bytes": 1633348,
+    "sha256": "4b4033198b0ee3b763f9acc212bad371a5f53966b832150f3a5fd90a01c0123c"
+  },
+  {
+    "path": "site/assets/crocursionism-logo.jpg",
+    "bytes": 144047,
+    "sha256": "3b22ee95b31be3391681229ac9f641d5ffc0403b2e2df71e28fc2d97e033ab61"
+  },
+  {
+    "path": "site/assets/window-rain.svg",
+    "bytes": 445,
+    "sha256": "971710d07e676ad2971c1351d890eb378426101480fb517cf3db0d138ca209c1"
+  },
+  {
     "path": "site/assets/canqi-portrait.jpg",
     "bytes": 38002,
     "sha256": "51b1db6cd7eafeb1e49b6d0f0df3b195a56c3b8987b95e3144d26a83e66e4e01"
+  },
+  {
+    "path": "site/assets/canqi-seaside.png",
+    "bytes": 906821,
+    "sha256": "c5afe5578bac2535f7956af5efff39ed31ea5c12b1a93bb3294baed1170bbfe1"
+  },
+  {
+    "path": "site/assets/contact-instagram-qr.jpg",
+    "bytes": 79143,
+    "sha256": "93cfe490b8e6826fd509c59b8ef0cfd78593a3f7d37c3ed395761a4584296fa6"
+  },
+  {
+    "path": "site/assets/contact-rednote-qr.jpg",
+    "bytes": 114007,
+    "sha256": "8ba933dca56754b694d0d39ea495c74b9e03402d4f7c842eee5987fd042bf432"
   },
   {
     "path": "site/assets/canqi-lin-cv-2026-en.pdf",

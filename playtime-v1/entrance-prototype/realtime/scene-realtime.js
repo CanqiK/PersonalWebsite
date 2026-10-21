@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 import { GLTFLoader } from '../vendor/GLTFLoader.js';
-import { createNightWeather } from './night-weather.js?v=playtime-v1-cursors';
-import { createCharacterGlitch } from './character-glitch.js?v=mono-fast-4';
+import { createNightWeather } from './night-weather.js?v=rain-contrast-5';
+import { createCharacterGlitch } from './character-glitch.js?v=smooth-16';
+import { createCameraFollow } from './camera-follow.js?v=depth-pan-2';
 const embedded = new URLSearchParams(location.search).has('embed');
 document.documentElement.classList.toggle('embedded', embedded);
 
@@ -24,14 +25,20 @@ const storedExposure = Number(localStorage.getItem(exposureKey));
 renderer.toneMappingExposure = storedExposure >= .8 && storedExposure <= 1.8 ? storedExposure : 1.25;
 lightLevel.value = renderer.toneMappingExposure.toFixed(2);
 lightValue.value = renderer.toneMappingExposure.toFixed(2);
-renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+// Bound GPU work on high-DPI/large displays; rain textures remain full resolution.
+let renderQuality = 1;
+let signalMode = false;
+const scenePixelRatio = () => Math.min(devicePixelRatio || 1, 1.5,
+  Math.sqrt(2400000 / Math.max(1, stage.clientWidth * stage.clientHeight))) * renderQuality;
+renderer.setPixelRatio(scenePixelRatio());
 renderer.setSize(stage.clientWidth, stage.clientHeight, false);
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#050d19');
-scene.fog = new THREE.FogExp2('#07111e', 0.008);
-scene.add(new THREE.AmbientLight(0xa9bfd7, .62));
-const moon = new THREE.DirectionalLight(0x9dbdde, 1.35);
+scene.fog = new THREE.FogExp2('#07111e', 0.006);
+// Less uniform fill, a stronger key: deepen shadows without dimming every light.
+scene.add(new THREE.AmbientLight(0xa9bfd7, .46));
+const moon = new THREE.DirectionalLight(0x9dbdde, 1.48);
 moon.position.set(-8, 12, 6);
 scene.add(moon);
 const warm = new THREE.DirectionalLight(0xffcf8b, 0.10);
@@ -96,8 +103,35 @@ let walkers = [];
 let walkerLimbs = [];
 let weather;
 let portraitGlitch;
+let cameraFollow;
 let weatherTime = 0;
 let lastFrame = 0;
+let animationFrame = 0;
+let nextFrameAt = 0;
+let qualitySampleStart = 0;
+let qualityElapsed = 0;
+let qualitySamples = 0;
+let lastQualityChange = 0;
+function requestSceneFrame() {
+  if (!animationFrame && !document.hidden && camera) animationFrame = requestAnimationFrame(update);
+}
+function sampleFrameLoad(t, gap) {
+  if (!qualitySampleStart) qualitySampleStart = t;
+  if (gap > 0 && gap < 200) { qualityElapsed += gap; qualitySamples++; }
+  if (t - qualitySampleStart < 3500) return;
+  const mean = qualityElapsed / Math.max(1, qualitySamples);
+  let next = renderQuality;
+  if (!signalMode && t - lastQualityChange > 8000 && qualitySamples > 50) {
+    if (mean > 25) next = Math.max(.7, renderQuality - .1);
+    else if (mean < 18 && t - lastQualityChange > 16000) next = Math.min(1, renderQuality + .05);
+  }
+  if (next !== renderQuality) {
+    renderQuality = next;
+    renderer.setPixelRatio(scenePixelRatio());
+    lastQualityChange = t;
+  }
+  qualitySampleStart = t; qualityElapsed = qualitySamples = 0;
+}
 const tunedMaterials = new Set();
 let moving = false;
 const motionProbe = probes.get('motion') !== 'off';
@@ -120,6 +154,12 @@ function receivePointer(data) {
 }
 addEventListener('message', event => {
   if (embedded && event.origin === location.origin && event.source === window.parent &&
+      event.data?.type === 'canqi:camera-follow') {
+    if (event.data.freeze) cameraFollow?.freeze();
+    else cameraFollow?.setTarget(event.data);
+    return;
+  }
+  if (embedded && event.origin === location.origin && event.source === window.parent &&
       event.data?.type === 'canqi:portrait-glitch') {
     portraitGlitch?.setActive(event.data.active === true);
     return;
@@ -127,9 +167,16 @@ addEventListener('message', event => {
   if (embedded && event.origin === location.origin && event.source === window.parent &&
       event.data?.type === 'canqi:signal-mode') {
     const signal = event.data.active === true;
-    renderer.setPixelRatio(signal ? Math.min(.6,640/stage.clientWidth) : Math.min(devicePixelRatio,1.5));
-    renderer.setSize(stage.clientWidth,stage.clientHeight,false);
+    signalMode = signal;
+    const ratio = signal ? Math.min(.6,640/stage.clientWidth) : scenePixelRatio();
+    // setPixelRatio already resizes/clears the drawing buffer. Repaint in this
+    // same task so the compositor never sees the cleared intermediate canvas.
+    if (renderer.getPixelRatio() !== ratio) renderer.setPixelRatio(ratio);
     canvas.style.imageRendering = signal ? 'pixelated' : 'auto';
+    if (camera) {
+      if (!portraitGlitch?.render(performance.now() / 1000)) renderer.render(scene, camera);
+      window.parent.postMessage({ type:'canqi:signal-ready', requestId:event.data.requestId }, location.origin);
+    }
     return;
   }
   if (embedded && event.origin === location.origin && event.source === window.parent &&
@@ -178,9 +225,14 @@ function addAisleWalkers() {
   }
 }
 
+let fittedWidth = 0, fittedHeight = 0;
 function fit() {
   if (!camera) return;
-  renderer.setSize(stage.clientWidth, stage.clientHeight, false);
+  const width = stage.clientWidth, height = stage.clientHeight;
+  if (width === fittedWidth && height === fittedHeight) return;
+  fittedWidth = width; fittedHeight = height;
+  renderer.setPixelRatio(signalMode ? Math.min(.6, 640 / width) : scenePixelRatio());
+  renderer.setSize(width, height, false);
   if (camera.userData.baseProjectionX) {
     camera.projectionMatrix.elements[0] = camera.userData.baseProjectionX *
       ((1280 / 720) / (stage.clientWidth / stage.clientHeight));
@@ -192,19 +244,21 @@ function fit() {
 new ResizeObserver(fit).observe(stage);
 
 function update(t) {
-  if (!camera) return;
+  animationFrame = 0;
+  if (!camera || document.hidden) return;
+  // Do not redraw the same scene at 120/144 Hz on fast monitors.
+  if (t < nextFrameAt - 1) { requestSceneFrame(); return; }
+  nextFrameAt = Math.max(nextFrameAt + 1000 / 60, t);
+  sampleFrameLoad(t, lastFrame ? t - lastFrame : 0);
   const time = t / 1000;
   const dt = lastFrame ? Math.min(.05, (t - lastFrame) / 1000) : 0;
   lastFrame = t;
+  if (moving) cameraFollow?.update(dt);
   if (motionEnabled && moving) weatherTime += dt;
   weather?.update(weatherTime, dt, motionEnabled && moving, embedded);
   if (motionEnabled && moving) {
     const inhale = .25 + .75 * (1 + Math.sin(time * Math.PI * 2 / 4.4)) / 2;
-    for (const mesh of chestMeshes) {
-      const map = mesh.morphTargetDictionary || {};
-      const breath = Object.keys(map).find(key => /Chest.inhale/i.test(key));
-      if (breath) mesh.morphTargetInfluences[map[breath]] = inhale;
-    }
+    for (const {mesh, index} of chestMeshes) mesh.morphTargetInfluences[index] = inhale;
     updateHead(dt, inhale);
     for (const side of ['leftarm', 'rightarm']) {
       const arm = canqiParts[side];
@@ -266,7 +320,7 @@ function update(t) {
     }
   }
   if (!portraitGlitch?.render(time)) renderer.render(scene, camera);
-  requestAnimationFrame(update);
+  requestSceneFrame();
 }
 
 async function load() {
@@ -293,7 +347,7 @@ async function load() {
     camera.updateMatrixWorld(true);
     camera.updateProjectionMatrix = () => {};
     addLampHalos(meta.frontLampAnchors || []);
-    weather = createNightWeather(scene, camera);
+    weather = createNightWeather(scene, camera, renderer);
 
     gltf.scene.traverse(object => {
       const nodeKey = object.name.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -313,7 +367,11 @@ async function load() {
       const label = object.name.toLowerCase();
       let ancestor = object;
       while (ancestor && ancestor.name.toLowerCase().replace(/[^a-z0-9]/g, '') !== 'canqichest') ancestor = ancestor.parent;
-      if (ancestor && object.morphTargetInfluences) chestMeshes.push(object);
+      if (ancestor && object.morphTargetInfluences) {
+        const map = object.morphTargetDictionary || {};
+        const breath = Object.keys(map).find(key => /Chest.inhale/i.test(key));
+        if (breath !== undefined) chestMeshes.push({mesh:object,index:map[breath]});
+      }
       if (label.includes('worker_head') || label.includes('worker_hair')) {
         const phase = Number(label.match(/(\d+)$/)?.[1] || 0) % 7;
         workerHeads.push({ object, base: object.rotation.y, baseY: object.position.y, phase });
@@ -373,6 +431,7 @@ async function load() {
       }
     });
 
+    cameraFollow = createCameraFollow(camera, gltf.scene, meta, canqiParts, reducedMotion);
     portraitGlitch = createCharacterGlitch(renderer, scene, camera, canqiParts, reducedMotion);
     addAisleWalkers();
     reportProgress(92, 'WARMING UP THE LIGHTS');
@@ -397,7 +456,7 @@ async function load() {
     motionToggle.setAttribute('aria-pressed', String(motionEnabled));
     motionToggle.textContent = motionEnabled ? 'MOTION ON' : 'MOTION OFF';
     console.info(`CANQI live scene: camera=${camera.name}; parts=${Object.keys(canqiParts).join(',')}; chestMeshes=${chestMeshes.length}; workers=${workerHeads.length}; walkers=${walkers.length}; limbs=${walkerLimbs.length}; coloredScreens=${[...frontLamps.values()].filter(lamp => lamp.faceMaterial).length}; cityBanks=${cityWindows.length}; draws=${renderer.info.render.calls}`);
-    requestAnimationFrame(update);
+    requestSceneFrame();
   } catch (error) {
     status.textContent = `LIVE 3D LOAD FAILED — ${error.message}`;
     console.error(error);
@@ -407,6 +466,9 @@ async function load() {
 
 document.addEventListener('visibilitychange', () => {
   moving = !document.hidden;
+  lastFrame = nextFrameAt = qualitySampleStart = qualityElapsed = qualitySamples = 0;
+  cancelAnimationFrame(animationFrame); animationFrame = 0;
+  if (moving) requestSceneFrame();
 });
 lightLevel.addEventListener('input', () => {
   renderer.toneMappingExposure = Number(lightLevel.value);
