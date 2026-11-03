@@ -1,0 +1,140 @@
+/* Extend the existing portfolio's editorial scale and colour from project images. */
+.mentor-page{padding:0 var(--gutter) 100px}
+.mentor-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;padding:55px 0 60px}
+.mentor-intro h1{font-size:clamp(58px,8vw,112px);font-weight:700;line-height:1;letter-spacing:-.04em;margin:0}
+.mentor-intro>p{max-width:32ch;font-size:16px;line-height:1.6;color:var(--muted);margin:0}
+.mentor-institutions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,3vw,48px);align-items:stretch}
+.mentor-institutions:focus-visible{outline:1px solid var(--paper);outline-offset:8px}
+.mentor-institution{display:grid;grid-template-rows:subgrid;grid-row:span 2;gap:0;min-width:0;scroll-margin-top:160px}
+.mentor-institution-heading{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:20px;padding:28px 0;border-top:1px solid var(--line)}
+.mentor-institution-heading h2{font-size:clamp(27px,2.5vw,44px);line-height:1.15;font-weight:500;letter-spacing:-.025em;margin:0}
+.mentor-institution-heading>p{font-size:14px;line-height:1.7;color:var(--muted);margin:0}
+.mentor-card{box-sizing:border-box;min-width:0;min-height:var(--mentor-card-height);border:1px solid var(--line);scroll-margin-top:160px}
+.mentor-feature{position:relative;isolation:isolate;display:block;overflow:hidden;color:#fff;background:#111;outline-offset:7px}
+.mentor-feature>.photo-print{position:absolute;inset:0;width:100%;height:100%}
+.mentor-feature .project-thumbnail{object-position:50% 45%}
+.mentor-feature::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#000e 0%,#0004 40%,#0002 70%,#0006 100%)}
+.mentor-feature-copy{position:absolute;inset:0;z-index:2;padding:clamp(24px,2.5vw,48px);display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end}
+.mentor-feature-course{font-size:14px;line-height:1.5;margin:0 0 24px}
+.mentor-feature h3{font-size:clamp(48px,5.7vw,104px);font-weight:600;line-height:.96;letter-spacing:-.04em;margin:0 0 28px;text-wrap:balance}
+.mentor-feature-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:24px;width:100%}
+.mentor-feature-bottom>p{font-size:16px;line-height:1.6;max-width:42ch;margin:0}
+.mentor-feature-bottom>span{display:flex;gap:28px;align-items:center;border:1px solid #deded4;padding:17px 22px;white-space:nowrap;font-size:15px;transition:background .2s,color .2s}
+.mentor-feature:hover .mentor-feature-bottom>span,.mentor-feature:focus-visible .mentor-feature-bottom>span{color:#171716;background:#e9e8e1}
+.mentor-feature:focus-visible .photo-print-canvas{opacity:0}
+@media(hover:hover) and (pointer:fine){.mentor-feature:hover .photo-print-canvas{opacity:0}}
+.mentor-feature svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.3}
+.mentor-sfk-panel{display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:clamp(24px,2.5vw,48px);background:var(--paper);color:var(--ink)}
+.mentor-sfk-panel h3{font-size:clamp(38px,4.2vw,76px);line-height:1.05;letter-spacing:-.035em;font-weight:500;margin:0;text-wrap:balance}
+.mentor-sfk-copy{max-width:45ch;font-size:clamp(16px,1.35vw,20px);line-height:1.7}
+.mentor-sfk-copy>p{margin:0}
+.mentor-sfk-copy>p:last-child{font-size:14px;color:#55554f;margin-top:28px;padding-top:20px;border-top:1px solid #99988f}
+.mentor-project-dialog{width:min(1480px,calc(100vw - 38px))}
+.mentor-project-dialog .project-reader{max-width:none}
+.mentor-project-dialog .reader-heading h2{font-size:clamp(44px,6.5vw,96px)}
+.mentor-project-dialog .reader-animation{max-width:640px;margin:32px auto}
+.mentor-project-dialog .reader-animation-auto{width:50%;max-width:320px}
+.mentor-project-dialog .reader-animation-auto img{display:block;width:100%;height:auto;background:#050505}
+.mentor-project-dialog .reader-pair-compact{max-width:none;gap:22px}
+.mentor-project-dialog .reader-pair-compact .reader-figure{max-width:none}
+.mentor-project-dialog .reader-pair .reader-figure>a{height:480px;display:flex;align-items:center}
+.mentor-project-dialog .reader-pair .reader-figure img{height:100%;object-fit:contain}
+.mentor-project-dialog #gafa-together .reader-figure-media{display:block}
+.mentor-project-dialog #gafa-together .reader-figure img{height:auto;max-height:none}
+@media(min-width:901px){.mentor-project-dialog #gafa-together .reader-pair{grid-template-columns:minmax(0,16fr) minmax(0,9fr)}}
+.reader-authors{font-size:13px;line-height:1.8;color:var(--reader-muted);margin:-5px 0 26px}
+.reader-quote-source{font-size:13px;color:var(--reader-muted);margin:0 0 24px;line-height:1.6}
+.reader-reflection blockquote{margin:0;padding:0}
+.mentor-project-dialog .reader-reflection{padding:clamp(56px,6vw,88px) 0 48px}
+.mentor-project-dialog .reader-reflection>header{margin-bottom:24px}
+.mentor-project-dialog .reader-reflection .reader-chapter{display:none}
+.mentor-project-dialog .reader-reflection h3{font-size:clamp(40px,5vw,68px);line-height:1.1;letter-spacing:-.035em;font-weight:500}
+.mentor-project-dialog .reader-reflection .reader-quote-source{margin-bottom:40px;letter-spacing:.025em}
+.mentor-project-dialog .reader-reflection .reader-prose{max-width:65ch;font-family:Georgia,"Noto Serif SC","Songti SC",STSong,SimSun,serif;font-size:clamp(1.125rem,1.5vw,1.3125rem)}
+.mentor-project-dialog .reader-reflection .reader-prose p{font-size:inherit;line-height:1.9;letter-spacing:.01em;margin-bottom:1.4em;color:#dcdad2}
+.mentor-project-dialog .reader-reflection .reader-prose p:first-child{font-size:clamp(1.5rem,2vw,1.875rem);line-height:1.6;color:#e9e8e1;margin-bottom:1.2em}
+.mentor-project-dialog .reader-reflection .reader-prose p:nth-child(5){font-family:"Helvetica Neue",Helvetica,Arial,"Microsoft YaHei",sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);line-height:1.55;letter-spacing:-.015em;color:#e9e8e1;max-width:30ch;margin-block:1.5em}
+.mentor-project-dialog .reader-reflection:lang(zh-CN) .reader-prose{max-width:32em}
+.mentor-project-dialog .reader-reflection:lang(zh-CN) .reader-prose p{line-height:1.95;letter-spacing:.025em}
+.mentor-project-dialog .reader-reflection:lang(zh-CN) .reader-prose p:nth-child(5){line-height:1.65;max-width:22em}
+@media(max-width:700px){
+ .mentor-page{padding-bottom:64px}
+ .mentor-intro{display:block;padding:40px 0}.mentor-intro h1{font-size:clamp(52px,12vw,80px)}.mentor-intro>p{margin-top:24px;max-width:34ch;font-size:14px}
+ .mentor-institutions{grid-template-columns:repeat(2,calc(100% - 24px));column-gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--line) var(--ink);padding-bottom:12px}
+ .mentor-institution{scroll-snap-align:start}
+ .mentor-institution-heading{padding:24px 0;gap:18px}.mentor-institution-heading h2{font-size:28px}.mentor-institution-heading>p{font-size:13px}
+ .mentor-feature-copy{padding:24px 20px}.mentor-feature h3{font-size:clamp(46px,12vw,76px);margin-bottom:25px}.mentor-feature-course{font-size:12px;margin-bottom:22px}
+ .mentor-feature-bottom{display:block}.mentor-feature-bottom>p{font-size:14px}.mentor-feature-bottom>span{width:fit-content;margin-top:24px;padding:12px 16px;font-size:14px}
+ .mentor-feature .project-thumbnail{object-position:65% 50%}.mentor-sfk-panel{padding:24px 20px;gap:32px}.mentor-sfk-panel h3{font-size:clamp(36px,9vw,56px)}.mentor-sfk-copy{font-size:16px}
+ .mentor-project-dialog .reader-pair{grid-template-columns:1fr}.mentor-project-dialog .reader-pair .reader-figure>a{height:auto}.mentor-project-dialog .reader-pair .reader-figure img{height:auto;max-height:65svh}
+}
+@media(prefers-reduced-motion:reduce){.mentor-feature-bottom>span{transition:none}}
+
+/* Every programme has the same poster scale; unpublished records stay non-interactive. */
+.mentor-programmes{--mentor-card-height:clamp(640px,55vw,800px);min-width:0;display:grid;grid-auto-rows:minmax(var(--mentor-card-height),auto);gap:32px;align-content:start}
+.mentor-programmes .mentor-feature h3{font-size:clamp(40px,4.8vw,80px)}
+.mentor-students-link{color:var(--ink);text-decoration:none;gap:24px}
+.mentor-students-link h3{font-size:clamp(36px,4vw,68px)}
+.mentor-students-link .mentor-sfk-copy{font-size:16px}
+.mentor-students-link .mentor-sfk-copy>p:last-child{margin:0;padding:0;border:0;color:inherit;font-size:inherit}
+.mentor-students-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid #99988f;padding-top:20px;font-size:15px}
+.mentor-students-cta svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.3}
+.mentor-students-link:hover .mentor-students-cta{text-decoration:underline;text-underline-offset:5px}
+.mentor-students-link:focus-visible,.mentor-back:focus-visible{outline:2px solid var(--paper);outline-offset:6px}
+.mentor-text-card{display:flex;flex-direction:column;justify-content:space-between;gap:32px;padding:clamp(24px,2.5vw,48px);background:var(--paper);color:var(--ink)}
+.mentor-entry-date{font-size:13px;line-height:1.6;letter-spacing:.025em;margin:0;font-variant-numeric:tabular-nums}
+.mentor-text-card h3,.mentor-course-record h3{font-size:clamp(36px,4vw,68px);font-weight:500;line-height:1.05;letter-spacing:-.035em;margin:0;text-wrap:balance;overflow-wrap:break-word}
+.mentor-entry-role{font-size:15px;line-height:1.6;margin:0 0 16px}
+.mentor-entry-copy{font-size:16px;line-height:1.7;max-width:50ch;margin:0}
+.mentor-text-card .mentor-entry-copy{color:#484842}
+.mentor-entry-note{font-size:14px;line-height:1.6;color:#484842;margin:0;border-top:1px solid #99988f;padding-top:20px}
+.mentor-back{display:inline-block;margin-top:32px;padding-block:12px;font-size:14px;text-decoration:underline;text-underline-offset:5px}
+.mentor-students .mentor-intro h1{font-size:clamp(48px,7vw,96px)}
+.mentor-student-intro{border-top:1px solid var(--line);padding:32px 0;max-width:75ch}
+.mentor-student-intro h2{font-size:24px;font-weight:500;margin:0 0 20px}
+.mentor-student-intro p,.mentor-student-empty p{font-size:16px;line-height:1.7;color:var(--muted);max-width:60ch}
+.mentor-student-empty{padding:48px 0 64px;border-top:1px solid var(--line)}
+.mentor-student-empty>p:first-child{font-size:13px;margin:0 0 24px}
+.mentor-student-empty h2{font-size:clamp(28px,3vw,44px);font-weight:500;line-height:1.2;margin:0 0 24px}
+.mentor-course-record{display:flex;flex-direction:column;color:inherit;text-decoration:none;background:#090909}
+.mentor-course-record>.photo-print{position:relative;inset:auto;display:block;flex:none;width:100%;aspect-ratio:531/278;overflow:hidden;margin:0}
+.mentor-course-record .project-thumbnail{object-fit:cover}
+.mentor-course-copy{flex:1;display:flex;flex-direction:column;align-items:stretch;gap:16px;padding:clamp(24px,2.5vw,48px)}
+.mentor-course-copy .mentor-entry-date{color:var(--muted)}
+.mentor-course-subtitle{font-size:clamp(20px,2vw,28px);line-height:1.25;margin:-8px 0 8px}
+.mentor-course-copy .mentor-entry-copy{color:var(--muted)}
+.mentor-course-copy .mentor-entry-role{font-size:14px;margin-bottom:8px}
+.mentor-course-record .mentor-students-cta{margin-top:auto;border-color:var(--line)}
+.mentor-course-record:hover .mentor-students-cta{text-decoration:underline;text-underline-offset:5px}
+.mentor-course-record:focus-visible{outline:2px solid var(--paper);outline-offset:7px}
+.mentor-course-record:focus-visible .photo-print-canvas{opacity:0}
+@media(hover:hover) and (pointer:fine){.mentor-course-record:hover .photo-print-canvas{opacity:0}}
+/* Exhibition-only variants: a compact catalogue and lettering seen together. */
+[data-reader-project="sfk-living-art"] .reader-triptych{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,2vw,24px);align-items:start}
+[data-reader-project="sfk-living-art"] .reader-triptych img{max-height:none;width:100%;height:auto}
+#living-catalogue-cover .reader-figure{max-width:540px;margin-inline:auto}
+#living-catalogue .reader-gallery{width:min(100%,560px);margin-inline:auto}
+#living-catalogue .reader-figure-media{height:360px;display:flex;align-items:center;justify-content:center;background:#111}
+#living-catalogue .reader-gallery-slide img{width:100%;height:100%;object-fit:contain}
+#living-graphics>.reader-pair .reader-figure>a{height:auto}
+#living-graphics>.reader-pair img{height:auto}
+#living-selected .reader-gallery-slide .reader-figure>a{height:min(70svh,700px)}
+#living-planning-process .reader-pair .reader-figure-media{height:360px;display:flex;align-items:center;justify-content:center}
+#living-planning-process .reader-pair img{height:100%;object-fit:contain}
+#living-thoughts .reader-prose p{white-space:pre-line}
+@media(max-width:700px){
+ #living-catalogue .reader-figure-media{height:240px}
+ #living-selected .reader-gallery-slide .reader-figure>a{height:min(52svh,420px)}
+ #living-planning-process .reader-pair .reader-figure-media{height:auto}
+ #living-planning-process .reader-pair img{height:auto}
+ [data-reader-project="sfk-living-art"] .reader-triptych figcaption{font-size:10px;line-height:1.5}
+}
+@media(max-width:700px){
+ .mentor-institutions{grid-template-columns:1fr;overflow:visible;gap:48px;scroll-snap-type:none}
+ .mentor-institution{display:block;grid-row:auto}
+ .mentor-programmes{--mentor-card-height:580px;gap:24px}
+ .mentor-programmes .mentor-feature h3{font-size:clamp(40px,12vw,64px)}
+ .mentor-text-card{padding:24px 20px;gap:28px}
+ .mentor-text-card h3,.mentor-course-record h3{font-size:clamp(36px,9vw,56px)}
+ .mentor-course-copy{padding:24px 20px}.mentor-entry-copy{font-size:15px}
+}

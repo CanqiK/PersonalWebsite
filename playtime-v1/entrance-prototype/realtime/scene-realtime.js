@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from '../vendor/GLTFLoader.js';
 import { createNightWeather } from './night-weather.js?v=rain-contrast-5';
-import { createCharacterGlitch } from './character-glitch.js?v=smooth-16';
+import { createCharacterGlitch } from './character-glitch.js?v=entry-flow-50';
 import { createCameraFollow } from './camera-follow.js?v=depth-pan-2';
 const embedded = new URLSearchParams(location.search).has('embed');
 document.documentElement.classList.toggle('embedded', embedded);
@@ -226,7 +226,7 @@ function addAisleWalkers() {
 }
 
 let fittedWidth = 0, fittedHeight = 0;
-function fit() {
+function fit(paint = true) {
   if (!camera) return;
   const width = stage.clientWidth, height = stage.clientHeight;
   if (width === fittedWidth && height === fittedHeight) return;
@@ -239,9 +239,9 @@ function fit() {
     camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();
   }
   camera.updateProjectionMatrix();
-  renderer.render(scene, camera);
+  if (paint) renderer.render(scene, camera);
 }
-new ResizeObserver(fit).observe(stage);
+new ResizeObserver(() => fit()).observe(stage);
 
 function update(t) {
   animationFrame = 0;
@@ -324,6 +324,14 @@ function update(t) {
 }
 
 async function load() {
+  const timings = {};
+  let checkpoint = performance.now();
+  const record = name => {
+    const now = performance.now();
+    timings[name] = Math.round(now - checkpoint);
+    checkpoint = now;
+    stage.dataset.bootTimings = JSON.stringify(timings);
+  };
   const reportProgress = (value, label) => {
     if (embedded) window.parent.postMessage({ type: 'canqi:3d-progress', value, label }, location.origin);
   };
@@ -338,6 +346,7 @@ async function load() {
       }),
     ]);
     reportProgress(85, 'ASSEMBLING THE SCENE');
+    record('model');
     scene.add(gltf.scene);
     camera = gltf.cameras[0];
     if (!camera) throw new Error('Blender camera missing from model');
@@ -435,11 +444,19 @@ async function load() {
     portraitGlitch = createCharacterGlitch(renderer, scene, camera, canqiParts, reducedMotion);
     addAisleWalkers();
     reportProgress(92, 'WARMING UP THE LIGHTS');
+    record('assembly');
     await new Promise(requestAnimationFrame);
-    if (renderer.compileAsync) await renderer.compileAsync(scene, camera);
-    fit();
-    await portraitGlitch.warmup();
+    fit(false);
+    // Issue all shader variants together while the loading UI still covers us.
+    // Waiting for each variant in sequence creates a visible pause at 92%.
+    await Promise.all([
+      renderer.compileAsync ? renderer.compileAsync(scene, camera) : renderer.compile(scene, camera),
+      portraitGlitch.warmup(),
+    ]);
+    record('compile');
+    await new Promise(requestAnimationFrame);
     renderer.render(scene, camera);
+    record('firstRender');
     // Wait for the first rendered frame before allowing the parent to reveal it.
     await new Promise(requestAnimationFrame);
     sceneStartTime = performance.now() / 1000;
@@ -449,7 +466,7 @@ async function load() {
     if (embedded && window.parent !== window) {
       reportProgress(100, 'OFFICE READY');
       window.parent.postMessage({ type: 'canqi:3d-ready',
-        bubbleAnchors: meta.bubbleAnchors, canqiBox: meta.canqiBox }, location.origin);
+        bubbleAnchors: meta.bubbleAnchors, canqiBox: meta.canqiBox, timings }, location.origin);
     }
     metrics.hidden = false;
     calibration.hidden = false;

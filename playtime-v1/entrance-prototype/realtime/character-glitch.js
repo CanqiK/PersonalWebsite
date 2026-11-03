@@ -139,9 +139,11 @@ export function createCharacterGlitch(renderer, scene, camera, parts, reducedMot
     async warmup() {
       resize();
       // Compile target-specific shader variants before the entrance opens.
-      await compile(scene, camera, color);
-      await compile(maskScene, camera, mask);
-      await compile(quadScene, quadCamera, null);
+      await Promise.all([
+        compile(scene, camera, color),
+        compile(maskScene, camera, mask),
+        compile(quadScene, quadCamera, null),
+      ]);
       const target = renderer.getRenderTarget();
       try {
         renderer.setRenderTarget(color);

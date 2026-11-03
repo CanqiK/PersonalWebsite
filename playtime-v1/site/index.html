@@ -18,13 +18,41 @@
       window.homeIntroFallback=setTimeout(()=>document.documentElement.classList.remove('home-intro-pending'),6000);
     }
   </script>
-  <link rel="stylesheet" href="styles.css?v=entrance-computer-13">
+  <link rel="stylesheet" href="styles.css?v=brand-tooltip-30">
   <link rel="stylesheet" href="digital-home.css?v=mono-fast-4">
-  <link rel="stylesheet" href="work-index.css?v=work-clean-8">
+  <link rel="stylesheet" href="work-index.css?v=performance-29">
   <link rel="stylesheet" href="investigation-wall.css?v=wall-lowpoly-15">
-  <link rel="stylesheet" href="home-scene.css?v=wall-fit-18">
-  <script src="home-scene.js?v=wall-fit-18" defer></script>
-  <script src="app.js?v=wall-fit-18" defer></script>
+  <link rel="stylesheet" href="home-scene.css?v=room-depth-49">
+  <script src="home-scene.js?v=entry-flow-50" defer></script>
+  <link rel="stylesheet" href="page-motion.css?v=flow-19">
+  <script src="page-motion.js?v=performance-29" defer></script>
+  <link rel="stylesheet" href="return-rocket.css?v=rocket-52">
+  <script src="return-rocket.js?v=rocket-51" defer></script>
+  <link rel="stylesheet" href="../entrance-prototype/exit-transition.css?v=feedback-2">
+  <link rel="stylesheet" href="route-transition.css?v=iris-28">
+  <script src="route-transition.js?v=mentor-42" defer></script>
+  <link rel="stylesheet" href="who-ascii.css?v=who-credit-48">
+  <script src="who-ascii.js?v=logo-center-27" defer></script>
+  <script src="study-painter.js?v=performance-29" defer></script>
+  <script src="study-renderer.js?v=performance-29" defer></script>
+  <link rel="stylesheet" href="project-content.css?v=ballon-append-39">
+  <script src="project-images.js?v=gavel-film-40" defer></script>
+  <script src="project-gavel.js?v=gavel-first-41" defer></script>
+  <script src="project-power.js?v=records-31" defer></script>
+  <script src="project-topias.js?v=ballon-append-39" defer></script>
+  <script src="project-other.js?v=ballon-38" defer></script>
+  <script src="project-fishbird-assets.js?v=fishbird-33" defer></script>
+  <script src="project-fishbird.js?v=installations-37" defer></script>
+  <link rel="stylesheet" href="mentor.css?v=mentor-cards-57">
+  <script src="mentor-assets.js?v=mentor-photos-45" defer></script>
+  <script src="mentor-content.js?v=mentor-layout-47" defer></script>
+  <script src="mentor-living-art-assets.js?v=living-cover-56" defer></script>
+  <script src="mentor-living-art.js?v=living-cover-56" defer></script>
+  <script src="mentor.js?v=mentor-cards-57" defer></script>
+  <script src="project-reader.js?v=living-art-54" defer></script>
+  <link rel="stylesheet" href="photo-print.css?v=colour-print-32">
+  <script src="photo-print.js?v=colour-print-32" defer></script>
+  <script src="app.js?v=living-art-54" defer></script>
 </head>
 <body>
   <div id="home-intro" aria-hidden="true"></div>
@@ -32,7 +60,7 @@
   <div class="grain" aria-hidden="true"></div>
   <header class="site-header" id="header">
     <div class="header-identity">
-      <a class="brand" href="#main" aria-label="CANQI — home">CANQI<span>燦琪</span></a>
+      <a class="brand" href="#main" aria-label="CANQI — home" aria-describedby="brand-tooltip">CANQI<span>燦琪</span><span class="entrance-tooltip" id="brand-tooltip" role="tooltip">主页</span></a>
       <a class="entrance-computer" href="../entrance-prototype/" aria-labelledby="entrance-tooltip">
         <span class="mini-computer" aria-hidden="true">
           <span class="mini-monitor"><span class="mini-screen"><span>CANQI</span><i></i></span><span class="mini-led"></span></span>
@@ -58,7 +86,7 @@
     <details class="print-settings">
       <summary data-en="Print settings" data-zh="印刷效果">Print settings</summary>
       <div class="settings-inner">
-        <label><span data-en="Image treatment" data-zh="图像模式">Image treatment</span><select id="treatment"><option value="halftone">Halftone / 半调</option><option value="continuous">Grayscale / 灰阶</option></select></label>
+        <label><span data-en="Image treatment" data-zh="图像模式">Image treatment</span><select id="treatment"><option value="halftone">Halftone / 半调</option><option value="continuous">Original / 原图</option></select></label>
         <label><span class="setting-label-row"><span data-en="Dot size" data-zh="网点尺寸">Dot size</span><output id="dot-size-value" for="dot-size">3</output></span><input id="dot-size" type="range" min="2" max="10" step="0.5" value="3"></label>
         <label><span data-en="Paper grain" data-zh="纸张颗粒">Paper grain</span><input id="grain" type="range" min="0" max="10" value="3"></label>
       </div>

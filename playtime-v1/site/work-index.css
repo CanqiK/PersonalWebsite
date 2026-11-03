@@ -8,6 +8,9 @@
   color:#fff;
   transition:border-color .2s ease;
   isolation:isolate;
+  /* The outer aspect ratio preserves scroll positions while distant contents sleep. */
+  content-visibility:auto;
+  contain-intrinsic-size:auto 240px;
 }
 .artist-card .artist-card-image {position:absolute;inset:0;aspect-ratio:auto;border:0;background:#111}
 .artist-card .artist-card-image canvas {width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1);filter:none}

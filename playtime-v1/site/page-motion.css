@@ -1,0 +1,7 @@
+/* Visible by default; only mounted subpages opt into one-time reveals. */
+[data-motion-waiting]{opacity:0}
+.artist-group-heading.motion-rule-entering{position:relative;border-bottom-color:transparent}
+.artist-group-heading.motion-rule-entering:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--line);transform-origin:left center;animation:section-rule-draw .7s cubic-bezier(.215,.61,.355,1) both;pointer-events:none}
+@keyframes section-rule-draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){[data-motion-waiting]{opacity:1}.artist-group-heading.motion-rule-entering:after{animation:none}}
+@media print{[data-motion-waiting]{opacity:1!important}}
