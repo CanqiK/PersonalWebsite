@@ -111,7 +111,7 @@ bubbles.forEach(state => state.node.addEventListener('click', () => breakBubble(
 
 // One clock keeps transitions ordered and pauses the sequence in hidden tabs.
 let previous = performance.now();
-setInterval(() => {
+function tickSequence() {
   const now = performance.now();
   const delta = Math.min(now - previous, 100);
   previous = now;
@@ -165,4 +165,12 @@ setInterval(() => {
       }
     }
   }
-}, 40);
+  // The reward remains interactive, but no longer needs a 25 Hz sequence clock.
+  if (reward.phase === 'visible') { clearInterval(sequenceTimer);sequenceTimer=0; }
+}
+let sequenceTimer=setInterval(tickSequence,40);
+document.addEventListener('visibilitychange',()=>{
+  clearInterval(sequenceTimer);sequenceTimer=0;
+  previous=performance.now();
+  if(!document.hidden&&reward.phase!=='visible')sequenceTimer=setInterval(tickSequence,40);
+});

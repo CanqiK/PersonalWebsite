@@ -15,6 +15,7 @@ destination is the adjacent `../site/index.html`. Keep relative URLs intact.
 5. Commit and push normally to `main`. Never force push to publish.
 6. Wait for the GitHub Pages build and verify the public manifest and entry URLs.
 
-The public CV PDF is intentionally included despite the general PDF ignore rule.
+The public CV PDF and two web-sized Carnival process videos are intentionally included
+despite the general PDF/video ignore rules. Asset-level exceptions keep them in Git.
 Do not add private source portfolios, Blender masters, credentials or local backups.
 Historical releases can be recovered from the repository's commits and tags.

@@ -349,14 +349,22 @@ function renderButton() {
   }
 }
 
+function prepareEngine() {
+  if (!engine && AudioContextClass) {
+    engine = createEngine();
+    engine.context.addEventListener('statechange', syncAudioState);
+  }
+}
+entrance.addEventListener('scene:preparing', () => {
+  if (!userMuted) {
+    try { prepareEngine(); } catch (error) { console.warn('Ambient audio preparation skipped:', error); }
+  }
+});
 async function startSound() {
   if (!AudioContextClass || document.hidden) return;
   userMuted = false;
   try {
-    if (!engine) {
-      engine = createEngine();
-      engine.context.addEventListener('statechange', syncAudioState);
-    }
+    prepareEngine();
     // Unlock during loading, but keep the mix silent until the iris has opened.
     engine.master.gain.setTargetAtTime(sceneEntered ? 1.45 : 0, engine.context.currentTime, sceneEntered ? 1.05 : .02);
     await engine.context.resume();

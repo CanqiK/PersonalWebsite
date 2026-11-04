@@ -14,3 +14,9 @@
 *.zip
 .impeccable/
 node_modules/
+
+!/playtime-v1/site/assets/canqi-lin-cv-2026-en.pdf
+
+!/playtime-v1/site/assets/videos/carnival-process-1.mp4
+
+!/playtime-v1/site/assets/videos/carnival-process-2.mp4

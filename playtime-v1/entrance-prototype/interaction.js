@@ -60,11 +60,11 @@ async function enterScene() {
   bootState = 'revealing';
   clearTimeout(loadingTimeout);
   root.classList.add('scene-3d');
-  await pause(Math.max(180, 850 - (performance.now() - bootStarted)));
+  // Allocate the sound graph under the loader, not on the first interactive frame.
+  root.dispatchEvent(new Event('scene:preparing'));
   loader.classList.add('is-powering-off');
   await pause(reducedMotion.matches ? 120 : 380);
   computer.style.opacity = '0';
-  await pause(reducedMotion.matches ? 0 : 100);
   loader.hidden = true;
   // The live scene itself is clipped; this is a real opening in the black frame.
   const radius = Math.ceil(Math.hypot(root.clientWidth, root.clientHeight) / 2) + 2;
@@ -72,7 +72,7 @@ async function enterScene() {
     ? [{ clipPath: `circle(${radius}px at 50% 50%)`, opacity: 0 },
       { clipPath: `circle(${radius}px at 50% 50%)`, opacity: 1 }]
     : [{ clipPath: 'circle(0px at 50% 50%)' }, { clipPath: `circle(${radius}px at 50% 50%)` }];
-  const reveal = root.animate(keyframes, { duration: reducedMotion.matches ? 180 : 760,
+  const reveal = root.animate(keyframes, { duration: reducedMotion.matches ? 180 : 620,
     easing: 'cubic-bezier(.22,.7,.18,1)', fill: 'forwards' });
   await reveal.finished;
   root.classList.add('scene-entered', 'scene-ready');
@@ -81,6 +81,7 @@ async function enterScene() {
   root.setAttribute('aria-busy', 'false');
   reveal.cancel();
   bootState = 'entered';
+  root.dataset.enteredMs = String(Math.round(performance.now() - bootStarted));
   root.dispatchEvent(new Event('scene:entered'));
   if (document.activeElement === document.body) root.focus({ preventScroll: true });
 }
@@ -102,6 +103,8 @@ addEventListener('message', event => {
   }
   if (event.data?.type === 'canqi:3d-error') { showLoadError(); return; }
   if (event.data?.type !== 'canqi:3d-ready') return;
+  root.dataset.bootTimings = JSON.stringify(event.data.timings || {});
+  root.dataset.readyMs = String(Math.round(performance.now() - bootStarted));
   const anchors = event.data.bubbleAnchors;
   const box = event.data.canqiBox;
   if (!anchors || !['artist','designer','mentor','director','entry'].every(role =>
@@ -139,10 +142,10 @@ root.addEventListener('pointerleave', clearPointer);
 root.addEventListener('scroll', queuePointer, { passive: true });
 addEventListener('blur', clearPointer);
 
-import './bubble-sequence.js?v=rounds-pin-3';
+import './bubble-sequence.js?v=performance-29';
 import './intro-window.js?v=rounds-pin-3';
 import './scene-anchors.js?v=rounds-pin-3';
 import './scene-pan.js?v=depth-pan-2';
-import './ambience.js?v=auto-sound-8';
+import './ambience.js?v=entry-flow-50';
 import './exit-transition.js?v=handoff-fix-6';
 import './hit-feedback.js?v=digital-3';
