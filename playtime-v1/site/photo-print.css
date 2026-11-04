@@ -1,0 +1,31 @@
+/* Original colour stays underneath; only the printed surface dissolves. */
+.photo-print{position:absolute;inset:0;display:block;overflow:hidden;isolation:isolate;transition:transform .5s ease-out}
+.photo-print>.project-thumbnail,.photo-print>.photo-print-canvas{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;filter:none;transform:none;animation:none}
+.photo-print>.photo-print-canvas{pointer-events:none;opacity:0;transition:opacity .5s ease-out}
+.photo-print-ready>.photo-print-canvas{opacity:1}
+.photo-print-continuous>.photo-print-canvas{opacity:0}
+.home-investigation .cover-middle .photo-print-canvas{filter:none;aspect-ratio:auto}
+.home-investigation .wall-photo img{filter:none}
+.artist-card .artist-card-image .photo-print-canvas{transition:opacity .5s ease-out;transform:none;filter:none}
+.artist-card .photo-print .project-thumbnail{transform:none}
+.feature-slide:has(.photo-print)>.feature-film{display:none}
+.feature-slide:has(.photo-print)>.feature-vignette{animation:none;box-shadow:none;background:linear-gradient(transparent 55%,#0003)}
+.feature-projector .photo-print>.photo-print-canvas{filter:none;animation:none}
+.artist-card:focus-visible .photo-print>.photo-print-canvas,
+.paper-stack:focus-visible .photo-print>.photo-print-canvas,
+.cover:focus-within .photo-print>.photo-print-canvas,
+.feature-projector:focus-within .photo-print>.photo-print-canvas{opacity:0}
+@media(hover:hover) and (pointer:fine){
+ .artist-card:hover .photo-print,.cover:hover .photo-print{transform:scale(1.025)}
+ .artist-card:hover .photo-print>.photo-print-canvas,
+ .cover:hover .photo-print>.photo-print-canvas,
+ .feature-projector:hover .photo-print>.photo-print-canvas{opacity:0}
+}
+@media(hover:none){
+ .artist-card:active .photo-print>.photo-print-canvas,
+ .cover:active .photo-print>.photo-print-canvas{opacity:0}
+}
+@media(prefers-reduced-motion:reduce){
+ .photo-print{transition:none;transform:none!important}
+ .photo-print>.photo-print-canvas,.artist-card .artist-card-image .photo-print-canvas{transition-duration:80ms}
+}

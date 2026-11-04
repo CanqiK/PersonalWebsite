@@ -10,6 +10,13 @@
 .scene-window .scene-plate{clip-path:polygon(0 0,10% 0,10% 68%,0 73%)}
 .scene-workstation{position:relative;min-height:inherit;padding:var(--room-top) var(--room-side) var(--room-bottom);isolation:isolate}
 .scene-workstation>.scene-backdrop{z-index:-1;clip-path:polygon(9.5% 7%,100% 7%,100% 100%,0 100%,0 72%,9.5% 67%)}
+.scene-fitted .scene-rear,.scene-fitted .scene-window{display:none}
+.scene-fitted .scene-workstation>.scene-backdrop{background:none;clip-path:none}
+.scene-fitted .scene-backdrop>svg,.scene-foreground>svg{display:block;width:100%;height:100%;overflow:visible}
+.scene-foreground{position:absolute;inset:0;z-index:4;pointer-events:none}
+.scene-fitted .investigation-board{z-index:1}
+.scene-fitted-rain{display:none;pointer-events:none}
+.scene-fitted .scene-fitted-rain{display:block}
 .scene-rain{position:absolute;left:0;top:8%;width:9.4%;height:57%;overflow:hidden;opacity:.48;transform:skewY(-3deg)}
 .scene-rain:before,.scene-rain:after{content:"";position:absolute;inset:-180px -20px 0;background:url('assets/window-rain.svg') 0 0/110px 180px repeat;animation:room-rain 1.05s linear infinite;will-change:transform}
 .scene-rain:after{opacity:.45;background-size:80px 180px;animation-duration:1.65s;animation-delay:-.7s}
@@ -38,8 +45,15 @@
 @media(max-width:1120px) and (min-width:761px){.home-investigation{--room-top:48px;--room-bottom:190px;--room-side:5vw}}
 /* Fit the complete pinboard into the illustrated wall, not a fixed-width strip. */
 @media(min-width:761px){
- .home-investigation{min-height:max(900px,calc(100svh - 96px))}
- .scene-workstation{height:max(900px,calc(100svh - 96px));padding:0}
+ /* The header and scene share one viewport; the footer floats over the desk. */
+ body.on-main{display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidden}
+ .on-main #header{flex:none}
+ .on-main #content{flex:1;min-height:0}
+ .home-investigation,.home-investigation .scene-camera,.home-investigation .scene-workstation{height:100%;min-height:0}
+ .scene-workstation{padding:0}
+ .on-main .site-footer{position:fixed;left:var(--gutter);right:var(--gutter);bottom:0;z-index:11;min-height:48px;margin:0;background:transparent;pointer-events:none;text-shadow:0 1px 3px #050a12}
+ .on-main .site-footer .print-settings{pointer-events:auto}
+ .on-main .site-footer summary{padding:12px 0}
  .home-investigation .investigation-board{position:absolute;left:15.5%;top:12%;width:1006px;max-width:none;margin:0;padding:18px 28px 0;grid-template-columns:210px 410px 220px;gap:55px;justify-content:space-between;transform-origin:0 0}
  .home-investigation .home-left{padding-top:18px}
  .home-investigation .home-file{width:210px;padding:29px 18px 23px}

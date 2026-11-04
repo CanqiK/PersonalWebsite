@@ -1,0 +1,14 @@
+/* Entrance signal styles are shared; internal navigation has a shorter cadence. */
+@property --route-iris-radius{syntax:"<length>";inherits:false;initial-value:0px}
+.route-handoff{margin:0;padding:0;border:0;width:100%;height:100%;max-width:none;max-height:none;pointer-events:auto;transition:opacity .18s ease-out}
+.route-handoff::backdrop{background:transparent}
+.route-handoff .signal-black,.route-handoff .signal-tear,.route-handoff .signal-scan::after{animation-duration:.38s}
+.route-handoff.signal-handoff-reduced .signal-black{animation-duration:.18s}
+.route-transmitting #content{filter:url(#route-signal-rgb) saturate(1.45) contrast(1.15) brightness(.85);animation:signal-offset .38s steps(1,end) both;pointer-events:none}
+.route-covered{background:#000;transition:none;opacity:1}
+.route-covered .signal-black{animation:none;opacity:1}
+.route-covered .signal-monitor,.route-covered .signal-noise,.route-covered .signal-scan,.route-covered .signal-tear{display:none}
+.route-covered.route-revealing{opacity:1;transition:none;-webkit-mask-image:radial-gradient(circle at 50% 50%,transparent max(0px,calc(var(--route-iris-radius) - 1px)),#000 var(--route-iris-radius));mask-image:radial-gradient(circle at 50% 50%,transparent max(0px,calc(var(--route-iris-radius) - 1px)),#000 var(--route-iris-radius));animation:route-iris-open .48s cubic-bezier(.22,.7,.18,1) both}
+@keyframes route-iris-open{from{--route-iris-radius:0px}to{--route-iris-radius:var(--route-iris-end,100vmax)}}
+.route-covered.route-revealing.signal-handoff-reduced{animation:none;-webkit-mask-image:none;mask-image:none;opacity:0;transition:opacity .08s ease-out}
+@media(prefers-reduced-motion:reduce){.route-transmitting #content{filter:none;animation:none}.route-covered.route-revealing{animation:none;-webkit-mask-image:none;mask-image:none;opacity:0;transition:opacity .08s ease-out}}
