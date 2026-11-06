@@ -3,7 +3,7 @@ body.on-main{--ink:#111a25;--paper:#d9dfe0;--muted:#a6b1bc;background:#0c1420;co
 .on-main .site-header{position:relative;z-index:12;background:#0c1420;border-color:#ffffff1c}
 .on-main .site-footer{position:relative;background:#0c1420;border-color:#ffffff1c}
 .on-main .grain{opacity:.018}
-.home-investigation{position:relative;isolation:isolate;display:block;min-height:max(850px,calc(100svh - 96px));padding:55px 7vw 210px;background:#152133 url('assets/investigation-room-lowpoly.webp') center bottom/cover no-repeat;overflow:hidden}
+.home-investigation{position:relative;isolation:isolate;display:block;min-height:max(850px,calc(100svh - 96px));padding:55px 7vw 210px;background:#152133 url('assets/investigation-room-detail.webp') center bottom/cover no-repeat;overflow:hidden}
 .home-investigation:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#070c1026,transparent 25% 75%,#080b100d);pointer-events:none}
 .investigation-board{position:relative;display:grid;grid-template-columns:210px 390px 220px;gap:55px;align-items:start;max-width:1150px;margin:0 auto;padding:18px 20px 0}
 .wall-threads{position:absolute;inset:0;z-index:1;width:100%;height:100%;overflow:visible;pointer-events:none;stroke:#9d302b;stroke-width:1.6;fill:none;filter:drop-shadow(1px 2px 1px #0009)}

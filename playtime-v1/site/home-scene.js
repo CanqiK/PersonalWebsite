@@ -1,36 +1,30 @@
-/* A responsive, sliced room plate: furniture keeps one uniform scale. */
+/* One proportional room plate, shared by the background and interactive props. */
 window.CanqiHomeScene = {
   fitRoom(width,height) {
-    const scale=Math.min(width/1536,height/1024);
-    const top=height-1024*scale;
-    const extra=Math.max(0,width-1536*scale)/2;
-    let left=0;
-    // Only the two empty wall / desktop strips absorb extra viewport width.
-    const slices=[[0,500,0],[500,2,extra],[502,528,0],[1030,70,extra],[1100,436,0]].map(([x,w,gap])=>{
-      const slice={sourceX:x,sourceWidth:w,left,width:w*scale+gap};
-      left+=slice.width;
-      return slice;
-    });
-    return {scale,top,slices};
+    // Cover the viewport without stretching individual pixels or wall panels.
+    // Bottom anchoring keeps the desk in frame as surplus ceiling is cropped.
+    const scale=Math.max(width/1536,height/1024);
+    return {scale,left:(width-1536*scale)/2,top:height-1024*scale};
   },
   roomMarkup(width,height,frame,foreground=false) {
-    const image='<image href="assets/investigation-room-lowpoly.webp" width="1536" height="1024"/>';
+    const image='<image href="assets/investigation-room-detail.webp" width="1536" height="1024" preserveAspectRatio="xMidYMid meet"/>';
+    const transform=`translate(${frame.left} ${frame.top}) scale(${frame.scale})`;
     if(foreground) {
-      const right=frame.slices[4].left-1100*frame.scale;
       // Trace the existing faceted lamp, including the open space between arms.
       const lamp='M1288 574 L1336 526 L1352 524 L1359 500 L1379 499 L1399 509 L1394 521 L1390 547 L1409 609 L1393 615 L1335 599 L1305 588 Z M1394 521 L1414 519 L1423 535 L1506 648 L1520 648 L1527 660 L1521 678 L1508 678 L1464 823 L1474 831 L1472 850 L1461 853 L1460 864 L1509 873 L1509 899 L1432 907 L1388 895 L1388 866 L1445 861 L1445 850 L1433 844 L1434 828 L1444 822 L1484 674 L1482 654 L1406 552 L1390 547 Z';
-      return `<svg viewBox="0 0 ${width} ${height}" aria-hidden="true"><defs><clipPath id="home-lamp-silhouette"><path d="${lamp}"/></clipPath></defs><g transform="translate(${right} ${frame.top}) scale(${frame.scale})" clip-path="url(#home-lamp-silhouette)">${image}</g></svg>`;
+      return `<svg viewBox="0 0 ${width} ${height}" aria-hidden="true"><defs><clipPath id="home-lamp-silhouette"><path d="${lamp}"/></clipPath></defs><g transform="${transform}" clip-path="url(#home-lamp-silhouette)">${image}</g></svg>`;
     }
-    // Extend a continuous wall band between ceiling and furniture, rather than
-    // bottom-aligning the entire plate over an unrelated filler image.
-    const rows=[{y:0,h:110,top:0,height:110*frame.scale},
-      {y:110,h:290,top:110*frame.scale,height:290*frame.scale+frame.top},
-      {y:400,h:624,top:400*frame.scale+frame.top,height:624*frame.scale}];
-    const strips=frame.slices.flatMap(s=>rows.map(r=>`<svg x="${s.left}" y="${r.top}" width="${s.width+.2}" height="${r.height+.2}" viewBox="${s.sourceX} ${r.y} ${s.sourceWidth} ${r.h}" preserveAspectRatio="none">${image}</svg>`)).join('');
-    return `<svg viewBox="0 0 ${width} ${height}" aria-hidden="true">${strips}</svg>`;
+    return `<svg viewBox="0 0 ${width} ${height}" aria-hidden="true"><g transform="${transform}">${image}</g></svg>`;
   },
-  fitBoard(width,height,naturalHeight) {
-    const area={left:width*.155,top:height*.12,width:width*.755,height:height*.66};
+  fitBoard(width,height,naturalHeight,room=this.fitRoom(width,height)) {
+    // Keep the papers above the actual desk, even when a wide viewport crops
+    // the ceiling. Text remains live DOM, independently sized for readability.
+    const top=Math.max(height*.06,90*room.scale+room.top);
+    const bottom=Math.min(height*.82,802*room.scale+room.top);
+    // On panoramic windows the lamp rises into the navigation's reading area.
+    // Reserve its silhouette instead of shrinking or warping the furniture.
+    const right=width/height>2.2 ? Math.min(width*.91,1280*room.scale+room.left-20) : width*.91;
+    const area={left:width*.155,top,width:right-width*.155,height:Math.max(1,bottom-top)};
     const scale=Math.min(area.width/1006,area.height/(naturalHeight+32));
     return {scale,width:area.width/scale,left:area.left,
       top:area.top+(area.height-naturalHeight*scale)/2};
@@ -96,11 +90,11 @@ window.CanqiHomeScene = {
     function measure() {
       bounds = root.getBoundingClientRect();
       bounds.scrollY=window.scrollY;
-      // Preserve the furniture proportions; only empty architecture can expand.
+      // All planes share one isotropic transform, including the lamp silhouette.
       const width = root.clientWidth;
       const height = root.clientHeight;
       const room = window.CanqiHomeScene.fitRoom(width,height);
-      rain.style.cssText=`left:0;top:${82*room.scale}px;width:${144*room.scale}px;height:${584*room.scale+room.top}px`;
+      rain.style.cssText=`left:${room.left}px;top:${82*room.scale+room.top}px;width:${144*room.scale}px;height:${584*room.scale}px`;
       root.style.setProperty('--plate-width', `${width}px`);
       root.style.setProperty('--plate-height', `${height}px`);
       root.style.setProperty('--plate-left', `${(root.clientWidth-width)/2}px`);
@@ -114,7 +108,7 @@ window.CanqiHomeScene = {
         root.classList.add('scene-fitted');
         backdrop.innerHTML=window.CanqiHomeScene.roomMarkup(width,height,room);
         foreground.innerHTML=window.CanqiHomeScene.roomMarkup(width,height,room,true);
-        const layout=window.CanqiHomeScene.fitBoard(width,height,board.offsetHeight);
+        const layout=window.CanqiHomeScene.fitBoard(width,height,board.offsetHeight,room);
         board.style.width=`${layout.width}px`;
         board.style.left=`${layout.left}px`;
         board.style.top=`${layout.top}px`;
@@ -124,13 +118,16 @@ window.CanqiHomeScene = {
         element.style.transform=`matrix3d(${window.CanqiHomeScene.projectQuad(w,h,corners).join(',')})`;
       };
       if (!mobile.matches) {
-        const platePoints = corners => corners.map(([x,y])=>[x*room.scale,y*room.scale+room.top]);
+        const platePoints = corners => corners.map(([x,y])=>[x*room.scale+room.left,y*room.scale+room.top]);
         // Actual lit glass corners inside the existing monitor bezel.
         project(screen,160,200,platePoints([[79,724],[185,710],[198,834],[92,854]]));
+        const screenCenter=140*room.scale+room.left;
+        screen.inert=screenCenter<0 || screenCenter>width;
         // A common tabletop plane, receding toward the desk's vanishing point.
         // Both small prints sit behind the front edge and clear the cup/chair.
         project(photos,220,160,platePoints([[350,900],[480,900],[460,936],[320,936]]));
       } else {
+        screen.inert=false;
         screen.style.removeProperty('transform');
         photos.style.removeProperty('transform');
       }

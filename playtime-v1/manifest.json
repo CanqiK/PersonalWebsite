@@ -161,8 +161,8 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 6169,
-    "sha256": "1e8670f4f7661b311092bc8a8b063b04044d45a842f5095b7751b3b700d3a414"
+    "bytes": 6172,
+    "sha256": "30766278208061397445d8f28a428874b3425d57b30ca6b7009f04bb7944b9af"
   },
   {
     "path": "site/app.js",
@@ -176,13 +176,13 @@
   },
   {
     "path": "site/home-scene.css",
-    "bytes": 7213,
-    "sha256": "8c3b4e3d5374077e08a4f1ee513511ccfabf66e49335176b44bb473ad710175b"
+    "bytes": 7236,
+    "sha256": "eaa0e1ca6d11312146d52f42daf58cef00169d4dbb17c176e344c99c6f91b7d5"
   },
   {
     "path": "site/home-scene.js",
-    "bytes": 10604,
-    "sha256": "bd098068fa6d8a9718ec34808b6c0db6c29f7e9d6321c432eea571de6d7295a3"
+    "bytes": 10601,
+    "sha256": "b8cbf61b8b4e3c94a191c924c68dc5130a49ac6d287f32f225d47459d8e14dbe"
   },
   {
     "path": "site/interaction-audio.js",
@@ -191,8 +191,8 @@
   },
   {
     "path": "site/investigation-wall.css",
-    "bytes": 11900,
-    "sha256": "aa3f96d71a06667ab2f79d6a52b809734adb9a89f884bb527730aa7e0befb433"
+    "bytes": 11899,
+    "sha256": "24e348ed068a277a242c05ca878195919c3179e95ad54e2092c6d52fe3ddf278"
   },
   {
     "path": "site/mentor-assets.js",
@@ -388,6 +388,11 @@
     "path": "site/assets/crocursionism-logo.webp",
     "bytes": 49000,
     "sha256": "9dc2e8b13bb6e986d76fe1c5172475d471f3e7ac426899bb0c2c017910ae1f5b"
+  },
+  {
+    "path": "site/assets/investigation-room-detail.webp",
+    "bytes": 98420,
+    "sha256": "1e74614af5ec562eda036e071d4850225b66db7a7cb142bde2f6e9068489916f"
   },
   {
     "path": "site/assets/investigation-room-lowpoly.png",

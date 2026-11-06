@@ -3,7 +3,7 @@
 .home-investigation:before{content:none}
 .scene-camera{position:relative;min-height:inherit;transform-origin:50% 50%;isolation:isolate}
 .scene-plate{position:absolute;left:var(--plate-left,0px);top:var(--plate-top,0px);width:var(--plate-width,100%);height:var(--plate-height,100%);pointer-events:none}
-.scene-backdrop{background:url('assets/investigation-room-lowpoly.webp') center/100% 100% no-repeat}
+.scene-backdrop{background:url('assets/investigation-room-detail.webp') center bottom/cover no-repeat;image-rendering:auto}
 .scene-rear,.scene-window{position:absolute;inset:0;pointer-events:none}
 .scene-rear{z-index:-3}
 .scene-window{z-index:-2}
