@@ -14,7 +14,7 @@ window.CanqiHomeScene = {
     return {scale,top,slices};
   },
   roomMarkup(width,height,frame,foreground=false) {
-    const image='<image href="assets/investigation-room-lowpoly.png" width="1536" height="1024"/>';
+    const image='<image href="assets/investigation-room-lowpoly.webp" width="1536" height="1024"/>';
     if(foreground) {
       const right=frame.slices[4].left-1100*frame.scale;
       // Trace the existing faceted lamp, including the open space between arms.

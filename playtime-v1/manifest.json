@@ -1,8 +1,8 @@
 [
   {
     "path": "entrance-prototype/index.html",
-    "bytes": 6366,
-    "sha256": "8d2b6c09e69656a6fb3f1e5d5afd029f11bcd10b915c220efc6623edb994935a"
+    "bytes": 6363,
+    "sha256": "49783684441142e9ae9e6d5709bd884ae015721e4513326d35f77dba947fc45a"
   },
   {
     "path": "entrance-prototype/styles.css",
@@ -71,8 +71,8 @@
   },
   {
     "path": "entrance-prototype/realtime/index.html",
-    "bytes": 1539,
-    "sha256": "5072810e50496db522fc9689ec6a8fa67d6c45f8d6ddf0ef02698538cc771e4f"
+    "bytes": 1927,
+    "sha256": "22a44c62a35843013b8a2518911123cd4207ae1e7ed8dc7c3fc55030f4784f65"
   },
   {
     "path": "entrance-prototype/realtime/styles.css",
@@ -81,8 +81,8 @@
   },
   {
     "path": "entrance-prototype/realtime/scene-realtime.js",
-    "bytes": 23999,
-    "sha256": "09f43a2dfa490fcea12d2e4f4523cd696c02bd2c01097d30882c5a30624dfb13"
+    "bytes": 23961,
+    "sha256": "b676fc804c2a0c5127c74759a3034d413d886879dc07857e8c58c3255d8da512"
   },
   {
     "path": "entrance-prototype/realtime/character-glitch.js",
@@ -125,6 +125,16 @@
     "sha256": "a3d50ccb86a512cf94cd95612f8e6c4609a1f933108d7ec91388ce3dd75c8ced"
   },
   {
+    "path": "entrance-prototype/realtime/office-loader.js",
+    "bytes": 1482,
+    "sha256": "8e5288bdeba3fb24c46cad46f55a0372acf4c062e63242a238620b2224a46122"
+  },
+  {
+    "path": "entrance-prototype/realtime/canqi-night-office.glb.gz",
+    "bytes": 2676459,
+    "sha256": "cdd0b9a69cdfdb8268fb168f99a549756473f35c0c0fd744758d3f65a485571d"
+  },
+  {
     "path": "entrance-prototype/vendor/three.module.js",
     "bytes": 603113,
     "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
@@ -151,13 +161,13 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 6187,
-    "sha256": "d04c0a0c07761cd805b33c2b1779d63eefc0c72eb6782d2cc9b6d31ba57db7f6"
+    "bytes": 6169,
+    "sha256": "1e8670f4f7661b311092bc8a8b063b04044d45a842f5095b7751b3b700d3a414"
   },
   {
     "path": "site/app.js",
-    "bytes": 67514,
-    "sha256": "ad8f0b487d70f0ce3778d40e2f6e5d4cc42b3d3bc012f88764abfdcfe350f009"
+    "bytes": 67517,
+    "sha256": "8cd0563b43b92acca6a7285531232b898c423e221c1a950a6cf72bfc962ba251"
   },
   {
     "path": "site/digital-home.css",
@@ -166,13 +176,13 @@
   },
   {
     "path": "site/home-scene.css",
-    "bytes": 7212,
-    "sha256": "242a3b084e8e165f294fec809208726ea4723f3e67d2def30f13c93603649d8e"
+    "bytes": 7213,
+    "sha256": "8c3b4e3d5374077e08a4f1ee513511ccfabf66e49335176b44bb473ad710175b"
   },
   {
     "path": "site/home-scene.js",
-    "bytes": 10603,
-    "sha256": "869a04534020c0e6d3e9c1683d6a190d2caa9c4ae85f999dffea8ad145305fe4"
+    "bytes": 10604,
+    "sha256": "bd098068fa6d8a9718ec34808b6c0db6c29f7e9d6321c432eea571de6d7295a3"
   },
   {
     "path": "site/interaction-audio.js",
@@ -181,8 +191,8 @@
   },
   {
     "path": "site/investigation-wall.css",
-    "bytes": 11899,
-    "sha256": "117e82b28eeb96e4c682af2621e743a5c69328187cb7d982192524445b2da2c3"
+    "bytes": 11900,
+    "sha256": "aa3f96d71a06667ab2f79d6a52b809734adb9a89f884bb527730aa7e0befb433"
   },
   {
     "path": "site/mentor-assets.js",
@@ -326,8 +336,8 @@
   },
   {
     "path": "site/who-ascii.js",
-    "bytes": 9734,
-    "sha256": "082cb4c102e4641dc4418ede5edf6f75d5a393b29288e0d9a8b9a6ba314f712b"
+    "bytes": 10052,
+    "sha256": "bcd29400fe12c64654c7a2bbb518236ce2d2a919ccb89b01ad8a279679a28dbf"
   },
   {
     "path": "site/work-index.css",
@@ -355,6 +365,11 @@
     "sha256": "c5afe5578bac2535f7956af5efff39ed31ea5c12b1a93bb3294baed1170bbfe1"
   },
   {
+    "path": "site/assets/canqi-seaside.webp",
+    "bytes": 141212,
+    "sha256": "633e53f225f9cf3faa3c78a66ca5306cf5e5762142af43e62cd125230d249f6e"
+  },
+  {
     "path": "site/assets/contact-instagram-qr.jpg",
     "bytes": 79143,
     "sha256": "93cfe490b8e6826fd509c59b8ef0cfd78593a3f7d37c3ed395761a4584296fa6"
@@ -370,9 +385,19 @@
     "sha256": "3b22ee95b31be3391681229ac9f641d5ffc0403b2e2df71e28fc2d97e033ab61"
   },
   {
+    "path": "site/assets/crocursionism-logo.webp",
+    "bytes": 49000,
+    "sha256": "9dc2e8b13bb6e986d76fe1c5172475d471f3e7ac426899bb0c2c017910ae1f5b"
+  },
+  {
     "path": "site/assets/investigation-room-lowpoly.png",
     "bytes": 1633348,
     "sha256": "4b4033198b0ee3b763f9acc212bad371a5f53966b832150f3a5fd90a01c0123c"
+  },
+  {
+    "path": "site/assets/investigation-room-lowpoly.webp",
+    "bytes": 37700,
+    "sha256": "5ee8f7ea9c2699a99227852f1e3f8fc033d70332029044a02b2fabd7ecfb0b95"
   },
   {
     "path": "site/assets/investigation-room.png",

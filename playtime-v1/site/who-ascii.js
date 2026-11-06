@@ -17,7 +17,7 @@
     const reduce=matchMedia('(prefers-reduced-motion: reduce)');
     const events=new AbortController(),image=new Image();
     let width=0,height=0,cols=0,rows=0,cw=10,ch=19,dpr=1,atlas=null,tileW=0,tileH=0;
-    let ink=new Float32Array(),seed=new Float32Array(),base=new Uint8Array(),drawnGlyph=new Int16Array(),drawnAlpha=new Int16Array(),protectedCells=new Uint8Array();
+    let ink=new Float32Array(),seed=new Float32Array(),arrivalDelays=new Float32Array(),base=new Uint8Array(),drawnGlyph=new Int16Array(),drawnAlpha=new Int16Array(),protectedCells=new Uint8Array();
     let disposed=false,frame=0,resizeTimer=0,protectTimer=0,last=0,lastPaint=-100,time=0,arrival=0,ripples=[];
     const pointer={x:0,y:0,tx:0,ty:0,strength:0,target:0};
     const ignore='a,button,input,select,textarea,summary,[role="button"],dialog';
@@ -42,10 +42,11 @@
       dpr=Math.min(devicePixelRatio||1,1.5,Math.sqrt(1800000/(width*height)));
       canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
       const count=cols*rows;
-      ink=new Float32Array(count);seed=new Float32Array(count);base=new Uint8Array(count);
+      ink=new Float32Array(count);seed=new Float32Array(count);arrivalDelays=new Float32Array(count);base=new Uint8Array(count);
       protectedCells=new Uint8Array(count);drawnGlyph=new Int16Array(count).fill(-1);drawnAlpha=new Int16Array(count).fill(-1);
       for(let y=0;y<rows;y++)for(let x=0;x<cols;x++){
         const i=y*cols+x;seed[i]=random(i*1.73+5);
+        arrivalDelays[i]=Math.min(1,Math.hypot((x+.5)*cw-width*(small?.49:.52),(y+.5)*ch-height*.57)/Math.max(width*.8,480))*1.15;
         base[i]=Math.max(0,alphabet.indexOf(phrase[(x+Math.floor(random(y+90)*phrase.length))%phrase.length]));
       }
       tileW=Math.ceil(cw*dpr);tileH=Math.ceil(ch*dpr);
@@ -70,23 +71,26 @@
       const hoverRadius=Math.min(300,Math.max(120,width*.175));
       const maxRadius=Math.max(width*.8,480),waveWidth=Math.min(420,width*.32);
       const scrambleTick=Math.floor(time*24),ambientTick=Math.floor(time*3.2);
+      const hovering=pointer.strength>.001,arriving=time-arrival<1.65;
+      const waves=still?[]:ripples.map(ripple=>{
+        const life=(time-ripple.time)/1.8;
+        return {x:ripple.x,y:ripple.y,radius:smooth(life)*maxRadius,strength:smooth(life/.22)*(1-smooth((life-.78)/.22))};
+      });
       for(let y=0;y<rows;y++)for(let x=0;x<cols;x++){
         const i=y*cols+x,n=seed[i],px=(x+.5)*cw,py=(y+.5)*ch;
         let char=base[i],opacity=.045+ink[i]*(small?.27:.38);
         const pulse=still?0:Math.sin(time*(.7+n*.8)+n*64)*.5+.5;
         if(pulse>.94){char=1+Math.floor(random(i+ambientTick*19)*(alphabet.length-1));opacity+=.035+ink[i]*.07;}
         if(!still){
-          const hover=(1-smooth(Math.hypot(px-pointer.x,py-pointer.y)/hoverRadius))*pointer.strength;
+          const hover=hovering?(1-smooth(Math.hypot(px-pointer.x,py-pointer.y)/hoverRadius))*pointer.strength:0;
           opacity*=1-hover;if(hover>.001&&n<hover*2.5)opacity=0;
           let wave=0;
-          for(const ripple of ripples){
-            const life=(time-ripple.time)/1.8,radius=smooth(life)*maxRadius;
-            const ring=1-smooth(Math.abs(Math.hypot(px-ripple.x,py-ripple.y)-radius)/(waveWidth*.5));
-            wave=Math.max(wave,ring*smooth(life/.22)*(1-smooth((life-.78)/.22)));
+          for(const ripple of waves){
+            const ring=1-smooth(Math.abs(Math.hypot(px-ripple.x,py-ripple.y)-ripple.radius)/(waveWidth*.5));
+            wave=Math.max(wave,ring*ripple.strength);
           }
           if(wave>.001&&n<wave*.5){char=1+Math.floor(random(i*3.1+scrambleTick)*(alphabet.length-1));opacity=.68;}
-          const arrivalDelay=Math.min(1,Math.hypot(px-width*(small?.49:.52),py-height*.57)/maxRadius)*1.15;
-          opacity*=smooth((time-arrival-arrivalDelay)/.5);
+          if(arriving)opacity*=smooth((time-arrival-arrivalDelays[i])/.5);
         }
         opacity=Math.min(opacity,protectedCells[i] ? .16 : .68);
         const level=Math.round(opacity*48);
@@ -132,7 +136,7 @@
     addEventListener('scroll',()=>{if(!protectTimer)protectTimer=setTimeout(()=>{protectTimer=0;protectCopy();},100);},{passive:true,signal:events.signal});
     addEventListener('pagehide',()=>{cancelAnimationFrame(frame);frame=0;leave();},{signal:events.signal});
     addEventListener('pageshow',start,{signal:events.signal});
-    image.onload=()=>{arrival=time;if(!reduce.matches)ripples=[{x:innerWidth*(innerWidth<=700?.49:.52),y:innerHeight*.57,time}];build();};image.onerror=()=>{paint();start();};image.src='assets/crocursionism-logo.jpg';
+    image.onload=()=>{arrival=time;if(!reduce.matches)ripples=[{x:innerWidth*(innerWidth<=700?.49:.52),y:innerHeight*.57,time}];build();};image.onerror=()=>{paint();start();};image.src='assets/crocursionism-logo.webp';
     build();
     return ()=>{disposed=true;cancelAnimationFrame(frame);clearTimeout(resizeTimer);clearTimeout(protectTimer);events.abort();image.onload=null;image.onerror=null;ripples=[];atlas=null;canvas.remove();hint.remove();};
   }

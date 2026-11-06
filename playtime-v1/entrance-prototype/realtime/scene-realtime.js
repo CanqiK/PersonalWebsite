@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { GLTFLoader } from '../vendor/GLTFLoader.js';
+import { loadOfficeModel } from './office-loader.js?v=loading-58';
 import { createNightWeather } from './night-weather.js?v=rain-contrast-5';
 import { createCharacterGlitch } from './character-glitch.js?v=entry-flow-50';
 import { createCameraFollow } from './camera-follow.js?v=depth-pan-2';
@@ -339,7 +339,7 @@ async function load() {
     reportProgress(5, 'LOADING THE OFFICE');
     const [meta, gltf] = await Promise.all([
       fetch('./scene-meta.json?v=workers-5').then(response => { if (!response.ok) throw new Error('Camera metadata missing'); return response.json(); }),
-      new GLTFLoader().loadAsync('./canqi-night-office.glb?v=workers-5', event => {
+      loadOfficeModel(event => {
         if (event.lengthComputable && event.total > 0) {
           reportProgress(5 + event.loaded / event.total * 75, 'LOADING THE OFFICE');
         } else reportProgress(5, 'RECEIVING THE OFFICE');

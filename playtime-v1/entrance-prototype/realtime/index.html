@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#070d18">
   <title>CANQI — Live 3D study</title>
+  <script>
+    // Start the model transfer while the renderer's ES modules are loading.
+    if (typeof DecompressionStream === 'function') {
+      const model = document.createElement('link');
+      model.rel = 'preload'; model.as = 'fetch'; model.crossOrigin = 'anonymous';
+      model.href = './canqi-night-office.glb.gz?v=loading-58';
+      document.head.append(model);
+    }
+  </script>
   <link rel="stylesheet" href="styles.css?v=playtime-v1">
   <script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
-  <script type="module" src="scene-realtime.js?v=entry-flow-50"></script>
+  <script type="module" src="scene-realtime.js?v=loading-58"></script>
 </head>
 <body>
   <main class="viewport" aria-label="CANQI live 3D night office study">

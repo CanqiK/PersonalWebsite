@@ -1,6 +1,6 @@
 # CANQI — Portfolio
 
-Current public runtime, updated 3 November 2026.
+Current public runtime, updated 6 November 2026.
 
 - Website: https://canqik.github.io/PersonalWebsite/
 - Entrance: https://canqik.github.io/PersonalWebsite/playtime-v1/entrance-prototype/
