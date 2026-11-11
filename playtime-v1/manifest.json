@@ -161,13 +161,18 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 6172,
-    "sha256": "30766278208061397445d8f28a428874b3425d57b30ca6b7009f04bb7944b9af"
+    "bytes": 6533,
+    "sha256": "fac70e223373e9f0d45a274db2da8d17c493bc106f78c8d574a9649c8da6b7fa"
+  },
+  {
+    "path": "site/copyright.html",
+    "bytes": 2809,
+    "sha256": "81ddd798f3fa4103170cfe8b6a3a4c2e52b0a0c9584e0604e45d2de2ca9b7059"
   },
   {
     "path": "site/app.js",
-    "bytes": 67517,
-    "sha256": "8cd0563b43b92acca6a7285531232b898c423e221c1a950a6cf72bfc962ba251"
+    "bytes": 67498,
+    "sha256": "7a2484375e83519235672d5514cec51ee7a2692f1d7a4c385f0cb468a810853d"
   },
   {
     "path": "site/digital-home.css",
@@ -246,8 +251,8 @@
   },
   {
     "path": "site/project-content.css",
-    "bytes": 16246,
-    "sha256": "a96cd0d4255e8e109ff9548e291d0431606dc5fe7bb011fb00369b1288462883"
+    "bytes": 20547,
+    "sha256": "90e0d77740f4add408bdba821ede480141675eddd4821c4d44ff48272f405f80"
   },
   {
     "path": "site/project-fishbird-assets.js",
@@ -270,6 +275,16 @@
     "sha256": "7bed913ec07e49044c9599e1bdb0f52c4d8f9029fd5e18e64a9598910f4462f3"
   },
   {
+    "path": "site/project-meilishuo-assets.js",
+    "bytes": 6442,
+    "sha256": "b515f7d6ffdbb87db76fbbcca5f7b386694cbeeb85f9e2e2d4dff6090ef41d0b"
+  },
+  {
+    "path": "site/project-meilishuo.js",
+    "bytes": 17547,
+    "sha256": "3d57b5142024d27c7631e21ec43fe754101579a1d4d8f7c3019d9cd86fc09f56"
+  },
+  {
     "path": "site/project-other.js",
     "bytes": 41326,
     "sha256": "fe56c25a3a0143cf65185fb6b0fabb1657983bacaac2f9e9520b9310ac9516b5"
@@ -281,13 +296,18 @@
   },
   {
     "path": "site/project-reader.js",
-    "bytes": 20442,
-    "sha256": "3011595db37c26db4a454a220619dc950e98ae1cc5a6febd5c1a02a72bfaf067"
+    "bytes": 21480,
+    "sha256": "a33a6358c6dd6a95cec9cc5b037748ef0fa7d6c4f82cfe0a89bc0a11f5ad89e0"
   },
   {
     "path": "site/project-topias.js",
     "bytes": 40368,
     "sha256": "5ae60104d12eee69cdf02b43ce1676d8dd8c6956258e93fac26de133143a9f24"
+  },
+  {
+    "path": "site/project-watermarks.js",
+    "bytes": 24943,
+    "sha256": "752cab5ed76571aaebb5d98c3dafb8630c28b235ede8a4a94aa55141656ddb84"
   },
   {
     "path": "site/return-rocket.css",
@@ -3210,6 +3230,501 @@
     "sha256": "e7076481d465cf8cb26d881cdc1ed3ad53e5abdbb46ce760a3a8a8e57f5a7f56"
   },
   {
+    "path": "site/assets/projects/meilishuo-bags-thumb.webp",
+    "bytes": 34974,
+    "sha256": "f478d672ae1e7b5be1de7fe012da466f0f3e1456366759ffe968119e8f46ffcb"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-bags-view.webp",
+    "bytes": 250976,
+    "sha256": "b0323fb8aa66cd22581de404c91a66ef4eecdbef65fa2fa5b43efb683d1aa559"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-bags.webp",
+    "bytes": 719798,
+    "sha256": "56eaad8f702a93cc8d2fa6fdc4e2b8d5309c87c559142a771870ea197c44a3a3"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-booth-thumb.webp",
+    "bytes": 46786,
+    "sha256": "d3653942d2fc4520ca6652939951e1e217ea3eea7d8b5ad4a6aed6086491e00d"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-booth-view.webp",
+    "bytes": 283558,
+    "sha256": "cafe7b619d03c26279944fae305f84d05639087aaf5b115a8f2c3f109de618c7"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-booth.webp",
+    "bytes": 712988,
+    "sha256": "6b539049e18be140b4a6b3f7d7f104664db6997ef1f952891363386f6cf8dd68"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-canqi-owner-thumb.webp",
+    "bytes": 39632,
+    "sha256": "e6bb2337470108bebefdb82f510610b1c68d9000ab1ac6e4a2555fa346e75e5d"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-canqi-owner-view.webp",
+    "bytes": 173238,
+    "sha256": "fb65c5111bf4f3762ab49e862261daa087ba7f56bc37c4b95f3d3d1af4c69fa0"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-canqi-owner.webp",
+    "bytes": 245142,
+    "sha256": "1582635797ff4f599eb419bf8a6620d16045a4275403f53640464a5d5ffe1863"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-canqi-thumb.webp",
+    "bytes": 39508,
+    "sha256": "43b170227855df963ac9a4a2173de7bc4851f88fa1c36407a2549735e8468093"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-canqi-view.webp",
+    "bytes": 208954,
+    "sha256": "250272148c48419d124205c6d957bdb0d1e938008f200650143b107b671f5a5a"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-canqi.webp",
+    "bytes": 608948,
+    "sha256": "430bb67827c97a7e74a7dff43ccf01f846c69835219a9233915a15af8be17320"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-colour-render-thumb.webp",
+    "bytes": 40516,
+    "sha256": "548632d84a32687f26a497a6bec8ba490684b22c0a8373045d419cb81355f5c1"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-colour-render-view.webp",
+    "bytes": 216648,
+    "sha256": "9b79644723649d59e7ebce13e11f9e004a4c70560ba25e98af992dd2e2c795e5"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-colour-render.webp",
+    "bytes": 322982,
+    "sha256": "b8e3c56d91c9b7874c5b33fc5fbf63de24ecb051d73c9fa25cbab64f6c5231bf"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-elevation-sketch-thumb.webp",
+    "bytes": 17234,
+    "sha256": "6670ba344f328878249755a31049174fc761ae16aaed5950033268d3304470b5"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-elevation-sketch-view.webp",
+    "bytes": 80824,
+    "sha256": "d879645f9fc0720c6f1dd263217a9304c9c2d030edf9d38e4a671f183817f229"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-elevation-sketch.webp",
+    "bytes": 151638,
+    "sha256": "9fcc71f1ecaae5c32d8a2af5f2b83f51ab41e6a3cc33cc3979b0b4e831fbdb98"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-encounter-thumb.webp",
+    "bytes": 22874,
+    "sha256": "660885cafb55f509dbefa0d56368ea30af08913bd47a091ef0cee069fb9923e4"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-encounter-view.webp",
+    "bytes": 129796,
+    "sha256": "81cc58115774b10c48b7b9e4e45a2bdf3ef88ad71732bfa9632158ec57b9af7f"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-encounter.webp",
+    "bytes": 377002,
+    "sha256": "d47975a13d55f4fb763ecfba6e204319e8fa358d6ff511d2cfd5040a44b9e6aa"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-flowers-thumb.webp",
+    "bytes": 44350,
+    "sha256": "5ef3ef247c11c4294c2dcdf27594747cb43f579ba2c7e988679c0f723a73ef84"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-flowers-view.webp",
+    "bytes": 213204,
+    "sha256": "4841f09efc2421672f19afe982308513130683defe2be37477a452211d503d97"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-flowers.webp",
+    "bytes": 476170,
+    "sha256": "4d57db920ab78aeddcab474d0956be9944dcc9af2379dabc27de1674e1d24391"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-hero-thumb.webp",
+    "bytes": 44834,
+    "sha256": "501db9ec8abed2676e4a5e002e45096375008fbd37aa99f79e7bbb7e13a6d4ed"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-hero-view.webp",
+    "bytes": 236944,
+    "sha256": "3f6739e3922aed3d48bfd7eb55cdb61cc3b53b733c4537aedc6f7428772b29d9"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-hero.webp",
+    "bytes": 543350,
+    "sha256": "6ed0498aa9588f770fb1d427451038e2f84cda93dfcc3f72021ada4740493a9f"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-installation-sketch-thumb.webp",
+    "bytes": 13808,
+    "sha256": "4d226a23fb684c30a9e6562d8b528a8557510f878bb5d372367aab0808b44ce7"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-installation-sketch-view.webp",
+    "bytes": 22506,
+    "sha256": "c4a42a924d788dacb94131b741fae20c90c7782d38b4f3b80713618d74e47a0d"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-installation-sketch.webp",
+    "bytes": 27328,
+    "sha256": "f165f4cff8e6ed1958fb6a2f8f89424a6701b18c155e846a4203eb7721e6a637"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-invitation-thumb.webp",
+    "bytes": 31550,
+    "sha256": "43a5b30fa29e79849dad2aa75c22e4f95ac2be3e6fda704cc5a6eaa78bcafcb9"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-invitation-view.webp",
+    "bytes": 163742,
+    "sha256": "3e2d5012345d8aed7ec07ed2f1257725e6ebeab1f91977324b0c7f09021e611a"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-invitation.webp",
+    "bytes": 230874,
+    "sha256": "1080dc59ba2c1bf24f8953a1a7e24a8c66a0ed21071268ab46a493de3987512b"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-mural-thumb.webp",
+    "bytes": 21308,
+    "sha256": "2c6631041cf2bcba114847b5f61bd7efb037b49c955901363b4341e326bb8005"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-mural-view.webp",
+    "bytes": 28878,
+    "sha256": "0f5b3a4049f3e624ba214e670aecd034203813f854a2b8a006a0aea0e06c18f4"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-mural.webp",
+    "bytes": 38500,
+    "sha256": "d8c804fcbcbb2a9d3086bd73629c0d9062471b1d7245adae8368593d54506b1d"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-object-thumb.webp",
+    "bytes": 24134,
+    "sha256": "26e78ab421e28e1396de9df3c1464e0b1f880463d743c40895acd219e9ac0338"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-object-view.webp",
+    "bytes": 127998,
+    "sha256": "80990a23ec3dc656ddfad5a5b71c7edaedc13176b8215d137abd0078c076f903"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-object.webp",
+    "bytes": 319864,
+    "sha256": "143ca546604cefc8269aeb700b9947d773e53aafef259eef2f77600725c46140"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-palette-thumb.webp",
+    "bytes": 48590,
+    "sha256": "6f50313014c113874c94c78796517c948258a80b362cb14c3d6dd0d5ba38f7f8"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-palette-view.webp",
+    "bytes": 256250,
+    "sha256": "a6103db252bf6914f5caae22c946f1b06fcaf0186f77a8e699a39fd70d8d88d3"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-palette.webp",
+    "bytes": 510726,
+    "sha256": "355d5120ba7b9901bba5a2355286ae4ebac991d045c35bcf2bec5e8d897b439f"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-pencil-sketch-thumb.webp",
+    "bytes": 29360,
+    "sha256": "c406c19722fa29e7e69e418f00b01159fe2798692771b1add795763c67050e9e"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-pencil-sketch-view.webp",
+    "bytes": 118208,
+    "sha256": "fe3368ea37311723ae88474a422f8926c3795016b60ed4e9f3c9a90b19ae4e47"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-pencil-sketch.webp",
+    "bytes": 154884,
+    "sha256": "fb830bca98a2a9379a2065c2c5bdf81a9e522fb50eab17961eb634e670f4f963"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-plan-sketch-thumb.webp",
+    "bytes": 19764,
+    "sha256": "304743fa152637399c719288e2726935107c4e285c924ea35547b42dc8484fd4"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-plan-sketch-view.webp",
+    "bytes": 86808,
+    "sha256": "29c109535c2186af16222ce6da640ef8e63c3a14d373d6b6756f92a28c34c671"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-plan-sketch.webp",
+    "bytes": 159152,
+    "sha256": "e3956eba28e300c38b462bf5d181b503e366266aeac464bcfe55ea6e399b6be1"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-render-thumb.webp",
+    "bytes": 36528,
+    "sha256": "7d81bb4e0452d52899ccfa5d687a316fa11be47037ed8ea661300ccc8ea8a1a1"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-render-view.webp",
+    "bytes": 203578,
+    "sha256": "47782890e0dd45fba171229095f54c96688d8c2c9455f50fe2097a46705994b9"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-render.webp",
+    "bytes": 302470,
+    "sha256": "2962ebfbd87cfc9b3826b061edd77ff1f8c336b2ab5db71d1f960d959e5490d1"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-shoe-thumb.webp",
+    "bytes": 24340,
+    "sha256": "9bf5a50d30467195baa49dd1b59a430bb0cfe858dda3fef2c0b40bebebfb6dd7"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-shoe-view.webp",
+    "bytes": 157274,
+    "sha256": "7127429ab0b29fa4dbfa2b6d26de9eb8d5edb217843d2acb0ecd18659f255894"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-shoe.webp",
+    "bytes": 423360,
+    "sha256": "065d5c6052c5bb126cc92a3fe70818fd43535f8bac11145c40343bdab764d98e"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-side-thumb.webp",
+    "bytes": 37696,
+    "sha256": "6ece52e051aa101e6d89b00bf3af42bdc2263ee5b30bf9973a06c71d9c581367"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-side-view.webp",
+    "bytes": 175086,
+    "sha256": "edfbdfb97b50e3ce1ca3e2e50af17a959e3598579ecdf80d544a42cd02079416"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-side.webp",
+    "bytes": 377378,
+    "sha256": "b2932ed14143750651b64d48f21a346d046641e195b781b6d773316ccfa5f395"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-spatial-plan-thumb.webp",
+    "bytes": 29038,
+    "sha256": "c86f0441dea22df1e42d1bf27cd99a5a9b0c18ab20f77d6d3fcfcea0275238e3"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-spatial-plan-view.webp",
+    "bytes": 150754,
+    "sha256": "9392135816c070e967356d71449b35c3ea84c853a9a79aba28d235e11e0e1b00"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-spatial-plan.webp",
+    "bytes": 274998,
+    "sha256": "d84e36ee630977fda5b350787d4988084d01d60363f7551f481f4959f6db735c"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-teal-thumb.webp",
+    "bytes": 28672,
+    "sha256": "84b244b6689350d3173e4b9f480998ea7566ed0ecf07f6fc3c92475705aca96c"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-teal-view.webp",
+    "bytes": 132458,
+    "sha256": "8b82d52f7962edacf0bdcb43cf99e183d2a6685a3060ae7fa3fd382bc4250c25"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-teal.webp",
+    "bytes": 348034,
+    "sha256": "b05c66f779baa5c7ade753de9fe68af615ce56a236e9449224ae6f4d741b4b6b"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-terracotta-thumb.webp",
+    "bytes": 25934,
+    "sha256": "45e4a24062cbc973b407181bf213186efe07b3db1e201d687defa2dda3900c9f"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-terracotta-view.webp",
+    "bytes": 165360,
+    "sha256": "02b7f38909ef2546d507148d3119bef848273d5ebab57bfc00581f41ecab8cd0"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-terracotta.webp",
+    "bytes": 431216,
+    "sha256": "1e6289ab2564df984c08d8b9c6e9fb998091119a958ef99267c33598c5af11eb"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-touch-thumb.webp",
+    "bytes": 15520,
+    "sha256": "51619dc6037638a88f8369a9e2d6ec1b8db44a615b70da286eb44316a6155088"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-touch-view.webp",
+    "bytes": 130524,
+    "sha256": "bcc18fadc52285bf3436aa451d253dd71675f53fdc49795da937da16e6959102"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-touch.webp",
+    "bytes": 462712,
+    "sha256": "fcb7d3afc0852c87276f84e2d0c174ad624d737dd71e59f64792a5cc2da76d85"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-01-thumb.webp",
+    "bytes": 42468,
+    "sha256": "06f59539976f8c7dd394431e45d9fd277c475fc3159bcdb7112e355a3b317241"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-01-view.webp",
+    "bytes": 196526,
+    "sha256": "4bcddf27476da7560f86a1ae3cc64d0679c236c9581f735c11ac5343ee93f27f"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-01.webp",
+    "bytes": 467410,
+    "sha256": "36578ff2592f4451a1d8dca02071981e44c3f054aed6cf295cac03db0d154da6"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-02-thumb.webp",
+    "bytes": 35598,
+    "sha256": "6489175b8a7b7c4094f80b91b82ca2cc4287d621ae41feea4b4444c4f2491d64"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-02-view.webp",
+    "bytes": 152136,
+    "sha256": "2787ea6961f345f47eb320db6e2e0afa9b8cbf752fa2313b990e078988366225"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-02.webp",
+    "bytes": 326898,
+    "sha256": "377629b52419813fe30d56c0e40c192bfcd671f562e7951c9f0261cd7ec5de3a"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-03-thumb.webp",
+    "bytes": 38294,
+    "sha256": "bc2cf0c46359d95575b7da52d7de27cefc34c05d7f6a492a2577c0e077a1f374"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-03-view.webp",
+    "bytes": 193544,
+    "sha256": "158978ac96575ab0d2654b2ef9ac599954a9c69ce0b4e738b922a892c2917e96"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-03.webp",
+    "bytes": 450392,
+    "sha256": "0648801dac898547b8bd254c361ae8f9da50722293bba34c8cf60ceeb214f254"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-04-thumb.webp",
+    "bytes": 38762,
+    "sha256": "7ffd33f82e0b9deed44ea85a77129bd5ccdb2d23a4046a2159f238fe93db4921"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-04-view.webp",
+    "bytes": 170586,
+    "sha256": "e7fa040431d0f5a5b5682886fdc8c0c5afc6edf9507a72342a9d1fd0d2d1a26b"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-04.webp",
+    "bytes": 381754,
+    "sha256": "67e0cc898c62dfcfde056428a9bfc4208b3b39575bbd2a07158ad8bc7bb65d0c"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-05-thumb.webp",
+    "bytes": 36880,
+    "sha256": "e6bf9818e13ca4b3b497d87e5ac7447d3356f4d1512582ab9544455b5cba8ad1"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-05-view.webp",
+    "bytes": 170284,
+    "sha256": "2a189dff29a932a3703b6f6b965c10f3df5bd506310cc395bfa604cab631c9da"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-05.webp",
+    "bytes": 364246,
+    "sha256": "8c594e681a272b205f2c674b40b851c2ac324f169fd3bfc471fad08a78b3649d"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-06-thumb.webp",
+    "bytes": 38912,
+    "sha256": "d9357f72a9e83f8843eef2dee15ab6555ac09c4efa6049d48900d77ff6d8e996"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-06-view.webp",
+    "bytes": 169776,
+    "sha256": "f7c18176661514a11a563f57aa16bfd21a2c556d70caa83e099cac4528053bda"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-06.webp",
+    "bytes": 408158,
+    "sha256": "872d67178ecac338491eb873032289ab7d4eb5bca482f3a0520be343f97222fe"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-07-thumb.webp",
+    "bytes": 44024,
+    "sha256": "0706977205a028ea6e86aadf1143e3b060ab8ebf36277254edc18017f3d6754e"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-07-view.webp",
+    "bytes": 202466,
+    "sha256": "d337565884d0aa401e0f982603bacd1f69d267a1d5f34df59397abd413e0b9d3"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-07.webp",
+    "bytes": 278714,
+    "sha256": "b306f8aaee9b5317927b1c6aacc4a0377a09c13564458ae6476a263560bc17b8"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-08-thumb.webp",
+    "bytes": 37182,
+    "sha256": "f38aff49b2157b6972445948fab8d533b7a5f7f172280a767a4d4d6251efb94c"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-08-view.webp",
+    "bytes": 146204,
+    "sha256": "f902a96f232931590712f15bd419a938bcb0af20c5cc265f34b22e95ab13815b"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-visitors-08.webp",
+    "bytes": 207794,
+    "sha256": "1c60e628c40c5e43006e55e173deb3eb130d266f852448cf083f60ae4beb1bd8"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-woven-display-thumb.webp",
+    "bytes": 23824,
+    "sha256": "efe5170e34ac81a24b00b20a35863c74741b1dd19bce173ebe86bbc5affe44e2"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-woven-display-view.webp",
+    "bytes": 130288,
+    "sha256": "1a53d7f2b172a1f37d1d14f5a5426ecbe29f625aec1b4f711d111ad844b78b0d"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-woven-display.webp",
+    "bytes": 412824,
+    "sha256": "f6191d69c96f973285b3770000fc6b854499113385006701e4080673718d5f67"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-yellow-thumb.webp",
+    "bytes": 15320,
+    "sha256": "d49c23ff6d42a6fafe38ec6d066ac768c57ac4e65fb76fbeabad998d44a653af"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-yellow-view.webp",
+    "bytes": 83614,
+    "sha256": "7f366ff6a06c75d50a1cc6620c52208a426be9b3e0b2e495fcbc9605b3d8ce73"
+  },
+  {
+    "path": "site/assets/projects/meilishuo-yellow.webp",
+    "bytes": 257864,
+    "sha256": "642128fba9dd8cf6d49026195732c91cd51e3e80db41d0f8d55d0915853f03e1"
+  },
+  {
     "path": "site/assets/projects/miao-installed-thumb.jpg",
     "bytes": 43835,
     "sha256": "b06685ce4d57c578f8c21aba52d068a0787074fb06560116ac3d0fa731b52c94"
@@ -3553,6 +4068,1231 @@
     "path": "site/assets/projects/under-structure.jpg",
     "bytes": 1008618,
     "sha256": "c89776e7c68eab391c0c5bebfddfde603eba3635cd1b9f72c017467f5f6a482f"
+  },
+  {
+    "path": "site/assets/protected/alcoholics-hand-sketch-thumb.webp",
+    "bytes": 25046,
+    "sha256": "b3f896e5b52b2cae15123058ba3ad4c444d94f64fcc861826e63230ff51d01e0"
+  },
+  {
+    "path": "site/assets/protected/alcoholics-hand-sketch-view.webp",
+    "bytes": 162474,
+    "sha256": "4bf2691cded0a66fc63dd55f3741633114174085d10d1b9cd17e262da8709521"
+  },
+  {
+    "path": "site/assets/protected/alcoholics-hero-thumb.webp",
+    "bytes": 20922,
+    "sha256": "418adc63fb4b6a2613a3131da77fa44473110b91a95f9fafc2aeb4427545b814"
+  },
+  {
+    "path": "site/assets/protected/alcoholics-hero-view.webp",
+    "bytes": 88856,
+    "sha256": "4ee6e108b8b9cff7893cdfeb85071d1a1f99578ecec6d8dbfb8988b4053ca383"
+  },
+  {
+    "path": "site/assets/protected/alcoholics-stage-01-thumb.webp",
+    "bytes": 42680,
+    "sha256": "59db0f9418bb2c577291b83b349ac72e824b1efbfc51aee4949b57dea3a42220"
+  },
+  {
+    "path": "site/assets/protected/alcoholics-stage-01-view.webp",
+    "bytes": 168196,
+    "sha256": "c3e6f3d78a584dd3672cdeb64900cf8b6a01ca0036458ebb879a8d1204fda96e"
+  },
+  {
+    "path": "site/assets/protected/alcoholics-stage-02-thumb.webp",
+    "bytes": 46378,
+    "sha256": "90f1e87c7eaf8600f80a17fd77dd4faa47e14c85bbf20f4d8e8508542198669a"
+  },
+  {
+    "path": "site/assets/protected/alcoholics-stage-02-view.webp",
+    "bytes": 187610,
+    "sha256": "8120370dfb28b169e3d5139b51ece8fc78c2568fa12da6bb2da518e2cc3a4bc2"
+  },
+  {
+    "path": "site/assets/protected/ballon-axon-thumb.webp",
+    "bytes": 30756,
+    "sha256": "3a3a86a8ac1ee26936ce8c234d9224b6c900c8460107d230ed386693809b28ce"
+  },
+  {
+    "path": "site/assets/protected/ballon-axon-view.webp",
+    "bytes": 187252,
+    "sha256": "3116cab5896dbd9cb4d4282266242cf4b2815c2c3dbb74a6e089f1514b010bf7"
+  },
+  {
+    "path": "site/assets/protected/ballon-form-thumb.webp",
+    "bytes": 40948,
+    "sha256": "83b2fed6d68b13b123cd7eea18c590066e09a6f2d935be9f3152bf429fbd9808"
+  },
+  {
+    "path": "site/assets/protected/ballon-form-view.webp",
+    "bytes": 256834,
+    "sha256": "17906c4e8147a3c2494624195bb0b0789027358d4aabcf9d5c0dbf379b9096f4"
+  },
+  {
+    "path": "site/assets/protected/ballon-hero-thumb.webp",
+    "bytes": 37998,
+    "sha256": "4bebde3c01f9559fefbbe7354bb015093b11a335b80db28d1742ae5959abc961"
+  },
+  {
+    "path": "site/assets/protected/ballon-hero-view.webp",
+    "bytes": 221572,
+    "sha256": "9ffd3163d4eecc553b54aaa1a47bb3e880e64ecdb429335519cc483881458579"
+  },
+  {
+    "path": "site/assets/protected/ballon-interior-thumb.webp",
+    "bytes": 31102,
+    "sha256": "2cfa4009e242f324f4d821c510b2bed4d33802166c31d5ef4deee961f408c186"
+  },
+  {
+    "path": "site/assets/protected/ballon-interior-view.webp",
+    "bytes": 158680,
+    "sha256": "56222c7545c2112bcea1902a0c86b5a471431a5aaac085ca576cc11c251d1461"
+  },
+  {
+    "path": "site/assets/protected/ballon-logo-poster-thumb.webp",
+    "bytes": 6872,
+    "sha256": "106018620044c69d6c4d6be6a4c01651076d564e47cbb57bb4c03876734ab405"
+  },
+  {
+    "path": "site/assets/protected/ballon-logo-poster-view.webp",
+    "bytes": 17814,
+    "sha256": "c1bbfa1d2f63227ed0d29f8286ef8be2b9b73a3b35b61521cdc07e6bbb6cdbef"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-business-thumb.webp",
+    "bytes": 10036,
+    "sha256": "ca11687a16fbc2612d1cad2d0225850113a5bdb379c47d757a14ff4547da9ea4"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-business-view.webp",
+    "bytes": 50600,
+    "sha256": "f4822031728786e6d9a9da8089ffa62300de7765cec0ef655a082c882393892f"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-circulation-thumb.webp",
+    "bytes": 17054,
+    "sha256": "e88e2bb5121423511532ace91004278711b4f1bdeb5c5172af0f6c160a8ce7a0"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-circulation-view.webp",
+    "bytes": 97836,
+    "sha256": "af596446afdd025ffc0158a2038c507e86d77a40820c540387cd481a09d5a7ba"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-interaction-thumb.webp",
+    "bytes": 30848,
+    "sha256": "310a0a75c54642276039bd0c2245acc5c0b807c964acc0288e487276a91ced4b"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-interaction-view.webp",
+    "bytes": 232208,
+    "sha256": "d3819c30dc004476e5afa303a84807d88d0051394570a21863c809b6a477f706"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-language-thumb.webp",
+    "bytes": 11820,
+    "sha256": "fa3109ee96cb20bf9db4a6db2ae6991277b5d0d45bb0c611cb7bc8f05ff85038"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-language-view.webp",
+    "bytes": 68312,
+    "sha256": "d26bad4a6d9129049e32ec28830375d98de915fcb82a8f1fb01567cf5f47cae1"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-loop-thumb.webp",
+    "bytes": 12414,
+    "sha256": "3e3202b38f9a599d26c2be2a10cdc1b2b1f997a347584048c1422e264d1fce06"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-loop-view.webp",
+    "bytes": 60542,
+    "sha256": "5c8a34eea038f42d3c96540fc97b88bf9f003b36d7ca1508f67fbae97963be0b"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-rest-thumb.webp",
+    "bytes": 14898,
+    "sha256": "9888214a7fedd60ce60392cf6870fc60ddca6b2113fc1f145f7763f30be41711"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-rest-view.webp",
+    "bytes": 86012,
+    "sha256": "390f13e922bc03391c02b89bf543ed0baafbe20e6d5e577bfac688f25f22bf19"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-section-thumb.webp",
+    "bytes": 26136,
+    "sha256": "1e9641506eb14452b819bd62d883f2e013b9deb46a44be0c742d2c9c2cc79756"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-section-view.webp",
+    "bytes": 162382,
+    "sha256": "9c996765acc7f7ec7771f8ab45886c07e720f3c2bfa1398d190b2f0d5f3e7e35"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-stage-one-thumb.webp",
+    "bytes": 27606,
+    "sha256": "24f12b48f774442041a47bd078f9ce67a8c02c73eaeb282cc3852d9cfba4f865"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-stage-one-view.webp",
+    "bytes": 159286,
+    "sha256": "a6963c6183e2e06089aed15a934de33602e874ace37c80beaa2a0b1714ed0640"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-stage-two-thumb.webp",
+    "bytes": 31128,
+    "sha256": "692063065ea3ef582cde0da1165b3e46bd4e1c05f2e6e6c564656eec8eec375a"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-stage-two-view.webp",
+    "bytes": 193334,
+    "sha256": "c341d9da56d55049a988694496b349446c4a081ac3733623b0b11c4445e44dd5"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-stages-thumb.webp",
+    "bytes": 18578,
+    "sha256": "cbb4e171ea76b15b48469da333839dc3bae55edd306b730bcc04c4497e45e079"
+  },
+  {
+    "path": "site/assets/protected/ballon-model-stages-view.webp",
+    "bytes": 98332,
+    "sha256": "f515a64259ea7a56e1a46f928802681c078f8a38d5d85bc7313849eb96968be9"
+  },
+  {
+    "path": "site/assets/protected/ballon-prolifa-poster-thumb.webp",
+    "bytes": 56910,
+    "sha256": "d0f9aa54ffcaf6e549b238a396ae30253ff2291d0198fc03cc66609fc5320659"
+  },
+  {
+    "path": "site/assets/protected/ballon-prolifa-poster-view.webp",
+    "bytes": 118614,
+    "sha256": "f3380fad074141e9ff3adbfa3a9e2da9c66157160e61c090a6f747d0a875e9df"
+  },
+  {
+    "path": "site/assets/protected/ballon-prolifa.webp",
+    "bytes": 731326,
+    "sha256": "2a8e8725dc0c6043e871495ca952cfc8f669fb6b7083470b4cbedaeb5d9f0892"
+  },
+  {
+    "path": "site/assets/protected/bsod-body-thumb.webp",
+    "bytes": 19124,
+    "sha256": "3c1229e23d33bb6c6641e60534cf86cd8e50c5697373324d5464aa88cce245b8"
+  },
+  {
+    "path": "site/assets/protected/bsod-body-view.webp",
+    "bytes": 69144,
+    "sha256": "3a21532209d51b63aef8a47d64654cde6b8c8e8a74f1ed52b7dd78f1e1686cd6"
+  },
+  {
+    "path": "site/assets/protected/bsod-hero-thumb.webp",
+    "bytes": 15256,
+    "sha256": "aafcb7963204219934be0e09ef803541f1a871f052f58dbc3d2313e932de7067"
+  },
+  {
+    "path": "site/assets/protected/bsod-hero-view.webp",
+    "bytes": 151960,
+    "sha256": "4372db0d279190d9c4db34d18c8656b322d1521316f0777a927d9eb252370271"
+  },
+  {
+    "path": "site/assets/protected/bsod-lamps-thumb.webp",
+    "bytes": 51368,
+    "sha256": "642cebbeffd6c8042a927094b29f0bd8ad1abc6fcfc11748ae9141317a5a7d40"
+  },
+  {
+    "path": "site/assets/protected/bsod-lamps-view.webp",
+    "bytes": 218302,
+    "sha256": "af8ea9c0c713c150fbeb0cecbbe298467ad7be0841f454f34ed8486ec643012d"
+  },
+  {
+    "path": "site/assets/protected/bsod-performance-thumb.webp",
+    "bytes": 17778,
+    "sha256": "c802c06fa86fbb6d7899651cea84eaf3ea398eba930a5ba744cc17c4c0c5aa68"
+  },
+  {
+    "path": "site/assets/protected/bsod-performance-view.webp",
+    "bytes": 61514,
+    "sha256": "7df0fca1a427e62d56cda8df37ead1e3a5424d9696a14c1274e12af39d72aa48"
+  },
+  {
+    "path": "site/assets/protected/bsod-score-thumb.webp",
+    "bytes": 37316,
+    "sha256": "80691529813c90ab4ed52fc57b8fe57bf2fd7e8e57db1f4f1c76edc3e2bd33c6"
+  },
+  {
+    "path": "site/assets/protected/bsod-score-view.webp",
+    "bytes": 142160,
+    "sha256": "93a163524342166a78d02ce0cd77605f02c5fd0ce0563c95a61dc312063af092"
+  },
+  {
+    "path": "site/assets/protected/bsod-stage-thumb.webp",
+    "bytes": 32986,
+    "sha256": "668b09165099ebc9c5f47e852e2384e724b2371c29153c2be796f4985eb2995e"
+  },
+  {
+    "path": "site/assets/protected/bsod-stage-view.webp",
+    "bytes": 102222,
+    "sha256": "4603a0f517352291d49fdf0a03881f6f63ca0899884222a57f6ac845c83dbda2"
+  },
+  {
+    "path": "site/assets/protected/bsod-workshop-thumb.webp",
+    "bytes": 36934,
+    "sha256": "f3052d61e1ed811e031b7bc985f8e195146d3113e5bdab4d1bca4a7e7150a4ea"
+  },
+  {
+    "path": "site/assets/protected/bsod-workshop-view.webp",
+    "bytes": 126290,
+    "sha256": "ca4cd8f6722e9b0ac8add58d4e968e4c0c9249ebc55c62f9b4d44668035768d0"
+  },
+  {
+    "path": "site/assets/protected/carnival-detail-thumb.webp",
+    "bytes": 40242,
+    "sha256": "75d9272ed0bafe0912986ef18d2759d6a566e3c4e3aec140d7d5a827de1750c6"
+  },
+  {
+    "path": "site/assets/protected/carnival-detail-view.webp",
+    "bytes": 154566,
+    "sha256": "ae011a1b5ec9cf495e3f2e3e525915e3ec56114b9f22aa1ea28335cddb6a4de6"
+  },
+  {
+    "path": "site/assets/protected/carnival-hero-thumb.webp",
+    "bytes": 33676,
+    "sha256": "9c862b0714c380aeb31c5d4d8d8a6bbb09ddd1a1812fdcb9997aff136011c77c"
+  },
+  {
+    "path": "site/assets/protected/carnival-hero-view.webp",
+    "bytes": 133050,
+    "sha256": "91cce9e6271623fb84dfa4f69595dbefcbfc529a33d83de6dfbdc1539df0c632"
+  },
+  {
+    "path": "site/assets/protected/carnival-light-thumb.webp",
+    "bytes": 36580,
+    "sha256": "f3c442f2060f32e7aa21d2bb5f330400da16291a14f7002aa3f21d9605150fd8"
+  },
+  {
+    "path": "site/assets/protected/carnival-light-view.webp",
+    "bytes": 141358,
+    "sha256": "71ba86d58b66300ecc14f10739c458b756adcbbf211d2df27259022c0ebe24ce"
+  },
+  {
+    "path": "site/assets/protected/carnival-process-1-thumb.webp",
+    "bytes": 55412,
+    "sha256": "1475d1c66ba81984c21fa3d487676c74650ffe467da15380a6ec1106e75564f0"
+  },
+  {
+    "path": "site/assets/protected/carnival-process-1-view.webp",
+    "bytes": 183504,
+    "sha256": "471c861228e6d7429bcbe82e6a0167fb56f5dc5dd467120fa8b3ee5fce31f057"
+  },
+  {
+    "path": "site/assets/protected/carnival-process-2-thumb.webp",
+    "bytes": 23084,
+    "sha256": "08841986e8282f2baf6648ae318a8c41d10b14b53f9172862863380c0cda5fc3"
+  },
+  {
+    "path": "site/assets/protected/carnival-process-2-view.webp",
+    "bytes": 57280,
+    "sha256": "be4a70531a27a0dfd6d138afd796450e9b30f30c7efcf0129563f65ea7ae6cfa"
+  },
+  {
+    "path": "site/assets/protected/carnival-red-eye-thumb.webp",
+    "bytes": 27158,
+    "sha256": "c7a75ef62b47b200e81f74e401fbace32f646315eea5384fb26c4211112cafba"
+  },
+  {
+    "path": "site/assets/protected/carnival-red-eye-view.webp",
+    "bytes": 101758,
+    "sha256": "fd065f4c88030b8ba533dece5ac6ec6db465d04e96fb179aeb360df7bc514f7e"
+  },
+  {
+    "path": "site/assets/protected/carnival-scale-thumb.webp",
+    "bytes": 50284,
+    "sha256": "5050af828f429a65477e740880baea0ba63b6f5bb3ec6a5ff77aa497e5a9db70"
+  },
+  {
+    "path": "site/assets/protected/carnival-scale-view.webp",
+    "bytes": 191502,
+    "sha256": "6b0d44f3fed6a1a10e2b5e430e926e2016e442c38407e06de53012c43fc0277b"
+  },
+  {
+    "path": "site/assets/protected/carnival-shadow-thumb.webp",
+    "bytes": 12256,
+    "sha256": "bb21666201e2474bf2ff8041b009d757116cae0c21e233af6f33b8fb2cdff665"
+  },
+  {
+    "path": "site/assets/protected/carnival-shadow-view.webp",
+    "bytes": 27500,
+    "sha256": "d9f2e299bcb6ba7f283179bca12ca571a13cc10ad3587c4b903a4b0d7f550599"
+  },
+  {
+    "path": "site/assets/protected/carnival-street-thumb.webp",
+    "bytes": 32766,
+    "sha256": "8662ad4418fe4d3fae5d6df49f146ee670c7a17ead8857f2fe40dae6cfd041ab"
+  },
+  {
+    "path": "site/assets/protected/carnival-street-view.webp",
+    "bytes": 138444,
+    "sha256": "113b9a41d01330f69bacad59bfede005a9f64f400f2d70501e12cfcaa521b46e"
+  },
+  {
+    "path": "site/assets/protected/chang-concept-board-thumb.webp",
+    "bytes": 26740,
+    "sha256": "f62cf8ba529b52806cff0253e3d3fa55b98c9e905c966a75845d5df55a24d842"
+  },
+  {
+    "path": "site/assets/protected/chang-concept-board-view.webp",
+    "bytes": 153410,
+    "sha256": "42392697f0e054b7b8286308da6ae779310287c42426e710509ae8c1cdd424a8"
+  },
+  {
+    "path": "site/assets/protected/chang-construction-sketch-thumb.webp",
+    "bytes": 21916,
+    "sha256": "b17801401af8eee5ba721feaceb96e869a1ed00bf5ad49bd4d73f545337a134a"
+  },
+  {
+    "path": "site/assets/protected/chang-construction-sketch-view.webp",
+    "bytes": 112906,
+    "sha256": "f35d8dc1844bfe51970f0e40703982c3ce7b86df058d152b65b9d19e6aada0db"
+  },
+  {
+    "path": "site/assets/protected/chang-hero-thumb.webp",
+    "bytes": 22692,
+    "sha256": "eb54ce43d726c64a72c4c77195d74ac6793af68fdfa3a0fdc11e7eb33138f240"
+  },
+  {
+    "path": "site/assets/protected/chang-hero-view.webp",
+    "bytes": 105648,
+    "sha256": "392cac600a5e5be4e633a664b331dc7d1498c4c57601b6b649b25caa8f80a4ae"
+  },
+  {
+    "path": "site/assets/protected/chang-portfolio-30-thumb.webp",
+    "bytes": 19658,
+    "sha256": "a4bd07ff2c103e296295e7520c6fbb48b52314ef66864c9d5032d83fc994eda3"
+  },
+  {
+    "path": "site/assets/protected/chang-portfolio-30-view.webp",
+    "bytes": 142148,
+    "sha256": "c7f730f6e20bd6deb40e29d4668cb64e7e443ea9c60b2726c347227a64b3656d"
+  },
+  {
+    "path": "site/assets/protected/chang-portfolio-31-thumb.webp",
+    "bytes": 19458,
+    "sha256": "8c1526ee4384dd866ba062848e053a9c99fa399136d0954366295c9298a7d912"
+  },
+  {
+    "path": "site/assets/protected/chang-portfolio-31-view.webp",
+    "bytes": 110714,
+    "sha256": "26a917fdf3fe15037d7e2e2bb5f74432cecf586518bd1bc7cc0b8e4a050b8b10"
+  },
+  {
+    "path": "site/assets/protected/chang-portfolio-32-thumb.webp",
+    "bytes": 25140,
+    "sha256": "e2546650c9041dc3b297c55ca53e1bdde9429e5b627867584d0001deb30e8c3b"
+  },
+  {
+    "path": "site/assets/protected/chang-portfolio-32-view.webp",
+    "bytes": 156238,
+    "sha256": "e8a114483fbcd51c497e1f80c3ecbe8200001f48d1dc34bad30f6b64f697e9bd"
+  },
+  {
+    "path": "site/assets/protected/chang-portfolio-33-thumb.webp",
+    "bytes": 17846,
+    "sha256": "c5fbbaa616d5399fb107e6e516c62065a78634ea41e593c9d751be2b45bd16e6"
+  },
+  {
+    "path": "site/assets/protected/chang-portfolio-33-view.webp",
+    "bytes": 114958,
+    "sha256": "0b6637deb196f9dd72d3697a6562e944be8c1acbde6baaee1f77fae8ba5de3ac"
+  },
+  {
+    "path": "site/assets/protected/chang-portfolio-34-thumb.webp",
+    "bytes": 19872,
+    "sha256": "6b269298c62e42425660c0dea24cdefa190c3766e6517370b63eec6eefbbca87"
+  },
+  {
+    "path": "site/assets/protected/chang-portfolio-34-view.webp",
+    "bytes": 136608,
+    "sha256": "b07547d40b6bd2d21bb3d43f56d4d0bbe78f229b3f153fcc8972de8d21d6f6b0"
+  },
+  {
+    "path": "site/assets/protected/dys-hero-thumb.webp",
+    "bytes": 45056,
+    "sha256": "b3266bb1605885768375becaea6dc73661ea43ab376faaa186f5522e0f9bf479"
+  },
+  {
+    "path": "site/assets/protected/dys-hero-view.webp",
+    "bytes": 331326,
+    "sha256": "ce0f8ee56c8d69424db9329fe5c50c2eb2282962a5d158e22e860c8c261a2338"
+  },
+  {
+    "path": "site/assets/protected/dys-plans-thumb.webp",
+    "bytes": 39020,
+    "sha256": "be88c39f88d56ee307d0709aa0a3b89ca53868147177f4e02dcc5ce0655cf8b6"
+  },
+  {
+    "path": "site/assets/protected/dys-plans-view.webp",
+    "bytes": 233548,
+    "sha256": "99e4f805efc2975bdc999d20ca91733a197ebcfb1790a6752ececee35975525f"
+  },
+  {
+    "path": "site/assets/protected/dys-scenes-thumb.webp",
+    "bytes": 38644,
+    "sha256": "db5fcdf4e2e6d169b4fbad36771aadd25a2af01a905364239b96302c835efa6c"
+  },
+  {
+    "path": "site/assets/protected/dys-scenes-view.webp",
+    "bytes": 242390,
+    "sha256": "3a3b442f067702c236a74b9358463cab74f52ea2ed151f041eafbafdb57af218"
+  },
+  {
+    "path": "site/assets/protected/dys-system-thumb.webp",
+    "bytes": 38714,
+    "sha256": "aa95026ba83c519783dd8d41e8395e77c4d2bfe9255ca5a1b62c302e97c9a33a"
+  },
+  {
+    "path": "site/assets/protected/dys-system-view.webp",
+    "bytes": 216602,
+    "sha256": "fa193efc875015c569aa6345cb204c712ae24807e412b56001dfb9a5f2af9b12"
+  },
+  {
+    "path": "site/assets/protected/fishbird-detail-thumb.webp",
+    "bytes": 58492,
+    "sha256": "07bbc1f7fdfd9786d54cb00582ff93d57389ef62b5c44b950ee187091e0af67b"
+  },
+  {
+    "path": "site/assets/protected/fishbird-detail-view.webp",
+    "bytes": 397856,
+    "sha256": "6c5ed61c2e93b0f22b92054ef6dacc0cb9a5a293bb63666b5cd8b536afa9247d"
+  },
+  {
+    "path": "site/assets/protected/fishbird-hero-thumb.webp",
+    "bytes": 42862,
+    "sha256": "f41432a32c95f80255e82f7eed730fe92c09c7090061a259ea211cda2a645662"
+  },
+  {
+    "path": "site/assets/protected/fishbird-hero-view.webp",
+    "bytes": 259242,
+    "sha256": "fb78642c6e8bc5a4c913ef2ef8f68d64596f47e52fefbcc245102e5ace35ce68"
+  },
+  {
+    "path": "site/assets/protected/fishbird-plan-thumb.webp",
+    "bytes": 24784,
+    "sha256": "71bc7bc4d3bb713a121491d7c84a755b0a6e19484d1c75732393623981b0fcdd"
+  },
+  {
+    "path": "site/assets/protected/fishbird-plan-view.webp",
+    "bytes": 131096,
+    "sha256": "c8ec59c736546bcecd780891ab4168eae433619bb8523b0ac1079008f131edf5"
+  },
+  {
+    "path": "site/assets/protected/fishbird-profile-thumb.webp",
+    "bytes": 39626,
+    "sha256": "b1959bcb194b65f22aaf83360e518539be6371b6d3841e59409741eb88d9764c"
+  },
+  {
+    "path": "site/assets/protected/fishbird-profile-view.webp",
+    "bytes": 258292,
+    "sha256": "cf1187c3077ab53f3ddb2625a46d0e173bbef27d8f0c6b8d1374e50e964539fc"
+  },
+  {
+    "path": "site/assets/protected/fishbird-side-thumb.webp",
+    "bytes": 42536,
+    "sha256": "7a0094185da05a48f5c1abbe7b6bbfc62486942a5e6103a8863ef9209dd45ea6"
+  },
+  {
+    "path": "site/assets/protected/fishbird-side-view.webp",
+    "bytes": 328650,
+    "sha256": "4fcb8d0b4b46338c62d63347ee2db819eb33415f7b08ab17fc89c9b7de104a72"
+  },
+  {
+    "path": "site/assets/protected/fishbird-sketch-thumb.webp",
+    "bytes": 12602,
+    "sha256": "103d4bc4be4ea215add53137bbc5f2f190db0774da264d32e0f0c7ab4533ad91"
+  },
+  {
+    "path": "site/assets/protected/fishbird-sketch-view.webp",
+    "bytes": 63560,
+    "sha256": "e1cda703d316ae5ad87cd854d97ca4920dcb6a13433c1978cba4fe4c0fe6cf14"
+  },
+  {
+    "path": "site/assets/protected/fishbird-structure-thumb.webp",
+    "bytes": 64226,
+    "sha256": "d2631810046344a18163140e51faefa984a3831a939f045c917ddc03b25d486b"
+  },
+  {
+    "path": "site/assets/protected/fishbird-structure-view.webp",
+    "bytes": 411406,
+    "sha256": "569a9c8d11c6b49cc9f427bd2fd9bdb428b8711015279b5e150c012d3f5df1b3"
+  },
+  {
+    "path": "site/assets/protected/floating-hero-thumb.webp",
+    "bytes": 20996,
+    "sha256": "0c8132c79bff4c550e35b25859d8bfe9679e2194b67a7c03ade183e7a10271de"
+  },
+  {
+    "path": "site/assets/protected/floating-hero-view.webp",
+    "bytes": 113620,
+    "sha256": "94c99862866b1277f0fa3ebfe0083d415632fc0605d7c92b48bd64ab7b471956"
+  },
+  {
+    "path": "site/assets/protected/flowing-hero-thumb.webp",
+    "bytes": 25480,
+    "sha256": "915ccd1f573c56685455cb7e712f643b22f297d92398bb43875e036f98f05999"
+  },
+  {
+    "path": "site/assets/protected/flowing-hero-view.webp",
+    "bytes": 106444,
+    "sha256": "1515cb6d6dd3ee0c2ef7fd2117873f807ea99476904a233022e74485f7c5cdf3"
+  },
+  {
+    "path": "site/assets/protected/gavel-art-position-thumb.webp",
+    "bytes": 15922,
+    "sha256": "9becd18434d2935580ad9ca6586fe8cad65b95f8ed9eab74ab9786b1efd97ab8"
+  },
+  {
+    "path": "site/assets/protected/gavel-art-position-view.webp",
+    "bytes": 77568,
+    "sha256": "9a8e3b83c024974360edab9b439f0892adb76dcb7327448c33f03ddf3ccfacea"
+  },
+  {
+    "path": "site/assets/protected/gavel-audience-thumb.webp",
+    "bytes": 33134,
+    "sha256": "362496b14b8410bb6d0bd8d009f02f0ed2c855c75e72044d4250044f8651c59f"
+  },
+  {
+    "path": "site/assets/protected/gavel-audience-view.webp",
+    "bytes": 313060,
+    "sha256": "12d71a6c9edbc790966465436c117589ad30167b7f6e63f6675f0385144e1796"
+  },
+  {
+    "path": "site/assets/protected/gavel-build-thumb.webp",
+    "bytes": 41754,
+    "sha256": "4ab8b2ae3e7fbcc2937f76dc1d83dd9a982ac41dad716f783bc1104ea547b18c"
+  },
+  {
+    "path": "site/assets/protected/gavel-build-view.webp",
+    "bytes": 239994,
+    "sha256": "7bf3e4c5545c3e80a8d7739cf4ac42e3ab5373b5b3a7d9dbe85ae0b9ff037e8f"
+  },
+  {
+    "path": "site/assets/protected/gavel-circles-thumb.webp",
+    "bytes": 30570,
+    "sha256": "eacf7145c3b589f42ec2a7d14c9ffe8243d2bd30e9b46720116be0ea6796ac52"
+  },
+  {
+    "path": "site/assets/protected/gavel-circles-view.webp",
+    "bytes": 103414,
+    "sha256": "19255c05d77fcfe60b647d119176a194a5a1a00f6cda5d5164a29e397a9f966e"
+  },
+  {
+    "path": "site/assets/protected/gavel-crypt-seat-thumb.webp",
+    "bytes": 35688,
+    "sha256": "a0aadb6e113afeba14a686657ff314d26fc86cefe4c870e02c7ce9e07b2008c6"
+  },
+  {
+    "path": "site/assets/protected/gavel-crypt-seat-view.webp",
+    "bytes": 134566,
+    "sha256": "789d49db6c063f1a9221d6ea36c3fd62dedfddd0e002897bed614b61d439d607"
+  },
+  {
+    "path": "site/assets/protected/gavel-crypt-thumb.webp",
+    "bytes": 48008,
+    "sha256": "6050d449a8db963c794972f5f1c3930e728dc4d2aa3bc09e2d39128a369e6238"
+  },
+  {
+    "path": "site/assets/protected/gavel-crypt-view.webp",
+    "bytes": 218260,
+    "sha256": "416ba11abbcfce8bd7d1a9c88410342e2754d85f3c1a7f1c291d06470beed3a3"
+  },
+  {
+    "path": "site/assets/protected/gavel-early-plan-thumb.webp",
+    "bytes": 11476,
+    "sha256": "bb7103e33afa4b4602a792713c732a6bfdce6e05008d95ee1945825c6778f2ea"
+  },
+  {
+    "path": "site/assets/protected/gavel-early-plan-view.webp",
+    "bytes": 56032,
+    "sha256": "0c885b5ee70d5a18dfbfbed3f500926956e928ed040d78faac0cb20f1a2c3cf4"
+  },
+  {
+    "path": "site/assets/protected/gavel-film-2025-thumb.webp",
+    "bytes": 8034,
+    "sha256": "ccc0f75be7150af66e70a6c4c304f7d41395e9851d6ae71de000dcb80f897a9b"
+  },
+  {
+    "path": "site/assets/protected/gavel-film-2025-view.webp",
+    "bytes": 37318,
+    "sha256": "8ff96c586711c7d78201521b6315ad2efdc129a0d1c736483fea38dad50d412b"
+  },
+  {
+    "path": "site/assets/protected/gavel-frame-thumb.webp",
+    "bytes": 30448,
+    "sha256": "d4a386ccd188b410acd061fcb7e4a72349229bb4b0f206c3da573e83ee603e58"
+  },
+  {
+    "path": "site/assets/protected/gavel-frame-view.webp",
+    "bytes": 209900,
+    "sha256": "aa13111f305d0c6a1c8b669caf77d4c8791712df5793546edc6efa3ea6c15b78"
+  },
+  {
+    "path": "site/assets/protected/gavel-hero-thumb.webp",
+    "bytes": 22576,
+    "sha256": "22b1b3912aec9ad2c0c813254e6530264fd804ae866dd18dc3fac387c23625fa"
+  },
+  {
+    "path": "site/assets/protected/gavel-hero-view.webp",
+    "bytes": 295692,
+    "sha256": "50778aee1f1f442b34265a70bde18f95a44dd3586da3bd826f0de407b73f7f3d"
+  },
+  {
+    "path": "site/assets/protected/gavel-performance-thumb.webp",
+    "bytes": 29726,
+    "sha256": "1f4bf6fbd06b0f8dac72fe27e56706cae06d276a64f0d8f1b5935ed4c751095d"
+  },
+  {
+    "path": "site/assets/protected/gavel-performance-view.webp",
+    "bytes": 182286,
+    "sha256": "11cf37279aa0ae6b887239eb1e72c4c59d6ee1df777655c202f9a557bb5781f8"
+  },
+  {
+    "path": "site/assets/protected/gavel-rehearsal-thumb.webp",
+    "bytes": 38616,
+    "sha256": "673e26ed91807984dbcd63593f2f674245532f9590d61b3402fde7b56607d70b"
+  },
+  {
+    "path": "site/assets/protected/gavel-rehearsal-view.webp",
+    "bytes": 260670,
+    "sha256": "46557d12b739c224c56100e17a25b171ba073af233faf43392088dab280fd051"
+  },
+  {
+    "path": "site/assets/protected/gavel-script-thumb.webp",
+    "bytes": 25440,
+    "sha256": "4d21d71642d613e7a197120478d2ae0d78b2222560279fbac2c90146f97d80a0"
+  },
+  {
+    "path": "site/assets/protected/gavel-script-view.webp",
+    "bytes": 130560,
+    "sha256": "5bdf160d8838ab4378c858bc569511a7c59aa6b41ae3b97327cf2c71830fe254"
+  },
+  {
+    "path": "site/assets/protected/gavel-sketch-thumb.webp",
+    "bytes": 23270,
+    "sha256": "9fabf13b9d398524f8ef40db60e5cc1a26ad6df12c2b5d9d7184713d8ea977d8"
+  },
+  {
+    "path": "site/assets/protected/gavel-sketch-view.webp",
+    "bytes": 102168,
+    "sha256": "ca03830d70e0e5f2b828b1d4629f126bedacf9fefb0ee802dde86931773c2f2c"
+  },
+  {
+    "path": "site/assets/protected/gavel-space-thumb.webp",
+    "bytes": 46078,
+    "sha256": "5ea2d9b780092337de894964cd19a92bdf5a1b33cdbb97810f70ec421e4549ef"
+  },
+  {
+    "path": "site/assets/protected/gavel-space-view.webp",
+    "bytes": 264268,
+    "sha256": "235130ff752b3d71a0897cc51a466b5e3656bd8b33fc8e061e3f2dc2c4c76056"
+  },
+  {
+    "path": "site/assets/protected/kaleidoscope-form-thumb.webp",
+    "bytes": 31166,
+    "sha256": "131f09ffa7d312375c3fe344d477b4837f6e3d0b90464a2eda91bc7a0e7147ed"
+  },
+  {
+    "path": "site/assets/protected/kaleidoscope-form-view.webp",
+    "bytes": 194706,
+    "sha256": "371c14e24db6a72eb38164c668da965c64b3358656b77e7a960fb58bd6093357"
+  },
+  {
+    "path": "site/assets/protected/kaleidoscope-frame-thumb.webp",
+    "bytes": 49614,
+    "sha256": "6dc177ebce342bd373c535059ec68f2f078f79e6ef067c1e7cfac848cb94eeb1"
+  },
+  {
+    "path": "site/assets/protected/kaleidoscope-frame-view.webp",
+    "bytes": 181704,
+    "sha256": "3f13c32b40c72cedf108a76fe5a76a53a39992858ea5efe4859697de346cf35c"
+  },
+  {
+    "path": "site/assets/protected/kaleidoscope-hero-thumb.webp",
+    "bytes": 44920,
+    "sha256": "9cbd691adede4c98a2fbd6fbc049fd77b5ebfa746c624d0d62b0d9f590662b08"
+  },
+  {
+    "path": "site/assets/protected/kaleidoscope-hero-view.webp",
+    "bytes": 236744,
+    "sha256": "66da961e5f203da8942e785c25c4f2f046846cfb55b95563df114aab6cf8f66f"
+  },
+  {
+    "path": "site/assets/protected/kaleidoscope-light-thumb.webp",
+    "bytes": 35156,
+    "sha256": "bfc9cbe3a6e9f20bb5c82596474143b171ab494c3b32613f2d6a9180a095b3ef"
+  },
+  {
+    "path": "site/assets/protected/kaleidoscope-light-view.webp",
+    "bytes": 194830,
+    "sha256": "6e809dac667794f8b204780158af9d71c2f0ed5fedbfcc986594d154e091eb7f"
+  },
+  {
+    "path": "site/assets/protected/kaleidoscope-plans-thumb.webp",
+    "bytes": 53508,
+    "sha256": "a6b2ded15aa40977f7df7ae926db16ddd4b3f1bf94afc7bdbdde642aa0f8bbb7"
+  },
+  {
+    "path": "site/assets/protected/kaleidoscope-plans-view.webp",
+    "bytes": 208010,
+    "sha256": "457bc626d319f3b91f1f7d8545387dc4ed7ad6edd0ea186a341decbb86a52271"
+  },
+  {
+    "path": "site/assets/protected/kinaree-counter-thumb.webp",
+    "bytes": 28364,
+    "sha256": "3389e6f142250db01d7a4adaaa9603c3cbc4d82b065aab00c9b471c0d3c6a1f2"
+  },
+  {
+    "path": "site/assets/protected/kinaree-counter-view.webp",
+    "bytes": 177128,
+    "sha256": "2aea7fb9bc25a8a8e8c2073ad3429916caea40f6eab6e53c3933995896040386"
+  },
+  {
+    "path": "site/assets/protected/kinaree-evening-thumb.webp",
+    "bytes": 27328,
+    "sha256": "f1efe7cda6a273e779148ddf9da827a7fd51d62da56dd73a6227fa418a65089b"
+  },
+  {
+    "path": "site/assets/protected/kinaree-evening-view.webp",
+    "bytes": 177452,
+    "sha256": "9d3c1cb256f530dd1dba573c2b93c1bc2d4e9957f8a3b44df6d5d60374ebfba2"
+  },
+  {
+    "path": "site/assets/protected/kinaree-hero-thumb.webp",
+    "bytes": 43868,
+    "sha256": "928a9992916bdc40093d3cb272720292307895e7ac3f11863d5a6594f36c68e4"
+  },
+  {
+    "path": "site/assets/protected/kinaree-hero-view.webp",
+    "bytes": 284004,
+    "sha256": "192c7e7fa69985242fc2a98fd9919851d9f7ba0999ecf67c0f9dd8e759db013d"
+  },
+  {
+    "path": "site/assets/protected/kinaree-interior-thumb.webp",
+    "bytes": 27982,
+    "sha256": "7814aa1584f25cc872e73fb29e718da9d7532920b542719c3df1fe84c146894d"
+  },
+  {
+    "path": "site/assets/protected/kinaree-interior-view.webp",
+    "bytes": 179300,
+    "sha256": "b5c9d64f98c32f9c421f5239e9ab0f89c5a67ea5b42aef034473cfdcbdac8d16"
+  },
+  {
+    "path": "site/assets/protected/kinaree-lighting-thumb.webp",
+    "bytes": 35080,
+    "sha256": "95bd9ddcea4273f5275f076a8ef3d342c9c8cd851d904a3b1d1d3db3ef92279c"
+  },
+  {
+    "path": "site/assets/protected/kinaree-lighting-view.webp",
+    "bytes": 227784,
+    "sha256": "69c1f99d0630f645992d81aaded4ed1759bae85a5bbf21f9770a244d53b52324"
+  },
+  {
+    "path": "site/assets/protected/kinaree-plan-thumb.webp",
+    "bytes": 32320,
+    "sha256": "06a431998482d7ab1dfbc3e0ec5c8c83db3c633369478e7c53cc29afea4fdcbe"
+  },
+  {
+    "path": "site/assets/protected/kinaree-plan-view.webp",
+    "bytes": 136058,
+    "sha256": "472376d9be845fbc26a476f4857e45a8ec8b79e7a9a1adbbbf54c3ecd38b00f9"
+  },
+  {
+    "path": "site/assets/protected/kinaree-seating-thumb.webp",
+    "bytes": 25130,
+    "sha256": "0f1f218bdd7d293d21202e2a507dc9a00cd6ece87db035f3770254241f8b60cd"
+  },
+  {
+    "path": "site/assets/protected/kinaree-seating-view.webp",
+    "bytes": 171262,
+    "sha256": "ae31fa1cea547ec7106ff79460317f9f9edb23bff4554d92d771b22c8da26038"
+  },
+  {
+    "path": "site/assets/protected/kinaree-window-thumb.webp",
+    "bytes": 32738,
+    "sha256": "4e98eafe39b2a1514c7924d2503faa24ac632716647983796d9819a05ce07a50"
+  },
+  {
+    "path": "site/assets/protected/kinaree-window-view.webp",
+    "bytes": 186086,
+    "sha256": "db073add814a2f8e0780b44c23fc709b729c89b5041ba817c62cd4c2a77db610"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-bags-thumb.webp",
+    "bytes": 37862,
+    "sha256": "c3b193eb130a67f94a0c47f0eb8acf019d56256a2ac341be22178a87bb16d2d9"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-bags-view.webp",
+    "bytes": 258542,
+    "sha256": "4313cce260885e08f8bb10d7cd92a245bdc2cb582faed63a6198c7a27e25ae02"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-booth-thumb.webp",
+    "bytes": 49654,
+    "sha256": "75efda08512ba74b7254ea54bb0e18c23a413a3b7bb67235d1a68074342709b1"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-booth-view.webp",
+    "bytes": 293298,
+    "sha256": "af1593b48664771ba83b97bf3594cb69d7361f5d131cfefac46a402e386b55e0"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-colour-render-thumb.webp",
+    "bytes": 41782,
+    "sha256": "9a190e57ae3c494c43458613d47755aec83edfd0ef0416e07cf7b3d879fd30dd"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-colour-render-view.webp",
+    "bytes": 225292,
+    "sha256": "653a3192e55696808d07057525e42c22bebd77464c9fecf890789645bbd4ac62"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-elevation-sketch-thumb.webp",
+    "bytes": 18856,
+    "sha256": "117bde426cce6a8f79873c4c08a43b38bad5df6c32e42e61bc3455eb6549dc24"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-elevation-sketch-view.webp",
+    "bytes": 85216,
+    "sha256": "db9f5ad08786bd7d59a537d78e60232515bea710f91fd80973fa1521887eeed5"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-flowers-thumb.webp",
+    "bytes": 46218,
+    "sha256": "60f93393d879778def939e20aa3a7c24d656c5a08b789f06f35d393e7ff00a20"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-flowers-view.webp",
+    "bytes": 221410,
+    "sha256": "ad6477243d4f79b10f73ae1b4394b6f1d4ef4abdb0bea56f0a553fc31dac6926"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-hero-thumb.webp",
+    "bytes": 46730,
+    "sha256": "8daeda61528cd92fc0b256f1531d00565ced1249a883acc836fe672328368176"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-hero-view.webp",
+    "bytes": 247322,
+    "sha256": "a776166390920878a18cd8e6346f9ab1582aa22ee13bd8664245944b1273bda3"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-installation-sketch-thumb.webp",
+    "bytes": 13330,
+    "sha256": "c1311f51635090b3cbc74fe33aeba8d54c545c96513929cc28a0126ba84ed467"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-installation-sketch-view.webp",
+    "bytes": 23628,
+    "sha256": "2c7c3a4b10985f7367f31d92aa9ddf674b0e80faa3a56a66a35527a58bd0cce1"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-invitation-thumb.webp",
+    "bytes": 31924,
+    "sha256": "45759385d3cc3d83f396414f18c731ce98314a593b96df0373e45e79b295ee0e"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-invitation-view.webp",
+    "bytes": 167176,
+    "sha256": "2be4396a0a2146b0b50040b33c28c0f20106a4ef832fc3f17df60886c82f9b8e"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-object-thumb.webp",
+    "bytes": 25940,
+    "sha256": "6ec9c0d417021f2a81d02099c468f34ddedf04abea12819b5adfbecfa6571f70"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-object-view.webp",
+    "bytes": 134904,
+    "sha256": "dc76ed7ba4796e949dab4b93c17adc312213f60db24bc1a8b717fb826ac04816"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-plan-sketch-thumb.webp",
+    "bytes": 20864,
+    "sha256": "54c0a7eda3acffb9487b09c479aeebd99da1681297fe3d3ef874c22722a5341d"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-plan-sketch-view.webp",
+    "bytes": 91244,
+    "sha256": "c29e0cc01a29e6ec8c202706e80f01988bde39ef2b89cbf6249cf2c5ab10fd4f"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-render-thumb.webp",
+    "bytes": 37584,
+    "sha256": "570a083bdf88b3a613dc1ce658d9dd7f0c5afa7825b9b296b7881d0634cc47dd"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-render-view.webp",
+    "bytes": 210304,
+    "sha256": "34d4222ab82c6fc1741d331fa5019e22d20356cad195001a7525ffd07232ae57"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-shoe-thumb.webp",
+    "bytes": 26898,
+    "sha256": "8c460ca7d43c05194cd90b0b80a38bf189e804d89061aeb188614ff16a50695b"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-shoe-view.webp",
+    "bytes": 162446,
+    "sha256": "7c32c158961d7e914de56373bd4e1665395319db81c2ac6dbd51733db2d62fd9"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-side-thumb.webp",
+    "bytes": 39618,
+    "sha256": "09555eb242d88f8a0da45e70cc0e8f0887982b759583d3ac99c18bf042b5b491"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-side-view.webp",
+    "bytes": 184148,
+    "sha256": "490e644da30fea3ec8eca31bafc577b14c27854eeb964286e5424e1235e5a3a7"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-teal-thumb.webp",
+    "bytes": 30866,
+    "sha256": "d48a42295d60a70376827d36bc4ddf5a3ac5cc58e609bd4fa9b3dd8178f5d0e6"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-teal-view.webp",
+    "bytes": 140006,
+    "sha256": "363be25ce14220f9cb73ea5790c7a92b9de4164be27f5686275605c6f229deea"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-terracotta-thumb.webp",
+    "bytes": 28586,
+    "sha256": "2e0c2593433f1702876be4606bc2a292784a916ded1a940817f51055a8cc6bd8"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-terracotta-view.webp",
+    "bytes": 172032,
+    "sha256": "e3af8bed034899df6a09b82aee96d409bd5c311c609cc02dc90d9c9950903094"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-woven-display-thumb.webp",
+    "bytes": 25334,
+    "sha256": "1be6a825172e2c3d8b3f2de2d711f4d84c140c610c5c12b6ffbdb50fc33151b3"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-woven-display-view.webp",
+    "bytes": 133422,
+    "sha256": "ed20fbef957bf7aad6a11aba85bbd26a59550a9745a029a36e9515d73cf8588b"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-yellow-thumb.webp",
+    "bytes": 16922,
+    "sha256": "32f5537474ca4a08d46486ffef97baffe227adcec9599d754ac3e5746691abc1"
+  },
+  {
+    "path": "site/assets/protected/meilishuo-yellow-view.webp",
+    "bytes": 88862,
+    "sha256": "0f2c397871e627eccacb3117a73f4fdd46fbe575d45f83dd95832878225ece14"
+  },
+  {
+    "path": "site/assets/protected/miao-installed-thumb.webp",
+    "bytes": 24648,
+    "sha256": "f41a79fcac0a02797f4c8e659432fd1914765c62c992c4c37c03810f024a3dde"
+  },
+  {
+    "path": "site/assets/protected/miao-installed-view.webp",
+    "bytes": 108394,
+    "sha256": "7fad5ecc1e6620a050804257a806d2d2e77273f8a2410025c5b918927df745f6"
+  },
+  {
+    "path": "site/assets/protected/miao-proposal-thumb.webp",
+    "bytes": 22108,
+    "sha256": "38e5ea557aa5a691c6996af3c5fb259c17b97fdb0c1d11aa4fd3f6ca53912593"
+  },
+  {
+    "path": "site/assets/protected/miao-proposal-view.webp",
+    "bytes": 47280,
+    "sha256": "4ddcda32fe49ef50bce1761a2123c0e9894c65da6f84006cd8354e6f7707eebf"
+  },
+  {
+    "path": "site/assets/protected/molabo-entry-seating-thumb.webp",
+    "bytes": 24964,
+    "sha256": "00af205753c9f6a8f9f33e1d6bf60a06dcd48d0de1631ab502ac73e2232d707d"
+  },
+  {
+    "path": "site/assets/protected/molabo-entry-seating-view.webp",
+    "bytes": 154488,
+    "sha256": "cfec01de64d4911dd15b499b640e8eba7b1632244d123344c7804965f82989dc"
+  },
+  {
+    "path": "site/assets/protected/molabo-hero-thumb.webp",
+    "bytes": 36482,
+    "sha256": "6f6747ff5ec748ee41214a343829f13177cdf27ded427e1b26ce8b3ed3589d2f"
+  },
+  {
+    "path": "site/assets/protected/molabo-hero-view.webp",
+    "bytes": 226584,
+    "sha256": "5ca3f81747d1570867f123935069026878f989dd76a361bc8c55116290b43112"
+  },
+  {
+    "path": "site/assets/protected/molabo-inner-entry-thumb.webp",
+    "bytes": 31190,
+    "sha256": "8121ba5651fee18d16d9b85f5bc0300b72adce45c861c860eb04bdb085e4c8eb"
+  },
+  {
+    "path": "site/assets/protected/molabo-inner-entry-view.webp",
+    "bytes": 226400,
+    "sha256": "65aca6ff30d18195286ff188ed3a12f7b48eb376a8711523a2a7b345ff95bbaa"
+  },
+  {
+    "path": "site/assets/protected/molabo-inner-seating-thumb.webp",
+    "bytes": 15638,
+    "sha256": "3e1768ca2098e2946ee1cd578bb232599c12c9ec474ffad83fef28ba5e778dab"
+  },
+  {
+    "path": "site/assets/protected/molabo-inner-seating-view.webp",
+    "bytes": 91234,
+    "sha256": "7b9fb5f41e7a0c6ddf42bd845c312628d6f5a67b9aa49d5f3e9e0dc6cb86d4e4"
+  },
+  {
+    "path": "site/assets/protected/molabo-kitchen-thumb.webp",
+    "bytes": 19488,
+    "sha256": "b8e340e9dfe5d3b7eb25c04d5f0fa03ffe9f70e99b17b354bfebe2bbc161936f"
+  },
+  {
+    "path": "site/assets/protected/molabo-kitchen-view.webp",
+    "bytes": 118412,
+    "sha256": "7ea46b1221924150f62fbb890aca5b3cfd5f0d4c48f6b78a67bcb0b526a3e5c8"
+  },
+  {
+    "path": "site/assets/protected/molabo-outer-entry-thumb.webp",
+    "bytes": 9448,
+    "sha256": "8a9752ea08a019b4fc200580add4754c97ba0dfaaaca4fcb72b7a748a1a0a681"
+  },
+  {
+    "path": "site/assets/protected/molabo-outer-entry-view.webp",
+    "bytes": 65830,
+    "sha256": "ee031c868fe6e8d795b6ccc9d3c676e97f6670db26f654264a56b9fac34a2f40"
+  },
+  {
+    "path": "site/assets/protected/molabo-outer-seating-thumb.webp",
+    "bytes": 16176,
+    "sha256": "9e919fd3ac304b051e201ed79e723e3d19b53c002ad692ff735d91f57839529b"
+  },
+  {
+    "path": "site/assets/protected/molabo-outer-seating-view.webp",
+    "bytes": 105408,
+    "sha256": "3ed91a00ba72a876a9e9db840e014d53f331a8d0b2734a44e4b3f186842958ec"
+  },
+  {
+    "path": "site/assets/protected/molabo-overhead-thumb.webp",
+    "bytes": 15712,
+    "sha256": "48c16ae20089e52b08a02cb502da0114f167f692285f0ae357208da2e47b30fb"
+  },
+  {
+    "path": "site/assets/protected/molabo-overhead-view.webp",
+    "bytes": 117128,
+    "sha256": "dac35232a1dcac5030b594adbe8f84d61b4b0559f77dd76c454a730244948c2c"
+  },
+  {
+    "path": "site/assets/protected/molabo-plans-thumb.webp",
+    "bytes": 21130,
+    "sha256": "efb0964e6b987d76a6ec071ab9044edf331834c5f7b50029633931bb2488d262"
+  },
+  {
+    "path": "site/assets/protected/molabo-plans-view.webp",
+    "bytes": 108548,
+    "sha256": "cc2429b520b52f90d8fd114223d6b155200fe14081b9240f744e63a875c1a288"
+  },
+  {
+    "path": "site/assets/protected/power-hero-thumb.webp",
+    "bytes": 48826,
+    "sha256": "70a4c95b249b73d51aff44956a8520ec51302d76e1c2b492bbcb4a0c3a066b62"
+  },
+  {
+    "path": "site/assets/protected/power-hero-view.webp",
+    "bytes": 214402,
+    "sha256": "e41c54935f33ea410d4e6526f669f741fdca1fe3cef0617519979fae7f23c8d7"
+  },
+  {
+    "path": "site/assets/protected/power-performance-thumb.webp",
+    "bytes": 46404,
+    "sha256": "2265f9cbea4ebc404c552df18aadd249a002ed5a5b09cb4ef5fd4de9d4727f1b"
+  },
+  {
+    "path": "site/assets/protected/power-performance-view.webp",
+    "bytes": 268620,
+    "sha256": "9e7da1ab878be1139fd45f686b50ca56f527240a871d0cbaa7f3447b4d8682d5"
+  },
+  {
+    "path": "site/assets/protected/power-plan-thumb.webp",
+    "bytes": 38116,
+    "sha256": "03c6b94386b8d720ac2e1445d6f0b78da7a40aa3edabbbe73179a9ab1279951b"
+  },
+  {
+    "path": "site/assets/protected/power-plan-view.webp",
+    "bytes": 102672,
+    "sha256": "c606ad49781bd0f6e553135e2a8afc367a348929e429ac49c0b763dbe595961f"
+  },
+  {
+    "path": "site/assets/protected/power-process-thumb.webp",
+    "bytes": 40224,
+    "sha256": "04fce44606f1fb9bc069ea3164e87f7ef06d52599cf6d09af0181a4f8c8a6758"
+  },
+  {
+    "path": "site/assets/protected/power-process-view.webp",
+    "bytes": 151216,
+    "sha256": "52eedcd82d31b184152b0dcc52621e3475ac1105cf4e8997eb66fa148a2cc32e"
+  },
+  {
+    "path": "site/assets/protected/power-totem-thumb.webp",
+    "bytes": 54484,
+    "sha256": "74e87ee76711b93f2e7737f190ae8e5f072ae5fb201b84e1c75d60f93aa3aaf6"
+  },
+  {
+    "path": "site/assets/protected/power-totem-view.webp",
+    "bytes": 268040,
+    "sha256": "26e8e89dd5a816540ea0e903bd6131b7fe33922fca49698215529dac9e047919"
+  },
+  {
+    "path": "site/assets/protected/under-form-thumb.webp",
+    "bytes": 36906,
+    "sha256": "53ab0a5af7c3fff19c6c107cc05d895391902c34814080c86767d002919dbee1"
+  },
+  {
+    "path": "site/assets/protected/under-form-view.webp",
+    "bytes": 243110,
+    "sha256": "aa9bd04d6ecc9b7b0e48dbb5840ce9350dc75a6a11bc57e964feec94c785a220"
+  },
+  {
+    "path": "site/assets/protected/under-hero-thumb.webp",
+    "bytes": 40016,
+    "sha256": "465e28cbb31abe1d61892a2238802b50fbee8191c6de895454849a39ac45df28"
+  },
+  {
+    "path": "site/assets/protected/under-hero-view.webp",
+    "bytes": 275152,
+    "sha256": "5579eee70d9a41e0d294c549ce9ad026892f305b6c2683a139028a313b44f496"
+  },
+  {
+    "path": "site/assets/protected/under-interior-thumb.webp",
+    "bytes": 33162,
+    "sha256": "8c1b8343543772c772e7ec59dcd2042858da11fb69a5c09ba04790f8f1bef5b6"
+  },
+  {
+    "path": "site/assets/protected/under-interior-view.webp",
+    "bytes": 231818,
+    "sha256": "3b8ea2a76e8ec02a6bdff78bb8e4357c36efcc1f1bfdb63e0d69b6093efff197"
+  },
+  {
+    "path": "site/assets/protected/under-section-thumb.webp",
+    "bytes": 40230,
+    "sha256": "738b234dab2e1033c5451f64cce61ea69e3deaa76729391fecb1bd53719ffeb1"
+  },
+  {
+    "path": "site/assets/protected/under-section-view.webp",
+    "bytes": 308550,
+    "sha256": "e6b38fa4d22b298017fe6fc725f4399378760aa695ad4c3cf72cf77a81ba8c71"
   },
   {
     "path": "site/assets/videos/carnival-process-1.mp4",

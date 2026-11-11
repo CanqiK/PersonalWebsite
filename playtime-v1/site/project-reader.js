@@ -18,9 +18,9 @@
   }
   function figure(item,lang,eager=false) {
     const a=asset(item.asset);if(!a)return '';
-    const cap=text(item.caption,lang),full=label('Open full-size image','打开大图',lang);
+    const cap=text(item.caption,lang),full=label('View image','查看图片',lang);
     if(item.zoom===false)return `<figure class="reader-figure ${a.width/a.height<.85?'reader-portrait':''}"><div class="reader-figure-media">${image(item.asset,cap,'',eager)}</div><figcaption><span>${esc(cap)}</span></figcaption></figure>`;
-    return `<figure class="reader-figure ${a.width/a.height<.85?'reader-portrait':''}"><a href="${esc(a.full)}" data-reader-image="${esc(item.asset)}" data-reader-caption="${esc(cap)}" aria-label="${esc(cap+' — '+full)}">${image(item.asset,cap,'',eager)}</a><figcaption><span>${esc(cap)}</span><a href="${esc(a.full)}" data-reader-image="${esc(item.asset)}" data-reader-caption="${esc(cap)}">${label('Full size ↗','大图 ↗',lang)}</a></figcaption></figure>`;
+    return `<figure class="reader-figure ${a.width/a.height<.85?'reader-portrait':''}"><button type="button" class="reader-image-open" data-reader-image="${esc(item.asset)}" data-reader-caption="${esc(cap)}" aria-label="${esc(cap+' — '+full)}">${image(item.asset,cap,'',eager)}</button><figcaption><span>${esc(cap)}</span><button type="button" class="reader-image-open" data-reader-image="${esc(item.asset)}" data-reader-caption="${esc(cap)}">${label('View image ↗','查看图片 ↗',lang)}</button></figcaption></figure>`;
   }
   function sectionImages(section,lang) {
     const images=section.images||[];
@@ -92,7 +92,7 @@
       const a=asset(item.poster);
       return `<figure class="reader-animation reader-animation-auto" data-reader-animation data-animation-autoplay><picture><source media="(prefers-reduced-motion: reduce)" srcset="${esc(poster)}"><img src="${esc(item.src)}" width="${a.width}" height="${a.height}" alt="${esc(title)}" loading="lazy" decoding="async"></picture><figcaption><span>${esc(title)}</span></figcaption></figure>`;
     }
-    return `<figure class="reader-animation" data-reader-animation data-animation-src="${esc(item.src)}" data-animation-poster="${esc(poster)}">${image(item.poster,title)}<figcaption><span>${esc(title)}</span><div class="reader-animation-controls"><button type="button" data-animation-toggle aria-pressed="false">${label('Play animation','播放动画',lang)}</button><a href="${esc(item.src)}" target="_blank" rel="noopener">${esc(text(item.downloadLabel,lang)||label('Original GIF','原始 GIF',lang))} ↗</a></div></figcaption></figure>`;
+    return `<figure class="reader-animation" data-reader-animation data-animation-src="${esc(item.src)}" data-animation-poster="${esc(poster)}">${image(item.poster,title)}<figcaption><span>${esc(title)}</span><div class="reader-animation-controls"><button type="button" data-animation-toggle aria-pressed="false">${label('Play animation','播放动画',lang)}</button></div></figcaption></figure>`;
   }
   function setAnimation(root,playing) {
     if(playing)document.querySelectorAll('[data-reader-animation]').forEach(other=>{if(other!==root&&other.querySelector('[aria-pressed="true"]'))setAnimation(other,false);});
@@ -107,7 +107,12 @@
   function sectionBody(s,lang,id) {
     const p=get(id);
     const e=v=>esc(text(v,lang));
-    return `${s.authors?`<p class="reader-authors">${e(s.authors)}</p>`:''}${s.quoteSource?`<p class="reader-quote-source">${e(s.quoteSource)}</p>`:''}<div class="reader-prose">${s.quoteSource?'<blockquote>':''}${s.paragraphs.map(v=>`<p>${e(v)}</p>`).join('')}${s.quoteSource?'</blockquote>':''}</div>${s.sequence?`<ol class="reader-score">${s.sequence.map(([a,b])=>`<li><strong>${e(a)}</strong><p>${e(b)}</p></li>`).join('')}</ol>`:''}${sectionImages(s,lang)}${s.gallery?.length?gallery(s.gallery,s.id,s.title,lang):''}${sectionVideos(p.videos||[],s.id,id,lang)}${animation(s.animation,lang)}${externalLinks(s.links,lang)}${(s.subsections||[]).map(part=>`<div class="reader-subsection" id="${esc(part.id)}"><h4>${e(part.title)}</h4>${sectionBody(part,lang,id)}</div>`).join('')}`;
+    return `${s.authors?`<p class="reader-authors">${e(s.authors)}</p>`:''}${s.quoteSource?`<p class="reader-quote-source">${e(s.quoteSource)}</p>`:''}<div class="reader-prose">${s.quoteSource?'<blockquote>':''}${s.paragraphs.map(v=>`<p>${e(v)}</p>`).join('')}${s.quoteSource?'</blockquote>':''}</div>${s.sequence?`<ol class="reader-score">${s.sequence.map(([a,b])=>`<li><strong>${e(a)}</strong><p>${e(b)}</p></li>`).join('')}</ol>`:''}${sectionImages(s,lang)}${colourStudy(s.palette,lang)}${s.gallery?.length?gallery(s.gallery,s.id,s.title,lang):''}${sectionVideos(p.videos||[],s.id,id,lang)}${animation(s.animation,lang)}${externalLinks(s.links,lang)}${s.columnSections?.length?`<div class="reader-photo-columns">${s.columnSections.map(part=>`<section id="${esc(part.id)}"><h4>${e(part.title)}</h4>${sectionBody(part,lang,id)}</section>`).join('')}</div>`:''}${(s.subsections||[]).map(part=>`<div class="reader-subsection" id="${esc(part.id)}"><h4>${e(part.title)}</h4>${sectionBody(part,lang,id)}</div>`).join('')}`;
+  }
+  function colourStudy(palette,lang) {
+    if(!palette)return '';
+    const e=value=>esc(text(value,lang));
+    return `<div class="reader-colour-study">${palette.groups.map(group=>`<section class="reader-colour-group"><h4>${e(group.title)}<span>${e(group.share)}</span></h4><ul class="reader-swatches">${group.colours.filter(c=>/^#[\da-f]{6}$/i.test(c.hex)).map(c=>`<li><span class="reader-swatch" style="background-color:${esc(c.hex)}" aria-hidden="true"></span><div><strong>${e(c.name)}</strong><span class="reader-swatch-ratio">${esc(c.ratio)}</span></div><small>${esc(c.hex)} · ${esc(c.pantone)} TPG</small></li>`).join('')}</ul></section>`).join('')}<p class="reader-colour-note">${e(palette.note)}</p></div>`;
   }
   function render(id,lang='en',modal=true) {
     const p=get(id);if(!p)return '';
@@ -120,7 +125,7 @@
     const credits=p.credits?`<section class="reader-credits"><h3>${label('Collaborators','合作署名',lang)}</h3><dl>${p.credits.map(([a,b])=>`<div><dt>${e(a)}</dt><dd>${e(b)}</dd></div>`).join('')}</dl></section>`:'';
     const heading=modal?'h2':'h1';
     const mentorBack=p.mentorSection==='mentor-sfk'?'mentor-sfk':'mentor-gafa';
-    return `<article class="${modal?'artist-detail':'page'} project-reader" data-reader-project="${esc(id)}">${bar}<header class="reader-heading"><div class="reader-kicker"><span>${e(p.subtitle||p.medium)}</span><span>${esc(p.year)}</span></div><${heading} id="artist-dialog-title">${e(p.title)}</${heading}><p class="reader-medium">${e(p.medium)}</p><p class="reader-summary">${e(p.summary)}</p>${externalLinks(p.links,lang)}</header>${figure({asset:p.hero,caption:p.heroCaption||p.medium},lang,true)}${versions}<section class="reader-overview ${p.role?'':'reader-overview-facts'}">${p.role?`<div class="reader-role"><span>${label('MY ROLE','我的职责',lang)}</span><p>${e(p.role)}</p></div>`:''}<dl class="reader-facts">${(p.facts||[]).map(([a,b])=>`<div><dt>${e(a)}</dt><dd>${e(b)}</dd></div>`).join('')}</dl></section>${sections||timeline||credits?`<div class="reader-layout ${toc?'':'reader-layout-short'}">${toc}<div class="reader-body">${sections}${timeline}${credits}</div></div>`:''}<nav class="reader-related" aria-label="${label('Related projects','相关项目',lang)}"><span>${label('CONTINUE READING','继续阅读',lang)}</span>${p.branch==="mentor"?`<a href="#${mentorBack}">${mentorBack==='mentor-sfk'?label("Back to SFK teaching","返回斯芬克教学",lang):label("Back to GAFA teaching","返回广美教学",lang)}<span aria-hidden="true">↗</span></a>`:""}${(p.related||[]).filter(r=>get(r)).map(r=>`<a href="#${route}/${r}">${esc(title(r,lang))}<span aria-hidden="true">↗</span></a>`).join('')}</nav></article>`;
+    return `<article class="${modal?'artist-detail':'page'} project-reader" data-reader-project="${esc(id)}">${bar}<header class="reader-heading"><div class="reader-kicker"><span>${e(p.subtitle||p.medium)}</span><span>${esc(p.year)}</span></div><${heading} id="artist-dialog-title">${e(p.title)}</${heading}><p class="reader-medium">${e(p.medium)}</p><p class="reader-summary">${e(p.summary)}</p>${externalLinks(p.links,lang)}</header>${figure({asset:p.hero,caption:p.heroCaption||p.medium},lang,true)}${versions}<section class="reader-overview ${p.role?'':'reader-overview-facts'}">${p.role?`<div class="reader-role"><span>${label('MY ROLE','我的职责',lang)}</span><p>${e(p.role)}</p></div>`:''}<dl class="reader-facts">${(p.facts||[]).map(([a,b])=>`<div><dt>${e(a)}</dt><dd>${e(b)}</dd></div>`).join('')}</dl></section>${sections||timeline||credits?`<div class="reader-layout ${toc?'':'reader-layout-short'}">${toc}<div class="reader-body">${sections}${timeline}${credits}</div></div>`:''}<p class="reader-rights">${label('Artwork and text © their respective authors. Please request permission before reuse.','作品与文字版权归各自作者所有，转载或使用请先联系授权。',lang)} <a href="copyright.html" target="_blank" rel="noopener">${label('Image use & credits','图片使用与署名',lang)} ↗</a></p><nav class="reader-related" aria-label="${label('Related projects','相关项目',lang)}"><span>${label('CONTINUE READING','继续阅读',lang)}</span>${p.branch==="mentor"?`<a href="#${mentorBack}">${mentorBack==='mentor-sfk'?label("Back to SFK teaching","返回斯芬克教学",lang):label("Back to GAFA teaching","返回广美教学",lang)}<span aria-hidden="true">↗</span></a>`:""}${(p.related||[]).filter(r=>get(r)).map(r=>`<a href="#${route}/${r}">${esc(title(r,lang))}<span aria-hidden="true">↗</span></a>`).join('')}</nav></article>`;
   }
   function jump(root,id) {
     const section=Array.from(root.querySelectorAll('.reader-section')).find(s=>s.id===id);if(!section)return;
@@ -148,7 +153,7 @@
     const lang=currentLang(),cap=link.dataset.readerCaption;
     lightbox=document.createElement('dialog');lightbox.className='reader-lightbox';
     lightbox.setAttribute('aria-label',label('Project image','作品大图',lang));
-    lightbox.innerHTML=`<div class="reader-lightbox-bar"><span>${esc(cap)}</span><button type="button" data-reader-zoom aria-pressed="false">${label('Zoom in','放大',lang)}</button><a href="${esc(a.full)}" target="_blank" rel="noopener">${label('Original ↗','原图 ↗',lang)}</a><button type="button" data-reader-image-close autofocus>${label('Close','关闭',lang)} ×</button></div><div class="reader-lightbox-scroll" data-native-scroll><img src="${esc(a.full)}" alt="${esc(cap)}" decoding="async"></div>`;
+    lightbox.innerHTML=`<div class="reader-lightbox-bar"><span>${esc(cap)}</span><button type="button" data-reader-zoom aria-pressed="false">${label('Zoom in','放大',lang)}</button><button type="button" data-reader-image-close autofocus>${label('Close','关闭',lang)} ×</button></div><div class="reader-lightbox-scroll" data-native-scroll><img src="${esc(a.file)}" alt="${esc(cap)}" decoding="async"></div>`;
     document.body.append(lightbox);lightbox.addEventListener('close',()=>{closeImage();if(link.isConnected)link.focus({preventScroll:true});},{once:true});lightbox.showModal();
   }
   document.addEventListener('click',event=>{
@@ -157,7 +162,7 @@
     if(target.matches('[data-gallery-step]')){moveGallery(target.closest('[data-reader-gallery]'),Number(target.dataset.galleryStep));return;}
     if(target.matches('[data-reader-language]')){document.getElementById('language')?.click();return;}
     if(target.matches('[data-reader-jump]')){jump(target.closest('.project-reader'),target.dataset.readerJump);return;}
-    if(target.matches('[data-reader-image]')){if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;event.preventDefault();showImage(target);return;}
+    if(target.matches('[data-reader-image]')){event.preventDefault();showImage(target);return;}
     if(target.matches('[data-reader-image-close]')){closeImage();return;}
     if(target.matches('[data-reader-zoom]')){const zoom=lightbox.classList.toggle('is-zoomed');target.setAttribute('aria-pressed',String(zoom));target.textContent=label(zoom?'Fit image':'Zoom in',zoom?'适应窗口':'放大',currentLang());return;}
     if(target.matches('[data-video-stop]')){const figure=target.closest('.reader-video');stopVideos(figure.parentElement);figure.querySelector('.reader-play')?.focus({preventScroll:true});return;}

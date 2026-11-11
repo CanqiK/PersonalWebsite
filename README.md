@@ -1,6 +1,6 @@
 # CANQI — Portfolio
 
-Current public runtime, updated 6 November 2026.
+Current public runtime, updated 11 November 2026.
 
 - Website: https://canqik.github.io/PersonalWebsite/
 - Entrance: https://canqik.github.io/PersonalWebsite/playtime-v1/entrance-prototype/
@@ -21,6 +21,12 @@ course and exhibition records for Present the Absent and Living Art. About and C
 share a scrolling page with an interactive ASCII background and a public English
 CV PDF. Some records remain explicitly provisional. Reduced-motion preferences
 are supported.
+
+The MEILISHUO project includes separate visitor and collaborator galleries, with
+visitor faces pixelated in the selected presentation photos. Artist-project images
+use reviewed, watermarked web copies; student work and reference material retain
+their own credits. The shared image viewer has no original-download link.
+Image use and attribution are explained in `playtime-v1/site/copyright.html`.
 
 ## Local preview
 

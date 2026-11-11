@@ -1,5 +1,33 @@
 /* Long-form project records extend the existing dark portfolio. */
 .project-thumbnail{display:block;width:100%;height:100%;object-fit:cover}
+/* The existing reader holds the complete MEILISHUO narrative. */
+[data-reader-project="meilishuo"] .reader-heading h1,
+[data-reader-project="meilishuo"] .reader-heading h2{letter-spacing:-.035em}
+[data-reader-project="meilishuo"] .reader-summary{max-width:40ch}
+[data-reader-project="meilishuo"] #meilishuo-process .reader-pair-compact{max-width:none}
+[data-reader-project="meilishuo"] #meilishuo-process .reader-pair-compact .reader-figure{max-width:none}
+[data-reader-project="meilishuo"] #meilishuo-communication>.reader-prose p:last-child{font-size:14px;color:var(--reader-muted)}
+[data-reader-project="meilishuo"] .reader-reflection{padding-block:clamp(48px,6vw,80px)}
+[data-reader-project="meilishuo"] .reader-reflection h3{font-size:clamp(32px,4vw,52px)}
+[data-reader-project="meilishuo"] .reader-quote-source{font-size:12px;color:var(--reader-muted);margin:0 0 28px}
+[data-reader-project="meilishuo"] .reader-reflection blockquote{margin:0}
+[data-reader-project="meilishuo"] .reader-reflection .reader-prose{max-width:60ch;font-family:Georgia,"Noto Serif SC","Songti SC",SimSun,serif}
+[data-reader-project="meilishuo"] .reader-reflection .reader-prose p{font-size:clamp(18px,1.6vw,22px);line-height:1.85}
+[data-reader-project="meilishuo"] .reader-reflection .reader-prose p:first-child{font-size:clamp(21px,2.1vw,28px);line-height:1.6;color:#e9e8e1}
+.reader-colour-study{margin:36px 0 48px}
+.reader-colour-group{margin:0 0 30px}
+.reader-colour-group h4{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin:0 0 16px;font-size:20px;font-weight:500}
+.reader-colour-group h4>span{font-size:14px;color:var(--reader-muted);align-self:center}
+.reader-swatches{display:flex;flex-wrap:wrap;gap:20px 16px;list-style:none;margin:0;padding:0}
+.reader-swatches>li{flex:1 1 150px;min-width:0}
+.reader-swatch{display:block;height:clamp(80px,10vw,125px);margin-bottom:12px}
+.reader-swatches li>div{display:flex;justify-content:space-between;gap:12px;line-height:1.5}
+.reader-swatches strong{font-size:16px;font-weight:500}
+.reader-swatch-ratio{font-size:14px;font-variant-numeric:tabular-nums}
+.reader-swatches small{display:block;font-size:12px;color:var(--reader-muted);line-height:1.6;margin-top:5px}
+.reader-colour-note{max-width:70ch;color:var(--reader-muted);font-size:13px;line-height:1.7}
+[data-reader-project="meilishuo"] #meilishuo-colour>.reader-figures{max-width:650px}
+@media(max-width:650px){.reader-swatches>li{flex-basis:calc(50% - 8px)}.reader-colour-group h4{font-size:18px}}
 .artist-card-image>.project-thumbnail{position:absolute;inset:0;transition:transform .45s ease}
 .artist-card:hover .project-thumbnail{transform:scale(1.025)}
 .feature-slide>.project-thumbnail{position:absolute;inset:0;object-position:center}
@@ -18,11 +46,11 @@
 .reader-medium{font-size:14px;color:var(--reader-muted);margin:0 0 32px}
 .reader-summary{font-size:clamp(21px,2.25vw,30px);line-height:1.5;max-width:43ch;margin:0;text-wrap:pretty}
 .reader-figure{margin:0;min-width:0}
-.reader-figure>a{display:block;background:#10100f}
+.reader-figure>.reader-image-open{display:block;background:#10100f}
 .reader-figure img{display:block;width:100%;height:auto;object-fit:contain}
 .project-reader> .reader-figure img{max-height:65svh;min-height:180px}
 .reader-figure figcaption,.reader-video figcaption{display:flex;justify-content:space-between;gap:24px;font-size:12px;line-height:1.55;color:var(--reader-muted);padding:12px 0}
-.reader-figure figcaption a,.reader-video figcaption a{white-space:nowrap;text-decoration:underline;text-underline-offset:4px;color:inherit}
+.reader-figure figcaption button,.reader-video figcaption a{white-space:nowrap;text-decoration:underline;text-underline-offset:4px;color:inherit}
 .reader-versions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:32px 0 0;border-block:1px solid var(--reader-line)}
 .reader-versions a{color:inherit;font:inherit;text-align:left;background:none;border:0;border-right:1px solid var(--reader-line);padding:24px;cursor:pointer;display:flex;flex-direction:column;gap:10px}
 .reader-versions a:first-child{padding-left:0}.reader-versions a:last-child{border-right:0}
@@ -46,7 +74,7 @@
 .reader-prose{max-width:65ch;margin-bottom:30px}.reader-prose p{font-size:17px;line-height:1.85;margin:0 0 20px;color:#d3d3cc;text-wrap:pretty}
 html[lang=zh-CN] .reader-prose{max-width:40em}html[lang=zh-CN] .reader-prose p{line-height:1.95}
 .reader-figures{display:grid;gap:24px;margin:28px 0}.reader-figures img{max-height:850px}.reader-portrait img{max-height:760px}
-.reader-pair{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.reader-pair .reader-figure>a{min-height:0}
+.reader-pair{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.reader-pair .reader-figure>.reader-image-open{min-height:0}
 .reader-pair-compact{max-width:800px}
 .reader-pair-compact .reader-figure{max-width:388px}
 .reader-video{margin:32px 0}.reader-video-stage{aspect-ratio:16/9;background:#10100f;position:relative;overflow:hidden}
@@ -66,7 +94,7 @@ html[lang=zh-CN] .reader-prose{max-width:40em}html[lang=zh-CN] .reader-prose p{l
 .reader-gallery-track{display:flex;width:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
 .reader-gallery-track::-webkit-scrollbar{display:none}
 .reader-gallery-slide{flex:0 0 100%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always}
-.reader-gallery-slide .reader-figure>a{height:min(60svh,570px);display:flex;align-items:center;justify-content:center}
+.reader-gallery-slide .reader-figure>.reader-image-open{height:min(60svh,570px);display:flex;align-items:center;justify-content:center}
 .reader-gallery-slide .reader-figure img{width:100%;height:100%;max-height:none;object-fit:contain}
 .reader-gallery-slide figcaption{padding-inline:1px;min-height:62px}
 .reader-gallery-controls{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid var(--reader-line);padding-top:12px}
@@ -101,7 +129,8 @@ html[lang=zh-CN] .reader-prose{max-width:40em}html[lang=zh-CN] .reader-prose p{l
 @media(max-width:650px){.reader-video-pair{grid-template-columns:1fr;max-width:340px;margin-inline:auto;gap:32px}}
 #fishbird-partner .reader-figure img{max-height:420px}
 #chang-brand .reader-figure{max-width:560px}
-@media(max-width:650px){.reader-gallery-slide .reader-figure>a{height:min(65svh,430px)}.reader-gallery-slide figcaption{min-height:88px;align-content:start}.reader-gallery-controls{padding-top:10px}.reader-video-portrait{max-width:340px}}
+@media(max-width:650px){.reader-gallery-slide .reader-figure>.reader-image-open{height:min(65svh,430px)}.reader-gallery-slide figcaption{min-height:88px;align-content:start}.reader-gallery-controls{padding-top:10px}.reader-video-portrait{max-width:340px}}
+@media(max-width:650px){#meilishuo-communication .reader-gallery-slide .reader-figure>.reader-image-open{height:auto;aspect-ratio:3/2}#meilishuo-communication .reader-gallery-slide figcaption{min-height:72px}}
 @media(min-width:1500px){.project-reader.page{padding-inline:70px}}
 @media(max-width:900px){.reader-layout{grid-template-columns:140px minmax(0,1fr);gap:28px}.reader-overview{gap:30px}.reader-pair{grid-template-columns:1fr}.reader-facts>div{grid-template-columns:90px 1fr}}
 @media(max-width:650px){
@@ -148,3 +177,19 @@ html[lang=zh-CN] .reader-prose{max-width:40em}html[lang=zh-CN] .reader-prose p{l
  .reader-toc ol{grid-template-columns:1fr}.reader-toc button{min-height:42px}
  .reader-figure figcaption,.reader-video figcaption{flex-wrap:wrap}
 }
+
+/* Image viewing stays in the reader; no link to the source file is exposed. */
+.reader-image-open{display:block;width:100%;padding:0;border:0;color:inherit;font:inherit;cursor:zoom-in;background:#10100f}
+.reader-figure figcaption .reader-image-open{width:auto;background:none;font-size:inherit;min-height:32px;cursor:pointer}
+.reader-photo-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin-top:48px}
+.reader-photo-columns>section{min-width:0;border-top:1px solid var(--reader-line);padding-top:24px}
+.reader-photo-columns h4{font-size:clamp(22px,2.1vw,28px);font-weight:500;margin:0 0 16px}
+.reader-photo-columns .reader-prose{min-height:78px}
+.reader-photo-columns .reader-prose p{font-size:14px;line-height:1.7}
+#meilishuo-communication .reader-photo-columns .reader-gallery-slide .reader-figure>.reader-image-open{height:clamp(260px,30vw,410px)}
+.reader-photo-columns .reader-gallery-slide figcaption{min-height:90px;flex-wrap:wrap;gap:6px}
+.reader-rights{border-top:1px solid var(--reader-line);margin-top:48px;padding-top:24px;font-size:12px;line-height:1.8;color:var(--reader-muted)}
+.reader-rights a{color:inherit;text-underline-offset:4px}
+@media(max-width:800px){.reader-photo-columns{grid-template-columns:1fr;gap:28px}.reader-photo-columns .reader-prose{min-height:0}#meilishuo-communication .reader-photo-columns .reader-gallery-slide .reader-figure>.reader-image-open{height:min(65svh,420px);aspect-ratio:auto}}
+
+.site-footer>a{grid-column:2;pointer-events:auto}

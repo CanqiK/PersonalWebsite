@@ -31,7 +31,7 @@
     ]},
     {id:'spatial',en:'Spatial',zh:'空间',items:[
       {id:'miao',title:'miao',zh:'淼',year:'2026',medium:['Retail display','门店陈设'],study:3},
-      {id:'meilishuo',title:'Leather project: world',zh:'群花',year:'2026',medium:['MEILISHUO Exhibition display design for the Canton Fair, Guangzhou.','美丽说 广交会沉浸式装置展厅设计'],study:4},
+      {id:'meilishuo',title:'Floral Leather World',zh:'群花',year:'2026',medium:['MEILISHUO · Canton Fair installation and brand space','美丽说 · 广交会装置与品牌空间'],study:4},
       {id:'molabo',title:'molabo',zh:'molabo',year:'2023',medium:['Coffee shop interior concept','咖啡门店室内方案'],study:5},
       {id:'kingnalri',title:'KINAREE',zh:'金那里',year:'',medium:['Restaurant interior concept','餐饮空间概念设计'],study:3},
       {id:'flowing-interior',title:'Flowing Interior',zh:'曲水流觞',year:'',medium:['Interior design','室内设计'],study:4}
