@@ -161,8 +161,8 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 6666,
-    "sha256": "9e3ebbd0a7852b11f5e18483e7fe5a6fc3cdedff389c9c70382cf6ebde56c7ba"
+    "bytes": 6790,
+    "sha256": "5ed3f706780363d7d39e87c40a4c1d9d9b89a422c7ff902defa78a191202cc40"
   },
   {
     "path": "site/copyright.html",
@@ -220,6 +220,16 @@
     "sha256": "9b38040657eaedf776e7c6cea0e74abddd5fe491f45614e327f4cadd4bbee69f"
   },
   {
+    "path": "site/mentor-nyu-2025-assets.js",
+    "bytes": 4226,
+    "sha256": "cf89f748254ce03c3444141c705119274c734a304eef44fe037e7b34935d8cf3"
+  },
+  {
+    "path": "site/mentor-nyu-2025.js",
+    "bytes": 18642,
+    "sha256": "b3c08096b03337b0621a74a725c76e67dc7569ced8e8ea5b9e427be0e2745ba8"
+  },
+  {
     "path": "site/mentor-winter-2026-assets.js",
     "bytes": 2680,
     "sha256": "3d486bd4e0fab4fff506bb3c76486c01033e6e5a85b1a3e0f744e5dfbeb9ab2c"
@@ -236,8 +246,8 @@
   },
   {
     "path": "site/mentor.js",
-    "bytes": 8485,
-    "sha256": "9d42f3f37cd88e84b7bb5e0c7dcb4011a6ed93d71c969cdd41769afabf8a38b4"
+    "bytes": 9178,
+    "sha256": "75109c428ab88536950a16a8d83bcf963d8b05856aded86ecd39d53c5adb4cf7"
   },
   {
     "path": "site/page-motion.css",
@@ -1678,6 +1688,246 @@
     "path": "site/assets/mentor/living-art/spatial-plan.jpg",
     "bytes": 163469,
     "sha256": "93b8cc0270dd791a5320d11dbb736bfae0cc5cb97103e075bf5762ce19d2e9ef"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/cover-thumb.webp",
+    "bytes": 39450,
+    "sha256": "02bb3e1967f2ceb439f6dd584e37eedf31cc94a17c6cd9f72129bfd04f44eeeb"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/cover.webp",
+    "bytes": 100724,
+    "sha256": "2b9fff3c26036e7007d7367d31aa6a56c0bd239bc76511c8a08f1de5550874dc"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/fish-1-thumb.webp",
+    "bytes": 17908,
+    "sha256": "cc154b74e1f4a5548642f211adcae07658139bf2076612a42a9a678c361abf22"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/fish-1.webp",
+    "bytes": 130880,
+    "sha256": "e6ae6fd7cad5750e6479a9ee198f5602943c884286bbdf84429e92b2edc695da"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/fish-4-thumb.webp",
+    "bytes": 37272,
+    "sha256": "5062de0e2cf78773e2041e2ae06d060d6f66ef9c8c39d7a6ebb3fa24b74e0687"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/fish-4.webp",
+    "bytes": 293690,
+    "sha256": "289b90a0b102541e9618d75aef989ea7640f6008b40c79bcc463c66cf634a832"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/fish-6-thumb.webp",
+    "bytes": 35924,
+    "sha256": "281c3aa07844f2f91a0170dde4a85208989c4745f97b6d549181e3871328e86a"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/fish-6.webp",
+    "bytes": 308260,
+    "sha256": "b2a78e1dc3a5c4ed95417ccbda382d4ae0cef2b66aa3e49593abd439159bdf03"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/group-thumb.webp",
+    "bytes": 18556,
+    "sha256": "e640b09c44b9d9147b0bccfaeca260a62648b426e1779f1fd77ff273559b6df5"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/group.webp",
+    "bytes": 63856,
+    "sha256": "55591bdd16e3eb265f12b35737f029d8d1f56d4c1eddfa1fb982262aa3bf9c16"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/inhabitant-1-thumb.webp",
+    "bytes": 13536,
+    "sha256": "c1cc9af98a5d46aa03b0ce604c2f1a0eed6af597116cc646786c377ae1b38d72"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/inhabitant-1.webp",
+    "bytes": 88858,
+    "sha256": "4e49ea58caf2ce13d2d3502b47ddb3709b3be396d91d4d811d2b9ee95c5a6573"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/inhabitant-4-thumb.webp",
+    "bytes": 37208,
+    "sha256": "e9e9ead71f53cbf4a6a7b8254c5ecab316c9ec1d406724529789cdd5afde1342"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/inhabitant-4.webp",
+    "bytes": 273124,
+    "sha256": "641846d7867e524b21489b6d31b876cf0cd55c53aa88e2c51fc565aed8477fd6"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/inhabitant-5-thumb.webp",
+    "bytes": 16668,
+    "sha256": "d317c85f5fa351bd221059d8cb0dcb19c043f6ec17e55c77da2a9d6dfea942d6"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/inhabitant-5.webp",
+    "bytes": 159856,
+    "sha256": "2bf0b39052176b009d2b484523354be94bc930c43182b4f6597a01c079ade228"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/kevin-thumb.webp",
+    "bytes": 46276,
+    "sha256": "9790664ddea4c03e7e9800903fde00f3d2408b4d5642bf979e6bb833d2188613"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/kevin.webp",
+    "bytes": 241272,
+    "sha256": "6fb837b535be1582676003fd8e901741dd3dbdba5a7d37e74dbeca9247f2ab56"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/kluge-3-thumb.webp",
+    "bytes": 38946,
+    "sha256": "053c980a76d44795963e9667afce4d87bbf90ed30873f32f67d2c4f1f04dad7f"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/kluge-3.webp",
+    "bytes": 340498,
+    "sha256": "ec9142cbde5eec715d2199175f4f1df91c2579ccdbede4e9f0b3a7a8a9017a2e"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/kluge-4-thumb.webp",
+    "bytes": 22326,
+    "sha256": "65c9c2fc2b7d4312b3428c51d1ebb74dd3f28445c554581b5a1e65936047f35c"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/kluge-4.webp",
+    "bytes": 156012,
+    "sha256": "943f7893becd3772edda94a5afd786e8a9421a3565e1d26c3ade3630e8d74fd7"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/kluge-7-thumb.webp",
+    "bytes": 32094,
+    "sha256": "1f710f5647c2d1b02c0596ce8497f728798da5873b4e0c7a3032db166a395ad0"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/kluge-7.webp",
+    "bytes": 300610,
+    "sha256": "f2489740442124c92fcfe67a166e51d13430b97956c6b5f628aea19e18eaecbf"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/memory-2-thumb.webp",
+    "bytes": 27352,
+    "sha256": "64900fe6f9e542f2b658a80e73382b3d35cd965e06a63fd5286f0793302dc806"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/memory-2.webp",
+    "bytes": 224486,
+    "sha256": "4896ced1bbc6a0f1037eeb5adda08c4bdc72166f197b2836f6b15a957a190a1c"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/memory-4-thumb.webp",
+    "bytes": 38450,
+    "sha256": "31b8fcc27e2368b9382bb8f96d9e0e4e44b413cc929f34e85bbbb75b0177772c"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/memory-4.webp",
+    "bytes": 298756,
+    "sha256": "2e2b7813d00869f33e6fed68a8409c53c7ebfdebe748426a621b0dc01ae49c27"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/memory-6-thumb.webp",
+    "bytes": 25556,
+    "sha256": "9cc0db6f9b5a14c5d03df804d92bdf644e346af00b03b136a7fab2b0698a622e"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/memory-6.webp",
+    "bytes": 197160,
+    "sha256": "40f09f65bdf40175b47af17d13ba20f0a013231bc9c0828487dd971c7395347f"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/peptide-1-thumb.webp",
+    "bytes": 36250,
+    "sha256": "f21f3a2669dbbb5d061e5a24a53e1f84af97a3593872bf1ca88b96bf72d6fc26"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/peptide-1.webp",
+    "bytes": 382652,
+    "sha256": "70947d5dd36d746ef4f3f58e017efccfcd871d1ad3a81d58045ffd8f2e86b371"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/peptide-5-thumb.webp",
+    "bytes": 40482,
+    "sha256": "341e7fe5e8948cada63c4b3aa15ca37cdd9bbcdd419669a14b052b5bd084f8b4"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/peptide-5.webp",
+    "bytes": 332114,
+    "sha256": "5e4abe02e8dbe16baf3711e4e7f99a85071cbe3556cb6576597d4ecf533234a0"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/peptide-7-thumb.webp",
+    "bytes": 46994,
+    "sha256": "a645bf4100fd33d07cab04b490579089cfa6c6c599fc303deb8782ccba707d01"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/peptide-7.webp",
+    "bytes": 435976,
+    "sha256": "83409c57388f9c25823e42b4d25e03e48abe65925ecc31d510da61f81b27fd24"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/plan-thumb.webp",
+    "bytes": 34782,
+    "sha256": "00dcf717274ef3df4f3bb9e5c4c4277821a9d09a22452564071eb8e31be4cbfd"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/plan.webp",
+    "bytes": 144354,
+    "sha256": "08f96c2ffdee03196ee434743b472146e6d3a0ea8c9960340ccd01dba113a995"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/poster-thumb.webp",
+    "bytes": 52558,
+    "sha256": "6f1424093c2955dfa2654eea5592ae8a4491b7af2c76fa4bd154b8dd7b48bfdd"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/poster.webp",
+    "bytes": 185676,
+    "sha256": "ace1c7a1a235d9f924b36360763e8799e7f5dbdef3b3c6d0f913117550592aee"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/preface-thumb.webp",
+    "bytes": 37792,
+    "sha256": "1ea07d72810714477f3179b55ccf26c0749360425cee09fa8f2c67bde113f22e"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/preface.webp",
+    "bytes": 280610,
+    "sha256": "3f86d4985582dd72cff858d8c1d6f2898621c17f82f6d61333aaa0216a623dd2"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/threads-1-thumb.webp",
+    "bytes": 18306,
+    "sha256": "6ab4c6c24605a434eae97629f619b6ec57b3d144f6e008196e792b574d84e4ce"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/threads-1.webp",
+    "bytes": 146214,
+    "sha256": "3d6cb5da825f6ccaf945e7ab564819c0999c17154c9a6b28f2a1c50b148edb7c"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/threads-4-thumb.webp",
+    "bytes": 27114,
+    "sha256": "ee5d90c461ccdbd673148fcded4d4500bebbc224c91bfe93b2f6592c2defce8b"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/threads-4.webp",
+    "bytes": 204194,
+    "sha256": "9bf0dc27d5ea2b3b655a31c8e858531236417a5b24d46d4e0914b1294dd491af"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/threads-5-thumb.webp",
+    "bytes": 22472,
+    "sha256": "309a73943fe60b9ea722fa6055cf08c06ea500006efe263716be763e51a0ad82"
+  },
+  {
+    "path": "site/assets/mentor/nyu-2025/threads-5.webp",
+    "bytes": 186508,
+    "sha256": "1deccd7eadada8320414a42b9a555e0764184ade8c7961487ed03bc11a8ab555"
   },
   {
     "path": "site/assets/mentor/winter-2026/anchor-cover-thumb.webp",

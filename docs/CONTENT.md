@@ -17,6 +17,11 @@ Current portfolio preview, updated at the owner's request on 12 November 2026.
   process documentation. Three project films and one supplementary experimental
   film use the video links in the supplied student portfolios. No external video
   link was present for Internal Corrosion. Student work retains its own authorship.
+- Multimodal Experiments records the August 2025 NYU digital-media summer-school
+  group: six student projects, six linked films, research and outcome spreads,
+  Unbounded exhibition materials, and two supplied group/educator photographs.
+  Later portfolio developments of Flash Back and Kluge are labelled separately
+  from their summer-school exhibition presentations. All student authorship is retained.
 - Additional teaching programmes have reserved cards using the information supplied
   so far. These are not presented as complete project documentation.
 - About, bilingual CV and contact information, including the public English CV PDF.

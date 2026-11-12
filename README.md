@@ -17,8 +17,9 @@ the portfolio. The homepage is a responsive low-poly investigation room with lay
 window rain, a perspective-mapped CRT emblem and desktop photographs. Project readers
 contain bilingual descriptions, selected documentation, image galleries and linked
 videos. Mentor programmes use large cards in GAFA and SFK columns, with detailed
-course and exhibition records for Present the Absent, Living Art and the January
-2026 Human–Machine Co-Creation winter school. About and CV
+course and exhibition records for Present the Absent, Living Art, the January
+2026 Human–Machine Co-Creation winter school and the August 2025 NYU Multimodal
+Experiments summer school. About and CV
 share a scrolling page with an interactive ASCII background and a public English
 CV PDF. Some records remain explicitly provisional. Reduced-motion preferences
 are supported.

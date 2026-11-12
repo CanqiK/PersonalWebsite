@@ -44,7 +44,17 @@ window.CanqiMentor={
       <span class="mentor-students-cta">${t('Explore the course & student work','进入课程与学生作品')}${arrow}</span>
       </div>
     </a>
-    ${entry('sfk-summer-2025-b','2025',t('Summer School · Class 02','夏令营 · 班级 02'),t('Class record','班级记录'),t('The second of two additional summer-school classes I participated in during 2025. Class name, role and project details will be added.','2025 年参与的另一个夏令营班级，班级名称、具体职责与项目内容待补充。'))}
+    <a class="mentor-card mentor-course-record" id="sfk-nyu-2025" href="#mentor/project/sfk-nyu-2025">
+      ${window.CanqiProjects.thumbnail('sfk-nyu-2025',lang,false,true)}
+      <div class="mentor-course-copy">
+      <p class="mentor-entry-date">${t('10–19 AUG 2025 · BEIJING','2025.08.10 — 08.19 · 北京')}</p>
+      <h3>${t('Multimodal<br>Experiments','多模态实验')}</h3>
+      <p class="mentor-course-subtitle">${t('NYU Digital Media & Interaction Summer School','NYU 数媒交互夏校')}</p>
+      <div class="mentor-card-details"><p class="mentor-entry-role">${t('Project mentoring · Kevin Cunningham & Cao Yuxi','项目指导 · 与 Kevin Cunningham、曹雨西合作')}</p>
+      <p class="mentor-entry-copy">${t('Six students, six projects. Installation, moving image and the Unbounded exhibition.','六位学生，六个项目。装置、影像与「无界」结营展览。')}</p></div>
+      <span class="mentor-students-cta">${t('Explore the course & student work','进入课程与学生作品')}${arrow}</span>
+      </div>
+    </a>
    </div></section>
    </div>
    <dialog class="artist-project-dialog mentor-project-dialog" id="artist-project-dialog" aria-labelledby="artist-dialog-title"></dialog>
