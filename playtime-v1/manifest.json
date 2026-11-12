@@ -161,8 +161,8 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 6929,
-    "sha256": "9a1dfee5f87516c6a3aa5fff72114b659e30fe17e58d186fa87ccfe119bce300"
+    "bytes": 6952,
+    "sha256": "6887a6347c8eb4953325a4c95685108192bc4c5899dee00e3a6c1d9e31240ca5"
   },
   {
     "path": "site/copyright.html",
@@ -221,13 +221,13 @@
   },
   {
     "path": "site/mentor-mit-2026-assets.js",
-    "bytes": 2275,
-    "sha256": "c91f18edb3e257ee5d521d270a8a83fbd2f0c02141e319f6d86ce08907ae5060"
+    "bytes": 5166,
+    "sha256": "0d02286e29cada6b8fc3ad8b5f99914d9c0c95e3d54e83e86cd36d317c0a91ff"
   },
   {
     "path": "site/mentor-mit-2026.js",
-    "bytes": 12099,
-    "sha256": "578656c22cd9d461bf930c9496de435b76f67af1460dfbcc580809ca9d2957d2"
+    "bytes": 19708,
+    "sha256": "8ab9224b300571d19e79ec9e0a826fd78c67f611fdaffff8b79e8d0dee80df1a"
   },
   {
     "path": "site/mentor-nyu-2025-assets.js",
@@ -251,8 +251,8 @@
   },
   {
     "path": "site/mentor.css",
-    "bytes": 13506,
-    "sha256": "9c710c8cd3e99b5f8455509f4054ab47e16ef4a4f158a6dee5bacd25c6390edb"
+    "bytes": 15724,
+    "sha256": "22ad063e7e3023fd7e264ffd97e6a71d9ee83416e914da7a9733cd54a6d205a8"
   },
   {
     "path": "site/mentor.js",
@@ -1700,6 +1700,26 @@
     "sha256": "93b8cc0270dd791a5320d11dbb736bfae0cc5cb97103e075bf5762ce19d2e9ef"
   },
   {
+    "path": "site/assets/mentor/mit-2026/class-discussion-thumb.webp",
+    "bytes": 32754,
+    "sha256": "3abb113cc950f97a9df732180a5224ff6ec3c7306e683cf86964a654b17fdbeb"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/class-discussion.webp",
+    "bytes": 199364,
+    "sha256": "0d3366514d6d68817b0a3dde8b215b63ba30d473070e0a6a9f4023df5479291e"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/class-group-thumb.webp",
+    "bytes": 57376,
+    "sha256": "8ba431f77d75307c0c423fef5c787e2829a1b52dc12397fffb9bc638c82dcdcb"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/class-group.webp",
+    "bytes": 162496,
+    "sha256": "d3eb8a26490b28eccbaf10551db06981155324cb0dc280ba436d1efc0e0c98e3"
+  },
+  {
     "path": "site/assets/mentor/mit-2026/closing-thumb.webp",
     "bytes": 16322,
     "sha256": "0003f76cc57caa1e754d97a9b48a0492204f175f7ffd43589fd4ef7eb02edd3f"
@@ -1728,6 +1748,76 @@
     "path": "site/assets/mentor/mit-2026/cutoff-overview.webp",
     "bytes": 316884,
     "sha256": "a16a440cfe46058c02bb716c016beab7ae3120449ef935d9fea492373c59acd0"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/exhibition-city-thumb.webp",
+    "bytes": 29086,
+    "sha256": "588eec8c9af9c6d21138ebea1de4033808c9c9bc35fa41d1448f77f0747d2014"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/exhibition-city.webp",
+    "bytes": 36362,
+    "sha256": "49f533619d812b3be072ad1e768761e8369b98c320a41329a5f0ee065a6edc6c"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/exhibition-credits-thumb.webp",
+    "bytes": 14000,
+    "sha256": "3afd0dc3b695025bbef7b15f92c25b4a1d6b20f486a087c7ba6132e78cfdcfaf"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/exhibition-credits.webp",
+    "bytes": 41730,
+    "sha256": "778ed7db62e140d21c4c8dff2d2fd2a5654ff28e884ef568dd9aabd539994765"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/exhibition-materials-thumb.webp",
+    "bytes": 14302,
+    "sha256": "e459db2521fb3fe433151b2e78cc4f1af6aa87b40b6d2143fccb9527c509888a"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/exhibition-materials.webp",
+    "bytes": 18380,
+    "sha256": "92df0ff187f2f0cb634ade58812dc8ea087c3cf323fd07d043c85da39033a436"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/exhibition-networks-thumb.webp",
+    "bytes": 26696,
+    "sha256": "626c8781c73f3edc119bb91af91f3f9a82caec65747082e91e8c5de1f1f5269f"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/exhibition-networks.webp",
+    "bytes": 32658,
+    "sha256": "85e46fa12a4229d5b6c2770606dcaa453eabe57df70e991f59443e7e3464f4c6"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/exhibition-sound-thumb.webp",
+    "bytes": 16672,
+    "sha256": "34dffb391fa42a04cc11f392fbcc6101808315072ef5627a6af4d3a6ed5a13c8"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/exhibition-sound.webp",
+    "bytes": 21460,
+    "sha256": "1e0d48cf14b71dc89141babc6426b155a0c0d1a3ec8c66531f491945758f46c6"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/exhibition-team-thumb.webp",
+    "bytes": 32954,
+    "sha256": "f723253dcdc6100353f38d926ae2ca54d73cb1f61d58dad6503dd13f62fba90d"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/exhibition-team.webp",
+    "bytes": 160008,
+    "sha256": "e3b7195ae907f8f2fcfbb0e0788d5250cdbc81f180c5ea48818cc7b607c7c98b"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/floorplan-thumb.webp",
+    "bytes": 10204,
+    "sha256": "6e1720d78cc0711c6765bf9fecdb9d53a8353cef733ea140f898cf4851880077"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/floorplan.webp",
+    "bytes": 33070,
+    "sha256": "3c6cdc299103ce1bdf48c5770caa891b99d1205520187c9892306428998e4e47"
   },
   {
     "path": "site/assets/mentor/mit-2026/flora-detail-thumb.webp",
@@ -1770,6 +1860,26 @@
     "sha256": "b68ea4e63f74f5e9df66886702e17d1c72f2b642d4508c313a4c1d0e2e0e6d00"
   },
   {
+    "path": "site/assets/mentor/mit-2026/group-review-thumb.webp",
+    "bytes": 49260,
+    "sha256": "3924c872a57c138f14468dc15f681fc238a79c7ce6ad6695932629526fbec27d"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/group-review.webp",
+    "bytes": 271514,
+    "sha256": "ac1fb87b003308cc1dd704110650163975c7f0def1b1230fbfa4f1da4b46486b"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/mementos-thumb.webp",
+    "bytes": 80726,
+    "sha256": "8bc5c35c95f1bcef3b32a35e30dec2be31e52dcb4fbedf642a68a8a35cce32de"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/mementos.webp",
+    "bytes": 438674,
+    "sha256": "f476af14e45755849e74fdc18b83e4ef07cc75cd709157539ec08b35486dc604"
+  },
+  {
     "path": "site/assets/mentor/mit-2026/rooted-interaction-thumb.webp",
     "bytes": 25654,
     "sha256": "1a12aae15954a221be96a0d8766754ea02d91167d7f981cf85c44ff696b87394"
@@ -1790,6 +1900,16 @@
     "sha256": "b9a237a4381aac0b788801c7df1e24ddf15fbac92f80613466d38243ac1b8d02"
   },
   {
+    "path": "site/assets/mentor/mit-2026/spatial-sketch-thumb.webp",
+    "bytes": 56502,
+    "sha256": "1aa7ef826186d38c5c7709052c139f1f7da0bb2e9215ccd60b202c1779f7f4ef"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/spatial-sketch.webp",
+    "bytes": 207696,
+    "sha256": "917920e3ce496fbd086f50135614397448f9d4de52f54f12e2b818a88f3abdef"
+  },
+  {
     "path": "site/assets/mentor/mit-2026/teaching-discussion-thumb.webp",
     "bytes": 32202,
     "sha256": "a5fbb2e438e7a2901e4f5e82cad2b0028a94e6728d55432a51f23439bb63edff"
@@ -1800,6 +1920,16 @@
     "sha256": "d412935cf84557d0f1bf8548a40c36ba7823d73ae0b3e52b04cdf3b27f6ca0a1"
   },
   {
+    "path": "site/assets/mentor/mit-2026/teaching-portrait-thumb.webp",
+    "bytes": 23800,
+    "sha256": "0573ffc4fbf908d9122f93bf78b3873d72b6a5851c0f67ace47ccc2031510d5d"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/teaching-portrait.webp",
+    "bytes": 147954,
+    "sha256": "4ffe562482c73f52274676efeff3cc44406d56eaf35f81b58128fb0a14d73c3c"
+  },
+  {
     "path": "site/assets/mentor/mit-2026/teaching-review-thumb.webp",
     "bytes": 30440,
     "sha256": "2edd07e97abddb4f1509996c5abe0591bd8da5ed4cb78c4beca3032d5ad84c21"
@@ -1808,6 +1938,26 @@
     "path": "site/assets/mentor/mit-2026/teaching-review.webp",
     "bytes": 195710,
     "sha256": "bdf49bfa0659701917693f7f13b973abf8e875db3c45ed073515036a1f5e0c8f"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/venue-scout-thumb.webp",
+    "bytes": 11210,
+    "sha256": "3e31b55e039d6befbcea1a32eabc35f1ff85b05690cb873da1710200bf1e2bda"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/venue-scout.webp",
+    "bytes": 67262,
+    "sha256": "98f5aa24444ff023c2fa0ca230391d6c7a4b93e32a7b6ce3ccae8ef9471e8ea3"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/work-in-progress-thumb.webp",
+    "bytes": 32290,
+    "sha256": "1b7912449204ae6a3e8af22ad1355537a584d9a08a350e57637df00ac0ad0215"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/work-in-progress.webp",
+    "bytes": 240516,
+    "sha256": "14e7bb99548f0486f3282fe4d66eef59dfa93cb5101023d6145905c215a95f89"
   },
   {
     "path": "site/assets/mentor/nyu-2025/cover-thumb.webp",

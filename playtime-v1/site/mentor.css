@@ -110,6 +110,24 @@
 .mentor-course-record:focus-visible .photo-print-canvas{opacity:0}
 @media(hover:hover) and (pointer:fine){.mentor-course-record:hover .photo-print-canvas{opacity:0}}
 /* Exhibition-only variants: a compact catalogue and lettering seen together. */
+/* MIT course: plans stay legible; people and process form a compact contact sheet. */
+[data-reader-project="sfk-mit-tongji-2026"] #mit-spatial .reader-image-open{height:clamp(360px,43vw,600px);display:flex;align-items:center;justify-content:center}
+[data-reader-project="sfk-mit-tongji-2026"] #mit-spatial .reader-figure img{width:100%;height:100%;object-fit:contain}
+[data-reader-project="sfk-mit-tongji-2026"] #mit-exhibition .reader-figures{max-width:920px}
+[data-reader-project="sfk-mit-tongji-2026"] #mit-journey .reader-triptych{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 20px;align-items:start}
+[data-reader-project="sfk-mit-tongji-2026"] #mit-journey .reader-figure-media{display:flex;align-items:center;justify-content:center;height:clamp(220px,22vw,300px);background:#10100f}
+[data-reader-project="sfk-mit-tongji-2026"] #mit-journey .reader-figure img{width:100%;height:100%;object-fit:contain}
+[data-reader-project="sfk-mit-tongji-2026"] #mit-journey figcaption{font-size:12px;line-height:1.6}
+[data-reader-project="sfk-mit-tongji-2026"] #mit-thoughts .reader-prose p{white-space:pre-line}
+[data-reader-project="sfk-mit-tongji-2026"] #mit-thoughts .reader-prose p:nth-child(5){font:inherit;line-height:1.9;letter-spacing:.01em;max-width:none;margin:0 0 1.4em;color:#dcdad2}
+[data-reader-project="sfk-mit-tongji-2026"] #mit-thoughts .reader-prose p:nth-child(10),[data-reader-project="sfk-mit-tongji-2026"] #mit-thoughts .reader-prose p:nth-child(12){font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:clamp(28px,3vw,38px);line-height:1.3;letter-spacing:-.025em;margin:1.6em 0 .6em;color:#e9e8e1}
+@media(max-width:700px){
+ [data-reader-project="sfk-mit-tongji-2026"] #mit-spatial .reader-image-open{height:auto}
+ [data-reader-project="sfk-mit-tongji-2026"] #mit-spatial .reader-figure img{height:auto;max-height:600px}
+ [data-reader-project="sfk-mit-tongji-2026"] #mit-exhibition .reader-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+ [data-reader-project="sfk-mit-tongji-2026"] #mit-journey .reader-triptych{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px}
+ [data-reader-project="sfk-mit-tongji-2026"] #mit-journey .reader-figure-media{height:180px}
+}
 [data-reader-project="sfk-living-art"] .reader-triptych{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,2vw,24px);align-items:start}
 [data-reader-project="sfk-living-art"] .reader-triptych img{max-height:none;width:100%;height:auto}
 #living-catalogue-cover .reader-figure{max-width:540px;margin-inline:auto}

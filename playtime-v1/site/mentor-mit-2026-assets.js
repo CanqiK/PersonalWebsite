@@ -66,6 +66,96 @@ window.CANQI_PROJECT_IMAGES=Object.assign(window.CANQI_PROJECT_IMAGES||{},
     "height": 1333,
     "file": "assets/mentor/mit-2026/closing.webp",
     "thumb": "assets/mentor/mit-2026/closing-thumb.webp"
+  },
+  "mit-class-discussion": {
+    "width": 2000,
+    "height": 1333,
+    "file": "assets/mentor/mit-2026/class-discussion.webp",
+    "thumb": "assets/mentor/mit-2026/class-discussion-thumb.webp"
+  },
+  "mit-group-review": {
+    "width": 2000,
+    "height": 1333,
+    "file": "assets/mentor/mit-2026/group-review.webp",
+    "thumb": "assets/mentor/mit-2026/group-review-thumb.webp"
+  },
+  "mit-teaching-portrait": {
+    "width": 1333,
+    "height": 2000,
+    "file": "assets/mentor/mit-2026/teaching-portrait.webp",
+    "thumb": "assets/mentor/mit-2026/teaching-portrait-thumb.webp"
+  },
+  "mit-class-group": {
+    "width": 1280,
+    "height": 720,
+    "file": "assets/mentor/mit-2026/class-group.webp",
+    "thumb": "assets/mentor/mit-2026/class-group-thumb.webp"
+  },
+  "mit-work-in-progress": {
+    "width": 1333,
+    "height": 2000,
+    "file": "assets/mentor/mit-2026/work-in-progress.webp",
+    "thumb": "assets/mentor/mit-2026/work-in-progress-thumb.webp"
+  },
+  "mit-mementos": {
+    "width": 1440,
+    "height": 1920,
+    "file": "assets/mentor/mit-2026/mementos.webp",
+    "thumb": "assets/mentor/mit-2026/mementos-thumb.webp"
+  },
+  "mit-exhibition-team": {
+    "width": 1440,
+    "height": 1920,
+    "file": "assets/mentor/mit-2026/exhibition-team.webp",
+    "thumb": "assets/mentor/mit-2026/exhibition-team-thumb.webp"
+  },
+  "mit-exhibition-credits": {
+    "width": 1440,
+    "height": 900,
+    "file": "assets/mentor/mit-2026/exhibition-credits.webp",
+    "thumb": "assets/mentor/mit-2026/exhibition-credits-thumb.webp"
+  },
+  "mit-spatial-sketch": {
+    "width": 1440,
+    "height": 1631,
+    "file": "assets/mentor/mit-2026/spatial-sketch.webp",
+    "thumb": "assets/mentor/mit-2026/spatial-sketch-thumb.webp"
+  },
+  "mit-venue-scout": {
+    "width": 1440,
+    "height": 1920,
+    "file": "assets/mentor/mit-2026/venue-scout.webp",
+    "thumb": "assets/mentor/mit-2026/venue-scout-thumb.webp"
+  },
+  "mit-floorplan": {
+    "width": 1414,
+    "height": 2000,
+    "file": "assets/mentor/mit-2026/floorplan.webp",
+    "thumb": "assets/mentor/mit-2026/floorplan-thumb.webp"
+  },
+  "mit-exhibition-materials": {
+    "width": 480,
+    "height": 480,
+    "file": "assets/mentor/mit-2026/exhibition-materials.webp",
+    "thumb": "assets/mentor/mit-2026/exhibition-materials-thumb.webp"
+  },
+  "mit-exhibition-sound": {
+    "width": 480,
+    "height": 480,
+    "file": "assets/mentor/mit-2026/exhibition-sound.webp",
+    "thumb": "assets/mentor/mit-2026/exhibition-sound-thumb.webp"
+  },
+  "mit-exhibition-city": {
+    "width": 480,
+    "height": 480,
+    "file": "assets/mentor/mit-2026/exhibition-city.webp",
+    "thumb": "assets/mentor/mit-2026/exhibition-city-thumb.webp"
+  },
+  "mit-exhibition-networks": {
+    "width": 480,
+    "height": 480,
+    "file": "assets/mentor/mit-2026/exhibition-networks.webp",
+    "thumb": "assets/mentor/mit-2026/exhibition-networks-thumb.webp"
   }
 }
 );

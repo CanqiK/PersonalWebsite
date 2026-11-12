@@ -1,6 +1,6 @@
 # Content and publication status
 
-Current portfolio preview, updated at the owner's request on 12 November 2026.
+Current portfolio preview, updated at the owner's request on 13 November 2026.
 
 ## Included
 
@@ -24,8 +24,11 @@ Current portfolio preview, updated at the owner's request on 12 November 2026.
   from their summer-school exhibition presentations. All student authorship is retained.
 - Atlas of Moving Matter records the August 2026 MIT × Tongji summer school:
   curriculum and class coordination, mentoring 11 digital-media students across
-  five groups, and four selected group projects with two images each. Teaching
-  and closing-ceremony photographs accompany the linked SFK WeChat story.
+  five groups, and four selected group projects with two images each. Spatial
+  sketches and a floor plan document the exhibition planning, followed by four
+  wider exhibition views and a compact gallery of twelve teaching, site-scouting
+  and team photographs. Canqi's full Fluid Matter reflection closes the record,
+  alongside the linked SFK WeChat story.
   Student work retains its own authorship; only the selected public material is included.
 - Additional teaching programmes have reserved cards using the information supplied
   so far. These are not presented as complete project documentation.
