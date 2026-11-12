@@ -33,7 +33,17 @@ window.CanqiMentor={
       </div>
     </a>
     ${entry('sfk-mit-tongji-2026','2026',t('MIT × Tongji Class','MIT 同济班'),t('Curriculum development · Co-teaching','教研 · 共同授课'),t('Participated in curriculum development for the MIT–Tongji class, liaising with overseas professors and teaching together.','作为教研参与 MIT 同济班，与海外教授对接并共同授课。'))}
-    ${entry('sfk-summer-2025-a','2025',t('Summer School · Class 01','夏令营 · 班级 01'),t('Class record','班级记录'),t('One of two additional summer-school classes I participated in during 2025. Class name, role and project details will be added.','2025 年参与的两个夏令营班级之一，班级名称、具体职责与项目内容待补充。'))}
+    <a class="mentor-card mentor-course-record" id="sfk-winter-2026" href="#mentor/project/sfk-winter-2026">
+      ${window.CanqiProjects.thumbnail('sfk-winter-2026',lang,false,true)}
+      <div class="mentor-course-copy">
+      <p class="mentor-entry-date">${t('JAN 2026 · 10 DAYS ON SITE','2026.01 · 在地 10 天')}</p>
+      <h3>${t('Human–Machine<br>Co-Creation','人机·共塑')}</h3>
+      <p class="mentor-course-subtitle">${t('Interaction & Digital Media Winter School','交互与数字媒体冬令营')}</p>
+      <div class="mentor-card-details"><p class="mentor-entry-role">${t('Project mentoring · Harvard × Tongji class','项目指导 · 哈佛 × 同济班')}</p>
+      <p class="mentor-entry-copy">${t('Four students, four installations. Concepts, making and outcomes from the group I mentored.','四位学生，四组装置。记录我所指导小组的项目概念、制作与最终成果。')}</p></div>
+      <span class="mentor-students-cta">${t('Explore the course & student work','进入课程与学生作品')}${arrow}</span>
+      </div>
+    </a>
     ${entry('sfk-summer-2025-b','2025',t('Summer School · Class 02','夏令营 · 班级 02'),t('Class record','班级记录'),t('The second of two additional summer-school classes I participated in during 2025. Class name, role and project details will be added.','2025 年参与的另一个夏令营班级，班级名称、具体职责与项目内容待补充。'))}
    </div></section>
    </div>

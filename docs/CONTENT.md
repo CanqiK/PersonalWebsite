@@ -1,6 +1,6 @@
 # Content and publication status
 
-Current portfolio preview, published at the owner's request on 3 November 2026.
+Current portfolio preview, updated at the owner's request on 12 November 2026.
 
 ## Included
 
@@ -12,6 +12,11 @@ Current portfolio preview, published at the owner's request on 3 November 2026.
   exhibition planning, student installations, animated scans and the course reflection.
   Living Art includes the exhibition direction, three studios, planning and graphics,
   selected student work, journey photographs and the closing reflection.
+- Human–Machine Co-Creation records the January 2026 SFK winter-school group:
+  ten days on site, four student projects, original opening/outcome spreads and
+  process documentation. Three project films and one supplementary experimental
+  film use the video links in the supplied student portfolios. No external video
+  link was present for Internal Corrosion. Student work retains its own authorship.
 - Additional teaching programmes have reserved cards using the information supplied
   so far. These are not presented as complete project documentation.
 - About, bilingual CV and contact information, including the public English CV PDF.

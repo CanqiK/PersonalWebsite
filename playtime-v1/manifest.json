@@ -161,8 +161,8 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 6533,
-    "sha256": "fac70e223373e9f0d45a274db2da8d17c493bc106f78c8d574a9649c8da6b7fa"
+    "bytes": 6666,
+    "sha256": "9e3ebbd0a7852b11f5e18483e7fe5a6fc3cdedff389c9c70382cf6ebde56c7ba"
   },
   {
     "path": "site/copyright.html",
@@ -220,14 +220,24 @@
     "sha256": "9b38040657eaedf776e7c6cea0e74abddd5fe491f45614e327f4cadd4bbee69f"
   },
   {
+    "path": "site/mentor-winter-2026-assets.js",
+    "bytes": 2680,
+    "sha256": "3d486bd4e0fab4fff506bb3c76486c01033e6e5a85b1a3e0f744e5dfbeb9ab2c"
+  },
+  {
+    "path": "site/mentor-winter-2026.js",
+    "bytes": 12308,
+    "sha256": "166b4a52937e586f163e59d551cb2bae52aac8765ae45b996e4e716625717a5d"
+  },
+  {
     "path": "site/mentor.css",
     "bytes": 13506,
     "sha256": "9c710c8cd3e99b5f8455509f4054ab47e16ef4a4f158a6dee5bacd25c6390edb"
   },
   {
     "path": "site/mentor.js",
-    "bytes": 7772,
-    "sha256": "94db1255f1ee9374fcee2b904ff02f691a7931dde08dc8dc025b0887f1a90b23"
+    "bytes": 8485,
+    "sha256": "9d42f3f37cd88e84b7bb5e0c7dcb4011a6ed93d71c969cdd41769afabf8a38b4"
   },
   {
     "path": "site/page-motion.css",
@@ -1668,6 +1678,136 @@
     "path": "site/assets/mentor/living-art/spatial-plan.jpg",
     "bytes": 163469,
     "sha256": "93b8cc0270dd791a5320d11dbb736bfae0cc5cb97103e075bf5762ce19d2e9ef"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/anchor-cover-thumb.webp",
+    "bytes": 36658,
+    "sha256": "3d573ee0f6959bab82e3e716943914503f9047388c6b555431925e469d941d1f"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/anchor-cover.webp",
+    "bytes": 217526,
+    "sha256": "f9130fd6668dfac1ce9c7d21c21d3ef2fd45336454af95a98fe2149750ddcb6a"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/anchor-outcome-thumb.webp",
+    "bytes": 36052,
+    "sha256": "a6ac131fb088589a67595e71302fc54f5b0d4f867be165345b1619821e827331"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/anchor-outcome.webp",
+    "bytes": 319430,
+    "sha256": "edbb42127ce36bd755e6efe3701991fde81caa2563c80276b578a86683060e8b"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/anchor-process-thumb.webp",
+    "bytes": 28026,
+    "sha256": "fe653798b88e965c067bf3bdb5fd84d348c2a45699b33dd85936584bcd3ae6f2"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/anchor-process.webp",
+    "bytes": 224628,
+    "sha256": "cd6ac5513fd1d2b7c277dc0bb488e8f7b1fc9858d8230333e2bc6150bead157b"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/appetite-cover-thumb.webp",
+    "bytes": 36270,
+    "sha256": "edf123fc0e8da9ae5191b869cdef1671cf24d5b090b4db621caf233fbc979975"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/appetite-cover.webp",
+    "bytes": 307426,
+    "sha256": "e8cf98dee051014b00126db60a82342ed2aebc5dda97d44c4e4273c15868766d"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/appetite-outcome-thumb.webp",
+    "bytes": 28274,
+    "sha256": "fa6f9381eb5d4caa5949b9884c5bd51660685c3118751ebf6f46b57f34901481"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/appetite-outcome.webp",
+    "bytes": 205734,
+    "sha256": "be9fafe288972cf0a14b04e0521f94dabaf817f1dd3a5cf0175c6ce0b0bc4b51"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/appetite-process-thumb.webp",
+    "bytes": 26460,
+    "sha256": "a50c618b142aafea6e63a39d69f411a9c762e4135ea670837560b86dca6803ba"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/appetite-process.webp",
+    "bytes": 178348,
+    "sha256": "d2c08659caca4693355630a595293cb19b22838d253bd8151fd885361b3ce871"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/corrosion-cover-thumb.webp",
+    "bytes": 29142,
+    "sha256": "2f00d25bc6c45a68fed90d197eb791215da420554b5b457822c31e1c96060752"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/corrosion-cover.webp",
+    "bytes": 184950,
+    "sha256": "398026ff47a2b7cd43339a4f618c93f3e4e7e3e4500d3d3eff8e97ed0bde7dc4"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/corrosion-outcome-thumb.webp",
+    "bytes": 54978,
+    "sha256": "783215edb310f6816fc3eb5e1f7ca5b5bf65e6741cf55bae003e52d37b9c08cf"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/corrosion-outcome.webp",
+    "bytes": 457444,
+    "sha256": "f2972c141fea193d2592eae729338d2391bbe8c26e208c01fb93c14bac52f762"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/corrosion-process-thumb.webp",
+    "bytes": 35152,
+    "sha256": "4d3f8e2c6646f4715231d217ece2551d88d6033fa8d6f72811ef3a6daf6db221"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/corrosion-process.webp",
+    "bytes": 265578,
+    "sha256": "b47e42b457cd88024bb502a3048199c4556de9ac0efba65d9853f76f598038b1"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/grind-cover-thumb.webp",
+    "bytes": 23164,
+    "sha256": "05589870d91a525e0ff01d9c46411476da0703532ee1c642a987d3335b7a9b6d"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/grind-cover.webp",
+    "bytes": 149066,
+    "sha256": "0eb5a97303b6f49406f78e3ec7ce735ab9e38953815e83a73fb8f208e6b7f8a8"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/grind-outcome-thumb.webp",
+    "bytes": 22024,
+    "sha256": "b1f36b9a6dc30a22d379182a9f9d3b96f810fabcfae7e36527188aadfbfdb3e6"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/grind-outcome.webp",
+    "bytes": 169740,
+    "sha256": "fb213b362506c9c9fd000199ba7fe01bc368e79cc17cf744ba38dc866e05410a"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/grind-process-thumb.webp",
+    "bytes": 28410,
+    "sha256": "07e7e28f6d2903dd7d91f9e71fe0233ff4320df9b863c7eb2a68afb8de932a9b"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/grind-process.webp",
+    "bytes": 224366,
+    "sha256": "c8baebdccb51f9a12c2641c5210c4cab386f3dbbb6449935c7f22f4d668d26b2"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/preface-thumb.webp",
+    "bytes": 40434,
+    "sha256": "23682e444044ea6a42e21d544ac81b3c0f30f6d34fbcfa6f5e5615cf23c55bcf"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/preface.webp",
+    "bytes": 277460,
+    "sha256": "f38a26bf742a326b1983eb1268c03fce237b697584233189cd9c731366e7dba4"
   },
   {
     "path": "site/assets/projects/alcoholics-hand-sketch-thumb.jpg",
