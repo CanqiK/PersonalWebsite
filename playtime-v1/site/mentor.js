@@ -32,7 +32,17 @@ window.CanqiMentor={
       <span class="mentor-students-cta">${t('Explore the course & exhibition','进入课程与展览档案')}${arrow}</span>
       </div>
     </a>
-    ${entry('sfk-mit-tongji-2026','2026',t('MIT × Tongji Class','MIT 同济班'),t('Curriculum development · Co-teaching','教研 · 共同授课'),t('Participated in curriculum development for the MIT–Tongji class, liaising with overseas professors and teaching together.','作为教研参与 MIT 同济班，与海外教授对接并共同授课。'))}
+    <a class="mentor-card mentor-course-record" id="sfk-mit-tongji-2026" href="#mentor/project/sfk-mit-tongji-2026">
+      ${window.CanqiProjects.thumbnail('sfk-mit-tongji-2026',lang,false,true)}
+      <div class="mentor-course-copy">
+      <p class="mentor-entry-date">${t('7–16 AUG 2026 · SHANGHAI','2026.08.07 — 08.16 · 上海')}</p>
+      <h3>${t('Atlas of<br>Moving Matter','流动物质图谱')}</h3>
+      <p class="mentor-course-subtitle">${t('MIT × Tongji Summer School','MIT × 同济夏校')}</p>
+      <div class="mentor-card-details"><p class="mentor-entry-role">${t('Curriculum & project mentoring · Class coordination','指导教研 · 项目指导 · 班级工作梳理')}</p>
+      <p class="mentor-entry-copy">${t('11 digital-media students, five groups. From urban research to interactive installations, with four selected projects presented here.','11 位数媒学生，5 个小组。从城市研究到交互装置，这里选呈四组作品。')}</p></div>
+      <span class="mentor-students-cta">${t('Explore the course & student work','进入课程与学生作品')}${arrow}</span>
+      </div>
+    </a>
     <a class="mentor-card mentor-course-record" id="sfk-winter-2026" href="#mentor/project/sfk-winter-2026">
       ${window.CanqiProjects.thumbnail('sfk-winter-2026',lang,false,true)}
       <div class="mentor-course-copy">

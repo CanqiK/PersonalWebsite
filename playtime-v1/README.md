@@ -19,7 +19,8 @@ contain bilingual descriptions, selected documentation, image galleries and link
 videos. Mentor programmes use large cards in GAFA and SFK columns, with detailed
 course and exhibition records for Present the Absent, Living Art, the January
 2026 Human–Machine Co-Creation winter school and the August 2025 NYU Multimodal
-Experiments summer school. About and CV
+Experiments summer school, and Atlas of Moving Matter from the August 2026
+MIT × Tongji summer school. About and CV
 share a scrolling page with an interactive ASCII background and a public English
 CV PDF. Some records remain explicitly provisional. Reduced-motion preferences
 are supported.

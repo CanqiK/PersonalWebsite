@@ -161,8 +161,8 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 6802,
-    "sha256": "57915c6a94d1ad8ac12ae1baca37553320e79d2b8eae57d727084b0dc2d1ccda"
+    "bytes": 6929,
+    "sha256": "9a1dfee5f87516c6a3aa5fff72114b659e30fe17e58d186fa87ccfe119bce300"
   },
   {
     "path": "site/copyright.html",
@@ -220,6 +220,16 @@
     "sha256": "9b38040657eaedf776e7c6cea0e74abddd5fe491f45614e327f4cadd4bbee69f"
   },
   {
+    "path": "site/mentor-mit-2026-assets.js",
+    "bytes": 2275,
+    "sha256": "c91f18edb3e257ee5d521d270a8a83fbd2f0c02141e319f6d86ce08907ae5060"
+  },
+  {
+    "path": "site/mentor-mit-2026.js",
+    "bytes": 12099,
+    "sha256": "578656c22cd9d461bf930c9496de435b76f67af1460dfbcc580809ca9d2957d2"
+  },
+  {
     "path": "site/mentor-nyu-2025-assets.js",
     "bytes": 4226,
     "sha256": "cf89f748254ce03c3444141c705119274c734a304eef44fe037e7b34935d8cf3"
@@ -246,8 +256,8 @@
   },
   {
     "path": "site/mentor.js",
-    "bytes": 9178,
-    "sha256": "75109c428ab88536950a16a8d83bcf963d8b05856aded86ecd39d53c5adb4cf7"
+    "bytes": 9955,
+    "sha256": "f7eee234dc71256fc1cfd112dd152b5d4af6e992001afb33d1c8f8a96d651a83"
   },
   {
     "path": "site/page-motion.css",
@@ -1688,6 +1698,116 @@
     "path": "site/assets/mentor/living-art/spatial-plan.jpg",
     "bytes": 163469,
     "sha256": "93b8cc0270dd791a5320d11dbb736bfae0cc5cb97103e075bf5762ce19d2e9ef"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/closing-thumb.webp",
+    "bytes": 16322,
+    "sha256": "0003f76cc57caa1e754d97a9b48a0492204f175f7ffd43589fd4ef7eb02edd3f"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/closing.webp",
+    "bytes": 270590,
+    "sha256": "3fa591b99f1bc79c03254a9a6809de07fffca51b5e660bd15df56624bbb3a9a8"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/cutoff-interaction-thumb.webp",
+    "bytes": 50756,
+    "sha256": "5014bd1d9088dfa16841b4c78053211b5d771714c52c684362db2eb48232f1a9"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/cutoff-interaction.webp",
+    "bytes": 111052,
+    "sha256": "cee723df6eac2da99ecf02d7a52d6458f88dddfba65375c4cccc3b6d6611df54"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/cutoff-overview-thumb.webp",
+    "bytes": 86882,
+    "sha256": "bbfba40bf16d9f2ded012948d15b9d0892b3104e970347b55af6913be8a9182a"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/cutoff-overview.webp",
+    "bytes": 316884,
+    "sha256": "a16a440cfe46058c02bb716c016beab7ae3120449ef935d9fea492373c59acd0"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/flora-detail-thumb.webp",
+    "bytes": 18196,
+    "sha256": "344163d24c7bb1d51346890e259bbc5aeddedb6badf2d34360340e0b10e2a87c"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/flora-detail.webp",
+    "bytes": 40410,
+    "sha256": "613d9ce2207ab29c00959fb2dd832e15dbf2211bc34077b4edbb1aef555c22ed"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/flora-overview-thumb.webp",
+    "bytes": 23614,
+    "sha256": "245286db032cb491e015481d0fc58139ba7d0f6dac45f0712200e3b23f17e84e"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/flora-overview.webp",
+    "bytes": 80140,
+    "sha256": "580c53482d9daa95fbc9e70512f57e5cedb0aea9bff67639bc73949352187742"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/flux-detail-thumb.webp",
+    "bytes": 26530,
+    "sha256": "d979aef8ecf40f009ad0aef38c25301e42d7b0f3e8ee84f29c61101ebdc0550e"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/flux-detail.webp",
+    "bytes": 80504,
+    "sha256": "3f3e2792f8186e4e881792c66e36bffbd8d2de07ce1d4c76f919900bd9e2d42c"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/flux-overview-thumb.webp",
+    "bytes": 13674,
+    "sha256": "8523707dc73fa6e5314b3f587dfd6989359f172e7a845f8f7660d74f0d319b8c"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/flux-overview.webp",
+    "bytes": 88700,
+    "sha256": "b68ea4e63f74f5e9df66886702e17d1c72f2b642d4508c313a4c1d0e2e0e6d00"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/rooted-interaction-thumb.webp",
+    "bytes": 25654,
+    "sha256": "1a12aae15954a221be96a0d8766754ea02d91167d7f981cf85c44ff696b87394"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/rooted-interaction.webp",
+    "bytes": 57776,
+    "sha256": "d3ac1cc7648ba63fd5863add797a8f5632c2d7a7fdead53950fec3ea4659717f"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/rooted-overview-thumb.webp",
+    "bytes": 11518,
+    "sha256": "3c11ecd2e1bcf3fcbe7f1cc60eb9bc31837b9d919ca9ea6823000894f3204bba"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/rooted-overview.webp",
+    "bytes": 68568,
+    "sha256": "b9a237a4381aac0b788801c7df1e24ddf15fbac92f80613466d38243ac1b8d02"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/teaching-discussion-thumb.webp",
+    "bytes": 32202,
+    "sha256": "a5fbb2e438e7a2901e4f5e82cad2b0028a94e6728d55432a51f23439bb63edff"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/teaching-discussion.webp",
+    "bytes": 169872,
+    "sha256": "d412935cf84557d0f1bf8548a40c36ba7823d73ae0b3e52b04cdf3b27f6ca0a1"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/teaching-review-thumb.webp",
+    "bytes": 30440,
+    "sha256": "2edd07e97abddb4f1509996c5abe0591bd8da5ed4cb78c4beca3032d5ad84c21"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/teaching-review.webp",
+    "bytes": 195710,
+    "sha256": "bdf49bfa0659701917693f7f13b973abf8e875db3c45ed073515036a1f5e0c8f"
   },
   {
     "path": "site/assets/mentor/nyu-2025/cover-thumb.webp",

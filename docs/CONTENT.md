@@ -22,6 +22,11 @@ Current portfolio preview, updated at the owner's request on 12 November 2026.
   Unbounded exhibition materials, and two supplied group/educator photographs.
   Later portfolio developments of Flash Back and Kluge are labelled separately
   from their summer-school exhibition presentations. All student authorship is retained.
+- Atlas of Moving Matter records the August 2026 MIT × Tongji summer school:
+  curriculum and class coordination, mentoring 11 digital-media students across
+  five groups, and four selected group projects with two images each. Teaching
+  and closing-ceremony photographs accompany the linked SFK WeChat story.
+  Student work retains its own authorship; only the selected public material is included.
 - Additional teaching programmes have reserved cards using the information supplied
   so far. These are not presented as complete project documentation.
 - About, bilingual CV and contact information, including the public English CV PDF.
