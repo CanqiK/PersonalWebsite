@@ -76,5 +76,17 @@ window.CANQI_PROJECT_IMAGES=Object.assign(window.CANQI_PROJECT_IMAGES||{},{
     "height": 1350,
     "file": "assets/mentor/winter-2026/appetite-outcome.webp",
     "thumb": "assets/mentor/winter-2026/appetite-outcome-thumb.webp"
+  },
+  "winter-cover": {
+    "width": 1490,
+    "height": 735,
+    "file": "assets/mentor/winter-2026/cover.webp",
+    "thumb": "assets/mentor/winter-2026/cover-thumb.webp"
+  },
+  "winter-exhibition-view": {
+    "width": 1080,
+    "height": 1440,
+    "file": "assets/mentor/winter-2026/exhibition-view.webp",
+    "thumb": "assets/mentor/winter-2026/exhibition-view-thumb.webp"
   }
 });

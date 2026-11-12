@@ -14,8 +14,8 @@
       subtitle:t('Interaction & Digital Media · Winter School','交互与数字媒体 · 冬令营'),
       year:'2026',
       medium:t('Project mentoring · Installation · Moving image','项目指导 · 装置 · 影像'),
-      hero:'winter-preface',
-      heroCaption:t('Human–Machine Co-Creation · Winter School Show, 2026. Exhibition preface and credits from the exhibition materials.','「人机·共塑」· 2026 冬校结营展。展览前言与署名，选自展览物料。'),
+      hero:'winter-cover',
+      heroCaption:t('Yajin Li · Internal Corrosion. Installation detail from the student’s project portfolio.','李亚津 ·《内蚀》。装置局部，选自学生项目作品集。'),
       summary:t('Four students, four completed installations, ten days on site. This record follows the group I mentored in the January 2026 SFK winter school, working with Allen Sayegh from Harvard GSD in the Harvard × Tongji interaction and digital media class.','四位学生、四组落地装置、十天在地创作。这里记录了我在 2026 年 1 月 SFK 冬令营中指导的小组项目，课程为哈佛 × 同济交互数媒班，与来自 Harvard GSD 的 Allen Sayegh 合作。'),
       role:t('As the group’s project mentor, I guided four students through the ten-day on-site programme to complete their individual projects. The supplied portfolios also credit me for project-layout mentoring. The works and their concepts presented below belong to the students.','我作为小组项目导师，在十天的在地课程中指导四位学生完成各自项目的落地。项目资料中同时记录了我的授课与排版指导职责。以下作品及其概念均由学生创作。'),
       facts:[
@@ -32,7 +32,8 @@
           paragraphs:[
             t('The exhibition approaches space as a responsive environment. Embedded computation, smart materials and sensing allow light, sound and physical form to respond to the visitor. It asks how these exchanges reshape bodily perception, behaviour and the ways people relate to one another.','展览将空间看作能够回应人的环境。嵌入式计算、智能材料与传感网络，让光线、声音和形态随观众的行动发生变化，并追问这种互动如何改变身体感知、行为与人与人之间的关系。'),
             t('Visitors complete the works through their presence and actions. Within this shared direction, my group developed four distinct projects addressing meritocratic pressure, technological intervention in nature, urban alienation, and the power relations around a dining table.','观众的到来与行动，是完成作品的最后一环。在这一共同方向下，我指导的小组分别从优绩主义压力、技术对自然的干预、城市中的疏离，以及餐桌中的权力关系出发，形成四组不同的作品。')
-          ]
+          ],
+          images:[pic('preface','Human–Machine Co-Creation · Exhibition preface and credits, 2026.','「人机·共塑」· 2026 冬校结营展前言与署名。')]
         },
         {
           id:'winter-mentoring',title:t('From a proposal to a working installation','从提案到装置落地'),
@@ -75,6 +76,11 @@
             t('Visitors bend down to discover three screens beneath a red-draped table. Experimental images and a mechanism of rising metal elements expose another scene below the polished surface, shifting both the viewer’s posture and point of view.','观众需要俯身、弯腰，探视红色桌布下方的三面屏幕。实验影像与升降的金属构件揭示光鲜餐桌之下的另一重场景，同时改变观看的姿态与视角。')
           ],
           gallery:portfolio('appetite','Rei Zhou · Appetite','周欣妍 ·《食欲》')
+        },
+        {
+          id:'winter-exhibition',title:t('In the exhibition','展览现场'),
+          paragraphs:[],
+          images:[pic('exhibition-view','A view into the winter-school exhibition. Yajin Li’s Internal Corrosion is visible through the doorway.','冬校展厅现场。透过入口，可见李亚津的装置作品《内蚀》。')]
         }
       ],
       videos:[

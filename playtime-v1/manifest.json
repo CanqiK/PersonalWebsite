@@ -161,8 +161,8 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 6790,
-    "sha256": "5ed3f706780363d7d39e87c40a4c1d9d9b89a422c7ff902defa78a191202cc40"
+    "bytes": 6802,
+    "sha256": "57915c6a94d1ad8ac12ae1baca37553320e79d2b8eae57d727084b0dc2d1ccda"
   },
   {
     "path": "site/copyright.html",
@@ -231,13 +231,13 @@
   },
   {
     "path": "site/mentor-winter-2026-assets.js",
-    "bytes": 2680,
-    "sha256": "3d486bd4e0fab4fff506bb3c76486c01033e6e5a85b1a3e0f744e5dfbeb9ab2c"
+    "bytes": 3057,
+    "sha256": "4dc50c69d3b19488f36720d2b796717bd997d9a8ff11e98c14d83edd9897dca1"
   },
   {
     "path": "site/mentor-winter-2026.js",
-    "bytes": 12308,
-    "sha256": "166b4a52937e586f163e59d551cb2bae52aac8765ae45b996e4e716625717a5d"
+    "bytes": 12788,
+    "sha256": "c84cf9f2aeca29f2db02fb2c2fac1dea72a7c301606932a5001ecb74f30f272f"
   },
   {
     "path": "site/mentor.css",
@@ -2018,6 +2018,26 @@
     "path": "site/assets/mentor/winter-2026/corrosion-process.webp",
     "bytes": 265578,
     "sha256": "b47e42b457cd88024bb502a3048199c4556de9ac0efba65d9853f76f598038b1"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/cover-thumb.webp",
+    "bytes": 23696,
+    "sha256": "e2e97cb5777381a0cfc49ca65e0510aead053f92eba2c1e91f1dda73c2d3b899"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/cover.webp",
+    "bytes": 87076,
+    "sha256": "94bbda4166c212753838afbf91c9fb0d7dde8129fa2229d8a14c81db6a018fd2"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/exhibition-view-thumb.webp",
+    "bytes": 23924,
+    "sha256": "c7151917fe1b3129eb43c4034a2195d9224eefec364429754f258f0942358126"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/exhibition-view.webp",
+    "bytes": 94358,
+    "sha256": "066e087c16eea01d79507bd2438a8b199d7ff5fba666c92d36b41d29664d556e"
   },
   {
     "path": "site/assets/mentor/winter-2026/grind-cover-thumb.webp",
