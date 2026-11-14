@@ -13,6 +13,12 @@ window.CANQI_PROJECT_IMAGES=Object.assign(window.CANQI_PROJECT_IMAGES||{},
     "file": "assets/mentor/mit-2026/rooted-interaction.webp",
     "thumb": "assets/mentor/mit-2026/rooted-interaction-thumb.webp"
   },
+  "mit-rooted-encounter": {
+    "width": 682,
+    "height": 498,
+    "file": "assets/mentor/mit-2026/rooted-encounter.webp",
+    "thumb": "assets/mentor/mit-2026/rooted-encounter-thumb.webp"
+  },
   "mit-flux-overview": {
     "width": 2000,
     "height": 1293,
@@ -48,6 +54,18 @@ window.CANQI_PROJECT_IMAGES=Object.assign(window.CANQI_PROJECT_IMAGES||{},
     "height": 932,
     "file": "assets/mentor/mit-2026/cutoff-interaction.webp",
     "thumb": "assets/mentor/mit-2026/cutoff-interaction-thumb.webp"
+  },
+  "mit-thermal-overview": {
+    "width": 1672,
+    "height": 941,
+    "file": "assets/mentor/mit-2026/thermal-overview.webp",
+    "thumb": "assets/mentor/mit-2026/thermal-overview-thumb.webp"
+  },
+  "mit-thermal-detail": {
+    "width": 2000,
+    "height": 1333,
+    "file": "assets/mentor/mit-2026/thermal-detail.webp",
+    "thumb": "assets/mentor/mit-2026/thermal-detail-thumb.webp"
   },
   "mit-teaching-discussion": {
     "width": 2000,
@@ -96,6 +114,18 @@ window.CANQI_PROJECT_IMAGES=Object.assign(window.CANQI_PROJECT_IMAGES||{},
     "height": 2000,
     "file": "assets/mentor/mit-2026/work-in-progress.webp",
     "thumb": "assets/mentor/mit-2026/work-in-progress-thumb.webp"
+  },
+  "mit-thermal-installation-details": {
+    "width": 2000,
+    "height": 965,
+    "file": "assets/mentor/mit-2026/thermal-installation-details.webp",
+    "thumb": "assets/mentor/mit-2026/thermal-installation-details-thumb.webp"
+  },
+  "mit-thermal-exhibition-views": {
+    "width": 1776,
+    "height": 1008,
+    "file": "assets/mentor/mit-2026/thermal-exhibition-views.webp",
+    "thumb": "assets/mentor/mit-2026/thermal-exhibition-views-thumb.webp"
   },
   "mit-mementos": {
     "width": 1440,

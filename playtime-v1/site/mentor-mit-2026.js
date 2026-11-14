@@ -11,7 +11,7 @@
       medium:t('Curriculum & project mentoring · Interactive installation','指导教研 · 交互装置'),
       hero:'mit-flux-overview',
       heroCaption:t('Externality Flux · Student-team installation, from the project portfolio.','《热阈衍流》· 学生团队装置，选自项目作品集。'),
-      summary:t('Shanghai became a laboratory for turning observations of the city into interactive objects. As a teaching and curriculum mentor, I guided 11 digital-media students across five groups and coordinated the class workflow. This archive presents four selected group projects.','以上海为实验场，将城市观察转化为交互装置。我作为指导教研，负责 11 位数媒学生、5 个小组的项目指导，以及整个班级的工作梳理。这里选呈其中四组作品。'),
+      summary:t('Shanghai became a laboratory for turning observations of the city into interactive objects. As a teaching and curriculum mentor, I guided 11 digital-media students across five groups and coordinated the class workflow. This archive presents selected work from all five groups.','以上海为实验场，将城市观察转化为交互装置。我作为指导教研，负责 11 位数媒学生、5 个小组的项目指导，以及整个班级的工作梳理。这里选呈五组作品。'),
       role:t('I worked with the course educators to guide project development, organise the class workflow and support the progression from research to completed installations. I also hosted the closing ceremony. The works below were created by the student teams; the credits identify the students I mentored.','我与课程导师共同推进项目，负责小组指导与班级工作的梳理，协助同学将研究议题发展为可以落地的装置，并主持了结营仪式。以下作品由学生团队创作，署名列出我所指导的同学。'),
       facts:[
         [t('Programme','课程'),t('SFK · MIT × Tongji Summer School','SFK · MIT × 同济夏校')],
@@ -19,7 +19,7 @@
         [t('Course direction','课程方向'),t('Atlas of Moving Matter · Sci-Fi Objects × Urban Systems × Interactive Prototypes','流动物质图谱 · 科幻物件 × 城市系统 × 交互原型')],
         [t('My mentoring scope','指导范围'),t('11 digital-media students · 5 groups','11 位数字媒体学生 · 5 个小组')],
         [t('Course educators','课程导师'),'Kaiho Yu · Kye Shimizu'],
-        [t('Selection shown here','本页精选'),t('4 group projects · 2 images per group','4 组作品 · 每组 2 张图')]
+        [t('Selection shown here','本页精选'),t('5 group projects · Selected installation views','5 组作品 · 装置与现场精选')]
       ],
       sections:[
         {
@@ -52,7 +52,20 @@
           imageLayout:'compact-pair',
           images:[
             pic('rooted-overview','Rooted Routes · Installation overview.','《乡音沪糅》· 装置整体。'),
-            pic('rooted-interaction','Rooted Routes · Visitors encountering the vibrating plates.','《乡音沪糅》· 观众体验振动板。')
+            pic('rooted-interaction','Rooted Routes · Visitors encountering the vibrating plates.','《乡音沪糅》· 观众体验振动板。'),
+            pic('rooted-encounter','Rooted Routes · Visitors exploring the screen-based sound installation.','《乡音沪糅》· 观众在屏幕与声音装置间体验作品。')
+          ]
+        },
+        {
+          id:'mit-thermal',title:t('Thermal Stratigraphy','Thermal Stratigraphy'),
+          authors:t('Selected portfolio material · Cao Yutong & Wang Yihan','作品集资料 · 曹语桐、王义涵'),
+          paragraphs:[t('Thermal Stratigraphy treats urban heat as a force that leaves traces in materials. Concrete, metal, plastic and electronic components form a layered thermal archive: stored heat, oxidation and deformation become clues to the city’s activity. Miniature landscapes, screens and interactive elements bring these changes into view, inviting visitors to read the installation as an archaeology of urban heat.','Thermal Stratigraphy 将城市热量视为一种在材料中留下痕迹的力量。混凝土、金属、塑料与电子元件共同构成分层的热档案：蓄热、氧化与形变成为阅读城市活动的线索。微缩景观、屏幕与交互元素让这些变化可以被观察，形成一次对城市热环境的“考古”。')],
+          imageLayout:'compact-pair',
+          images:[
+            pic('thermal-installation-details','Thermal Stratigraphy · Installation structure and electronic display details.','Thermal Stratigraphy · 装置结构与电子屏幕细节。'),
+            pic('thermal-exhibition-views','Thermal Stratigraphy · Exhibition overview, wall-mounted screens and material details.','Thermal Stratigraphy · 展陈全景、墙面屏幕与材料细节。'),
+            pic('thermal-overview','Thermal Stratigraphy · The layered installation and surrounding screens.','Thermal Stratigraphy · 分层装置与周围的屏幕。'),
+            pic('thermal-detail','Thermal Stratigraphy · Material samples, miniature landscapes and electronic displays.','Thermal Stratigraphy · 材料样本、微缩景观与电子显示细节。')
           ]
         },
         {
@@ -87,7 +100,7 @@
         },
         {
           id:'mit-exhibition',title:t('Inside the exhibition','展厅现场'),
-          paragraphs:[t('Selected views from the wider exhibition show how materials, screens, sound and interactive interfaces occupied the gallery. These works were created by the participating student teams; the four groups I mentored and have permission to share are presented separately above.','从更完整的展览现场中选取几处画面，呈现材料、屏幕、声音与交互界面在展厅中的不同组织方式。作品由参展学生团队创作；我所指导并获准公开的四组作品已在上文分别介绍。')],
+          paragraphs:[t('Selected views from the wider exhibition show how materials, screens, sound and interactive interfaces occupied the gallery. These works were created by the participating student teams; the five groups I mentored are presented separately above.','从更完整的展览现场中选取几处画面，呈现材料、屏幕、声音与交互界面在展厅中的不同组织方式。作品由参展学生团队创作；我所指导的五组作品已在上文分别介绍。')],
           imageLayout:'compact-pair',
           images:[
             pic('exhibition-materials','Exhibition view · Material studies alongside screen-based work.','展厅现场 · 材料实验与屏幕作品并置。'),

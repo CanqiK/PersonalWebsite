@@ -111,6 +111,13 @@
 @media(hover:hover) and (pointer:fine){.mentor-course-record:hover .photo-print-canvas{opacity:0}}
 /* Exhibition-only variants: a compact catalogue and lettering seen together. */
 /* MIT course: plans stay legible; people and process form a compact contact sheet. */
+[data-reader-project="sfk-mit-tongji-2026"] #mit-thermal .reader-figure:nth-child(-n+2){grid-column:1/-1}
+[data-reader-project="sfk-mit-tongji-2026"] #mit-thermal .reader-figure img{height:auto;max-height:none;object-fit:contain}
+@media(min-width:901px){
+ [data-reader-project="sfk-mit-tongji-2026"] #mit-rooted .reader-pair{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+ [data-reader-project="sfk-mit-tongji-2026"] #mit-rooted .reader-figure:nth-child(2){grid-column:2;grid-row:1/span 2}
+ [data-reader-project="sfk-mit-tongji-2026"] #mit-rooted .reader-figure:nth-child(3){grid-column:1;grid-row:2}
+}
 [data-reader-project="sfk-mit-tongji-2026"] #mit-spatial .reader-image-open{height:clamp(360px,43vw,600px);display:flex;align-items:center;justify-content:center}
 [data-reader-project="sfk-mit-tongji-2026"] #mit-spatial .reader-figure img{width:100%;height:100%;object-fit:contain}
 [data-reader-project="sfk-mit-tongji-2026"] #mit-exhibition .reader-figures{max-width:920px}

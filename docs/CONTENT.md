@@ -24,7 +24,11 @@ Current portfolio preview, updated at the owner's request on 13 November 2026.
   from their summer-school exhibition presentations. All student authorship is retained.
 - Atlas of Moving Matter records the August 2026 MIT × Tongji summer school:
   curriculum and class coordination, mentoring 11 digital-media students across
-  five groups, and four selected group projects with two images each. Spatial
+  five groups, with selected work from all five groups. Rooted Routes has three
+  images; Thermal Stratigraphy has two full-width composite installation views
+  followed by the two existing photographs. Each remaining group has two images.
+  Thermal Stratigraphy uses the approved teammate material and supplied images
+  without the withheld personal portfolio layout. Spatial
   sketches and a floor plan document the exhibition planning, followed by four
   wider exhibition views and a compact gallery of twelve teaching, site-scouting
   and team photographs. Canqi's full Fluid Matter reflection closes the record,

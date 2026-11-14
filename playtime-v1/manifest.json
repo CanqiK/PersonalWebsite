@@ -162,7 +162,7 @@
   {
     "path": "site/index.html",
     "bytes": 6952,
-    "sha256": "6887a6347c8eb4953325a4c95685108192bc4c5899dee00e3a6c1d9e31240ca5"
+    "sha256": "02fe7d048d8031c0c975c840d541e35c15d731b09d0b464cb0688ed035946d05"
   },
   {
     "path": "site/copyright.html",
@@ -221,13 +221,13 @@
   },
   {
     "path": "site/mentor-mit-2026-assets.js",
-    "bytes": 5166,
-    "sha256": "0d02286e29cada6b8fc3ad8b5f99914d9c0c95e3d54e83e86cd36d317c0a91ff"
+    "bytes": 6206,
+    "sha256": "853455e1ea72a56cd7f14b2fad08d94d896baee9ebc20f91c46cbf29bd924174"
   },
   {
     "path": "site/mentor-mit-2026.js",
-    "bytes": 19708,
-    "sha256": "8ab9224b300571d19e79ec9e0a826fd78c67f611fdaffff8b79e8d0dee80df1a"
+    "bytes": 21707,
+    "sha256": "d596269d177d80688e3b2c32e79bb8b3e696b7f9ca77c099cb80e088c14e06c6"
   },
   {
     "path": "site/mentor-nyu-2025-assets.js",
@@ -251,13 +251,13 @@
   },
   {
     "path": "site/mentor.css",
-    "bytes": 15724,
-    "sha256": "22ad063e7e3023fd7e264ffd97e6a71d9ee83416e914da7a9733cd54a6d205a8"
+    "bytes": 16333,
+    "sha256": "56c8c278403dc6fe15555687f802fe5087854f7de1c450764320aa9da3007a99"
   },
   {
     "path": "site/mentor.js",
-    "bytes": 9955,
-    "sha256": "f7eee234dc71256fc1cfd112dd152b5d4af6e992001afb33d1c8f8a96d651a83"
+    "bytes": 9950,
+    "sha256": "c6fda54c6a50f76525e16348969b15abe95495f2cc09484f033469a340f50a5e"
   },
   {
     "path": "site/page-motion.css",
@@ -1880,6 +1880,16 @@
     "sha256": "f476af14e45755849e74fdc18b83e4ef07cc75cd709157539ec08b35486dc604"
   },
   {
+    "path": "site/assets/mentor/mit-2026/rooted-encounter-thumb.webp",
+    "bytes": 24284,
+    "sha256": "339d931a5830107002fc5a3712e62636718fb2010dbd398742a4fa77af3e54a1"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/rooted-encounter.webp",
+    "bytes": 32010,
+    "sha256": "9457c227f5b1d163627c55ffc3789a7022393a143e5fd5bb1b690846a78e2b22"
+  },
+  {
     "path": "site/assets/mentor/mit-2026/rooted-interaction-thumb.webp",
     "bytes": 25654,
     "sha256": "1a12aae15954a221be96a0d8766754ea02d91167d7f981cf85c44ff696b87394"
@@ -1938,6 +1948,46 @@
     "path": "site/assets/mentor/mit-2026/teaching-review.webp",
     "bytes": 195710,
     "sha256": "bdf49bfa0659701917693f7f13b973abf8e875db3c45ed073515036a1f5e0c8f"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/thermal-detail-thumb.webp",
+    "bytes": 45928,
+    "sha256": "9f09f6e730b40f323efe212d204a742a2bf8200d92fad92044138c41499e3a4d"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/thermal-detail.webp",
+    "bytes": 332762,
+    "sha256": "daee2dc09f5c4bc41cf5cb4fe9db327e1548d609118948d15afa8c8b96642d46"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/thermal-exhibition-views-thumb.webp",
+    "bytes": 31234,
+    "sha256": "d2b9fdb92ebde9f1c3f75fbec57f19e398e25fd87b647f09454deb0309e199da"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/thermal-exhibition-views.webp",
+    "bytes": 146196,
+    "sha256": "1873cec2a83d90cbb27c8e617dd05dd6b10cfd4ab7ffe55207f55707d6368dd8"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/thermal-installation-details-thumb.webp",
+    "bytes": 33338,
+    "sha256": "453e80284ad77a3aef89dbd01573288a81d16ad97ea29f866d167c645798cfb3"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/thermal-installation-details.webp",
+    "bytes": 177712,
+    "sha256": "d1f760d78ffb8974b1beaa334710012fafe8708e06465ff92956b0195c01e686"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/thermal-overview-thumb.webp",
+    "bytes": 13662,
+    "sha256": "240439fc507a7986e41c36fe1bfb23d5ceb435522afe1daa8eea16fdab751bf9"
+  },
+  {
+    "path": "site/assets/mentor/mit-2026/thermal-overview.webp",
+    "bytes": 66476,
+    "sha256": "6cf78426e6451ac3ada0bc25e50b07e2d9046435d7fab93ecc7ab5cd984fa8ad"
   },
   {
     "path": "site/assets/mentor/mit-2026/venue-scout-thumb.webp",
