@@ -49,7 +49,8 @@
       card.classList.toggle('is-selected',card.dataset.workId===selectedProject);
     });
   }
-  const featuredWorks = [works[0],works[1],selectedWorks[2],works[3]];
+  const homeFeaturedWorks = [works[0],works[1],selectedWorks[2],works[3]];
+  const featuredWorks = [allArtistWorks.find(work=>work.id==='meilishuo'),...homeFeaturedWorks];
   let featuredIndex = 0;
   let featuredTimer = 0;
   let disposeProjector = null;
@@ -81,7 +82,7 @@
   const routeNames = { works:['Works','作品'], about:['About','关于'], cv:['CV','履历'], contact:['Have you seen Canqi?','你见过燦琪吗？'] };
 
   function coverSheet(w) {
-    const number=String(featuredWorks.indexOf(w)+1).padStart(2,'0');
+    const number=String(homeFeaturedWorks.indexOf(w)+1).padStart(2,'0');
     return `<article class="cover" data-project="${w.id}" aria-label="${t('Featured project newspaper','精选项目报纸')} — ${titleOf(w)}">
       <div class="cover-topline"><span>CANQI / ${t('SELECTED PROJECT','精选项目')}</span><span>${number} / 04 — ${w.year}</span></div>
       <h1 class="cover-title">${titleOf(w)}</h1>
@@ -94,7 +95,7 @@
   }
   function cover() {
     const underlay=`<div class="paper-underlay paper-underlay-back" aria-hidden="true"><span class="underlay-masthead">CANQI / ${t('PROJECT ARCHIVE','项目档案')}</span><span class="underlay-frame"></span><span class="underlay-line long"></span><span class="underlay-line"></span><span class="underlay-line short"></span><span class="underlay-side-frame"></span><span class="underlay-footer">${t('IMAGE / TEXT / PROCESS','图像 / 文字 / 过程')}</span></div>`;
-    return `<div class="paper-stack" id="home-paper-stack" role="region" tabindex="0" aria-label="${t('Featured newspapers. Scroll, swipe horizontally or use left and right arrow keys to turn.','精选项目报纸。滚动、左右滑动或按左右方向键翻页。')}">${underlay}<div class="paper-underlay paper-underlay-middle" aria-hidden="true"><span class="underlay-masthead">CANQI / ${t('SELECTED WORKS','精选作品')}</span><span class="underlay-frame"></span><span class="underlay-line long"></span><span class="underlay-line"></span><span class="underlay-line short"></span><span class="underlay-side-frame"></span><span class="underlay-footer">${t('STUDY / DOCUMENT / INDEX','实验 / 记录 / 索引')}</span></div><div class="home-paper-front" id="home-paper-front">${coverSheet(featuredWorks[homePaperIndex])}</div></div>`;
+    return `<div class="paper-stack" id="home-paper-stack" role="region" tabindex="0" aria-label="${t('Featured newspapers. Scroll, swipe horizontally or use left and right arrow keys to turn.','精选项目报纸。滚动、左右滑动或按左右方向键翻页。')}">${underlay}<div class="paper-underlay paper-underlay-middle" aria-hidden="true"><span class="underlay-masthead">CANQI / ${t('SELECTED WORKS','精选作品')}</span><span class="underlay-frame"></span><span class="underlay-line long"></span><span class="underlay-line"></span><span class="underlay-line short"></span><span class="underlay-side-frame"></span><span class="underlay-footer">${t('STUDY / DOCUMENT / INDEX','实验 / 记录 / 索引')}</span></div><div class="home-paper-front" id="home-paper-front">${coverSheet(homeFeaturedWorks[homePaperIndex])}</div></div>`;
   }
   function clearHomeIntro() {
     if (!homeIntroTransition) return;
@@ -254,7 +255,9 @@
     return `<div class="feature-slide">${projectImage(w,true,false)}<span class="feature-vignette" aria-hidden="true"></span><span class="feature-film" aria-hidden="true"></span></div>`;
   }
   function featureCopy(w) {
-    return `<div class="feature-copy-top"><span>${t('FEATURED PROJECT','精选项目')} / ${String(featuredWorks.indexOf(w)+1).padStart(2,'0')}—04</span><span>${imageNote(w)}</span></div><div class="feature-copy-main"><div><span class="feature-index">${String(featuredWorks.indexOf(w)+1).padStart(2,'0')} / 04</span><h2>${titleOf(w)}</h2><p>${lang === 'zh' ? w.title : w.zh}</p></div><a class="feature-enter" href="#artist/project/${w.id}" data-project-open="${w.id}">${t('Enter project','进入项目')}${arrow}</a></div><div class="feature-copy-bottom"><span>${w.year}</span><span>${t(...w.medium)}</span><span>CANQI / 燦琪</span></div>`;
+    const number=String(featuredWorks.indexOf(w)+1).padStart(2,'0');
+    const total=String(featuredWorks.length).padStart(2,'0');
+    return `<div class="feature-copy-top"><span>${t('FEATURED PROJECT','精选项目')} / ${number}—${total}</span><span>${imageNote(w)}</span></div><div class="feature-copy-main"><div><span class="feature-index">${number} / ${total}</span><h2>${titleOf(w)}</h2><p>${lang === 'zh' ? w.title : w.zh}</p></div><a class="feature-enter" href="#artist/project/${w.id}" data-project-open="${w.id}">${t('Enter project','进入项目')}${arrow}</a></div><div class="feature-copy-bottom"><span>${w.year}</span><span>${t(...w.medium)}</span><span>CANQI / 燦琪</span></div>`;
   }
   function artist() {
     const selectedGroups = [
@@ -359,13 +362,14 @@
         ['07.2017 — 06.2021','BA, Environmental Art and Design','环境艺术设计学士','School of Architecture and Applied Arts, Guangzhou Academy of Fine Arts.','广州美术学院建筑艺术设计学院。']
       ]},
       {heading:['Teaching & professional roles','教学与工作经历'],entries:[
+        [['08.2026 — 08.2027','2026.08 — 2027.08'],'Graduation Project Supervisor','毕业设计导师','School of Architecture and Applied Arts, Guangzhou Academy of Fine Arts.','广州美术学院建筑艺术设计学院。',true],
         [['04.2026 — Present','2026.04 — 至今'],'Academic Supervisor and Curriculum Development','数字艺术科系教研','SFK International Art Education; teaching, curriculum and programme development.','斯芬克国际艺术教育；负责数字艺术教学、课程及教学产品研发。',true],
         ['04.2024 — 04.2026','Digital Media Project Mentor','数字媒体项目导师','SFK International Art Education; mentoring digital-media and spatial-performance projects.','斯芬克国际艺术教育；指导数字媒体与空间表演项目。'],
         ['10.2024 — 12.2024','Externally Appointed Lecturer','外聘专业课讲师','School of Architecture and Applied Arts, Guangzhou Academy of Fine Arts; interdisciplinary spatial and digital design.','广州美术学院建筑艺术设计学院；讲授空间与数字设计跨学科课程。'],
         ['2023 — 03.2024','Spatial Designer','空间设计师','HEYTEA, Shenzhen headquarters; retail interiors, display systems and store concepts.','喜茶深圳总部空间设计部；参与门店空间、陈设系统与概念设计。']
       ]},
       {heading:['Selected projects & presentations','精选项目与展出'],entries:[
-        ['10.2026','Leather project: world','群花','MEILISHUO Exhibition display design for the Canton Fair, Guangzhou.','美丽说 广交会沉浸式装置展厅设计',true],
+        ['10.2026','Leather project: world','群花','MEILISHUO Exhibition display design for the Canton Fair, Guangzhou.','美丽说 广交会沉浸式装置展厅设计'],
         ['01.2026','MIAO / 淼','MIAO / 淼','Commercial display and installation design, Guangzhou.','商业展陈及装置设计，广州。'],
         ['10.2025','Fishbird [Sumeru]','鱼鸟「须弥」','Curatorial and installation design for BUZHITANSUO art space, Guangzhou.','不止探索艺术空间的策展与装置设计，广州。'],
         ['12.2024','Carnival Nervous System','狂欢节神经系统','Art-installation exhibition design and production.','艺术装置展陈设计与制作。'],
@@ -528,10 +532,10 @@
     const stack=$('#home-paper-stack');
     if(!stack||homePaperTurning)return;
     const front=$('#home-paper-front');
-    const next=(homePaperIndex+direction+featuredWorks.length)%featuredWorks.length;
+    const next=(homePaperIndex+direction+homeFeaturedWorks.length)%homeFeaturedWorks.length;
     const update=()=>{
       homePaperIndex=next;
-      front.innerHTML=coverSheet(featuredWorks[next]);
+      front.innerHTML=coverSheet(homeFeaturedWorks[next]);
       drawStudies(front);
     };
     if(matchMedia('(prefers-reduced-motion: reduce)').matches){update();return;}

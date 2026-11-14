@@ -161,8 +161,8 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 6952,
-    "sha256": "02fe7d048d8031c0c975c840d541e35c15d731b09d0b464cb0688ed035946d05"
+    "bytes": 6951,
+    "sha256": "41be14b331d5aea023605377431c5460544f96aa9a719579c9e9b2e88ef804f3"
   },
   {
     "path": "site/copyright.html",
@@ -171,8 +171,8 @@
   },
   {
     "path": "site/app.js",
-    "bytes": 67498,
-    "sha256": "7a2484375e83519235672d5514cec51ee7a2692f1d7a4c385f0cb468a810853d"
+    "bytes": 67907,
+    "sha256": "b36dcbd9fb33d47ab87ea3595a5694432d8980d17ee065beb609d68ae4f9484f"
   },
   {
     "path": "site/digital-home.css",
