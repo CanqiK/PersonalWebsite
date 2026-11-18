@@ -1,6 +1,6 @@
 # Content and publication status
 
-Current portfolio preview, updated at the owner's request on 13 November 2026.
+Current portfolio preview, updated at the owner's request on 18 November 2026.
 
 ## Included
 
@@ -34,6 +34,13 @@ Current portfolio preview, updated at the owner's request on 13 November 2026.
   and team photographs. Canqi's full Fluid Matter reflection closes the record,
   alongside the linked SFK WeChat story.
   Student work retains its own authorship; only the selected public material is included.
+- The selected student-project entry opens a dedicated cohort directory, with
+  15 projects by five students in 2025 and 38 projects by eleven students in 2026.
+  Individual projects open floating readers with covers, selected outcomes,
+  occasional making documentation and available film or interactive-work links.
+  The 2027 cohort is explicitly awaiting content. Student authorship is retained.
+  Three 2026 projects have image-only presentations while their private or
+  unavailable films await replacement links.
 - Additional teaching programmes have reserved cards using the information supplied
   so far. These are not presented as complete project documentation.
 - About, bilingual CV and contact information, including the public English CV PDF.
@@ -46,7 +53,8 @@ The deployment contains browser code and the web exports selected for the websit
 Original portfolios, working documents, local asset-provenance paths, Blender masters,
 build scripts and backups remain in the local workspace. The public CV retains the
 contact information requested in the source CV. Two web-sized Carnival process
-videos are included; other project videos use their supplied external links.
+videos and one web-sized 2025 student project film are included; other project
+videos use their supplied external links.
 
 This remains an evolving portfolio. Preserve the distinction between concept
 proposals, design visualisations, installations and exhibited work when adding

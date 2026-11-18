@@ -302,8 +302,9 @@
   }
   function syncMentorRoute(route,animate=false) {
     const dialog=$('#artist-project-dialog');if(!dialog)return;
-    if(route.startsWith('mentor/project/')) {
-      const id=route.split('/')[2],record=window.CanqiProjects.get(id);
+    const studentRoute=window.CanqiStudentArchive.parse(route);
+    if(route.startsWith('mentor/project/')||studentRoute?.project) {
+      const id=studentRoute?.project||route.split('/')[2],record=window.CanqiProjects.get(id);
       if(!record||record.branch!=='mentor')return;
       lastMentorSection=record.mentorSection||'mentor-gafa';
       document.title=`${record.title[lang]||record.title.en} — CANQI 燦琪`;
@@ -314,6 +315,7 @@
       }
     }else{
       if(dialog.open)dialog.close();
+      if(studentRoute)document.title=`${t('Selected student projects','指导学生项目精选')} · ${studentRoute.year} — CANQI 燦琪`;
       if(route==='mentor-gafa'||route==='mentor-sfk'||route==='mentor') {
         document.title=`${t('As a mentor.','作为导师。')} — CANQI 燦琪`;
         lastMentorSection=route==='mentor'?'mentor-gafa':route;
@@ -326,14 +328,20 @@
   }
   function startMentor() {
     const rail=content.querySelector('.mentor-institutions');
-    if(!rail)return;
-    rail.addEventListener('scroll',updateMentorNav,{passive:true});
-    rail.addEventListener('keydown',event=>{
+    rail?.addEventListener('scroll',updateMentorNav,{passive:true});
+    rail?.addEventListener('keydown',event=>{
       if(event.target!==rail||!['ArrowLeft','ArrowRight'].includes(event.key))return;
       event.preventDefault();location.hash=event.key==='ArrowRight'?'mentor-sfk':'mentor-gafa';
     });
-    $('#artist-project-dialog').addEventListener('close',()=>{
-      if(location.hash.startsWith('#mentor/project/')){
+    $('#artist-project-dialog')?.addEventListener('close',()=>{
+      const studentRoute=window.CanqiStudentArchive.parse(location.hash.slice(1));
+      if(studentRoute?.project){
+        const projectHref=location.hash;
+        history.replaceState(null,'',`#${studentRoute.base}`);
+        setupNavigation(studentRoute.base);currentRoute=studentRoute.base;
+        document.title=`${t('Selected student projects','指导学生项目精选')} · ${studentRoute.year} — CANQI 燦琪`;
+        content.querySelector(`a[href="${CSS.escape(projectHref)}"]`)?.focus({preventScroll:true});
+      }else if(location.hash.startsWith('#mentor/project/')){
         const projectHref=location.hash;
         history.replaceState(null,'',`#${lastMentorSection}`);setupNavigation(lastMentorSection);currentRoute=lastMentorSection;
         document.title=`${t('As a mentor.','作为导师。')} — CANQI 燦琪`;
@@ -615,7 +623,7 @@
     if(branch==='mentor') {
       $('#breadcrumb').innerHTML=`<a href="#main">${t('Index','主页')}</a><span aria-hidden="true">/</span><a href="#mentor">${branchName('mentor')}</a>`;
       $('#secondary').innerHTML=[['mentor-gafa','Guangzhou Academy of Fine Arts','广州美术学院'],['mentor-sfk','SFK International Art Education','斯芬克']].map(([id,en,zh])=>`<a href="#${id}" data-mentor-section="${id}">${t(en,zh)}</a>`).join('');
-      if(route==='mentor-students'){
+      if(window.CanqiStudentArchive.parse(route)){
         $('#breadcrumb').insertAdjacentHTML('beforeend',`<span aria-hidden="true">/</span><span aria-current="page">${t('Student projects','学生项目')}</span>`);
         $('#secondary [data-mentor-section="mentor-sfk"]').setAttribute('aria-current','location');
       }
@@ -645,10 +653,12 @@
     const isWho=['who','about','cv','contact'].includes(route);
     const wasWho=['who','about','cv','contact'].includes(currentRoute);
     const previousWhoScroll=isWho&&wasWho?window.scrollY:0;
+    const studentRoute=window.CanqiStudentArchive.parse(route),previousStudentRoute=window.CanqiStudentArchive.parse(currentRoute);
+    const previousStudentScroll=studentRoute&&previousStudentRoute?window.scrollY:0;
     const previousReader=force?document.querySelector('.project-reader'):null;
     const previousReaderSection=previousReader?Array.from(previousReader.querySelectorAll('.reader-section')).filter(s=>s.getBoundingClientRect().top<180).at(-1)?.id:null;
     const previousReaderScroll=force?($('#artist-project-dialog')?.scrollTop||0):0;
-    if(isMentor&&wasMentor&&!force&&(route==='mentor-students')===(currentRoute==='mentor-students')){setupNavigation(route);syncMentorRoute(route,route!==currentRoute);currentRoute=route;return;}
+    if(isMentor&&wasMentor&&!force&&(studentRoute?.base||null)===(previousStudentRoute?.base||null)){setupNavigation(route);syncMentorRoute(route,route!==currentRoute);currentRoute=route;return;}
     if(isArtist&&wasArtist&&!force) {
       setupNavigation(route);
       syncArtistRoute(route,route!==currentRoute);
@@ -704,6 +714,7 @@
       else scrollToWhoSection(route,false);
     }
     if(isMentor){startMentor();syncMentorRoute(route,false);}
+    if(force&&studentRoute&&previousStudentRoute)window.scrollTo(0,previousStudentScroll);
     currentRoute = route;
     if(route!=='main')pageMotion=window.CanqiPageMotion?.mount(content);
     if(previousReader){

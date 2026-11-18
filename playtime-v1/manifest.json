@@ -161,8 +161,8 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 6951,
-    "sha256": "41be14b331d5aea023605377431c5460544f96aa9a719579c9e9b2e88ef804f3"
+    "bytes": 7406,
+    "sha256": "0c99a5da334b315edc4952846e111d742b982edded8879413876e17d7dc9573b"
   },
   {
     "path": "site/copyright.html",
@@ -171,8 +171,8 @@
   },
   {
     "path": "site/app.js",
-    "bytes": 67907,
-    "sha256": "b36dcbd9fb33d47ab87ea3595a5694432d8980d17ee065beb609d68ae4f9484f"
+    "bytes": 68991,
+    "sha256": "80027aa2ee574f36356f66fc500c219deecf0c1738e74f9f2dad8d5271b8265c"
   },
   {
     "path": "site/digital-home.css",
@@ -240,6 +240,36 @@
     "sha256": "b3c08096b03337b0621a74a725c76e67dc7569ced8e8ea5b9e427be0e2745ba8"
   },
   {
+    "path": "site/mentor-students-2026-assets.js",
+    "bytes": 38250,
+    "sha256": "a457b151ea6c1fc917b3d6e047f9481eacab0986b9bdab1ae842a7f1c6894b12"
+  },
+  {
+    "path": "site/mentor-students-2026-content.js",
+    "bytes": 123102,
+    "sha256": "4d1e366d7cdc9e200f6ca2b6d2dcd7ee7297e6621a09e8ab39f76f4f7508d079"
+  },
+  {
+    "path": "site/mentor-students-assets.js",
+    "bytes": 15144,
+    "sha256": "ee31c46fbda5b1bcfcc5f5933c37260e7f9bc904299cda74e0f628e11f607b5c"
+  },
+  {
+    "path": "site/mentor-students-content.js",
+    "bytes": 48225,
+    "sha256": "a325cfe1de0052a1a87d9143af174eba8a5bbdd0faf583bf11047356e014e46c"
+  },
+  {
+    "path": "site/mentor-students.css",
+    "bytes": 4393,
+    "sha256": "d00934b6fca823e3eb950b438f9a6975dae11a45a2955334f77346f001f8c959"
+  },
+  {
+    "path": "site/mentor-students.js",
+    "bytes": 5062,
+    "sha256": "52433406ec280417ac972fa919c6384837a2d10f2a8a60984c0f1ffc131cd84b"
+  },
+  {
     "path": "site/mentor-winter-2026-assets.js",
     "bytes": 3057,
     "sha256": "4dc50c69d3b19488f36720d2b796717bd997d9a8ff11e98c14d83edd9897dca1"
@@ -256,8 +286,8 @@
   },
   {
     "path": "site/mentor.js",
-    "bytes": 9950,
-    "sha256": "c6fda54c6a50f76525e16348969b15abe95495f2cc09484f033469a340f50a5e"
+    "bytes": 8876,
+    "sha256": "3f8a61f74900aef26a5f87174aed7e6eb91e738048320d87f7b1b9f9c1f2dac2"
   },
   {
     "path": "site/page-motion.css",
@@ -326,8 +356,8 @@
   },
   {
     "path": "site/project-reader.js",
-    "bytes": 21480,
-    "sha256": "a33a6358c6dd6a95cec9cc5b037748ef0fa7d6c4f82cfe0a89bc0a11f5ad89e0"
+    "bytes": 21635,
+    "sha256": "36a6b2eddafbff78065fb00b36c60557dae6c0dc59eb79b0f9265a15ed21f48f"
   },
   {
     "path": "site/project-topias.js",
@@ -2248,6 +2278,2086 @@
     "path": "site/assets/mentor/nyu-2025/threads-5.webp",
     "bytes": 186508,
     "sha256": "1deccd7eadada8320414a42b9a555e0764184ade8c7961487ed03bc11a8ab555"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-alienated-architect-card-thumb.webp",
+    "bytes": 11170,
+    "sha256": "fcfd6b9a373978bd3683af36f0600fc2217a0ddb6473155ea0cf9b3a2ccbb1d9"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-alienated-architect-card.webp",
+    "bytes": 25802,
+    "sha256": "32992e5f087cea03a58cc8a448eed7a3e08aed4b295e7a34b35df77e30aa67ce"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-alienated-architect-cover-thumb.webp",
+    "bytes": 15722,
+    "sha256": "ceeebeab00c8c1d8da6b6e9325a62bbd952c727ecff0ecd8c70d29ca52407d6e"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-alienated-architect-cover.webp",
+    "bytes": 76328,
+    "sha256": "a0d258b6693ed6ca6b74ab6709b5320b14ae393fd72a40fdf4cea32748b1e8ec"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-alienated-architect-making-1-thumb.webp",
+    "bytes": 55206,
+    "sha256": "0f2642baa8473d15dcecfe85820516193464cb5e72e4a49239bf69a790e89c70"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-alienated-architect-making-1.webp",
+    "bytes": 67876,
+    "sha256": "40b9f2e02268071080fa47532a29fa10bd9a06e77a6b731c41eae990dec276c5"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-alienated-architect-outcomes-1-thumb.webp",
+    "bytes": 19260,
+    "sha256": "921de0cdf3fda7b8af5b91ff31a10aecb5237780160d37323ceda6862aab272f"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-alienated-architect-outcomes-1.webp",
+    "bytes": 85674,
+    "sha256": "fd0b86ea5b88021b0acc3375dae93f5636ca6be38c9438c174ab20613649ca91"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-caixun-card-thumb.webp",
+    "bytes": 68408,
+    "sha256": "e888aa793aa809b02b46b98be7cd1eb69f0e7ea1ed025f3b221ba4672b0bb861"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-caixun-card.webp",
+    "bytes": 83624,
+    "sha256": "1717f385d2426e7199f61ba3df841fe6948af3881b497e94350612ea8d9d70db"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-caixun-cover-thumb.webp",
+    "bytes": 72508,
+    "sha256": "09942e41826325dd7b72c6efb132ff887774e48e949155c8a1cf78b480785217"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-caixun-cover.webp",
+    "bytes": 324302,
+    "sha256": "f7890e71444fd0f88e6ebd372d86496395d53394177499a2ec6e6cac6d920289"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-caixun-outcomes-1-thumb.webp",
+    "bytes": 76110,
+    "sha256": "ab48bfc27c6b74b5f6149b5a620b9181ab6f519ca19640e3c7407c6fc21a1f97"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-caixun-outcomes-1.webp",
+    "bytes": 377350,
+    "sha256": "9a4460bf0559426c8fa2fdc3f68c69d2f2fd0dc562594b96c4f1cee27f4d8287"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-caixun-outcomes-2-thumb.webp",
+    "bytes": 40014,
+    "sha256": "40ba5387dc417dbc38f42c403ff0aa8e905bdeef2855289be6a164a38ac4431e"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-caixun-outcomes-2.webp",
+    "bytes": 188148,
+    "sha256": "3383c7848e88dfad95212e695179ea5d95ca812ec2aa4d6b20db28b18b8d3336"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-code-lighthouse-card-thumb.webp",
+    "bytes": 21120,
+    "sha256": "ac632be38de3d281afb6d4dd402d07c70b484d115c72db1527d8ef353ee65e92"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-code-lighthouse-card.webp",
+    "bytes": 30342,
+    "sha256": "d479d599978556d30f9163489784cb2062d8c5051d55a0ce463f1995c7f104c4"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-code-lighthouse-cover-thumb.webp",
+    "bytes": 23498,
+    "sha256": "19c6a71e413c4def33d7aa80508396da5c66fb50fbae77fd35d4f6fba7133718"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-code-lighthouse-cover.webp",
+    "bytes": 127820,
+    "sha256": "af09480cf82c05f23a7455cdc6bca9a3d30c818f7e329b52d0b44e226ca10cae"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-code-lighthouse-making-1-thumb.webp",
+    "bytes": 53754,
+    "sha256": "d108ae46418f99adc269808cdcfa60cf41bacaedaf45e176356b58116c574d51"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-code-lighthouse-making-1.webp",
+    "bytes": 69948,
+    "sha256": "453071b2f38576825fe9d80e1eff4e60a891f619c457441aeac4ced7e0923333"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-code-lighthouse-outcomes-1-thumb.webp",
+    "bytes": 40004,
+    "sha256": "2cf37b6fb504c96af8eb50ac154174bd6ca05b79f6aa07cc1d15770d303b3871"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-code-lighthouse-outcomes-1.webp",
+    "bytes": 75408,
+    "sha256": "aa204e3b3f5c27df270fdcee9dd8e5d797d52972e7ea6dc3602c8f3d52297bfe"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-code-lighthouse-outcomes-2-thumb.webp",
+    "bytes": 52572,
+    "sha256": "4defc9874af497f196e8cda996bb5ab7b24cbbebf57612464317f1faf3764eeb"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-code-lighthouse-outcomes-2.webp",
+    "bytes": 77166,
+    "sha256": "e86334173528bad21c9e23449f487266c92d2e370b5e19c9ff5ccaa41ca6937a"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-dissociation-cube-card-thumb.webp",
+    "bytes": 9242,
+    "sha256": "6d6228a8d0d6cb80823e12628e7e4b13e0d398600e40433177e27722259dd4af"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-dissociation-cube-card.webp",
+    "bytes": 12238,
+    "sha256": "93ae2632f1738b7d52b8c460cdc856e23dddd7241b34e5d15586bd75c7c53217"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-dissociation-cube-cover-thumb.webp",
+    "bytes": 43928,
+    "sha256": "11f4c51c81ebc195a183750d4a58d1f31b3f7643237b055edc668e6216bc17dd"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-dissociation-cube-cover.webp",
+    "bytes": 215598,
+    "sha256": "801c2434ecbe07302354761640f370a458bb7b86d8cc1f42df7d508d512e86a5"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-dissociation-cube-making-1-thumb.webp",
+    "bytes": 51330,
+    "sha256": "04a114191114a837e52cf97e0afb53b167205bdb257c1ee1b393277639bb00ac"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-dissociation-cube-making-1.webp",
+    "bytes": 65468,
+    "sha256": "bb4e4720b6afaf6e03edeb764b0a73fedfb50ff4cd502768df56e239942c5ecd"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-dissociation-cube-outcomes-1-thumb.webp",
+    "bytes": 27816,
+    "sha256": "3f3b0b879975bb75f194e630446ad7838318bfff34f145201224b137b106f05f"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-dissociation-cube-outcomes-1.webp",
+    "bytes": 102048,
+    "sha256": "3807a490ea6073182d5d9e534fa4b967eea3cc20da7e445b0ae71904079e750b"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-dissociation-cube-outcomes-2-thumb.webp",
+    "bytes": 16076,
+    "sha256": "6d8c10b15a9ccbeaad09715ce63bf90b0cee59bb3cf86475bf733c70dd66e0a1"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-dissociation-cube-outcomes-2.webp",
+    "bytes": 19186,
+    "sha256": "62648b74ab8bfb63b0fe5f4db9e414153b3d035dc4a6ee001794f549a26761c8"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-electronic-erectile-dysfunction-card-thumb.webp",
+    "bytes": 27944,
+    "sha256": "22380d5e4e9363b7742eb3227c57525fa25b57e4f47ca180ee35d1fce5757a4c"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-electronic-erectile-dysfunction-card.webp",
+    "bytes": 34504,
+    "sha256": "3bc81e5160d99cfced63da94ddef52e4570abda7dbbf136a797045a8b47ca120"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-electronic-erectile-dysfunction-cover-thumb.webp",
+    "bytes": 18904,
+    "sha256": "c1a9c22ba63d2b3d0b80ee6fe3ede32c02cc2e903c13b52352698182ea8c631b"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-electronic-erectile-dysfunction-cover.webp",
+    "bytes": 94186,
+    "sha256": "416afbd469a120a6655cf7e4e57eff80c69a3f058404de9dd82b606a6192e19c"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-electronic-erectile-dysfunction-outcomes-1-thumb.webp",
+    "bytes": 35036,
+    "sha256": "9ee2f92c9aa711d4e1ad220d99b3f956490572ca3bdebf8513a05f065fa7be89"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-electronic-erectile-dysfunction-outcomes-1.webp",
+    "bytes": 166214,
+    "sha256": "778d0d226a430363486b2d481e12ebc9c6b6ebd2897ab336f7a05051c19592b7"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-electronic-erectile-dysfunction-outcomes-2-thumb.webp",
+    "bytes": 71198,
+    "sha256": "a3331cbc1d20455fc4b8db7ed246eaf8dc43d7d0c84db7f7e42f33f58fcc1f1b"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-electronic-erectile-dysfunction-outcomes-2.webp",
+    "bytes": 275182,
+    "sha256": "3df316df0ed397945ed5a744d0cea3ab0356aeb8bc61e04650b8673b5271e348"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-hush-card-thumb.webp",
+    "bytes": 26408,
+    "sha256": "3b1856a3fba2b1b3d1f467393d3657465f2cd22434eb712c588b3df6da3f7f56"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-hush-card.webp",
+    "bytes": 67802,
+    "sha256": "4dfee84081655a7766ce36d24815bc7985003cd23f80193cbbb2b2ecdb1d06d1"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-hush-cover-thumb.webp",
+    "bytes": 37500,
+    "sha256": "486002fb461018077eec5404efdf2b1d62241b0180ee316e37b8df7c5e4dc2b5"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-hush-cover.webp",
+    "bytes": 161092,
+    "sha256": "dec96779b90591fb3ffce990fbb07c4fe10589cd5dabc649371f20a0b8ab17b4"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-hush-outcomes-1-thumb.webp",
+    "bytes": 49600,
+    "sha256": "fccc8c506a254a23458a10554ddfdde896b28acc104579c355a7bac693f48f51"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-hush-outcomes-1.webp",
+    "bytes": 221178,
+    "sha256": "0094ebef543627fa39ff59b5e4a47f9e042b3f48d1672e1e9b292239ef6e07f7"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-hush-outcomes-2-thumb.webp",
+    "bytes": 43326,
+    "sha256": "8a791c25c03c7f7d25161ad0eb5e84c435a4384db4ca22d377d50e2c9a815605"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-hush-outcomes-2.webp",
+    "bytes": 168516,
+    "sha256": "d34b8a6420918d88c18ac1e299e373243f40f737b42472d55467966da6c60343"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-illusory-elegy-card-thumb.webp",
+    "bytes": 44866,
+    "sha256": "8e32772ed668aa071a555ec2656bb4ec0826ff1956642a19ee069d608d0a3148"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-illusory-elegy-card.webp",
+    "bytes": 180530,
+    "sha256": "470811ba223f65bd0509f9f64ec27e330388c665d05d952730f328ddbfa8ecae"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-illusory-elegy-cover-thumb.webp",
+    "bytes": 52862,
+    "sha256": "5ff8400e13794dbc29156887a52b4e7567cb9554a3e3e40e8d8db634af02bbe4"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-illusory-elegy-cover.webp",
+    "bytes": 212298,
+    "sha256": "be699aebb94b721dc3e8b3a498022beea8d95a66d891d2bd88727aa4564254c2"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-illusory-elegy-outcomes-1-thumb.webp",
+    "bytes": 52734,
+    "sha256": "6d2c685453519551657315c313163116fcb2eb6f0d8b4ffdcf0e1c19724a1fd0"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-illusory-elegy-outcomes-1.webp",
+    "bytes": 231428,
+    "sha256": "ddb67fc2c60cd69d0bda079f067cc43a531ab79a17eff5288725c9657b6a429f"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-illusory-elegy-outcomes-2-thumb.webp",
+    "bytes": 54218,
+    "sha256": "b081b3c79559941ff06f21bcbae3b91a6572a479a3c824a97d5e1dab5d9a7924"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-illusory-elegy-outcomes-2.webp",
+    "bytes": 187110,
+    "sha256": "53f42ea56b09c67f98fa161647279117940425a18de634240c969c7be346fb90"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-kitbit-card-thumb.webp",
+    "bytes": 36316,
+    "sha256": "82b170fb67831eb56afa3fa26a96c7794aefe5f3b6c58c6e2d5c3f78869ac647"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-kitbit-card.webp",
+    "bytes": 85518,
+    "sha256": "392342dfdb6c63b584f04519d9db27604f40f3e67900fb89f277f4618c3de238"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-kitbit-cover-thumb.webp",
+    "bytes": 27640,
+    "sha256": "79c59eefd8b58632b9089bea941001ee2a40e9832deea34ab7f1da2c695aaf3b"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-kitbit-cover.webp",
+    "bytes": 110110,
+    "sha256": "7774559fc0c8f6f6b9c16df6afb0dae6d6643f692fb3b14f0ac6088592179c0c"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-kitbit-outcomes-1-thumb.webp",
+    "bytes": 43160,
+    "sha256": "9cb23b45feabfa186895e27cb12b4999e9ea50bed8bea5bfd2e07fcfb6082eae"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-kitbit-outcomes-1.webp",
+    "bytes": 103058,
+    "sha256": "c5e97691b21eb4bcb7ed27463144508303da08d7e4d768707013b55183fdb698"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-lichenctuary-card-thumb.webp",
+    "bytes": 48094,
+    "sha256": "d0b13d96ba47ee1ef4bfa194bcf1dcf6215c6f03d32a8d0d061e04dfad8fb480"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-lichenctuary-card.webp",
+    "bytes": 114648,
+    "sha256": "c0419dac013a852c3a95091a8f87e9d6cc1e007099369d03448e161585dd19ea"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-lichenctuary-cover-thumb.webp",
+    "bytes": 87636,
+    "sha256": "9a4b6b73febb56a504f46215e93573f7b5bcdf031a6e9d665a691d97f6f645b0"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-lichenctuary-cover.webp",
+    "bytes": 441324,
+    "sha256": "2399f7fa7b423f438cc511189f3feebdc0405c9024c95d419fefbe08209b83eb"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-lichenctuary-outcomes-1-thumb.webp",
+    "bytes": 44532,
+    "sha256": "21f2e86bcc4f21ecf27018b55051bb0e77ed1e84252bc64d36b693328ce734f0"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-lichenctuary-outcomes-1.webp",
+    "bytes": 191088,
+    "sha256": "31777a8d3187331f4b97646328464aa56439553f89ea0569d9aa8840a4f38671"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-lichenctuary-outcomes-2-thumb.webp",
+    "bytes": 53002,
+    "sha256": "109da39f3f76d1c2b0b9cd6377d4e184d0b3f18937768bdfc0fcadb6b4ecd6b8"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-lichenctuary-outcomes-2.webp",
+    "bytes": 232992,
+    "sha256": "c41ab0dabe89caa61cadb42b00d3c0ebb4b6db2171e8dabec475898f030c6b9d"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-line-of-sky-card-thumb.webp",
+    "bytes": 45072,
+    "sha256": "319c18e75a0ee9d93cccd2393a32486161cb456527acf4cb3644305a244adf76"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-line-of-sky-card.webp",
+    "bytes": 102800,
+    "sha256": "d2a18ee2d5eb3ebacc00c56f68edecfa6940f7b8b020ca02429b464e3dc19e7b"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-line-of-sky-cover-thumb.webp",
+    "bytes": 20738,
+    "sha256": "8d2689d47ab1a502802946f948a9f830eb603445f038ce707f98a6ffef1ad8cb"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-line-of-sky-cover.webp",
+    "bytes": 123692,
+    "sha256": "55c41ae9fda3b08309c69ca7d6ef88aacee2244b0d3d2f2dd5154fcf1fdaae24"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-line-of-sky-outcomes-1-thumb.webp",
+    "bytes": 36392,
+    "sha256": "beddecae89c8b98955fd2a124ee5c9d990eb0b1956605d588afcb680d52da00a"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-line-of-sky-outcomes-1.webp",
+    "bytes": 182734,
+    "sha256": "82ba41945fbeb722c7cde9f23d063b4fd9337430e188c182cb4b7a5ad1d10e52"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-monsters-of-appetite-card-thumb.webp",
+    "bytes": 54016,
+    "sha256": "1994cdf6ffe4ddcb93574dff7b80a4d95f7e9576bc927f0a6cd6ef0cf45f0a56"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-monsters-of-appetite-card.webp",
+    "bytes": 297154,
+    "sha256": "ae36e44dcbb375cb9d9b66697fb5a176d5dbe83dbe600b2edbb75e0310534d8c"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-monsters-of-appetite-cover-thumb.webp",
+    "bytes": 50512,
+    "sha256": "4524b4e40a3ccd742f6685ad6f498278d582b9db41433565d7dad586328abae9"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-monsters-of-appetite-cover.webp",
+    "bytes": 338402,
+    "sha256": "9f368bd8fbb7a2408740b55f4db67b853185419db6f7a827f1a1c28d7d0229e7"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-monsters-of-appetite-outcomes-1-thumb.webp",
+    "bytes": 54016,
+    "sha256": "1994cdf6ffe4ddcb93574dff7b80a4d95f7e9576bc927f0a6cd6ef0cf45f0a56"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-monsters-of-appetite-outcomes-1.webp",
+    "bytes": 297154,
+    "sha256": "ae36e44dcbb375cb9d9b66697fb5a176d5dbe83dbe600b2edbb75e0310534d8c"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-monsters-of-appetite-outcomes-2-thumb.webp",
+    "bytes": 89716,
+    "sha256": "cb59c9051d3446ce42d24f5e440c6728c79e9087b8ac6c5d566ed1a2d9301b16"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-monsters-of-appetite-outcomes-2.webp",
+    "bytes": 145772,
+    "sha256": "1c08bd626e79236dd0da45d32dd4446abdc5c7769c5d1230a97079bcd448b899"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-perpetual-hospital-card-thumb.webp",
+    "bytes": 14168,
+    "sha256": "bc46ae179614b4e695b0f35b12f817e9f8ad1e59befce5bca30e5c417b1b8b08"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-perpetual-hospital-card.webp",
+    "bytes": 34016,
+    "sha256": "f372eef8dfbd077cdf16bc41b01bc0c583c01534c55eb03f77d99bcc2b93f592"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-perpetual-hospital-cover-thumb.webp",
+    "bytes": 29838,
+    "sha256": "aef70707454b34ac40f7574252910ac5cce786af138b5b4965a01db45a2cd2a1"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-perpetual-hospital-cover.webp",
+    "bytes": 118570,
+    "sha256": "fe7b4cb6f55bf9a61f5f295b571c947efeba3585ce369b5cfded893d042e98a6"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-perpetual-hospital-making-1-thumb.webp",
+    "bytes": 60760,
+    "sha256": "c4ce978e4ebcaf2584831c67eb135e1185fd09d64956b960dd8887fd46125b27"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-perpetual-hospital-making-1.webp",
+    "bytes": 139898,
+    "sha256": "18e6667e426da60d613afeef9f5b427392c07963d36bd4b2c01b1868eb66eff2"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-perpetual-hospital-outcomes-1-thumb.webp",
+    "bytes": 19516,
+    "sha256": "227e80f40ab4970ac794fbc76a869e727dbeaf4229332faa7b34dee85e1bee81"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-perpetual-hospital-outcomes-1.webp",
+    "bytes": 74148,
+    "sha256": "466a4c0483c8d187136ff93eff73ff59aa78544843d576448682bf20f0c2ff15"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-perpetual-hospital-outcomes-2-thumb.webp",
+    "bytes": 33158,
+    "sha256": "bb67b17eedd2442ec7b1cf7e6deda14020685090ee347f38aa7a2c5cc12fc547"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-perpetual-hospital-outcomes-2.webp",
+    "bytes": 131778,
+    "sha256": "7adf026ded08404c754fc6f636def88f923f3fb7ca1736d36ad3a6d1c954c59e"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-underflow-card-thumb.webp",
+    "bytes": 50646,
+    "sha256": "c6d6c2a1e0cc62537f03f7ff4cb011c72e1311eed547a40a78a6a7a6a76cf7eb"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-underflow-card.webp",
+    "bytes": 75194,
+    "sha256": "2973796a798b1194bf6485b6269e0e314ae2161fdb9a2015980ea84bf17aeb37"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-underflow-cover-thumb.webp",
+    "bytes": 62396,
+    "sha256": "41aee497ac543837ed557abfeda4ad6cf0ae6d50ca11515524deea1e11073c82"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-underflow-cover.webp",
+    "bytes": 307718,
+    "sha256": "f4d2bd33506374b97a8b6b98ddd498a96482868274dff196e1772ce90a2a5844"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-underflow-outcomes-1-thumb.webp",
+    "bytes": 53730,
+    "sha256": "62d7908beefc0d7c6e6ad5ac9b8a2a7d165cc8c5bd0bb3b4a9e592cd807178f5"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-underflow-outcomes-1.webp",
+    "bytes": 232744,
+    "sha256": "4dada8f8835b779809ba5206c975b6a41aaa9773e9206e1a0e48588623177815"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-underflow-outcomes-2-thumb.webp",
+    "bytes": 71968,
+    "sha256": "6f2c5da811b34ae24de2d0e4e1485db74926b3b7f461620bd273135db961d0ed"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-underflow-outcomes-2.webp",
+    "bytes": 353960,
+    "sha256": "d70763b4b3d7670f284b9e1d520edb246ab9e8b5da2f783f368014c9d5f2582f"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-veiled-pulse-card-thumb.webp",
+    "bytes": 36442,
+    "sha256": "264f7898ad4f2ac2b2f050a046e859d048b69698c1c72396062ae4507bbd4f62"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-veiled-pulse-card.webp",
+    "bytes": 55342,
+    "sha256": "76fea2f5bcdf30f22119dc114df8627f20c0e2eda6e029ad498a2a0b81e7b981"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-veiled-pulse-cover-thumb.webp",
+    "bytes": 23980,
+    "sha256": "44fd5b0627b464dd4b5f040abcf5d389c8851d777a1b41a71b204cad8692c2cd"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-veiled-pulse-cover.webp",
+    "bytes": 116292,
+    "sha256": "321ab61c17a2140090f5e3668130e53d1af343fe9dd2d78551530b84569b67ea"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-veiled-pulse-outcomes-1-thumb.webp",
+    "bytes": 37450,
+    "sha256": "34f9cee7303837b600e62b6deebef737005d95409e5f462263ec700dbcb65b82"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-veiled-pulse-outcomes-1.webp",
+    "bytes": 116208,
+    "sha256": "909ccc57bc861b0699775c8f2ff50a4d9cfc32cea43f92aecd2dce41165ce027"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-white-dog-card-thumb.webp",
+    "bytes": 57796,
+    "sha256": "eb6cc7428f615a0ead14a2254564082195c062e86d3be7c4b0ff88f0b09a4ad4"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-white-dog-card.webp",
+    "bytes": 141580,
+    "sha256": "b6801b861b3f0cad7f51f41b6495fb0cdb3699bdc5e2bd562990853b2b6403d7"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-white-dog-cover-thumb.webp",
+    "bytes": 53556,
+    "sha256": "351875ce29165a8a704dcdd69dbf8a96dc83c3ce3a9d7afc7abb8882e0abb25d"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-white-dog-cover.webp",
+    "bytes": 212842,
+    "sha256": "07571b16ccfd60792fc5d0162a82c86b60725494bd63024dfd83804dbe1ccf61"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-white-dog-outcomes-1-thumb.webp",
+    "bytes": 69470,
+    "sha256": "19de4d30d1f86471104b3df869c53753d05d22f680eb0dc6d754463e019dfbd1"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-white-dog-outcomes-1.webp",
+    "bytes": 289990,
+    "sha256": "f66ca77cf2be534fcab7bac8e9858985baee1e289ab8fd109a1b9199caa665ca"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-white-dog-outcomes-2-thumb.webp",
+    "bytes": 50224,
+    "sha256": "436f9a0b907c88b71d41e1a936da9c2ab5a76ffe3b673e1bb537849c92199c18"
+  },
+  {
+    "path": "site/assets/mentor/students-2025/student25-white-dog-outcomes-2.webp",
+    "bytes": 189070,
+    "sha256": "f55053bb79eb7e56b49600dcbcdb27ce9b61ec38c224f8a48c4caa39cb623de0"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-absolute-truth-card-thumb.webp",
+    "bytes": 53420,
+    "sha256": "5b3a806964a9a770ba1de62cc16d2662f7b6745e3e6c2e0677b3724d89c14c26"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-absolute-truth-card.webp",
+    "bytes": 95102,
+    "sha256": "f38a702b943616f2a843e1b8497d81a73aeb0f47d69d261967de02ac55e50a64"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-absolute-truth-cover-thumb.webp",
+    "bytes": 33364,
+    "sha256": "6705a4661b8a488954755b8080d8180edbe3f084231fd5ae67c8d3e5e99c851d"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-absolute-truth-cover.webp",
+    "bytes": 141468,
+    "sha256": "077597ea3cac2aa4899790a23d022fadd30cf7338b56af9278114355ffe53df0"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-absolute-truth-outcomes-1-thumb.webp",
+    "bytes": 41722,
+    "sha256": "355dba739ecafd7fc284026d58dedf7032bafbacc3298ca2ebd842cc7138ceff"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-absolute-truth-outcomes-1.webp",
+    "bytes": 224744,
+    "sha256": "a4b302f38d76d92ba7db2bc179f10631c817483c60db47f654f0010205d3db6a"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-after-white-cube-card-thumb.webp",
+    "bytes": 48744,
+    "sha256": "e7505b4473cbde8c8e1b5e99dcf3e971e5bf43a204a978e1d5222f074ad402a7"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-after-white-cube-card.webp",
+    "bytes": 95038,
+    "sha256": "93e73a44e391789a32cbe7b2f3ec45f99e9ea933074f465ec19b93d80c0aa3d5"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-after-white-cube-cover-thumb.webp",
+    "bytes": 57952,
+    "sha256": "05d40f751ac3b1d41e45c24fbddd36987b2f307f726b9972b455a86b5f788ad4"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-after-white-cube-cover.webp",
+    "bytes": 279326,
+    "sha256": "0a50a91209c8f08b98a8f6d78c9879d542d7208b35a0d54e55f975af7c9d8f34"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-after-white-cube-outcomes-1-thumb.webp",
+    "bytes": 59814,
+    "sha256": "3f5c56d8d42afd8e1e1f7258957610856f71509b7b3ac4703b9d1b03e0b01fe3"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-after-white-cube-outcomes-1.webp",
+    "bytes": 258254,
+    "sha256": "c67cffad721485bb1e8a3afb1b5b9512bb439f850a4512cb73b31084f90b786b"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-after-white-cube-outcomes-2-thumb.webp",
+    "bytes": 34800,
+    "sha256": "94f81dd6481152549de6708efdf3e9d0f7a3ef5f5045ea431cacc84f7285be7b"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-after-white-cube-outcomes-2.webp",
+    "bytes": 171888,
+    "sha256": "6d8d4f61e6973c39375326623c80a078eedc24f3f95fdf3ab8b9c59d891ab241"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-allergy-era-card-thumb.webp",
+    "bytes": 56124,
+    "sha256": "9cbc17b5342136e41a11978f90545bce3a25f87c2eecb1e7e9ade8528360d28f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-allergy-era-card.webp",
+    "bytes": 162580,
+    "sha256": "c88d96068c5d461fe63aa0e52b46a57c2fd459124cda258ef39f9bc61dd807ea"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-allergy-era-cover-thumb.webp",
+    "bytes": 36844,
+    "sha256": "2beae6a29331378f25ef5b8cf00a91a6b58ebeceb4ed015d578c495a5e695f03"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-allergy-era-cover.webp",
+    "bytes": 171070,
+    "sha256": "ae9d84f99b1bb1febd9ccac90456a055435bffe2c1d3164e93e9db3a64b501e7"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-allergy-era-outcomes-1-thumb.webp",
+    "bytes": 46128,
+    "sha256": "ee9d6968e460e900a63fe883ce3448a4739090fd31912b7d8b3341ad14c760d3"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-allergy-era-outcomes-1.webp",
+    "bytes": 224832,
+    "sha256": "8ac40d6ef18e3fac245a76b09e09c7045c5660adfc3f642ef2a88b8e58319b1f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-allergy-era-outcomes-2-thumb.webp",
+    "bytes": 50616,
+    "sha256": "1ce62e77bb36fc378f3a5313be926533c84ef777ee74859893840239e9e57ec3"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-allergy-era-outcomes-2.webp",
+    "bytes": 271776,
+    "sha256": "65978a4caa133b2b5052d324382fb36bcbc9c1a82ad953bf7c3b74b3c8e33d3e"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-allergy-era-outcomes-3-thumb.webp",
+    "bytes": 54342,
+    "sha256": "fb6f250dc5d78260ab9cb67c122f84a1048652a688c6a4dfdacd287a7f05dc8f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-allergy-era-outcomes-3.webp",
+    "bytes": 328060,
+    "sha256": "64e4ab97159f2cad8f4f7ee8d365d94b53f7cc649209ac99a9c3b383685662fb"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-apple-card-thumb.webp",
+    "bytes": 33486,
+    "sha256": "9d6e835ff579e02c93ed53fa5939a6cb70e74c5e15509ea780b5d86b54aca7f3"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-apple-card.webp",
+    "bytes": 68232,
+    "sha256": "31be7f06d3ce48b189ead7636d0d5b540305b7565389b456af910447b88e5203"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-apple-cover-thumb.webp",
+    "bytes": 24330,
+    "sha256": "d4a05178aa0c5c886d1bcce56574aa46bc07f3199e7b9559b2d301b299146d04"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-apple-cover.webp",
+    "bytes": 130332,
+    "sha256": "ed656aee788e53b504bac8b2d1e40b603a5313abb67a5a5e344b1b3b1a1b7e2c"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-apple-outcomes-1-thumb.webp",
+    "bytes": 27834,
+    "sha256": "c8b9da948e55729e6912b2990e456798d52db6a22e299dc5df026ee63662bc7b"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-apple-outcomes-1.webp",
+    "bytes": 46342,
+    "sha256": "026d36c8e883e039a7ec58adb7941a1f496e692ea2a823b42c661bee7b988ef7"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-apple-outcomes-2-thumb.webp",
+    "bytes": 67710,
+    "sha256": "2af032282334b3c269b1535738af8d5d36c9c0f6f7178ae9ab043ff95c96830f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-apple-outcomes-2.webp",
+    "bytes": 110874,
+    "sha256": "58d3dc419313407290a3adee4192da5b77afc4ca7f1a698526b39e1ed8714c90"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-between-her-pulse-and-mine-card-thumb.webp",
+    "bytes": 31094,
+    "sha256": "df3d9167758891afc16be9dc3a34898fd43d75c03108df21846f98ec9e27f557"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-between-her-pulse-and-mine-card.webp",
+    "bytes": 55066,
+    "sha256": "03146d27eab1f663bde32ae3c9190d431e39e1021452c564fd57b2c63e5dce1a"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-between-her-pulse-and-mine-cover-thumb.webp",
+    "bytes": 63958,
+    "sha256": "bdd18ca9abd59bf532f86c4b8ddb07386debd0d2434cebef4e152f12799dee36"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-between-her-pulse-and-mine-cover.webp",
+    "bytes": 277422,
+    "sha256": "4ca5a73d762e7e24f50a60b5a1eb0f1d8748e0370b1edb127a0c071d08a750ee"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-between-her-pulse-and-mine-making-1-thumb.webp",
+    "bytes": 70186,
+    "sha256": "7e2261d180518acc818f65117e7c817477aac486ff601839ac17394dc15f5952"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-between-her-pulse-and-mine-making-1.webp",
+    "bytes": 164806,
+    "sha256": "fa9ebc2209f073f81d02141ee39cb14526159846c0cda426ab70bfb53f829ae7"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-between-her-pulse-and-mine-outcomes-1-thumb.webp",
+    "bytes": 50340,
+    "sha256": "a8dc72e1cac3b22007b3d3f6c9d85f661f7054ac21c7c042a88c7729ba6a71f2"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-between-her-pulse-and-mine-outcomes-1.webp",
+    "bytes": 219982,
+    "sha256": "fa7094901a5ab18f7d14d5bd091cf9df2c07b5b4461b82c45f0de2e80cf2605d"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-between-her-pulse-and-mine-outcomes-2-thumb.webp",
+    "bytes": 49228,
+    "sha256": "e984ec69712900100409204eb5fc30807c3200b1b07171cee1d21331e3fc3738"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-between-her-pulse-and-mine-outcomes-2.webp",
+    "bytes": 232892,
+    "sha256": "29c7b844d088589a3e1cf70f3259b5996d27e9550c65d4ec30ec7385b9b1e14f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-bioscar-card-thumb.webp",
+    "bytes": 10536,
+    "sha256": "69757c1f80635d3bf30f0cc65eb368727c9a3345b4c2014e8f3558b809cb0df5"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-bioscar-card.webp",
+    "bytes": 17566,
+    "sha256": "e2c7d350b511ab093759956f2788258438e02020bdfe434bdc246ff4008c0977"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-bioscar-cover-thumb.webp",
+    "bytes": 25320,
+    "sha256": "365992cbd5f96a9f317f3832752b755b828743a8dea4224267c4b804b6bbacf3"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-bioscar-cover.webp",
+    "bytes": 99970,
+    "sha256": "29eeca23aaf0e91853b6ca263b248aabe521d6b5bd455eceee7fe7322b204e02"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-bioscar-outcomes-1-thumb.webp",
+    "bytes": 11326,
+    "sha256": "242eb49794469a4bdef4f7a0ac8414b049475011c601ac4750bd07fc00d4b34f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-bioscar-outcomes-1.webp",
+    "bytes": 43662,
+    "sha256": "5f79268d895aa725752ab7bdaca943a62de2581c58acc8caac94764aa4cff82f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-bioscar-outcomes-2-thumb.webp",
+    "bytes": 40574,
+    "sha256": "ec9866fffe556c8fe4c1390cc5716c8a639edb330aad2a58589c38aaa9b17513"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-bioscar-outcomes-2.webp",
+    "bytes": 72008,
+    "sha256": "b1f4119b65a839684a6e5336ea076342acdda42a89051cb8bd13ffafe661d540"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-contraptions-of-protection-card-thumb.webp",
+    "bytes": 65760,
+    "sha256": "06af7c7b876e7976ca725fb1bc41b10b5689f7915f67c864014bcac1301e2dac"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-contraptions-of-protection-card.webp",
+    "bytes": 113920,
+    "sha256": "9fbf5c4d6b2fae93ea0b709a4b6d512a3c1ca97ca6e431a6c1bb2d4689d92f50"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-contraptions-of-protection-cover-thumb.webp",
+    "bytes": 48128,
+    "sha256": "7f614702d66ff5d67ad1af487657adfd24a33b4691444c4b6b094973e84884d2"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-contraptions-of-protection-cover.webp",
+    "bytes": 200002,
+    "sha256": "0fdbc95e0e3d7e02ae01b9e3cb9008eccb897ffadc0514ccf9dcd71cec2c6418"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-contraptions-of-protection-outcomes-1-thumb.webp",
+    "bytes": 41546,
+    "sha256": "a9ba5fc2e9ca578c85d753bd011991c269450e16b6054300ecbcf719dd87458f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-contraptions-of-protection-outcomes-1.webp",
+    "bytes": 236646,
+    "sha256": "da875ece6db5a51df60623d3dfe49b21c3a3e9567783e153c64a34b28c3ee380"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-dignity-on-the-assembly-line-card-thumb.webp",
+    "bytes": 85196,
+    "sha256": "a3b4e0584948385d781d67412b723f06304e5f964326e50ae9840a9c86112561"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-dignity-on-the-assembly-line-card.webp",
+    "bytes": 124868,
+    "sha256": "73234a9b73fd91b441500ba8ed0af0bdbc1ef8354ae0d54e04c7d2ad61bc8c9f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-dignity-on-the-assembly-line-cover-thumb.webp",
+    "bytes": 63658,
+    "sha256": "76f135c55d065c3b77620ae49f2a9ad5701a194a2079415697260f92cb5303ee"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-dignity-on-the-assembly-line-cover.webp",
+    "bytes": 232966,
+    "sha256": "f28f7dcab04bc8ee486e2586a2036084413eda2d011f752d1be8a70d2d79acee"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-dignity-on-the-assembly-line-outcomes-1-thumb.webp",
+    "bytes": 54860,
+    "sha256": "d93f5f1735b990052cf69fc58a499c76e0736482c81319905fc5a188f52ce5ae"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-dignity-on-the-assembly-line-outcomes-1.webp",
+    "bytes": 198412,
+    "sha256": "71144be6e740b77539ffe7dd427b919d0645a7e7016dd0dcf91a24878c5a6a9d"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-dignity-on-the-assembly-line-outcomes-2-thumb.webp",
+    "bytes": 63602,
+    "sha256": "55fb21add5d7673c68dc0156704865ad6aa50b7a177672a397180a2b13cf9d5f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-dignity-on-the-assembly-line-outcomes-2.webp",
+    "bytes": 106150,
+    "sha256": "feaf5491199f0a506ccd9c4ac2a7911ee69dfe2f36dbfe0688581fa74e9a28e2"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-echoes-from-the-old-factory-card-thumb.webp",
+    "bytes": 38986,
+    "sha256": "68a106ebe224c6a3bc611044a5d6d6148db56b9e64b839596d60c0ef4336800f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-echoes-from-the-old-factory-card.webp",
+    "bytes": 91618,
+    "sha256": "7ee6c4a383ed3bbebf9d9662732b3ac5c71899405d1bdcc213d85d89c0e7c693"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-echoes-from-the-old-factory-cover-thumb.webp",
+    "bytes": 42132,
+    "sha256": "c44ca1678c7f0385e3a5b00408c3d7e9d3aa81dcab2950e99f6dc3cb1a094dff"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-echoes-from-the-old-factory-cover.webp",
+    "bytes": 173674,
+    "sha256": "e620a062d4cf396fd621d70bc8dc8653a0e0f183fd398cf382eb76f8f80eebe0"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-echoes-from-the-old-factory-outcomes-1-thumb.webp",
+    "bytes": 44210,
+    "sha256": "5622dee703d5349cefcbf62dd4d97cf96578bc793b5c952566fe33fc59ca8e9a"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-echoes-from-the-old-factory-outcomes-1.webp",
+    "bytes": 229998,
+    "sha256": "55b314f24f6ad3da5b91efdee354de74604691b04d4cdf0de02890afe01d6560"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-echoes-from-the-old-factory-outcomes-2-thumb.webp",
+    "bytes": 41892,
+    "sha256": "e09222209a030e1dc3d1ebabfb9458b136136f8df1f7f06305d4a0bf9fbdc0eb"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-echoes-from-the-old-factory-outcomes-2.webp",
+    "bytes": 169502,
+    "sha256": "780da28a2b6f41d82ea661449d7fed32c77c73331e542e2edaef3ec9e0208375"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-echoes-from-the-old-factory-outcomes-3-thumb.webp",
+    "bytes": 39216,
+    "sha256": "45a2fc7e21522f0c66e9c7aa1a4b721306d72ed6bb8514cc2b2743599a07a4cc"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-echoes-from-the-old-factory-outcomes-3.webp",
+    "bytes": 155244,
+    "sha256": "4896dd90bad8a806d7b23f4f43b29e77d25a499f8d472baf3e2fcecdc04b268b"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-embers-card-thumb.webp",
+    "bytes": 19738,
+    "sha256": "1462872eb4734c9873b124fa47e286f22c02492857b0958f4f594b51e82e8a32"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-embers-card.webp",
+    "bytes": 26824,
+    "sha256": "d16cd8057084eb8d94725787c7b9db8095703930619824ec513442500ddff81c"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-embers-cover-thumb.webp",
+    "bytes": 30218,
+    "sha256": "94109eba709f722f33b2df7dcebe6355e5d4e607b2d4f5d07d1b15386609b96e"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-embers-cover.webp",
+    "bytes": 183886,
+    "sha256": "c853bf736f68c3215308cc74da44c180b564e43dc2e49d03b21ac4c91f1f9516"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-embers-outcomes-1-thumb.webp",
+    "bytes": 20486,
+    "sha256": "80eab7d633f451f7c978c24e0a3e04841318b0d211c258f361f6f06e3b1a3433"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-embers-outcomes-1.webp",
+    "bytes": 111704,
+    "sha256": "c9860f7844bcd8565f6bddccb18c8676d74dde9937aedb84ec0b75cb5c0459c3"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-embers-outcomes-2-thumb.webp",
+    "bytes": 20864,
+    "sha256": "cb62c37e53dc5994c2ddac6ce399cb9c194d4332f95561121cc04d72f2be3cd8"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-embers-outcomes-2.webp",
+    "bytes": 25434,
+    "sha256": "c1785683cfa745d68b2dca7eb3e4ecfc33413800f247df544276b0a74b70424a"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-ethereal-guardian-card-thumb.webp",
+    "bytes": 35114,
+    "sha256": "a62ef6b134dc65fda3db331f87621aafabf074d290dd9ad1ea93336ec14f5848"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-ethereal-guardian-card.webp",
+    "bytes": 87732,
+    "sha256": "8796ddbfa22a3c41ea6dd08a94fac21f4d882ae9074267fcca45a4b631630e48"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-ethereal-guardian-cover-thumb.webp",
+    "bytes": 44504,
+    "sha256": "4bdd730642cb45ec7b16c83c2cddacb3a180fc908c3cded04e269a6489b073ee"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-ethereal-guardian-cover.webp",
+    "bytes": 222968,
+    "sha256": "676b6c6ff8f63aff29f9077d3e21cf7c04a5a87612c4a6665d42b1ddf9244ab3"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-ethereal-guardian-making-1-thumb.webp",
+    "bytes": 61498,
+    "sha256": "3c43451853c02c6d652f27289338e3f2bad701eb9e2a86321cfdbae12fb43d06"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-ethereal-guardian-making-1.webp",
+    "bytes": 100436,
+    "sha256": "48023c496ce8b3454bf306a5863da1adb57f88cc3e911e86f2c28b038971deab"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-ethereal-guardian-outcomes-1-thumb.webp",
+    "bytes": 36274,
+    "sha256": "4958b9f4b89ae33a0687acd92d64e6038e013013f89dc4a1d2741b6aafb52c21"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-ethereal-guardian-outcomes-1.webp",
+    "bytes": 176000,
+    "sha256": "75c72ee117cf6ea7b50288c121e3a73f194bc04f51ff4a87e9c471e1738743b4"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-floating-self-card-thumb.webp",
+    "bytes": 44426,
+    "sha256": "0e6bdc52b4111385e22786cd972c489a9b8d793b8519de60ea303bed55dc3316"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-floating-self-card.webp",
+    "bytes": 69256,
+    "sha256": "ed8a9f450815fcd46bab112c4553214fc7ba40b7767c50649a1eed8b470830d8"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-floating-self-cover-thumb.webp",
+    "bytes": 40542,
+    "sha256": "b731ca02f99d73d12932d8cc5dd9372c1891cfe16f67f019892c75b21fa58c4e"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-floating-self-cover.webp",
+    "bytes": 160164,
+    "sha256": "1a49c987d9039824eaa2bd4a5615a2bc6f0cdd2f717bef8fef5b0fe64ddb7da0"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-floating-self-making-1-thumb.webp",
+    "bytes": 75114,
+    "sha256": "e994e72f67c707835ea21d1159311c92b9e25a6b648e7ca74f22b79ba0ac29f0"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-floating-self-making-1.webp",
+    "bytes": 98950,
+    "sha256": "1c5e823f655e3c62ee8d755fb5e22be13f6ff703713a2c5d7f4cdc16e8528eec"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-floating-self-outcomes-1-thumb.webp",
+    "bytes": 60014,
+    "sha256": "4be1832ac25245b8d2e56861cdd2dd475ed3efb18cd01fe373102b4db89dbbb6"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-floating-self-outcomes-1.webp",
+    "bytes": 267536,
+    "sha256": "9ac2fd8b5fe714de59c153e74220aab0ee7a812c926d38dd388d04fec97f7ebf"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-greed-card-thumb.webp",
+    "bytes": 38652,
+    "sha256": "4a258509c3b55d96c61f27ab03d5e9f671edd587fbd8418c5d95904c6c594405"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-greed-card.webp",
+    "bytes": 60066,
+    "sha256": "c2b71da01c1c24bb86446ba6d80dfcdcaa437c2f97385f64dbc25b1c50241a07"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-greed-cover-thumb.webp",
+    "bytes": 47508,
+    "sha256": "e6384fe26077d3bb10b243d5575c53ffa9c7571f032e1d057ac8bb77408651b6"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-greed-cover.webp",
+    "bytes": 175062,
+    "sha256": "7b433e9495425327d3f2d03aa46f7775c8bac5fd17859e1d617f503b74821d57"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-greed-making-1-thumb.webp",
+    "bytes": 74220,
+    "sha256": "b885a79c4c0d16d1be73a4e950084dd3c717f629ad8a2c1f90b99f99e37e4fde"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-greed-making-1.webp",
+    "bytes": 129156,
+    "sha256": "5fb49a5ce23011a7e4e5a3713648f84eac4036e8781cae562531bf5e66d5b83f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-greed-outcomes-1-thumb.webp",
+    "bytes": 56732,
+    "sha256": "86245f523ab46b284011e6fef890a4b4f6f90dcb7ebc6c533bc7a66e89c6d4ee"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-greed-outcomes-1.webp",
+    "bytes": 235474,
+    "sha256": "c085ee234845de8917b6b20584f899170cdc759847c6ed63c18f7c52fa1af02b"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hallucination-card-thumb.webp",
+    "bytes": 36760,
+    "sha256": "99e3316f3c99717d06bdd64ea24d7e35bd0e00af3fa34daf8a4e3014133f4982"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hallucination-card.webp",
+    "bytes": 87266,
+    "sha256": "b2a46088e368c4567a5dfda9537df69134b98f229df5602ac7286173789bd84b"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hallucination-cover-thumb.webp",
+    "bytes": 56288,
+    "sha256": "355ef9fa9c279ac1c6dbeee9106b9b533b4e298af381a5b4202a123b7f782534"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hallucination-cover.webp",
+    "bytes": 238664,
+    "sha256": "8a813184f4cecef9b38e320bb4158584d4e1ea398f710d6e918ffe73c9f56f33"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hallucination-outcomes-1-thumb.webp",
+    "bytes": 54802,
+    "sha256": "b7c70f31032bc6bc479f013d1438f623dc5f3617b010a04011b807d8d4dabc8c"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hallucination-outcomes-1.webp",
+    "bytes": 132986,
+    "sha256": "a2d620f6f43a48ad875e23d31445c1f8a6700dc0935f843b17c8f927e89b751c"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hallucination-outcomes-2-thumb.webp",
+    "bytes": 49828,
+    "sha256": "b3544574769ec55f89bb3cf3c2da4f9d34f87837b019c599c71355acf3b3f005"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hallucination-outcomes-2.webp",
+    "bytes": 105210,
+    "sha256": "ba70bdbdfa90c296b100097e964a7cebbbd1f897ebcd906a677dd1039f55d49b"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hetero-lavatory-card-thumb.webp",
+    "bytes": 26944,
+    "sha256": "006b2c743496ff3cdb960b272dcdbe17b50ba2f4109d8f313aacdef399bc0065"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hetero-lavatory-card.webp",
+    "bytes": 60442,
+    "sha256": "1fc5410a5e393d6d7e4c428cbe2eab69b79c335ba2d5ca2e93287c517774731a"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hetero-lavatory-cover-thumb.webp",
+    "bytes": 59352,
+    "sha256": "bb8abad4ed87bb985507c63e79fef9977a00594f50eb84fd67950693f36fac1f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hetero-lavatory-cover.webp",
+    "bytes": 360860,
+    "sha256": "077464d9dd669e623fceddca8b22b8232f150304b6e860e3a208864ef9a1891d"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hetero-lavatory-outcomes-1-thumb.webp",
+    "bytes": 30502,
+    "sha256": "7714968b029e9480ae067201c98a9e0ad5a2ff3b89d44b12f707f5c530e27100"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-hetero-lavatory-outcomes-1.webp",
+    "bytes": 117146,
+    "sha256": "47c6afd6981a2981e2a62c4913827dcd5012b1ab12210461665e17fa866dbf81"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-insight-web-card-thumb.webp",
+    "bytes": 33010,
+    "sha256": "b33d422c8f4f01a293c82dbd052746ae3cee8d470837e30e70aea1b8ceb98624"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-insight-web-card.webp",
+    "bytes": 73316,
+    "sha256": "ea4a0446e39df2098c1aa364e566f1e4da7fb546f873f47e58685452cf5915d4"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-insight-web-cover-thumb.webp",
+    "bytes": 78590,
+    "sha256": "f22b5d2757a62620402a87ce4aa65bfb5abb708a8ed3c20da989721e091aadc8"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-insight-web-cover.webp",
+    "bytes": 341054,
+    "sha256": "00b9ac41201f6b1990042ec194fc348ec53c3791d38328adbebf03287c093d1d"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-insight-web-outcomes-1-thumb.webp",
+    "bytes": 60138,
+    "sha256": "dc2dd91aa6a2b93bf8219879c72264815944e25bef5c782b84fa3fa398537ac5"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-insight-web-outcomes-1.webp",
+    "bytes": 288560,
+    "sha256": "62cd0fd738b0495ef40831baa1a5897c3387669988d9cb3eafdd253474817f97"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-insight-web-outcomes-2-thumb.webp",
+    "bytes": 50100,
+    "sha256": "bfbe7402f7f09b000ccc0fb3b2cf78d8005c94f476810c31ce79b4f3273fbb44"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-insight-web-outcomes-2.webp",
+    "bytes": 76992,
+    "sha256": "5918288dcbaf179d4df841918894b7917e7daa04c674013b87030f5302142c3f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-lost-textile-village-card-thumb.webp",
+    "bytes": 43634,
+    "sha256": "a70d1f41613f194547f3d80d4181d936b8fa24a7449b6e8037ed3feefab8c2ea"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-lost-textile-village-card.webp",
+    "bytes": 164178,
+    "sha256": "3ab4d988d2a16d885acf55ace0b43461e3410f012bcb3c3174ec8a8655768ef0"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-lost-textile-village-cover-thumb.webp",
+    "bytes": 71032,
+    "sha256": "79782f73af736d51b18b5096e20dc029f9a561767a1b8159593ebbf91e86ffaf"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-lost-textile-village-cover.webp",
+    "bytes": 305486,
+    "sha256": "811ddec2b791945a09d9fbb18fa8928f500decc4b60a17e1cc80e4d67379ff5a"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-lost-textile-village-outcomes-1-thumb.webp",
+    "bytes": 50840,
+    "sha256": "cab5291ffe74f0b67ccb8401edb6d90f7355a7790dc5537ea0698b753c0bf4e7"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-lost-textile-village-outcomes-1.webp",
+    "bytes": 196250,
+    "sha256": "798fe2497c59f5fa7a5ed1d142499673b539933c1f34a67f0b9a8e1b81d7e42b"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-lost-textile-village-outcomes-2-thumb.webp",
+    "bytes": 58356,
+    "sha256": "59b60cedebfff94acfaaf9a240d543577af8c9033488db971f21a4f6719156e4"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-lost-textile-village-outcomes-2.webp",
+    "bytes": 120924,
+    "sha256": "dfcd9ccadba1ea6cc3710a8e03078636139e4f1f2bc97d39e2b1bba9e90cc523"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-microecology-visualization-card-thumb.webp",
+    "bytes": 69204,
+    "sha256": "903c80c416e41e486c7b52e36cdf8d8e681eff415dd7fed80ab5409a0bf02c3a"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-microecology-visualization-card.webp",
+    "bytes": 131762,
+    "sha256": "477008f49fb68b7ab7f16306a2f8d1510c1ee59d2fd3a9d89b8aba642c6aad6b"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-microecology-visualization-cover-thumb.webp",
+    "bytes": 59116,
+    "sha256": "9504be9e9026a79e794a31cdb41de0064460444be6a80ab3998fe4e28afcea73"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-microecology-visualization-cover.webp",
+    "bytes": 224854,
+    "sha256": "a74b61c249c612e3cbb5fdcda335186637c39f09e2fa33abc61823a38b24a737"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-microecology-visualization-outcomes-1-thumb.webp",
+    "bytes": 62210,
+    "sha256": "f37b67d427c1d1dc7898dc7eab407ecd186390f562262ba039e817fe989ca080"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-microecology-visualization-outcomes-1.webp",
+    "bytes": 286230,
+    "sha256": "e0e94c9fe7e81e8eb0a3a98c83f7f6a7a76971de441b22aa6f789065836af5eb"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-not-a-robot-card-thumb.webp",
+    "bytes": 32554,
+    "sha256": "0d227df8c460c6ce0744fa4e26148069e3d42721f85bd52a8d51d1c3d82992ea"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-not-a-robot-card.webp",
+    "bytes": 40010,
+    "sha256": "24d7a5bf1827155671ccecddb5827ddeef13fbea8773d759ff9b8a550e3d34a7"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-not-a-robot-cover-thumb.webp",
+    "bytes": 9718,
+    "sha256": "40c32418930eb3a6969e966ea49b1534348062d447b52cd967e620c4f830cbed"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-not-a-robot-cover.webp",
+    "bytes": 39374,
+    "sha256": "9919224a586e87b0d625b9a936afc6aa426abb03b5ab81554727557c69901420"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-not-a-robot-making-1-thumb.webp",
+    "bytes": 46742,
+    "sha256": "46c1780b46a7172068e1c5aacb9f5f9505a770a41c6f69b2ae2f02ef68059b17"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-not-a-robot-making-1.webp",
+    "bytes": 99618,
+    "sha256": "348591445424715c72d64b3791b5df31668a55ed4b59128fc6cd44ea0468a6f9"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-not-a-robot-outcomes-1-thumb.webp",
+    "bytes": 27346,
+    "sha256": "d7cb003b0e65b596888befb6ced587d57b59dd98b9516c5ddcae92c93213a61f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-not-a-robot-outcomes-1.webp",
+    "bytes": 118094,
+    "sha256": "04023204aab22c3dfd5fda94209455725a70d548a84c245809570b8863bd13cd"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-once-again-card-thumb.webp",
+    "bytes": 11344,
+    "sha256": "96892b4600fb9e6d900b8cff83d00a10eebbe588617158d27bf3cf70fec90fc7"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-once-again-card.webp",
+    "bytes": 16784,
+    "sha256": "a722f19b84819a11c79fe6d1961fa7a0a6f357081e15792c685eca1e4c07e5ae"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-once-again-cover-thumb.webp",
+    "bytes": 41830,
+    "sha256": "1f458373a9dc755a654f60fc761ee65116e8a598cc322549972eedb20f5a9f6e"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-once-again-cover.webp",
+    "bytes": 185866,
+    "sha256": "87e0d792a493a8a84cb438503bd77c064b252c67b43c7c7a36ef2ce3a769a51d"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-once-again-outcomes-1-thumb.webp",
+    "bytes": 23698,
+    "sha256": "22ebb46ec137f091c147778b437532d8b55f246c44c22bd5cae37ff7d6a61ca5"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-once-again-outcomes-1.webp",
+    "bytes": 103302,
+    "sha256": "3d4af36e4e7b008e55db8890acd692dc1d8dac556f656725161079fa09261803"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-panopticon-inverse-card-thumb.webp",
+    "bytes": 28418,
+    "sha256": "af833a256e30a1a50c799cf97366a1f833d21cedd414ca63668794f1dfe9988b"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-panopticon-inverse-card.webp",
+    "bytes": 48204,
+    "sha256": "eef95daa68441b5447fd8b32cdb787e3cdc268ae75b04e3b5bb4317d464ac3d8"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-panopticon-inverse-cover-thumb.webp",
+    "bytes": 48478,
+    "sha256": "2bfc7fa58fd740fa2ef78c85cb79c90140d9740879d24cbccca0198e838ff8ff"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-panopticon-inverse-cover.webp",
+    "bytes": 208092,
+    "sha256": "15ebb2919b2ebfe4121cc39fac07d8ebfd65d94a96abe8903bd9fe53231f0cf1"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-panopticon-inverse-outcomes-1-thumb.webp",
+    "bytes": 43500,
+    "sha256": "560e0884c922753cca45ae5438009496f405a755727cac0ad89028cffae471f5"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-panopticon-inverse-outcomes-1.webp",
+    "bytes": 224768,
+    "sha256": "4d1216271a5ea03124c0703b5808015b2ad53952aae91c61bd581888c2f339d5"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-panopticon-inverse-outcomes-2-thumb.webp",
+    "bytes": 43686,
+    "sha256": "3ea38f9492fd0406270fa3d6f631ad039e5fb7cd03633a30bda597de30eadcfa"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-panopticon-inverse-outcomes-2.webp",
+    "bytes": 118806,
+    "sha256": "e8bfeb6e5563db7677a4dd8107784c59efd4728871ac6a6f1c687ae51635dc75"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-patriarchywall-treeholes-card-thumb.webp",
+    "bytes": 30984,
+    "sha256": "aa926f11eea8c64ea2c9f1b580bb45d38f90950a739128ba8743a7ae9cbcedbc"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-patriarchywall-treeholes-card.webp",
+    "bytes": 61976,
+    "sha256": "abbef9cd86afaac296491d389de3ab0bbc5c06f7a850ff0ee891d92893dad44a"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-patriarchywall-treeholes-cover-thumb.webp",
+    "bytes": 26906,
+    "sha256": "be8cbeeb6c26a6c0849096730e4a130365e0419a08edb28c3a4cf07314330cd3"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-patriarchywall-treeholes-cover.webp",
+    "bytes": 129894,
+    "sha256": "e621328fd90d1e56b49af0195bbcfc901ef8c9d9b1f804f9a983a5e7e623fd37"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-patriarchywall-treeholes-outcomes-1-thumb.webp",
+    "bytes": 33350,
+    "sha256": "30ab7af7e317cd4c3b3bc068bac615b49b2a94621976b8f323e828d5f58b3134"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-patriarchywall-treeholes-outcomes-1.webp",
+    "bytes": 131626,
+    "sha256": "4bd146a26311e214bb84946be270d40eb244ec3eab49bb7979ab8f4eb9ba8f35"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-patriarchywall-treeholes-outcomes-2-thumb.webp",
+    "bytes": 13526,
+    "sha256": "8adc2e9c94d05fdaf2c82645cf32bfe48eeca1d7542cff9aa1d36b8755f2c1fa"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-patriarchywall-treeholes-outcomes-2.webp",
+    "bytes": 17848,
+    "sha256": "6a64c4025ac9716fa64378465914c2c49c2b6e2790ae600b858b942eef56a6af"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-pcos-companion-card-thumb.webp",
+    "bytes": 41506,
+    "sha256": "d0a915cde7352b766d5b502a065272f0452ddd0311fcd2786981d703cc0fccd3"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-pcos-companion-card.webp",
+    "bytes": 93976,
+    "sha256": "3ea628f42a520266f2d036c4c4ed066dfa3127b93b6bb0be06f530ed66e98e41"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-pcos-companion-cover-thumb.webp",
+    "bytes": 36966,
+    "sha256": "2287e60eaaa6138f432c2b5eb878788ee3976842ce43eba317792ce8c95f2419"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-pcos-companion-cover.webp",
+    "bytes": 151368,
+    "sha256": "3d5069d91a810ec250ae5b34a4bcd35e6fa55b9cee77b31503fde5f4a33db8e4"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-pcos-companion-outcomes-1-thumb.webp",
+    "bytes": 49548,
+    "sha256": "fb859fe8db84251a881c2c8445fd8da88768d94e446f8114394baa7d39f379ef"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-pcos-companion-outcomes-1.webp",
+    "bytes": 192790,
+    "sha256": "3687b013bb37f411fb4ca37e8902dd4f3e75844a1c9b12097c48a0b80bf3d658"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-pcos-companion-outcomes-2-thumb.webp",
+    "bytes": 60230,
+    "sha256": "752fbff25db575270346af71c65cc4f3b26adc106c6ac995b8b4a782f16e9332"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-pcos-companion-outcomes-2.webp",
+    "bytes": 96852,
+    "sha256": "2e48e84928c72a33400907276b87acd65fa7b15b842dbcf138a5fab8675545c9"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-psyche-card-thumb.webp",
+    "bytes": 42732,
+    "sha256": "53c96188c5b2c06940edd7c77937b65ebff4cd2213c0f1b5f14e0664ed70e423"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-psyche-card.webp",
+    "bytes": 119538,
+    "sha256": "414ae537da06618c24fbe15b808c6f45715748ca738ecc930636433b20078a90"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-psyche-cover-thumb.webp",
+    "bytes": 35110,
+    "sha256": "f3043aa6ea760ab79b574d6425c2a3657b2493ddc2a21df30f02455aab93204e"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-psyche-cover.webp",
+    "bytes": 161960,
+    "sha256": "7674395b9988c1bc37cff84cbc7b8e86af6831e6977279e15d054dc20cee2833"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-psyche-outcomes-1-thumb.webp",
+    "bytes": 93702,
+    "sha256": "950580634f3820e398061c77a6b3ec41c8660b0099656fcfc58a5dcdfffa8994"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-psyche-outcomes-1.webp",
+    "bytes": 400320,
+    "sha256": "4445a01594a0723060cca8db04d172fd18d0992dd79b32ccfce05274c224f4d8"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-re-fractal-card-thumb.webp",
+    "bytes": 36366,
+    "sha256": "09034aa7227c51d8fd5cb8536e61bdb78cc22037e6cbe7dea3fa95e23bd3f4d9"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-re-fractal-card.webp",
+    "bytes": 105680,
+    "sha256": "d7fdaa778512d8f7c209971222c277ec442cd6bb550e9e823f4456812a4007c9"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-re-fractal-cover-thumb.webp",
+    "bytes": 25942,
+    "sha256": "b4d80f424924762974890e2c0c9347f9516f4be3440e91a27b024312cfc0aa49"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-re-fractal-cover.webp",
+    "bytes": 129014,
+    "sha256": "66da55c42ba52879cf9b5e4ae6a06b534b9a23f81c312c83ac4568b5ca69d965"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-re-fractal-outcomes-1-thumb.webp",
+    "bytes": 29942,
+    "sha256": "16bee23a8a14a3ec54657389948fd5a83dddfbccd058e0a33465e623411443f0"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-re-fractal-outcomes-1.webp",
+    "bytes": 157746,
+    "sha256": "b0f7f2838708ea3f7385d845ef2968eb62073ef5dbc1d584c8b1a61008f553bf"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-re-fractal-outcomes-2-thumb.webp",
+    "bytes": 42120,
+    "sha256": "fc81b9ede9c4c1f520235b60f8ed9e9a2679e7022b02ec5a2f97ce348b70bfe1"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-re-fractal-outcomes-2.webp",
+    "bytes": 79276,
+    "sha256": "238723a8833fbf1e6ad82f5c9992e3f9bb34ecddcf4a0e82fb629c57e3f7486c"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-resonance-with-the-cosmos-card-thumb.webp",
+    "bytes": 17384,
+    "sha256": "bd123d876ee3462c912fdd1733ff55fbb37614edbe6cc3ebf0252d0e66494ae4"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-resonance-with-the-cosmos-card.webp",
+    "bytes": 39884,
+    "sha256": "cc2ee0cc227b0cb910f34aac324de1242f865528c8876195d93147361956d477"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-resonance-with-the-cosmos-cover-thumb.webp",
+    "bytes": 33228,
+    "sha256": "5d96d3b367e1dcca54dcc7a29d01dda24eeb5c65fe703763c807d0a1d0cce44f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-resonance-with-the-cosmos-cover.webp",
+    "bytes": 127094,
+    "sha256": "f81107d96e685665e86d24b8fa8c42eff288cc7f4cffdaa9b234e414d5d0009f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-resonance-with-the-cosmos-outcomes-1-thumb.webp",
+    "bytes": 31130,
+    "sha256": "38d5615d531e885d398e6d25e9e458455b04066b9ad29bef149be7f67791c6ed"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-resonance-with-the-cosmos-outcomes-1.webp",
+    "bytes": 122850,
+    "sha256": "4de73da0552797ece7cb746c06e27e74c722d976208ff2a2fb9601461b3fc5e9"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-shiqiao-dreamfiles-card-thumb.webp",
+    "bytes": 30262,
+    "sha256": "bbfa2ce7a68e2f8d1ffbb8dc1a620b16dbac7d254fc2048b62e070d21086b734"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-shiqiao-dreamfiles-card.webp",
+    "bytes": 90884,
+    "sha256": "11cc7ab014e4cdd3dcb870807d748ae8b04819f67f8203d70bb292b9d2a44d78"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-shiqiao-dreamfiles-cover-thumb.webp",
+    "bytes": 39436,
+    "sha256": "f1b29f512ddebfe487a6da1ac461c0e1c2d2cc8733e1aefd232cce7f8566b6fa"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-shiqiao-dreamfiles-cover.webp",
+    "bytes": 160786,
+    "sha256": "b36e4971b4207fd181ceda595c4650d3a85950c542bdff546d3583b1885b62c7"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-shiqiao-dreamfiles-outcomes-1-thumb.webp",
+    "bytes": 48382,
+    "sha256": "486cd430beb96a691ea4a37ae2f6f37c8af8b5c27d645a1b32afd02d17a39c0b"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-shiqiao-dreamfiles-outcomes-1.webp",
+    "bytes": 199928,
+    "sha256": "f7b29d32818c92893ec3d3ca1531641a842a3cbdf337816680ce0c35ce69f0c6"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-shiqiao-dreamfiles-outcomes-2-thumb.webp",
+    "bytes": 66676,
+    "sha256": "6ccaab23404af9fe53928f104177c5678fdc77e3ff1253931f8c205dc005b939"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-shiqiao-dreamfiles-outcomes-2.webp",
+    "bytes": 176858,
+    "sha256": "abcdb8e139428ccd559f315dd8d1d26c8ebd6a13c291900d5c0a7eb7de4fe7d6"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sigil-of-catharsis-card-thumb.webp",
+    "bytes": 39774,
+    "sha256": "a226ac50474e035d4350543ce1bbd71681247b8334dd94f0f1bfc6caa96e3660"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sigil-of-catharsis-card.webp",
+    "bytes": 78610,
+    "sha256": "6e3e19c8d4f806518c85c39a61ddb26c072c2974856c13299870e68c922ec071"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sigil-of-catharsis-cover-thumb.webp",
+    "bytes": 41874,
+    "sha256": "012354468318d12180fc9b580f53b019af0589fc8ff1e8ed964d80a1aa975fe7"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sigil-of-catharsis-cover.webp",
+    "bytes": 175624,
+    "sha256": "fb836c2abfa42c57a050a914ce34a9eb0c1b8efb07ceff3f222922ca802dc4e6"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sigil-of-catharsis-outcomes-1-thumb.webp",
+    "bytes": 49188,
+    "sha256": "dd6f962eb749876bd1afb7b9f7dbd6640b6506723ee1367729a0ead46c0bdfe7"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sigil-of-catharsis-outcomes-1.webp",
+    "bytes": 192952,
+    "sha256": "1bd45daa3f83d28c45a3874103cae4623190d5dad69f893639742c6861f3b6f1"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sigil-of-catharsis-outcomes-2-thumb.webp",
+    "bytes": 67052,
+    "sha256": "607332ae2bde4ba022ecab78704fbbe8b8275f11cbf684cc1bf4e8c50fe62df4"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sigil-of-catharsis-outcomes-2.webp",
+    "bytes": 106762,
+    "sha256": "70923e1ae425be28646a159bcc2356eb399afd35a2ce8a410c4517ac06fc4ad0"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sleep-paralysis-card-thumb.webp",
+    "bytes": 20730,
+    "sha256": "fdcaebb7782c95c80f80b018abcb412db70427eb36aee29d326491d7d74b5101"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sleep-paralysis-card.webp",
+    "bytes": 59010,
+    "sha256": "0008459ff800dab5156d852f06d6767814621e5de2f578dd46da090ce45d77ac"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sleep-paralysis-cover-thumb.webp",
+    "bytes": 29772,
+    "sha256": "f62dd68dadae1fda5eb1e4402382c4f51a1aa7c683c8fc6ee56d36da2e44ee1e"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sleep-paralysis-cover.webp",
+    "bytes": 119866,
+    "sha256": "0c2a0a591fa5539e81de2bf01e584e4b984329f57ef9285bd2a82d397d1e60c6"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sleep-paralysis-outcomes-1-thumb.webp",
+    "bytes": 20936,
+    "sha256": "b900ecf4db6aac092a76b5940172080cb1ea47d64f74e3bca758f83c0c5a5dd2"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sleep-paralysis-outcomes-1.webp",
+    "bytes": 89634,
+    "sha256": "5ba9af550bd7684c9d870243f1bdcb72620d156460e9fd51634847616cc79098"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sleep-paralysis-outcomes-2-thumb.webp",
+    "bytes": 51048,
+    "sha256": "d304fa42196986504718873ebd78cf64d7be717f6ad1dbe74a340a65660f5902"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-sleep-paralysis-outcomes-2.webp",
+    "bytes": 228702,
+    "sha256": "a026235692befe173113c8a51380733ca3b616ea8c3fcb3405e066ef5a6c1c13"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-squeeze-the-boundaries-card-thumb.webp",
+    "bytes": 30866,
+    "sha256": "5d94919f7fa13c83d6242f0f2e16a9454f7d8facf2994b8b874dc9898c5a4ae2"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-squeeze-the-boundaries-card.webp",
+    "bytes": 71316,
+    "sha256": "7a8546e58229d086db9d1d34b5627c2c876172adfba081c84483d79e1dd76461"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-squeeze-the-boundaries-cover-thumb.webp",
+    "bytes": 26206,
+    "sha256": "db83c0d80eff3b70c0edc19fc7615737b305010339be85017d145453078323f8"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-squeeze-the-boundaries-cover.webp",
+    "bytes": 106930,
+    "sha256": "4bb42171505cfb8d7f8807bc89e35939d3ae98a7cd9a2377091c08978b1d0eae"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-squeeze-the-boundaries-making-1-thumb.webp",
+    "bytes": 44094,
+    "sha256": "3618a3c01b47132774fcedfb3f3f45e411da54eb80ade65cbe7100bf172663b9"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-squeeze-the-boundaries-making-1.webp",
+    "bytes": 105832,
+    "sha256": "ab9610138a4d9f519bb0a26b38a34b1ac9f6356ec8a09356f733fd2273a837b3"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-squeeze-the-boundaries-outcomes-1-thumb.webp",
+    "bytes": 61892,
+    "sha256": "80e0c53af2b3ef6e1a3646f31d97d07261f1c82ba876437c01e6eb807b3b3c46"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-squeeze-the-boundaries-outcomes-1.webp",
+    "bytes": 92212,
+    "sha256": "7735e5a31794d6934f1d7dcca3ffd2b5eaa56a686a3ff2fdc593ee027aa55ae3"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-squeeze-the-boundaries-outcomes-2-thumb.webp",
+    "bytes": 39144,
+    "sha256": "2ca04ae7317df886ff727cc7126f9b82c0752cbd6ac89ce5ab5fc0476fd63063"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-squeeze-the-boundaries-outcomes-2.webp",
+    "bytes": 63822,
+    "sha256": "69260533e69be3a74a407ffa3ada7b3ccb7f518b3b85cfc29fe6eaa6f01cc9f1"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-subterranean-protocol-card-thumb.webp",
+    "bytes": 48706,
+    "sha256": "98309ab155af1bf8b79832a277db9822934f8573615f7c2e001a444b63afb95a"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-subterranean-protocol-card.webp",
+    "bytes": 106400,
+    "sha256": "b4a2b2a51117332454cc9eb4ecb40c9a0e1a4cc84faff42c501b2397bb7beb7c"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-subterranean-protocol-cover-thumb.webp",
+    "bytes": 70078,
+    "sha256": "34d2c15edc4d5ed7dc7c3e598a7e915c1c3de231aa89c34fb781c28ec712958c"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-subterranean-protocol-cover.webp",
+    "bytes": 260660,
+    "sha256": "cc5f7b506ff4371e97879d8fc53eb5553ff3d8c50b670958e33410db551239e9"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-subterranean-protocol-outcomes-1-thumb.webp",
+    "bytes": 51112,
+    "sha256": "80a31ac779b5f9b304c28a73a7fa3e6b008a26fd64dead6401f1cd5ecb72f03f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-subterranean-protocol-outcomes-1.webp",
+    "bytes": 235284,
+    "sha256": "d7887d9488cf484f880b32d700b7571cda0b67136d775666405fe3c16a3915f2"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-subterranean-protocol-outcomes-2-thumb.webp",
+    "bytes": 80394,
+    "sha256": "157da4da13e9ab5e93ae5fbb088ce14db2e24309a066cf74c77b9c89e94afbbd"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-subterranean-protocol-outcomes-2.webp",
+    "bytes": 365784,
+    "sha256": "d10e189919e90159572d65ad34843de53a0590823295a7e3c1b223433b6d73b0"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-surplus-emotion-card-thumb.webp",
+    "bytes": 23364,
+    "sha256": "07baf3bf0cc4116a7879e20b43c1fc6190e540df6a73dcc36f8400667795bd71"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-surplus-emotion-card.webp",
+    "bytes": 48334,
+    "sha256": "4267b54724b035313c8535d1bce7afe8b903058fee5e7669a3aacafdc196e4d0"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-surplus-emotion-cover-thumb.webp",
+    "bytes": 39562,
+    "sha256": "99f75cb2602ce7859b492dcc21b0f517e8a46378ec1a26f2f02323f76e420832"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-surplus-emotion-cover.webp",
+    "bytes": 159944,
+    "sha256": "a381bab654c281e4222403dd1fddb2abe2753c2dd47a774aa2d8cd29df3dbf9f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-surplus-emotion-outcomes-1-thumb.webp",
+    "bytes": 30318,
+    "sha256": "de7982311516e769c0a5046719d732b024a81d0dd4545af5c4f2f214d2643c2c"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-surplus-emotion-outcomes-1.webp",
+    "bytes": 131188,
+    "sha256": "a2c6edca6f173ad2b8a52de6ed12e61b36fbd180e8822c440061a1d0e120ad4f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-surplus-emotion-outcomes-2-thumb.webp",
+    "bytes": 30680,
+    "sha256": "d778e4da74df9e385133ca9aae1679a928738d24d44ed01ae59a19b94fb3e943"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-surplus-emotion-outcomes-2.webp",
+    "bytes": 198180,
+    "sha256": "516f0c12e64c31b5c9433186173ada91814f3f2febff61727b9506b52b4674f0"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-symbiosis-engine-card-thumb.webp",
+    "bytes": 87958,
+    "sha256": "4eaf06a3fc1f2091978533e0fef0398229f3813979000673aa08cf73a987e7b8"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-symbiosis-engine-card.webp",
+    "bytes": 198378,
+    "sha256": "9b06f1c076b1d0255f85e97a54ec36787a77121da49eda3a128cc75501db73cb"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-symbiosis-engine-cover-thumb.webp",
+    "bytes": 59388,
+    "sha256": "19027c96bc0bf227b3a8916407d3bcf9b0c1100b26733337f459db4e8eb5640e"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-symbiosis-engine-cover.webp",
+    "bytes": 273376,
+    "sha256": "dc300e6b0ac302e22d64f64c9d0511398ba827335341f20fa82573c1df13654c"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-symbiosis-engine-outcomes-1-thumb.webp",
+    "bytes": 39910,
+    "sha256": "52fcb994367da7d3ab97e71f7bb66d35c30dc99183bfb0e1682661e6d9725fd2"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-symbiosis-engine-outcomes-1.webp",
+    "bytes": 190742,
+    "sha256": "a902567d38483d11e57faa753b110445b6653dc617fd6a6d5aaafed2d0f9848d"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-symbiosis-engine-outcomes-2-thumb.webp",
+    "bytes": 42386,
+    "sha256": "3449c1407ccfe2aabef04dd7feb4e1150edb8ef677a9da88e8b1884886282d90"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-symbiosis-engine-outcomes-2.webp",
+    "bytes": 213046,
+    "sha256": "c4c18f005543efb344bd6ca27169b59ff811097b69bf9035d240a5c505316325"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-under-the-babel-card-thumb.webp",
+    "bytes": 6036,
+    "sha256": "3b06af257a7575220b61facf1fc29e159a462df0d680e4e8a1955eca92a77f24"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-under-the-babel-card.webp",
+    "bytes": 7538,
+    "sha256": "ce9ea5820cdd596af949ae5109689a61ba64b0afb046cc32260f3e1effe16ec8"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-under-the-babel-cover-thumb.webp",
+    "bytes": 16686,
+    "sha256": "ba955f4c381e5b7cd087c164eaf32938117556fa018314090eef47e2c21908af"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-under-the-babel-cover.webp",
+    "bytes": 75786,
+    "sha256": "0adaa7f6912c63263ba7b12af00499a629fc2f31d92b4d612fc4bc3babcc6f29"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-under-the-babel-outcomes-1-thumb.webp",
+    "bytes": 20796,
+    "sha256": "ee0bc3c31dd517985bdb0cfb09684034e5df4010f10c8b7c81abe05481162f27"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-under-the-babel-outcomes-1.webp",
+    "bytes": 33950,
+    "sha256": "d914c5b2b0ce219bd5c6e610d30d02faed4a71c3608a4e68f9c59eaad7236305"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-under-the-babel-outcomes-2-thumb.webp",
+    "bytes": 37878,
+    "sha256": "e1c21f0a1cdb8fa9e940dbc8f4bfe19448514337ef6f7c8d6cf070d27a8d6327"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-under-the-babel-outcomes-2.webp",
+    "bytes": 58578,
+    "sha256": "f87577820ec873ea6ea316321ca11f9330159e0fadc6c4a925e36add467db575"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-utopia-memory-surge-card-thumb.webp",
+    "bytes": 42760,
+    "sha256": "3629a6dd7b6033a75bd3a92cfce36c0bc71f25dd9583c447d0a5dfefb965bfbc"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-utopia-memory-surge-card.webp",
+    "bytes": 92406,
+    "sha256": "7b26a18657e240cd776077501040abdd7e9686865a75a62096a90bf78c8569e8"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-utopia-memory-surge-cover-thumb.webp",
+    "bytes": 17566,
+    "sha256": "78315b3ebc937c0ecced27a5629cf776e4319fd43a67d604b92bf8d6257a6fe5"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-utopia-memory-surge-cover.webp",
+    "bytes": 69250,
+    "sha256": "67f9cab700a8b2e8bad815956c5278a9c520091024d9274c3d5aa91ba0bb5568"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-utopia-memory-surge-outcomes-1-thumb.webp",
+    "bytes": 35290,
+    "sha256": "e662552e1f73accdb28bbb96dbf845613b0be33cf21bb2ecec0002244a8120a0"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-utopia-memory-surge-outcomes-1.webp",
+    "bytes": 156594,
+    "sha256": "32e437e99022352b20cd99bb7d14c21ee997e248e5080be7ad4e4ff04b7b8118"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-utopia-memory-surge-outcomes-2-thumb.webp",
+    "bytes": 17436,
+    "sha256": "886008f23f5f42a266c4976ce1c62428e55041ebb83f5557b8d88d7d6ac4f3bd"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-utopia-memory-surge-outcomes-2.webp",
+    "bytes": 47096,
+    "sha256": "a25731512a6740bce509ac3c95a87e683132fc3a58fcbe3c30a6ddc23187472e"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-whispering-straw-card-thumb.webp",
+    "bytes": 27462,
+    "sha256": "02a5a712a75732d7a729d11fd3c4e7e2dccb4c373eac8450f1f5489d8f053274"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-whispering-straw-card.webp",
+    "bytes": 55896,
+    "sha256": "b104cc3595753141ff310f385e49967b1e39b5af6cd5bbb2156278ee167901eb"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-whispering-straw-cover-thumb.webp",
+    "bytes": 42560,
+    "sha256": "8b5d2479f5c654abdbb5745bd59c3c97f21608f62aab0933094ab5801e584327"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-whispering-straw-cover.webp",
+    "bytes": 157762,
+    "sha256": "21e8ce12c973acafcf9312504f811b35c54592c26320f2140ae2fbe6d7853f2e"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-whispering-straw-making-1-thumb.webp",
+    "bytes": 48222,
+    "sha256": "a1cd9e967223f27beee2de7480fca98eab9a55699d1d65512ecd7bf49a979a9a"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-whispering-straw-making-1.webp",
+    "bytes": 75240,
+    "sha256": "a26075c9f704aa8c8bb2e7f0e6c8fc0a511d4c002040b38ac08f5f563c0fd167"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-whispering-straw-outcomes-1-thumb.webp",
+    "bytes": 25406,
+    "sha256": "d0b0212e918d6a51779d556dd6add84aa7ef96c7750977e89f75194216e9bc6c"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-whispering-straw-outcomes-1.webp",
+    "bytes": 117562,
+    "sha256": "6a0090be791c32210f88be7e71df1de783d9392c34ec3ee48a49f4119efcf997"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-wind-pushing-card-thumb.webp",
+    "bytes": 61812,
+    "sha256": "f3cc067ffffdeec40a1a7b48250332463e6d542698212d4b3e4074b01c6ab9f9"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-wind-pushing-card.webp",
+    "bytes": 205410,
+    "sha256": "9c81e7f24b41d463d044fada135a2e41e33ebdfadc81778a8dd63ec6fdcc2e5b"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-wind-pushing-cover-thumb.webp",
+    "bytes": 65806,
+    "sha256": "8b43b7f5f49179ea06913eb7328b92f25e55c98cd2613d19f03c8195e71b575f"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-wind-pushing-cover.webp",
+    "bytes": 323722,
+    "sha256": "cea5ed13104881ff4bf22d666e931a65a2122066d26020f45c1f81db5552a361"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-wind-pushing-outcomes-1-thumb.webp",
+    "bytes": 106406,
+    "sha256": "2b81d9659f7056b0eb3606cb79c663b9b0093b053084e55abf78a8554a81f4c5"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-wind-pushing-outcomes-1.webp",
+    "bytes": 570886,
+    "sha256": "5f1ea42e2e17e75f9dcdb489198ccda76d1f74d6da258f2adcbdc59209f8ab21"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-within-the-thread-card-thumb.webp",
+    "bytes": 72372,
+    "sha256": "cd41e259c35d6d8ddb402c1baa70521b9bd40b4cbc75852645fea6cf0c629655"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-within-the-thread-card.webp",
+    "bytes": 216264,
+    "sha256": "c3c1613fb6d77c20c9f8e58ed7a6c9480e47f3225b82d928af64c3792c501a60"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-within-the-thread-cover-thumb.webp",
+    "bytes": 46028,
+    "sha256": "073bf164e779d02d1bae48f6c81690e55bbcdd4a9d554a81bf0f3f58031c9e70"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-within-the-thread-cover.webp",
+    "bytes": 209272,
+    "sha256": "8d1d1104bb249e49529983d8de69d0b680efacd31600d0dfe96595f2cc3d69ea"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-within-the-thread-outcomes-1-thumb.webp",
+    "bytes": 93010,
+    "sha256": "d2540fa300572a8ac3f2a8a31ac07c69fd41fae2ba828e56c54dadff83879cf8"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-within-the-thread-outcomes-1.webp",
+    "bytes": 418204,
+    "sha256": "50b0a86f9bc9e6494490176edca50fd41a5e4969f3c01ff89ffd95dff27f5109"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-within-the-thread-outcomes-2-thumb.webp",
+    "bytes": 33318,
+    "sha256": "20e7b13b68f77ca15e370131df7fcfe7aaf5add3858892691b8a8c601e989778"
+  },
+  {
+    "path": "site/assets/mentor/students-2026/student26-within-the-thread-outcomes-2.webp",
+    "bytes": 139926,
+    "sha256": "9e947e78b396189d9aec9a488c789f808dea36f61edd25d31d90cf64582f0e0d"
   },
   {
     "path": "site/assets/mentor/winter-2026/anchor-cover-thumb.webp",
@@ -6033,6 +8143,11 @@
     "path": "site/assets/videos/carnival-process-2.mp4",
     "bytes": 1810241,
     "sha256": "1e1a68da547f43d5e13525186972a00ea2697e75c53081f22da476a61fa366d4"
+  },
+  {
+    "path": "site/assets/videos/students-2025/electronic-erectile-dysfunction.mp4",
+    "bytes": 16018749,
+    "sha256": "2710a267bcfa10457e69182ddaa1b91352b5be5a6fa5216013f137b323821b6b"
   },
   {
     "path": "site/assets/window-rain.svg",

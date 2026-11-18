@@ -1,6 +1,6 @@
 # CANQI — Portfolio
 
-Current public runtime, updated 15 November 2026.
+Current public runtime, updated 18 November 2026.
 
 - Website: https://canqik.github.io/PersonalWebsite/
 - Entrance: https://canqik.github.io/PersonalWebsite/playtime-v1/entrance-prototype/
@@ -20,7 +20,10 @@ videos. Mentor programmes use large cards in GAFA and SFK columns, with detailed
 course and exhibition records for Present the Absent, Living Art, the January
 2026 Human–Machine Co-Creation winter school and the August 2025 NYU Multimodal
 Experiments summer school, and Atlas of Moving Matter from the August 2026
-MIT × Tongji summer school. About and CV
+MIT × Tongji summer school. The student-project directory is organised by cohort,
+with 15 projects by five students in 2025 and 38 projects by eleven students in
+2026. Selected covers, outcomes and films open in individual project readers;
+student work retains its own authorship. About and CV
 share a scrolling page with an interactive ASCII background and a public English
 CV PDF. Some records remain explicitly provisional. Reduced-motion preferences
 are supported.
