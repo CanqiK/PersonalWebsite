@@ -214,6 +214,7 @@
   }
   let disposeHomeScene=null;
   let disposeWhoAscii=null;
+  let disposeStudentGlobe=null;
   let wallObserver=null;
   let wallFrame=0;
   function stopWallThreads(){
@@ -327,6 +328,7 @@
     updateMentorNav();
   }
   function startMentor() {
+    disposeStudentGlobe=window.CanqiMentorGlobe?.mount(content.querySelector('[data-student-globe]'));
     const rail=content.querySelector('.mentor-institutions');
     rail?.addEventListener('scroll',updateMentorNav,{passive:true});
     rail?.addEventListener('keydown',event=>{
@@ -682,6 +684,7 @@
     stopWallThreads();
     disposeHomeScene?.();disposeHomeScene=null;
     disposeWhoAscii?.();disposeWhoAscii=null;
+    disposeStudentGlobe?.();disposeStudentGlobe=null;
     pageMotion?.destroy();pageMotion=null;
     window.CanqiStudies.reset();
     window.CanqiPhotoPrint?.reset();

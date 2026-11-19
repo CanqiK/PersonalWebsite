@@ -1,6 +1,6 @@
 # CANQI — Portfolio
 
-Current public runtime, updated 18 November 2026.
+Current public runtime, updated 19 November 2026.
 
 - Website: https://canqik.github.io/PersonalWebsite/
 - Entrance: https://canqik.github.io/PersonalWebsite/playtime-v1/entrance-prototype/
@@ -23,15 +23,18 @@ Experiments summer school, and Atlas of Moving Matter from the August 2026
 MIT × Tongji summer school. The student-project directory is organised by cohort,
 with 15 projects by five students in 2025 and 38 projects by eleven students in
 2026. Selected covers, outcomes and films open in individual project readers;
-student work retains its own authorship. About and CV
+student work retains its own authorship. The student archive is reached through
+a rotating dark halftone globe with an orbiting satellite. About and CV
 share a scrolling page with an interactive ASCII background and a public English
 CV PDF. Some records remain explicitly provisional. Reduced-motion preferences
 are supported.
 
 The MEILISHUO project includes separate visitor and collaborator galleries, with
 visitor faces pixelated in the selected presentation photos. Artist-project images
-use reviewed, watermarked web copies; student work and reference material retain
-their own credits. The shared image viewer has no original-download link.
+use CANQI-signed web copies. Student images and animations carry their English
+author or group names, while reference material retains its original credits.
+Image enlargement controls and the separate lightbox have been removed; project
+readers, gallery navigation and video playback remain available.
 Image use and attribution are explained in `playtime-v1/site/copyright.html`.
 
 ## Local preview

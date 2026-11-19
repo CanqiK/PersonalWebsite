@@ -10,7 +10,8 @@
   const label=(en,zh,lang)=>lang==='zh'?zh:en;
   function image(key,alt,cls='',eager=false,small=false) {
     const a=asset(key);if(!a)return '';
-    return `<img class="${cls}" src="${esc(small?a.thumb:a.file)}" width="${a.width}" height="${a.height}" alt="${esc(alt)}" loading="${eager?'eager':'lazy'}" decoding="async">`;
+    const region=a.watermarkRegion?.[small?'thumb':'file'];
+    return `<img class="${cls}" src="${esc(small?a.thumb:a.file)}" width="${a.width}" height="${a.height}" alt="${esc(alt)}"${region?` data-signature-region="${region.join(',')}"`:''} loading="${eager?'eager':'lazy'}" decoding="async">`;
   }
   function thumbnail(id,lang='en',eager=false,small=true) {
     const p=get(id),key=p?.cardImage||p?.hero;
@@ -18,9 +19,8 @@
   }
   function figure(item,lang,eager=false) {
     const a=asset(item.asset);if(!a)return '';
-    const cap=text(item.caption,lang),full=label('View image','查看图片',lang);
-    if(item.zoom===false)return `<figure class="reader-figure ${a.width/a.height<.85?'reader-portrait':''}"><div class="reader-figure-media">${image(item.asset,cap,'',eager)}</div><figcaption><span>${esc(cap)}</span></figcaption></figure>`;
-    return `<figure class="reader-figure ${a.width/a.height<.85?'reader-portrait':''}"><button type="button" class="reader-image-open" data-reader-image="${esc(item.asset)}" data-reader-caption="${esc(cap)}" aria-label="${esc(cap+' — '+full)}">${image(item.asset,cap,'',eager)}</button><figcaption><span>${esc(cap)}</span><button type="button" class="reader-image-open" data-reader-image="${esc(item.asset)}" data-reader-caption="${esc(cap)}">${label('View image ↗','查看图片 ↗',lang)}</button></figcaption></figure>`;
+    const cap=text(item.caption,lang);
+    return `<figure class="reader-figure ${a.width/a.height<.85?'reader-portrait':''}"><div class="reader-figure-media">${image(item.asset,cap,'',eager)}</div><figcaption><span>${esc(cap)}</span></figcaption></figure>`;
   }
   function sectionImages(section,lang) {
     const images=section.images||[];
@@ -145,26 +145,12 @@
       figure.querySelector('[data-video-stop]').hidden=true;
     });
   }
-  let lightbox=null;
-  function closeImage(){if(lightbox){const old=lightbox;lightbox=null;old.close();old.remove();}}
-  function showImage(link) {
-    const a=asset(link.dataset.readerImage);if(!a)return;
-    closeImage();
-    const lang=currentLang(),cap=link.dataset.readerCaption;
-    lightbox=document.createElement('dialog');lightbox.className='reader-lightbox';
-    lightbox.setAttribute('aria-label',label('Project image','作品大图',lang));
-    lightbox.innerHTML=`<div class="reader-lightbox-bar"><span>${esc(cap)}</span><button type="button" data-reader-zoom aria-pressed="false">${label('Zoom in','放大',lang)}</button><button type="button" data-reader-image-close autofocus>${label('Close','关闭',lang)} ×</button></div><div class="reader-lightbox-scroll" data-native-scroll><img src="${esc(a.file)}" alt="${esc(cap)}" decoding="async"></div>`;
-    document.body.append(lightbox);lightbox.addEventListener('close',()=>{closeImage();if(link.isConnected)link.focus({preventScroll:true});},{once:true});lightbox.showModal();
-  }
   document.addEventListener('click',event=>{
     const target=event.target.closest?.('button,a');if(!target)return;
     if(target.matches('[data-animation-toggle]')){setAnimation(target.closest('[data-reader-animation]'),target.getAttribute('aria-pressed')!=='true');return;}
     if(target.matches('[data-gallery-step]')){moveGallery(target.closest('[data-reader-gallery]'),Number(target.dataset.galleryStep));return;}
     if(target.matches('[data-reader-language]')){document.getElementById('language')?.click();return;}
     if(target.matches('[data-reader-jump]')){jump(target.closest('.project-reader'),target.dataset.readerJump);return;}
-    if(target.matches('[data-reader-image]')){event.preventDefault();showImage(target);return;}
-    if(target.matches('[data-reader-image-close]')){closeImage();return;}
-    if(target.matches('[data-reader-zoom]')){const zoom=lightbox.classList.toggle('is-zoomed');target.setAttribute('aria-pressed',String(zoom));target.textContent=label(zoom?'Fit image':'Zoom in',zoom?'适应窗口':'放大',currentLang());return;}
     if(target.matches('[data-video-stop]')){const figure=target.closest('.reader-video');stopVideos(figure.parentElement);figure.querySelector('.reader-play')?.focus({preventScroll:true});return;}
     if(!target.matches('[data-project-video]'))return;
     const [id,n]=target.dataset.projectVideo.split(':'),v=get(id)?.videos?.[Number(n)];if(!v)return;
@@ -180,7 +166,6 @@
     target.parentElement.replaceChildren(frame);frame.closest('.reader-video').querySelector('[data-video-stop]').hidden=false;frame.focus();
   });
   document.addEventListener('close',event=>{if(event.target.matches?.('#artist-project-dialog')&&!event.target.open){stopVideos(event.target);event.target.replaceChildren();delete event.target.dataset.project;}},true);
-  window.addEventListener('hashchange',closeImage);
   document.addEventListener('visibilitychange',()=>{if(document.hidden){document.querySelectorAll('.reader-video video').forEach(v=>v.pause());stopAnimations();}});
   window.CanqiProjects={get,render,thumbnail,jump,stopVideos};
 })();

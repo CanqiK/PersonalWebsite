@@ -21,7 +21,7 @@ window.CanqiPhotoPrint=(()=>{
     const ratio=Math.min(devicePixelRatio||1,1.5,1800/w,Math.sqrt(1800000/(w*h)));
     const width=Math.max(1,Math.round(w*ratio)),height=Math.max(1,Math.round(h*ratio));
     const dot=Math.max(3.6,Math.min(11,Number(options.dot||3)*1.8));
-    const key=[state.img.currentSrc||state.img.src,width,height,dot].join('|');
+    const key=[state.img.currentSrc||state.img.src,width,height,dot,state.img.dataset.signatureRegion||''].join('|');
     state.spec={width,height,cell:dot*ratio};state.key=key;
     host.classList.toggle('photo-print-continuous',options.treatment==='continuous');
     schedule();
@@ -35,6 +35,8 @@ window.CanqiPhotoPrint=(()=>{
   function finish(job){
     if(active!==job){release(job.surface);return;}
     active=null;
+    // Keep the baked author's signature legible beneath the decorative halftone layer.
+    if(job.signature)job.surface.getContext('2d').clearRect(...job.signature);
     for(const [host,state] of records)if(state.key===job.key)paint(host,state,job.surface);
     remember(job.key,job.surface);schedule();
   }
@@ -52,7 +54,9 @@ window.CanqiPhotoPrint=(()=>{
     const surface=document.createElement('canvas');surface.width=width;surface.height=height;
     const ctx=surface.getContext('2d');
     ctx.fillStyle='#171716';ctx.fillRect(0,0,width,height);
-    const job={key:state.key,surface,row:0,cancelled:false};active=job;
+    const region=(img.dataset.signatureRegion||'').split(',').map(Number);
+    const signature=region.length===4&&region.every(Number.isFinite)?[(region[0]*img.naturalWidth-(img.naturalWidth-sw)/2)*scale-1,(region[1]*img.naturalHeight-(img.naturalHeight-sh)/2)*scale-1,region[2]*img.naturalWidth*scale+2,region[3]*img.naturalHeight*scale+2]:null;
+    const job={key:state.key,surface,row:0,cancelled:false,signature};active=job;
     const step=()=>{
       timer=0;
       if(active!==job||job.cancelled){release(surface);return;}
