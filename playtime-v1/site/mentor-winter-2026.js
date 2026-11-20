@@ -15,6 +15,7 @@
       year:'2026',
       medium:t('Project mentoring · Installation · Moving image','项目指导 · 装置 · 影像'),
       hero:'winter-cover',
+      cardImage:'winter-grind-card',
       heroCaption:t('Yajin Li · Internal Corrosion. Installation detail from the student’s project portfolio.','李亚津 ·《内蚀》。装置局部，选自学生项目作品集。'),
       summary:t('Four students, four completed installations, ten days on site. This record follows the group I mentored in the January 2026 SFK winter school, working with Allen Sayegh from Harvard GSD in the Harvard × Tongji interaction and digital media class.','四位学生、四组落地装置、十天在地创作。这里记录了我在 2026 年 1 月 SFK 冬令营中指导的小组项目，课程为哈佛 × 同济交互数媒班，与来自 Harvard GSD 的 Allen Sayegh 合作。'),
       role:t('As the group’s project mentor, I guided four students through the ten-day on-site programme to complete their individual projects. The supplied portfolios also credit me for project-layout mentoring. The works and their concepts presented below belong to the students.','我作为小组项目导师，在十天的在地课程中指导四位学生完成各自项目的落地。项目资料中同时记录了我的授课与排版指导职责。以下作品及其概念均由学生创作。'),

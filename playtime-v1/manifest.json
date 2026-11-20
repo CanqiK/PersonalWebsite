@@ -161,8 +161,8 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 7652,
-    "sha256": "f02509ef7378d731e8172e198cd29292e9628f9330b34a864cb93e8357463e63"
+    "bytes": 7630,
+    "sha256": "512517c7724154524f6573523249ec158daaba6aa77a2823c5e6edd044a87c66"
   },
   {
     "path": "site/copyright.html",
@@ -216,13 +216,13 @@
   },
   {
     "path": "site/mentor-globe.css",
-    "bytes": 2956,
-    "sha256": "f823968082b23c5beae02e0e76df5bab591ada5c5f1e67f676c142ddd9ac5fa9"
+    "bytes": 4994,
+    "sha256": "8164a67db042f23ccd09c435646f0577ca7665fe98377e8e27fd0fb347aaabb4"
   },
   {
     "path": "site/mentor-globe.js",
-    "bytes": 6765,
-    "sha256": "693ccea39b6da33a043d909126a513ed8d5e22aa51c85bc10a9ab1548a166ae2"
+    "bytes": 7303,
+    "sha256": "01b51749b2b56c3cf26c8dc84584c96c103404b21f32300e70b5d44d7a6fb9ac"
   },
   {
     "path": "site/mentor-living-art-assets.js",
@@ -286,23 +286,23 @@
   },
   {
     "path": "site/mentor-winter-2026-assets.js",
-    "bytes": 3057,
-    "sha256": "4dc50c69d3b19488f36720d2b796717bd997d9a8ff11e98c14d83edd9897dca1"
+    "bytes": 3367,
+    "sha256": "5f405a507ba3daac0d8202ab34ff9408a7d1d08482b6c08b2f92903431e52eb3"
   },
   {
     "path": "site/mentor-winter-2026.js",
-    "bytes": 12788,
-    "sha256": "c84cf9f2aeca29f2db02fb2c2fac1dea72a7c301606932a5001ecb74f30f272f"
+    "bytes": 12825,
+    "sha256": "8683915a660e03b881d464833d077c8061e709f648917f8eb88f15724e069aec"
   },
   {
     "path": "site/mentor.css",
-    "bytes": 16337,
-    "sha256": "f72f3ca6ba1559e86f79ab63864de76171b501cb1c02e9bc5a8d0dea72d168aa"
+    "bytes": 16390,
+    "sha256": "20e6b8021668bd41f54aea280377edd8fc23492b9550441e64e6b0f083587f1c"
   },
   {
     "path": "site/mentor.js",
-    "bytes": 9830,
-    "sha256": "9f1a732067dda3cbd977acc0b7d7f854953ac1c6ae8780c6cbd8b068b8da5895"
+    "bytes": 10494,
+    "sha256": "7471fa0c39a37fdef028eada665700acab8d23a7c9bf20ba3b9e961bb51e7606"
   },
   {
     "path": "site/page-motion.css",
@@ -321,8 +321,8 @@
   },
   {
     "path": "site/photo-print.js",
-    "bytes": 7194,
-    "sha256": "19ffaa8ceea6ab79bf1a4ab614a93d9d55e570d82c5cdbb672686d1f171b4344"
+    "bytes": 7590,
+    "sha256": "92247048159ab5b037e5e333958a2c1f7e8b11f8084587e2527d0c3d58b5a604"
   },
   {
     "path": "site/project-content.css",
@@ -381,8 +381,8 @@
   },
   {
     "path": "site/project-watermarks.js",
-    "bytes": 201972,
-    "sha256": "d960ae29e94f572eb9f7039b953cc103704afd5ddf068c20ec0f92636e99d44e"
+    "bytes": 202427,
+    "sha256": "93b50d8f6b4f44a2cefe0cd755791d63e55e27c11ed37dbd7565bfd7151005a8"
   },
   {
     "path": "site/return-rocket.css",
@@ -2293,6 +2293,16 @@
     "path": "site/assets/mentor/nyu-2025/threads-5.webp",
     "bytes": 186508,
     "sha256": "1deccd7eadada8320414a42b9a555e0764184ade8c7961487ed03bc11a8ab555"
+  },
+  {
+    "path": "site/assets/mentor/student-milky-way-small.webp",
+    "bytes": 41246,
+    "sha256": "d0ff94e7246ea967969acc3cf288e27a472ca2f3dfae9ec5a743690e3d64e346"
+  },
+  {
+    "path": "site/assets/mentor/student-milky-way.webp",
+    "bytes": 112024,
+    "sha256": "388bc90b447dad944b98c355efe265cb3ace5cc0b56c732bbbf62b6947136d5d"
   },
   {
     "path": "site/assets/mentor/students-2025/student25-alienated-architect-card-thumb.webp",
@@ -4483,6 +4493,16 @@
     "path": "site/assets/mentor/winter-2026/exhibition-view.webp",
     "bytes": 94358,
     "sha256": "066e087c16eea01d79507bd2438a8b199d7ff5fba666c92d36b41d29664d556e"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/grind-card-clarified-thumb.webp",
+    "bytes": 26586,
+    "sha256": "a3094c65472b803d608d99595628b0cdb0935997a5d719dd07c7eb413c706d88"
+  },
+  {
+    "path": "site/assets/mentor/winter-2026/grind-card-clarified.webp",
+    "bytes": 166358,
+    "sha256": "f3e6609316b119c9c054618b9a27d98fd5d5e602a2bb0d15d5dc8b78c9eac6b4"
   },
   {
     "path": "site/assets/mentor/winter-2026/grind-cover-thumb.webp",
@@ -11228,6 +11248,16 @@
     "path": "site/assets/protected/winter-cover-en-view.webp",
     "bytes": 86386,
     "sha256": "3354e0ed9a03ac0c443755bace3b8ba67d8142df76e875f1cd44b9d224183b4e"
+  },
+  {
+    "path": "site/assets/protected/winter-grind-card-en-thumb.webp",
+    "bytes": 21212,
+    "sha256": "cf51cc80210f3052ce3e594a88b6abe831d804fe238365669bdfb5fd45f971af"
+  },
+  {
+    "path": "site/assets/protected/winter-grind-card-en-view.webp",
+    "bytes": 129874,
+    "sha256": "d405cc00469c9da1cf180765a7a69245666ff6cbb9b65ee09ee1ad1c425ee9cf"
   },
   {
     "path": "site/assets/protected/winter-grind-cover-en-thumb.webp",

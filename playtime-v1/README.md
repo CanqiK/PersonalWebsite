@@ -1,6 +1,6 @@
 # CANQI — Portfolio
 
-Current public runtime, updated 19 November 2026.
+Current public runtime, updated 21 November 2026.
 
 - Website: https://canqik.github.io/PersonalWebsite/
 - Entrance: https://canqik.github.io/PersonalWebsite/playtime-v1/entrance-prototype/
@@ -24,7 +24,10 @@ MIT × Tongji summer school. The student-project directory is organised by cohor
 with 15 projects by five students in 2025 and 38 projects by eleven students in
 2026. Selected covers, outcomes and films open in individual project readers;
 student work retains its own authorship. The student archive is reached through
-a rotating dark halftone globe with an orbiting satellite. About and CV
+a rotating blue-green halftone globe with an orbiting satellite, a gently printed
+Milky Way background and occasional distant meteors. The January winter-school
+card uses the clarified miniature-office photograph credited to Chunying Xiao.
+About and CV
 share a scrolling page with an interactive ASCII background and a public English
 CV PDF. Some records remain explicitly provisional. Reduced-motion preferences
 are supported.

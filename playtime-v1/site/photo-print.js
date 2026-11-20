@@ -20,9 +20,12 @@ window.CanqiPhotoPrint=(()=>{
     const w=host.clientWidth,h=host.clientHeight;if(!w||!h)return;
     const ratio=Math.min(devicePixelRatio||1,1.5,1800/w,Math.sqrt(1800000/(w*h)));
     const width=Math.max(1,Math.round(w*ratio)),height=Math.max(1,Math.round(h*ratio));
-    const dot=Math.max(3.6,Math.min(11,Number(options.dot||3)*1.8));
-    const key=[state.img.currentSrc||state.img.src,width,height,dot,state.img.dataset.signatureRegion||''].join('|');
-    state.spec={width,height,cell:dot*ratio};state.key=key;
+    const dotScale=Math.max(.5,Math.min(1,Number(host.dataset.printDotScale)||1));
+    const dot=Math.max(3.6,Math.min(11,Number(options.dot||3)*1.8))*dotScale;
+    // Decorative backgrounds may opt into their responsive percentage crop.
+    const position=host.dataset.printPosition==='image'?getComputedStyle(state.img).objectPosition.split(/\s+/).map(v=>v.endsWith('%')?Math.max(0,Math.min(1,parseFloat(v)/100)):.5):[.5,.5];
+    const key=[state.img.currentSrc||state.img.src,width,height,dot,position.join(','),state.img.dataset.signatureRegion||''].join('|');
+    state.spec={width,height,cell:dot*ratio,position};state.key=key;
     host.classList.toggle('photo-print-continuous',options.treatment==='continuous');
     schedule();
   }
@@ -41,21 +44,22 @@ window.CanqiPhotoPrint=(()=>{
     remember(job.key,job.surface);schedule();
   }
   function start(state){
-    const {width,height,cell}=state.spec,img=state.img;
+    const {width,height,cell,position}=state.spec,img=state.img;
     const cols=Math.ceil(width/cell),rows=Math.ceil(height/cell);
     const sample=document.createElement('canvas');sample.width=cols;sample.height=rows;
     const sampleContext=sample.getContext('2d',{willReadFrequently:true});
     // Match object-fit:cover exactly, so the two layers never jump on hover.
     const scale=Math.max(width/img.naturalWidth,height/img.naturalHeight);
     const sw=width/scale,sh=height/scale;
-    sampleContext.drawImage(img,(img.naturalWidth-sw)/2,(img.naturalHeight-sh)/2,sw,sh,0,0,cols,rows);
+    const sx=(img.naturalWidth-sw)*position[0],sy=(img.naturalHeight-sh)*position[1];
+    sampleContext.drawImage(img,sx,sy,sw,sh,0,0,cols,rows);
     let pixels;try{pixels=sampleContext.getImageData(0,0,cols,rows).data;}catch{state.painted=state.key;release(sample);schedule();return;}
     release(sample);
     const surface=document.createElement('canvas');surface.width=width;surface.height=height;
     const ctx=surface.getContext('2d');
     ctx.fillStyle='#171716';ctx.fillRect(0,0,width,height);
     const region=(img.dataset.signatureRegion||'').split(',').map(Number);
-    const signature=region.length===4&&region.every(Number.isFinite)?[(region[0]*img.naturalWidth-(img.naturalWidth-sw)/2)*scale-1,(region[1]*img.naturalHeight-(img.naturalHeight-sh)/2)*scale-1,region[2]*img.naturalWidth*scale+2,region[3]*img.naturalHeight*scale+2]:null;
+    const signature=region.length===4&&region.every(Number.isFinite)?[(region[0]*img.naturalWidth-sx)*scale-1,(region[1]*img.naturalHeight-sy)*scale-1,region[2]*img.naturalWidth*scale+2,region[3]*img.naturalHeight*scale+2]:null;
     const job={key:state.key,surface,row:0,cancelled:false,signature};active=job;
     const step=()=>{
       timer=0;

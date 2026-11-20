@@ -88,5 +88,12 @@ window.CANQI_PROJECT_IMAGES=Object.assign(window.CANQI_PROJECT_IMAGES||{},{
     "height": 1440,
     "file": "assets/mentor/winter-2026/exhibition-view.webp",
     "thumb": "assets/mentor/winter-2026/exhibition-view-thumb.webp"
+  },
+  "winter-grind-card": {
+    "width": 1684,
+    "height": 934,
+    "file": "assets/mentor/winter-2026/grind-card-clarified.webp",
+    "thumb": "assets/mentor/winter-2026/grind-card-clarified-thumb.webp",
+    "source": "User-selected photograph of The Grind; conservative AI-assisted clarity enhancement."
   }
 });

@@ -1,7 +1,20 @@
-/* The student archive is an orbit: warm halftone land on charcoal. */
+/* The Milky Way shares the project's colour-halftone print treatment. */
 .mentor-students-entry{position:relative;min-width:0;container-type:inline-size}
-.mentor-students-entry .mentor-students-link{height:100%;display:flex;gap:24px;padding:clamp(24px,4.5cqw,44px);background:#11130f;color:#e1dfd2;border-color:#4a4c41;overflow:hidden}
-.mentor-students-entry .mentor-students-link:hover,.mentor-students-entry .mentor-students-link:focus-visible{color:#eeeade;background:#151711}
+.mentor-students-entry .mentor-students-link{position:relative;isolation:isolate;height:100%;display:flex;gap:24px;padding:clamp(24px,4.5cqw,44px);background:#060b12;color:#e1dfd2;border-color:#4a4c41;overflow:hidden}
+.mentor-students-entry .mentor-students-link:hover,.mentor-students-entry .mentor-students-link:focus-visible{color:#eeeade;background:#060b12}
+.student-orbit-space{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.student-orbit-space>.photo-print{opacity:.86;transition:none}
+.student-orbit-sky>.project-thumbnail{object-position:64% 50%}
+.student-orbit-sky.photo-print-ready>.photo-print-canvas{opacity:.34}
+.student-orbit-sky.photo-print-continuous>.photo-print-canvas{opacity:0}
+.mentor-students-link:focus-visible .student-orbit-sky>.photo-print-canvas{opacity:0}
+@media(hover:hover) and (pointer:fine){.mentor-students-link:hover .student-orbit-sky>.photo-print-canvas{opacity:0}}
+.student-orbit-space::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,14,.22),transparent 23%,rgba(3,8,14,.15) 78%,rgba(3,8,14,.6)),linear-gradient(90deg,rgba(3,8,14,.12) 36%,rgba(3,8,14,.66) 61%,rgba(3,8,14,.48) 87%,rgba(3,8,14,.15))}
+.student-orbit-meteor{position:absolute;z-index:1;left:85%;top:14%;width:clamp(30px,5cqw,65px);height:1px;background:linear-gradient(90deg,transparent,rgba(192,214,224,.7));opacity:0;animation:distant-meteor 19s linear infinite;animation-play-state:paused;transform:rotate(145deg)}
+.student-orbit-meteor::after{content:"";position:absolute;right:0;top:-.5px;width:2px;height:2px;background:#cadbe2;border-radius:50%}
+.student-orbit-meteor--far{left:59%;top:84%;width:clamp(22px,3cqw,40px);animation-duration:27s;animation-delay:8s}
+[data-orbit-running="true"] .student-orbit-meteor{animation-play-state:running}
+@keyframes distant-meteor{0%,17%{opacity:0;transform:translate3d(0,0,0) rotate(145deg)}18.5%{opacity:.7}22%{opacity:0;transform:translate3d(-132px,92px,0) rotate(145deg)}100%{opacity:0;transform:translate3d(-132px,92px,0) rotate(145deg)}}
 .student-orbit-top{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:32px;padding-right:36px;color:#b7b9a5;font-size:12px;letter-spacing:.025em}
 .student-orbit-top>span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
 .student-orbit-layout{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:clamp(14px,2cqw,28px);margin-block:auto}
@@ -17,6 +30,9 @@
 .student-orbit-toggle svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.3}
 .student-orbit-toggle .orbit-play{display:none}.student-orbit-toggle[data-paused="true"] .orbit-play{display:block}.student-orbit-toggle[data-paused="true"] .orbit-pause{display:none}
 @container(max-width:480px){
+ .student-orbit-sky>.project-thumbnail{object-position:72% 50%}
+ .student-orbit-space::after{background:linear-gradient(180deg,rgba(3,8,14,.15),rgba(3,8,14,.12) 35%,rgba(3,8,14,.76) 59%,rgba(3,8,14,.84) 82%,rgba(3,8,14,.6))}
+ .student-orbit-meteor--far{left:38%;top:38%}
  .student-orbit-layout{grid-template-columns:1fr;gap:0;width:100%}
  .student-orbit-visual{width:100%;margin:0;grid-row:1;max-width:400px;justify-self:center}
  .student-orbit-copy{padding:4px 0 12px;display:grid;grid-template-columns:1fr;gap:16px}
@@ -24,4 +40,4 @@
  .student-orbit-meta{margin:0}.student-orbit-top{font-size:11px;gap:12px}.student-orbit-top>span:last-child{display:none}
  .mentor-students-entry .mentor-students-link{gap:16px}
 }
-@media(prefers-reduced-motion:reduce){.mentor-students-entry *{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.mentor-students-entry *{scroll-behavior:auto}.student-orbit-meteor{display:none}}
