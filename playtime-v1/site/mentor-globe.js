@@ -15,6 +15,7 @@
     if(!root)return;
     const canvas=root.querySelector('.student-orbit-visual canvas'),ctx=canvas?.getContext('2d',{alpha:true});
     if(!ctx)return;
+    const disposePlanets=window.CanqiMentorPlanets?.mount(root);
     const toggle=root.querySelector('[data-globe-toggle]'),motion=matchMedia('(prefers-reduced-motion: reduce)');
     let paused=motion.matches,visible=false,disposed=false,frame=0,last=0,time=0,width=0;
     const tilt=-13*rad,ct=Math.cos(tilt),st=Math.sin(tilt);
@@ -83,7 +84,7 @@
     const dialog=root.closest('.mentor-page')?.querySelector('dialog');const modalObserver=new MutationObserver(sync);if(dialog)modalObserver.observe(dialog,{attributes:true,attributeFilter:['open']});
     toggle.addEventListener('click',click);motion.addEventListener('change',preference);document.addEventListener('visibilitychange',sync);
     resize();label();
-    return ()=>{disposed=true;cancelAnimationFrame(frame);observer.disconnect();resizeObserver.disconnect();modalObserver.disconnect();toggle.removeEventListener('click',click);motion.removeEventListener('change',preference);document.removeEventListener('visibilitychange',sync);};
+    return ()=>{disposed=true;disposePlanets?.();cancelAnimationFrame(frame);observer.disconnect();resizeObserver.disconnect();modalObserver.disconnect();toggle.removeEventListener('click',click);motion.removeEventListener('change',preference);document.removeEventListener('visibilitychange',sync);};
   }
   window.CanqiMentorGlobe={mount};
 })();

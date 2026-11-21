@@ -25,7 +25,9 @@ with 15 projects by five students in 2025 and 38 projects by eleven students in
 2026. Selected covers, outcomes and films open in individual project readers;
 student work retains its own authorship. The student archive is reached through
 a rotating blue-green halftone globe with an orbiting satellite, a gently printed
-Milky Way background and occasional distant meteors. The January winter-school
+Milky Way background and occasional distant meteors. Saturn, Jupiter, Mars and
+Neptune frame the student entry; a darker starfield extends across the mentor
+branch. The January winter-school
 card uses the clarified miniature-office photograph credited to Chunying Xiao.
 About and CV
 share a scrolling page with an interactive ASCII background and a public English

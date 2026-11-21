@@ -161,8 +161,8 @@
   },
   {
     "path": "site/index.html",
-    "bytes": 7630,
-    "sha256": "512517c7724154524f6573523249ec158daaba6aa77a2823c5e6edd044a87c66"
+    "bytes": 7708,
+    "sha256": "d2af0b1ecd9c49d131385d37e1042841a0a796764f06367a7d8ea79674e8c0e8"
   },
   {
     "path": "site/copyright.html",
@@ -216,13 +216,13 @@
   },
   {
     "path": "site/mentor-globe.css",
-    "bytes": 4994,
-    "sha256": "8164a67db042f23ccd09c435646f0577ca7665fe98377e8e27fd0fb347aaabb4"
+    "bytes": 6150,
+    "sha256": "728cc65a10098bb326471a92c3739320e5bf8036a52283fab552e0874fb7e60a"
   },
   {
     "path": "site/mentor-globe.js",
-    "bytes": 7303,
-    "sha256": "01b51749b2b56c3cf26c8dc84584c96c103404b21f32300e70b5d44d7a6fb9ac"
+    "bytes": 7387,
+    "sha256": "d459a376d19f21bbd82fa03fc2a52c557e1c2ba48f415ad3b897d7c61ba634b1"
   },
   {
     "path": "site/mentor-living-art-assets.js",
@@ -253,6 +253,11 @@
     "path": "site/mentor-nyu-2025.js",
     "bytes": 18642,
     "sha256": "b3c08096b03337b0621a74a725c76e67dc7569ced8e8ea5b9e427be0e2745ba8"
+  },
+  {
+    "path": "site/mentor-planets.js",
+    "bytes": 3459,
+    "sha256": "d47c3eb6e3f944dab58811e0a9b0655a04851d519b0a2774bcc1097bc4dba42c"
   },
   {
     "path": "site/mentor-students-2026-assets.js",
@@ -301,8 +306,8 @@
   },
   {
     "path": "site/mentor.js",
-    "bytes": 10494,
-    "sha256": "7471fa0c39a37fdef028eada665700acab8d23a7c9bf20ba3b9e961bb51e7606"
+    "bytes": 10974,
+    "sha256": "d46a884339fd0a9f3349ea27551e5da8df2399ebad2fd2c4a1c9f599a6de6327"
   },
   {
     "path": "site/page-motion.css",
